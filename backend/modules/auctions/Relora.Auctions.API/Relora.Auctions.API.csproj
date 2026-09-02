@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\shared\Relora.Shared.Domain\Relora.Shared.Domain.csproj" />
+    <ProjectReference Include="..\..\identity\Relora.Identity.Infrastructure\Relora.Identity.Infrastructure.csproj" />
+    <ProjectReference Include="..\Relora.Auctions.Application\Relora.Auctions.Application.csproj" />
+    <ProjectReference Include="..\Relora.Auctions.Infrastructure\Relora.Auctions.Infrastructure.csproj" />
+  </ItemGroup>
+
+
+</Project>

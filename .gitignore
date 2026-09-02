@@ -1,0 +1,48 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+**/appsettings.Development.json
+**/appsettings.Production.json
+**/appsettings.Local.json
+!**/appsettings.Development.example.json
+!**/appsettings.example.json
+**/Properties/launchSettings.json
+*.pem
+*.key
+*.pfx
+*.crt
+*.cer
+*.snk
+
+# IDE and operating system files
+.vs/
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.DS_Store
+Thumbs.db
+
+# .NET build output
+**/[Bb]in/
+**/[Oo]bj/
+**/[Tt]est[Rr]esult*/
+*.nupkg
+*.snupkg
+
+# Node.js build output and caches
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/.vite/
+**/.cache/
+coverage/
+
+# Local Docker overrides and data
+docker-compose.override.yml
+**/docker-data/

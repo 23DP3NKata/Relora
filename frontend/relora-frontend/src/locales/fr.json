@@ -1,0 +1,2471 @@
+{
+    "announcement": {
+        "title": "Vendez sur Relora",
+        "description": "Profitez de seulement 2 % de commission sur vos 10 premières ventes",
+        "buttonText": "Commencer à vendre"
+    },
+    "common": {
+        "language": "Langue",
+        "loading": "Chargement...",
+        "loadingProfile": "Chargement du profil...",
+        "tryAgain": "Réessayer",
+        "cancel": "Annuler",
+        "delete": "Supprimer",
+        "deleting": "Suppression...",
+        "search": "Rechercher",
+        "filters": "Filtres",
+        "clearAll": "Tout effacer",
+        "showResults": "Afficher les résultats",
+        "sortCatalog": "Trier le catalogue",
+        "sortBy": "Trier par : {label}",
+        "close": "Fermer",
+        "openMenu": "Ouvrir le menu",
+        "closeMenu": "Fermer le menu",
+        "closeAnnouncement": "Fermer l’annonce",
+        "learnMore": "En savoir plus",
+        "noImage": "Aucune image",
+        "imageUnavailable": "Image indisponible",
+        "seller": "Vendeur",
+        "currentBid": "Enchère actuelle",
+        "currentPrice": "Prix actuel",
+        "shipping": "Livraison",
+        "dispatch": "Expédition",
+        "shipsFrom": "Expédié depuis",
+        "shipsTo": "Expédié vers",
+        "days": "jours",
+        "hours": "heures",
+        "minutesShort": "min",
+        "secondsShort": "s",
+        "details": "Détails",
+        "statusUnavailable": "Statut indisponible",
+        "unavailable": "Indisponible",
+        "any": "Tous",
+        "size": "Taille {value}",
+        "listingCount": "{count} annonces trouvées.",
+        "copyright": "© {year} Relora",
+        "first": "Première",
+        "previous": "Précédent",
+        "next": "Suivant",
+        "last": "Dernière",
+        "morePages": "Plus de pages",
+        "nextSlide": "Diapositive suivante",
+        "previousSlide": "Diapositive précédente",
+        "brand": "Relora"
+    },
+    "navigation": {
+        "women": "Femme",
+        "men": "Homme",
+        "bags": "Sacs",
+        "shoes": "Chaussures",
+        "jewelryWatches": "Bijoux et montres",
+        "vintage": "Vintage",
+        "accessories": "Accessoires",
+        "designers": "Créateurs",
+        "about": "À propos",
+        "sustainability": "Durabilité",
+        "journal": "Journal",
+        "buy": "Acheter",
+        "buyerProtection": "Protection acheteur",
+        "returnsPolicy": "Politique de retour",
+        "sell": "Vendre",
+        "howToSell": "Comment vendre",
+        "sellerProtection": "Protection vendeur",
+        "sellAnItem": "Vendre un article",
+        "brandPartnerships": "Partenariats de marque",
+        "help": "Aide",
+        "contactUs": "Nous contacter",
+        "faq": "FAQ",
+        "legal": "Juridique",
+        "termsOfService": "Conditions d’utilisation",
+        "privacyPolicy": "Politique de confidentialité",
+        "cookiePolicy": "Politique relative aux cookies",
+        "auctionRules": "Règles des enchères",
+        "followUs": "Suivez-nous",
+        "sellWithUs": "Vendre avec nous",
+        "signIn": "Se connecter",
+        "signOut": "Se déconnecter",
+        "profile": "Profil",
+        "myProfile": "Mon profil",
+        "yourOrders": "Commandes",
+        "myListings": "Annonces",
+        "settings": "Paramètres",
+        "myAccount": "Mon compte",
+        "register": "S’inscrire",
+        "signedInAccount": "Compte connecté"
+    },
+    "footer": {
+        "noticeTitle": "Avis important",
+        "notice": "À l’exception des partenaires de marque officiels, Relora n’a aucune association ni affiliation avec les marques dont les produits sont proposés à la vente sur notre plateforme. Toutes les marques commerciales, noms de marque, logos et noms de produits restent la propriété de leurs détenteurs respectifs et sont utilisés uniquement à des fins d’identification. Tous les services d’authentification et de contrôle qualité sont effectués indépendamment par Relora.",
+        "social": {
+            "instagram": "Instagram",
+            "youtube": "YouTube"
+        }
+    },
+    "theme": {
+        "label": "Thème",
+        "description": "Basculer entre clair et sombre",
+        "toggle": "Changer de thème",
+        "light": "Clair",
+        "dark": "Sombre",
+        "system": "Système"
+    },
+    "search": {
+        "placeholder": "Rechercher des lots, marques et catégories...",
+        "mobilePlaceholder": "Rechercher des produits, marques, catégories...",
+        "designerPlaceholder": "Rechercher une marque de créateur...",
+        "resultsFor": "Résultats de recherche pour « {query} »",
+        "enterQuery": "Saisissez une recherche.",
+        "noResultsFor": "Aucune annonce trouvée pour « {query} ».",
+        "failed": "Impossible de charger les résultats de recherche."
+    },
+    "catalog": {
+        "title": "Catalogue",
+        "noListings": "Aucune annonce trouvée.",
+        "failed": "Impossible de charger le catalogue.",
+        "drawerLabel": "Filtres du catalogue",
+        "closeFilters": "Fermer les filtres",
+        "removeFilter": "Supprimer le filtre {label}",
+        "gender": "Genre",
+        "category": "Catégorie",
+        "brand": "Marque",
+        "price": "Prix",
+        "from": "De",
+        "to": "À",
+        "country": "Pays",
+        "condition": "État",
+        "size": "Taille",
+        "quickFilters": "Filtres rapides",
+        "endingSoon": "Se termine bientôt",
+        "newlyListed": "Récemment ajouté",
+        "searchBrands": "Rechercher des marques...",
+        "searchCountry": "Rechercher un pays...",
+        "options": {
+            "Women": "Femme",
+            "Men": "Homme",
+            "Unisex": "Unisexe",
+            "Tops": "Hauts",
+            "Bottoms": "Bas",
+            "Outerwear": "Vêtements d’extérieur",
+            "Footwear": "Chaussures",
+            "Shoes": "Chaussures",
+            "Bags": "Sacs",
+            "Accessories": "Accessoires",
+            "Jewellery": "Bijoux",
+            "Vintage": "Vintage",
+            "Other": "Autre",
+            "New": "Neuf",
+            "Worn": "Porté",
+            "Refurbished": "Reconditionné",
+            "XXS": "XXS",
+            "XS": "XS",
+            "S": "S",
+            "M": "M",
+            "L": "L",
+            "XL": "XL",
+            "XXL": "XXL",
+            "Latvia": "Lettonie",
+            "Lithuania": "Lituanie",
+            "Estonia": "Estonie",
+            "Germany": "Allemagne",
+            "France": "France",
+            "Italy": "Italie",
+            "Spain": "Espagne",
+            "Netherlands": "Pays-Bas",
+            "Belgium": "Belgique",
+            "Poland": "Pologne"
+        },
+        "sort": {
+            "EndingSoon": "Se termine bientôt",
+            "NewlyListed": "Récemment ajouté",
+            "PriceLowToHigh": "Prix : croissant",
+            "PriceHighToLow": "Prix : décroissant",
+            "MostBids": "Plus d’enchères"
+        },
+        "status": {
+            "Live": "En direct",
+            "Draft": "Brouillon",
+            "Pending": "En attente",
+            "Approved": "Approuvé",
+            "Active": "Actif",
+            "Rejected": "Rejeté",
+            "Sold": "Vendu",
+            "Expired": "Expiré",
+            "Unknown": "Inconnu"
+        }
+    },
+    "auction": {
+        "imageAlt": "{title} — image {number}"
+    },
+    "lot": {
+        "loadingListing": "Chargement de l'annonce...",
+        "failedLoad": "Impossible de charger l'annonce.",
+        "unavailableListing": "Cette annonce n'est pas disponible.",
+        "openGallery": "Ouvrir la galerie d'images",
+        "noImageAvailable": "Aucune image disponible",
+        "imageCount": "{title} - {number} / {total}",
+        "inspectDetails": "Inspecter les details",
+        "selectImage": "Selectionner l'image {number}",
+        "currentPrice": "Prix actuel",
+        "dispatchDays": "{count} jours ouvres",
+        "auctionEnded": "Enchere terminee",
+        "auctionEndsIn": "L'enchere se termine dans",
+        "endsAt": "Fin : {date}",
+        "placeBid": "Placer une offre",
+        "enterBidAmount": "Saisir le montant de l'offre",
+        "placingBid": "Envoi...",
+        "signInToBid": "Connectez-vous pour placer une offre.",
+        "bidActiveOnly": "Les offres sont possibles uniquement quand l'enchere est active.",
+        "biddingUnavailable": "Les offres sont actuellement indisponibles.",
+        "validBidRequired": "Veuillez saisir un montant d'offre valide.",
+        "bidSuccess": "Offre placee avec succes.",
+        "bidFailed": "Impossible de placer l'offre.",
+        "description": "Description",
+        "itemDetails": "Details de l'article",
+        "color": "Couleur",
+        "style": "Style",
+        "year": "Annee",
+        "location": "Localisation",
+        "unknownSeller": "Vendeur inconnu",
+        "sellerUsernameFallback": "vendeur",
+        "bidHistory": "Historique des offres",
+        "totalBids": "Total des offres",
+        "loadingBids": "Chargement des offres...",
+        "noBidsYet": "Aucune offre pour le moment.",
+        "lotGallery": "Galerie d'images du lot",
+        "toggleMagnifier": "Activer la loupe (M)",
+        "magnifier": "Loupe",
+        "zoomOut": "Zoom arriere",
+        "resetZoom": "Reinitialiser le zoom",
+        "resetView": "Reinitialiser la vue (0)",
+        "zoomIn": "Zoom avant",
+        "closeGallery": "Fermer la galerie",
+        "closeEsc": "Fermer (Esc)",
+        "previousImage": "Image precedente",
+        "nextImage": "Image suivante",
+        "openImage": "Ouvrir l'image {number}",
+        "galleryDragZoomReset": "Faites glisser pour deplacer - Faites defiler pour zoomer - Double-cliquez pour reinitialiser",
+        "galleryInspectZoom": "Deplacez le curseur sur l'image pour inspecter les details - Faites defiler pour zoomer",
+        "galleryZoomBrowse": "Double-cliquez ou faites defiler pour zoomer - Utilisez les fleches pour parcourir"
+    },
+    "listings": {
+        "title": "Mes annonces",
+        "description": "Gerez vos pieces du brouillon a la vente terminee.",
+        "createListing": "Creer une annonce",
+        "checkingSession": "Verification de votre session",
+        "signInTitle": "Connectez-vous pour voir vos annonces",
+        "signInDescription": "Accedez a vos brouillons, encheres en direct et pieces vendues.",
+        "filterAria": "Filtrer les annonces",
+        "searchLabel": "Rechercher des annonces",
+        "searchPlaceholder": "Rechercher par titre ou marque",
+        "loadingListings": "Chargement des annonces",
+        "unableLoad": "Impossible de charger les annonces",
+        "loadFailed": "Nous n'avons pas pu charger vos annonces. Veuillez reessayer.",
+        "imageUnavailable": "Image indisponible",
+        "listedOn": "Publiee {date}",
+        "auctionDuration": "Duree de l'enchere",
+        "durationDays": "{count} jours",
+        "restarting": "Redemarrage...",
+        "starting": "Demarrage...",
+        "restartAuction": "Relancer l'enchere",
+        "startAuction": "Demarrer l'enchere",
+        "viewListing": "Voir l'annonce",
+        "edit": "Modifier",
+        "submitting": "Envoi...",
+        "submitForReview": "Soumettre pour examen",
+        "deleteListing": "Supprimer l'annonce",
+        "deleteTitle": "Supprimer \"{title}\" ?",
+        "deleteFallbackTitle": "Supprimer l'annonce ?",
+        "deleteConfirmMessage": "Voulez-vous vraiment supprimer cette annonce ? Cette action est irreversible.",
+        "deleted": "Votre annonce a ete supprimee.",
+        "deleteFailed": "La suppression a echoue. Cette annonce ne peut peut-etre plus etre supprimee.",
+        "submittedReview": "Annonce soumise pour examen.",
+        "submitFailed": "Impossible de soumettre l'annonce.",
+        "auctionStarted": "Enchere demarree avec succes.",
+        "startAuctionFailed": "Impossible de demarrer l'enchere.",
+        "filters": {
+            "all": "Toutes les annonces",
+            "attention": "Action requise",
+            "live": "En direct",
+            "sold": "Vendues"
+        },
+        "status": {
+            "draft": "Brouillon",
+            "review": "En examen",
+            "rejected": "Modifications demandees",
+            "ready": "Prete pour enchere",
+            "live": "Enchere en direct",
+            "sold": "Vendu",
+            "unsold": "Invendu",
+            "expired": "Enchere terminee",
+            "unknown": "Statut indisponible"
+        },
+        "actionTitle": {
+            "draft": "Terminer l'annonce",
+            "rejected": "Verifier les modifications demandees",
+            "review": "Votre annonce est en cours d'examen",
+            "ready": "Prete a etre publiee",
+            "live": "L'enchere est actuellement en direct",
+            "sold": "Cette piece a ete vendue",
+            "unsold": "Aucune offre recue",
+            "expired": "L'enchere est terminee",
+            "unknown": "Verifier les details de l'annonce"
+        },
+        "actionDescription": {
+            "draft": "Completez les details et soumettez la piece pour examen.",
+            "rejected": "Modifiez l'annonce avant de la soumettre a nouveau.",
+            "review": "Aucune action n'est requise pendant l'examen par l'equipe Relora.",
+            "ready": "Choisissez une duree d'enchere et demarrez l'enchere.",
+            "live": "Les enchérisseurs peuvent maintenant decouvrir cette piece et enchérir.",
+            "sold": "La transaction continuera dans vos commandes recues.",
+            "unsold": "Choisissez une nouvelle duree et relancez cette enchere.",
+            "expired": "Examinez le resultat avant de decider de la suite.",
+            "unknown": "Ouvrez l'annonce pour consulter ses informations actuelles."
+        },
+        "emptyFirst": {
+            "title": "Publiez votre premiere piece.",
+            "description": "Creez une annonce pour soumettre un article a l'examen et commencer a vendre sur Relora.",
+            "action": "Creer une annonce"
+        },
+        "emptyFiltered": {
+            "title": "Aucune annonce correspondante.",
+            "description": "Essayez un autre terme de recherche ou changez de statut d'annonce.",
+            "action": "Effacer les filtres"
+        }
+    },
+    "editLot": {
+        "sellerDashboard": "Tableau vendeur",
+        "title": "Modifier l'annonce",
+        "description": "Mettez a jour votre annonce avant son approbation et sa publication sur Relora.",
+        "loadFailed": "Impossible de charger l'annonce pour modification.",
+        "cannotEdit": "Cette annonce ne peut pas etre modifiee dans son statut actuel.",
+        "signInRequired": "Vous devez vous connecter avant de modifier.",
+        "completeRequired": "Veuillez completer tous les champs requis avec des valeurs valides.",
+        "updated": "Annonce mise a jour avec succes.",
+        "updateToast": "Votre annonce a ete mise a jour avec succes.",
+        "updateFailed": "Impossible de mettre a jour l'annonce.",
+        "statusCannotEdit": "Cette annonce ne peut pas etre modifiee car elle est actuellement {status}.",
+        "basicInformation": "Informations de base",
+        "basicDescription": "Ajoutez les details principaux que les acheteurs verront d'abord.",
+        "locationStyle": "Localisation et style",
+        "locationStyleDescription": "Indiquez aux acheteurs d'ou l'article est expedie et a quel style il appartient.",
+        "itemDetailsDescription": "Aidez les acheteurs a comprendre le type d'article.",
+        "priceDescription": "Definissez le prix de depart de votre annonce.",
+        "shippingDescription": "Les acheteurs paient ce cout de livraison avec l'enchere gagnante.",
+        "brandPlaceholder": "Nom de marque",
+        "colorPlaceholder": "Noir, gris, marine...",
+        "savingChanges": "Enregistrement...",
+        "saveChanges": "Enregistrer"
+    },
+    "orders": {
+        "title": "Commandes",
+        "description": "Suivez vos achats et pieces vendues, de l'enchere gagnante a la livraison.",
+        "purchasesTab": "Achats",
+        "ordersTab": "Commandes",
+        "checkingSession": "Verification de votre session",
+        "signInTitle": "Connectez-vous pour voir vos commandes",
+        "signInDescription": "Accedez a vos achats, commandes recues et actions en cours.",
+        "filterAria": "Filtrer les commandes par activite",
+        "loadingOrders": "Chargement des commandes",
+        "unableLoad": "Impossible de charger les commandes",
+        "loadFailed": "Nous n'avons pas pu charger vos commandes. Veuillez reessayer.",
+        "imageUnavailable": "Image indisponible",
+        "auctionPiece": "Piece aux encheres",
+        "untitledPiece": "Piece sans titre",
+        "dateUnavailable": "Date indisponible",
+        "orderNumber": "Commande #{reference}",
+        "viewOrderFor": "Voir la commande pour {title}",
+        "details": "Details",
+        "noPurchasesEyebrow": "Aucun achat pour le moment",
+        "noPurchasesTitle": "Votre collection commence ici.",
+        "noPurchasesDescription": "Les pieces que vous remportez aux encheres apparaitront ici avec les mises a jour de paiement et de livraison.",
+        "exploreAuctions": "Explorer les encheres",
+        "noOrdersEyebrow": "Aucune commande pour le moment",
+        "noOrdersTitle": "Aucune commande client a afficher.",
+        "noOrdersDescription": "Lorsqu'un de vos lots sera vendu, sa commande et son statut apparaitront ici.",
+        "sellItem": "Vendre un article",
+        "status": {
+            "paid": "Payee",
+            "pending": "Paiement en attente",
+            "paymentExpired": "Paiement expire",
+            "shipped": "En transit",
+            "buyerProtection": "Litige",
+            "completed": "Terminee",
+            "failed": "Paiement echoue",
+            "cancelled": "Annulee",
+            "unknown": "Statut indisponible"
+        },
+        "hint": {
+            "paidSeller": "Paiement recu. Preparez l'article pour l'expedition.",
+            "paidBuyer": "Paiement confirme. En attente d'expedition par le vendeur.",
+            "pendingSeller": "En attente du paiement par l'acheteur.",
+            "pendingBuyerDeadline": "Effectuez le paiement avant le {date}.",
+            "pendingBuyer": "Effectuez le paiement pour confirmer l'achat.",
+            "shippedSeller": "L'article a ete expedie.",
+            "shippedBuyer": "Votre piece est en chemin.",
+            "completed": "La transaction est terminee.",
+            "disputeSeller": "L'acheteur a ouvert un litige.",
+            "disputeBuyer": "Votre litige est en cours d'examen.",
+            "expiredSeller": "L'acheteur n'a pas paye sous 3 jours.",
+            "expiredBuyer": "La fenetre de paiement de 3 jours a expire.",
+            "failedSeller": "Paiement echoue. N'expediez pas l'article.",
+            "failedBuyer": "Le paiement n'a pas ete finalise.",
+            "cancelled": "Aucune autre action n'est requise.",
+            "unknown": "Ouvrez la commande pour voir la derniere mise a jour."
+        },
+        "transaction": {
+            "sold": "Vendu {date}",
+            "purchased": "Achete {date}",
+            "paid": "Paye {date}"
+        },
+        "total": {
+            "order": "Total commande",
+            "sale": "Total vente"
+        }
+    },
+    "support": {
+        "eyebrow": "Support Relora",
+        "title": "Comment pouvons-nous aider ?",
+        "description": "Parlez-nous de votre question ou probleme. Notre equipe examinera votre demande et vous contactera par e-mail.",
+        "beforeContacting": "Avant de nous contacter",
+        "includeDetails": "Incluez autant de details que possible",
+        "includeDetailsDescription": "Des informations comme un numero de commande, un titre d'annonce ou une description claire nous aident a resoudre votre demande plus vite.",
+        "responseTime": "Delai de reponse",
+        "responseTimeDescription": "La plupart des demandes recoivent une reponse sous 1 a 2 jours ouvres.",
+        "accountSecurity": "Securite du compte",
+        "accountSecurityDescription": "N'incluez jamais de mots de passe ni d'informations de carte de paiement.",
+        "emailUpdates": "Mises a jour par e-mail",
+        "emailUpdatesDescription": "Notre reponse sera envoyee a l'adresse saisie dans le formulaire.",
+        "orderEmailNote": "Pour une commande existante, utilisez la meme adresse e-mail que celle associee a votre compte Relora.",
+        "sendRequest": "Envoyer une demande",
+        "allFieldsRequired": "Tous les champs sont obligatoires.",
+        "category": "Categorie",
+        "selectCategory": "Selectionner une categorie",
+        "subject": "Sujet",
+        "subjectPlaceholder": "Decrivez brievement votre demande",
+        "message": "Message",
+        "messagePlaceholder": "Decrivez ce qui s'est passe, quand cela s'est passe et l'aide dont vous avez besoin.",
+        "charactersLeft": "{count} caracteres restants",
+        "consent": "En envoyant ce formulaire, vous acceptez que Relora vous contacte au sujet de cette demande.",
+        "sending": "Envoi de la demande...",
+        "sent": "Votre demande a ete recue. L'equipe Relora repondra a l'adresse e-mail fournie.",
+        "failed": "Nous n'avons pas pu envoyer votre demande. Veuillez verifier les informations et reessayer.",
+        "categories": {
+            "technical": "Probleme technique",
+            "account": "Compte & securite",
+            "buying": "Acheter sur Relora",
+            "selling": "Vendre sur Relora",
+            "suggestion": "Retour ou suggestion",
+            "other": "Autre chose"
+        }
+    },
+    "orderDetails": {
+        "purchaseDetails": "Details de l'achat",
+        "saleDetails": "Details de la vente",
+        "orderDetails": "Details de commande",
+        "buyer": "Acheteur",
+        "seller": "Vendeur",
+        "counterparty": "Contrepartie",
+        "yourSale": "Votre vente",
+        "yourPurchase": "Votre achat",
+        "backToOrders": "Retour aux commandes",
+        "loadingOrder": "Chargement de la commande",
+        "unableOpen": "Impossible d'ouvrir la commande",
+        "loadFailed": "Nous n'avons pas pu charger cette commande. Veuillez reessayer.",
+        "signInRequired": "Veuillez vous connecter pour voir cette commande.",
+        "orderLine": "Commande #{reference} · {title}",
+        "currentStatus": "Statut actuel",
+        "viewingAs": "Vue en tant que {role}",
+        "untitledPiece": "Piece sans titre",
+        "imageAlt": "{title} — vue {number}",
+        "imageUnavailable": "Image indisponible",
+        "itemImages": "Images de l'article",
+        "showImage": "Afficher l'image {number}",
+        "itemDetails": "Details de l'article",
+        "itemUnavailable": "Informations de l'article indisponibles.",
+        "aboutPiece": "A propos de cette piece",
+        "viewOriginalListing": "Voir l'annonce originale",
+        "orderTotal": "Total commande",
+        "winningBid": "Enchere gagnante",
+        "openingPrice": "Prix de depart",
+        "auction": "Enchere",
+        "started": "Debut",
+        "ended": "Fin",
+        "paidOn": "Paye le",
+        "paymentDue": "Paiement du",
+        "shipBy": "Expedier avant",
+        "deliveryAddress": "Adresse de livraison",
+        "fullName": "Nom complet",
+        "addressLine1": "Adresse ligne 1",
+        "addressLine2": "Adresse ligne 2",
+        "postcode": "Code postal",
+        "countryCodePlaceholder": "LV",
+        "countryPlaceholder": "Lettonie",
+        "phone": "Telephone",
+        "openCheckout": "Ouverture du paiement...",
+        "pay": "Payer {amount}",
+        "hiddenAddress": "L'adresse de livraison est masquee jusqu'a la fin du paiement.",
+        "shipment": "Expedition",
+        "dispatchDeadline": "Date limite d'expedition : {date}",
+        "carrierPlaceholder": "Transporteur, ex. Omniva",
+        "trackingPlaceholder": "Numero de suivi",
+        "saving": "Enregistrement...",
+        "markShipped": "Marquer comme expedie",
+        "carrier": "Transporteur",
+        "carrierUnavailable": "Transporteur indisponible",
+        "tracking": "Suivi",
+        "disputedReview": "Cette commande est en litige et en cours d'examen admin.",
+        "confirming": "Confirmation...",
+        "itemReceived": "Article recu",
+        "trackingPending": "Les details de suivi apparaitront apres expedition par le vendeur.",
+        "reportProblem": "Signaler un probleme",
+        "reportDescription": "Ouvrez un litige si la commande necessite un examen admin.",
+        "open": "Ouvert",
+        "resolved": "Resolu",
+        "reason": "Raison",
+        "opened": "Ouvert",
+        "evidence": "Preuve",
+        "disputeEvidenceAlt": "Preuve de litige",
+        "decision": "Decision : {decision}",
+        "completeOrder": "Terminer la commande",
+        "describeProblem": "Decrivez ce qui s'est passe",
+        "photoEvidence": "Preuve photo",
+        "remove": "Retirer",
+        "problemsAfterPayment": "Les problemes peuvent etre signales apres confirmation du paiement.",
+        "transaction": "Transaction",
+        "yourRole": "Votre role",
+        "orderReference": "Reference commande",
+        "auctionReference": "Reference enchere",
+        "copied": "Copie",
+        "copy": "Copier",
+        "checkoutAddressRequired": "Veuillez completer l'adresse de livraison.",
+        "checkoutFailed": "Impossible de demarrer le paiement.",
+        "shipmentRequired": "Le transporteur et le numero de suivi sont requis.",
+        "shipmentSaved": "Details d'expedition enregistres.",
+        "shipmentFailed": "Impossible d'enregistrer les details d'expedition.",
+        "orderCompletedToast": "Commande terminee.",
+        "receiptFailed": "Impossible de confirmer la reception.",
+        "problemRequired": "Veuillez decrire le probleme.",
+        "problemReported": "Probleme signale.",
+        "problemFailed": "Impossible de signaler le probleme.",
+        "status": {
+            "completed": "Terminee",
+            "disputed": "Litige",
+            "inTransit": "En transit",
+            "cancelled": "Annulee",
+            "paymentExpired": "Paiement expire",
+            "paymentFailed": "Paiement echoue",
+            "awaitingShipment": "Expedition en attente",
+            "awaitingPayment": "Paiement en attente",
+            "failed": "Echoue",
+            "delivered": "Livre",
+            "notApplicable": "Non applicable",
+            "notStarted": "Non demarre"
+        },
+        "statusTitle": {
+            "orderCompleted": "Commande terminee",
+            "problemReported": "Probleme signale",
+            "disputeOpened": "Litige ouvert",
+            "buyerShipped": "Votre piece est en chemin",
+            "sellerShipped": "L'article est en chemin",
+            "orderCancelled": "Commande annulee",
+            "paymentExpired": "Delai de paiement expire",
+            "paymentAttention": "Paiement a verifier",
+            "completePayment": "Terminez votre paiement",
+            "waitingBuyer": "En attente de l'acheteur",
+            "paymentReceived": "Paiement recu",
+            "paymentConfirmed": "Paiement confirme",
+            "orderReceived": "Commande recue"
+        },
+        "statusDescription": {
+            "complete": "La transaction et la livraison sont terminees.",
+            "issueBuyer": "Relora a enregistre votre signalement. La commande est en examen admin.",
+            "issueSeller": "L'acheteur a ouvert un litige. Verifiez les details et attendez l'examen admin.",
+            "tracking": "Suivez l'expedition avec le numero {tracking}.",
+            "handedOver": "L'article a ete remis pour livraison.",
+            "cancelled": "Aucune autre action n'est requise pour cette commande.",
+            "expiredBuyer": "La fenetre de paiement de 3 jours est terminee; cette commande ne peut plus etre payee.",
+            "expiredSeller": "L'acheteur n'a pas paye sous 3 jours. L'article peut etre remis en vente.",
+            "failedBuyer": "Le paiement n'a pas ete termine. Reessayez lorsque le paiement sera disponible.",
+            "failedSeller": "Le paiement n'a pas ete termine. N'expediez pas l'article.",
+            "pendingBuyerDeadline": "Effectuez le paiement avant {date} pour confirmer votre achat.",
+            "pendingBuyer": "Effectuez le paiement pour confirmer votre achat.",
+            "pendingSeller": "L'article est reserve. Attendez la confirmation du paiement avant l'expedition.",
+            "paidSeller": "L'acheteur a paye. Preparez l'expedition; les details apparaitront lorsqu'ils seront disponibles.",
+            "paidBuyer": "Votre paiement est confirme. Les details d'expedition apparaitront apres l'envoi par le vendeur.",
+            "unknown": "La commande est enregistree, mais aucune autre information de statut n'est encore disponible."
+        },
+        "progress": {
+            "auctionSold": "Enchere vendue",
+            "auctionWon": "Enchere remportee",
+            "sellerWinningBid": "L'enchere gagnante etait {amount}.",
+            "buyerWinningBid": "Votre enchere gagnante etait {amount}.",
+            "confirmed": "Confirme",
+            "payment": "Paiement",
+            "paymentConfirmed": "Paiement confirme en totalite.",
+            "paymentExpired": "La fenetre de paiement de 3 jours a expire.",
+            "paymentNotCompleted": "Le paiement n'a pas ete termine.",
+            "waitingPayment": "En attente de confirmation du paiement.",
+            "due": "Du {date}",
+            "actionRequired": "Action requise",
+            "shipment": "Expedition",
+            "dispatched": "L'article a ete expedie.",
+            "disputeReview": "Le litige est en cours d'examen.",
+            "sellerPrepare": "Preparez l'article pour l'expedition.",
+            "buyerWaitingDispatch": "En attente de l'expedition par le vendeur.",
+            "afterPayment": "Commence apres confirmation du paiement.",
+            "dispatchedDate": "Expedie",
+            "currentStep": "Etape actuelle",
+            "delivery": "Livraison",
+            "orderCompleted": "La commande est terminee.",
+            "reviewOpen": "L'examen du litige est ouvert.",
+            "parcelOnWay": "Le colis est en chemin.",
+            "updatesAfterShipping": "Mises a jour apres expedition de l'article.",
+            "completed": "Termine",
+            "reported": "Signale",
+            "inProgress": "En cours"
+        },
+        "disputeReasons": {
+            "ItemNotShipped": "Article non expedie",
+            "ItemNotReceived": "Article non recu",
+            "WrongItem": "Mauvais article recu",
+            "SignificantlyNotAsDescribed": "Tres different de la description",
+            "Damaged": "Endommage",
+            "SuspectedCounterfeit": "Contrefacon suspectee"
+        }
+    },
+    "sell": {
+        "charactersLeft": "{count} caractères restants",
+        "sellOnRelora": "Vendre sur Relora",
+        "createListing": "Créer une annonce",
+        "createListingDescription": "Soumettez votre article pour examen et préparez-le à être publié sur la marketplace.",
+        "progress": "Progression",
+        "stepOf": "Étape {step} sur {total}",
+        "back": "Retour",
+        "continue": "Continuer",
+        "uploading": "Téléversement...",
+        "submitting": "Envoi...",
+        "submitForReview": "Soumettre pour examen",
+        "introTitle": "Listez votre article.",
+        "introDescription": "Créez une annonce précise pour des pièces de mode de créateur, d’archive et distinctives. Chaque article est examiné avant publication.",
+        "startListing": "Commencer l’annonce",
+        "beforeBegin": "Avant de commencer",
+        "requirementPhotosTitle": "Ajouter des photos claires",
+        "requirementPhotosDescription": "Téléversez au moins cinq photos montrant l’article, les étiquettes, les détails de taille et l’état.",
+        "requirementConditionTitle": "Décrire l’état",
+        "requirementConditionDescription": "Mentionnez l’usure visible, les défauts, réparations, retouches ou pièces manquantes.",
+        "requirementDetailsTitle": "Fournir des détails précis",
+        "requirementDetailsDescription": "Sélectionnez la bonne marque, catégorie, taille, couleur et localisation de l’article.",
+        "incompleteNote": "Les annonces avec des informations incomplètes ou peu claires peuvent être renvoyées pour modification.",
+        "photosStat": "5+ photos",
+        "photosStatDescription": "Documentation claire de l’article",
+        "reviewStat": "Examen manuel",
+        "reviewStatDescription": "Vérifié avant publication",
+        "detailsStat": "Détails précis",
+        "detailsStatDescription": "De meilleures informations renforcent la confiance",
+        "uploadPhotos": "Téléverser des photos",
+        "photosDescription": "Ajoutez au moins 5 photos claires de votre article. Pour passer l’examen, elles doivent montrer clairement l’article, les étiquettes de marque, les coutures, labels, détails d’état et certificats si disponibles.",
+        "photosCount": "Minimum requis : {minimum} photos. Actuel : {current} / {maximum}.",
+        "clickUpload": "Cliquer pour téléverser des photos",
+        "imageFormats": "PNG, JPG, WEBP jusqu’à 10 Mo",
+        "multiImages": "Vous pouvez sélectionner plusieurs images",
+        "uploadedPhotos": "Photos téléversées",
+        "photosAdded": "{count} photo ajoutée | {count} photos ajoutées",
+        "remove": "Supprimer",
+        "noPhotosYet": "Aucune photo téléversée pour le moment.",
+        "noPhotos": "Aucune photo téléversée.",
+        "maxPhotosError": "Vous pouvez téléverser jusqu’à {count} photos.",
+        "basicInfo": "Informations de base de l’article",
+        "basicInfoDescription": "Ajoutez les détails principaux que les acheteurs doivent voir en premier.",
+        "title": "Titre",
+        "titlePlaceholder": "ex. Rick Owens Cropped Bomber Jacket",
+        "brand": "Marque",
+        "brandPlaceholder": "ex. Rick Owens",
+        "selectCategory": "Sélectionner une catégorie",
+        "selectGender": "Sélectionner un genre",
+        "selectSize": "Sélectionner une taille",
+        "conditionAppearance": "État et apparence",
+        "conditionAppearanceDescription": "Soyez précis sur l’état et les détails visibles de l’article.",
+        "selectCondition": "Sélectionner un état",
+        "color": "Couleur",
+        "colorPlaceholder": "ex. Noir",
+        "pricing": "Tarification",
+        "pricingDescription": "Définissez le prix de départ de l’enchère et les conditions de livraison que les acheteurs paieront après avoir gagné.",
+        "amount": "Montant",
+        "amountPlaceholder": "ex. 250",
+        "currency": "Devise",
+        "shippingDescription": "Utilisez pour l’instant un prix de livraison manuel. Les acheteurs paieront ce montant avec l’enchère gagnante.",
+        "shippingPrice": "Prix de livraison",
+        "shippingPricePlaceholder": "ex. 7.00",
+        "shippingCurrency": "Devise de livraison",
+        "handlingTime": "Délai de traitement",
+        "shipsToPlaceholder": "Lettonie, Estonie, Lituanie ou monde entier",
+        "additionalDetails": "Détails supplémentaires",
+        "additionalDetailsDescription": "Décrivez clairement l’article afin que les acheteurs comprennent ce qu’ils regardent.",
+        "description": "Description",
+        "descriptionPlaceholder": "Décrivez l’article, la coupe, les défauts visibles, les matières ou tout ce que les acheteurs doivent savoir.",
+        "city": "Ville",
+        "cityPlaceholder": "Riga",
+        "ageYear": "Âge / année",
+        "ageYearPlaceholder": "2020, années 90, vintage...",
+        "style": "Style",
+        "stylePlaceholder": "Archive, streetwear, minimaliste...",
+        "reviewListing": "Vérifier votre annonce",
+        "reviewDescription": "Vérifiez tout avant de soumettre votre article pour examen.",
+        "item": "Article",
+        "untitledItem": "Article sans titre",
+        "noBrandSelected": "Aucune marque sélectionnée",
+        "listingDetails": "Détails de l’annonce",
+        "price": "Prix",
+        "dispatchTime": "Délai d’expédition",
+        "businessDays": "{count} jours ouvrés",
+        "noDescription": "Aucune description fournie.",
+        "uploadOnePhoto": "Veuillez téléverser au moins une photo.",
+        "uploadMinimumPhotos": "Veuillez téléverser au moins {count} photos.",
+        "waitPhotos": "Veuillez attendre que toutes les photos soient téléversées.",
+        "photosPending": "Certaines photos ne sont pas encore téléversées.",
+        "titleRequired": "Le titre est requis.",
+        "brandRequired": "La marque est requise.",
+        "categoryRequired": "La catégorie est requise.",
+        "genderRequired": "Le genre est requis.",
+        "sizeRequired": "La taille est requise.",
+        "conditionRequired": "L’état est requis.",
+        "colorRequired": "La couleur est requise.",
+        "amountRequired": "Le montant est requis.",
+        "amountPositive": "Le montant doit être supérieur à 0.",
+        "currencyRequired": "La devise est requise.",
+        "shippingPriceRequired": "Le prix de livraison est requis.",
+        "shippingPricePositive": "Le prix de livraison ne peut pas être négatif.",
+        "shippingCurrencyRequired": "La devise de livraison est requise.",
+        "shippingOriginRequired": "Le pays d’origine d’expédition est requis.",
+        "shippingDestinationRequired": "Ajoutez au moins une destination de livraison.",
+        "handlingRange": "Le délai de traitement doit être compris entre 1 et 30 jours ouvrés.",
+        "descriptionRequired": "La description est requise.",
+        "descriptionTooShort": "La description doit contenir au moins {count} caractères.",
+        "countryRequired": "Le pays est requis.",
+        "cityRequired": "La ville est requise.",
+        "ageRequired": "L’âge est requis.",
+        "styleRequired": "Le style est requis.",
+        "allRequired": "Veuillez remplir tous les champs obligatoires avant d’envoyer.",
+        "uploadFailed": "Échec du téléversement de {fileName}",
+        "createSuccess": "Annonce créée avec succès. ID du lot : {lotId}",
+        "submitFailed": "Échec de l’envoi de l’annonce."
+    },
+    "auth": {
+        "emailAddress": "Adresse e-mail",
+        "password": "Mot de passe",
+        "newPassword": "Nouveau mot de passe",
+        "confirmPassword": "Confirmer le mot de passe",
+        "username": "Nom d’utilisateur",
+        "emailPlaceholder": "you{'@'}example.com",
+        "passwordPlaceholder": "Saisissez votre mot de passe",
+        "usernamePlaceholder": "Saisissez votre nom d’utilisateur",
+        "createPasswordPlaceholder": "Créer un mot de passe",
+        "repeatPasswordPlaceholder": "Répétez votre mot de passe",
+        "newPasswordPlaceholder": "Créer un nouveau mot de passe",
+        "repeatNewPasswordPlaceholder": "Répétez votre nouveau mot de passe",
+        "loginEyebrow": "Connexion",
+        "loginTitle": "Bon retour.",
+        "loginDescription": "Connectez-vous pour gérer votre compte, suivre des lots sélectionnés et rester proche des pièces à surveiller.",
+        "forgotPassword": "Mot de passe oublié ?",
+        "noAccount": "Vous n’avez pas de compte ?",
+        "createOne": "En créer un",
+        "marketplaceEyebrow": "Marketplace sélectionnée",
+        "marketplaceTitle": "Pièces rares. Plus d’attention.",
+        "marketplaceDescription": "Relora est conçu pour la mode de créateur, les pièces d’archives et les objets qui méritent une présentation plus forte que celle généralement offerte par les plateformes de revente de masse.",
+        "registerEyebrow": "Inscription",
+        "registerTitle": "Créez votre compte.",
+        "registerDescription": "Commencez à sauvegarder des lots remarquables, à suivre des vendeurs et à construire votre place dans Relora.",
+        "createAccount": "Créer un compte",
+        "alreadyHaveAccount": "Vous avez déjà un compte ?",
+        "joinEyebrow": "Rejoindre Relora",
+        "joinTitleLine1": "Sauvegarder de meilleures pièces.",
+        "joinTitleLine2": "Suivre un meilleur goût.",
+        "joinDescription": "Créez un compte pour suivre des lots, découvrir des vendeurs sélectionnés et rester plus proche de ce qui mérite d’être possédé.",
+        "passwordReset": "Réinitialisation du mot de passe",
+        "forgotTitle": "Mot de passe oublié ?",
+        "forgotDescription": "Saisissez votre e-mail et nous vous enverrons un lien pour le réinitialiser.",
+        "sendResetLink": "Envoyer le lien",
+        "rememberedPassword": "Mot de passe retrouvé ?",
+        "backToSignIn": "Retour à la connexion",
+        "resetPassword": "Réinitialiser le mot de passe",
+        "resetTitle": "Créez un nouveau mot de passe.",
+        "resetDescription": "Choisissez un mot de passe sécurisé pour restaurer l’accès à votre compte.",
+        "saveNewPassword": "Enregistrer le nouveau mot de passe",
+        "changedMind": "Vous avez changé d’avis ?",
+        "passwordMismatch": "Les mots de passe ne correspondent pas",
+        "loginSuccess": "Vous êtes connecté avec succès.",
+        "loginFailed": "Échec de la connexion",
+        "registerSuccess": "Vous êtes inscrit avec succès.",
+        "registrationFailed": "Échec de l’inscription",
+        "unexpectedError": "Une erreur inattendue est survenue"
+    },
+    "profile": {
+        "failed": "Impossible de charger le profil.",
+        "notFound": "Profil introuvable",
+        "userProfile": "Profil utilisateur",
+        "verifiedSeller": "Vendeur vérifié",
+        "securePayments": "Paiements sécurisés",
+        "description": "Profil vendeur avec inventaire actif, ventes terminées et activité sur la plateforme.",
+        "follow": "Suivre",
+        "message": "Message",
+        "activeListings": "Annonces actives",
+        "soldItems": "Articles vendus",
+        "bidsPlaced": "Enchères placées",
+        "aboutSeller": "À propos du vendeur",
+        "focus": "Focus",
+        "focusDescription": "Mode d’archive, vêtements d’extérieur de créateur, accessoires et pièces de collection sélectionnées.",
+        "accountStatus": "Statut du compte",
+        "trustedHistory": "Historique fiable",
+        "buyerProtection": "Protection acheteur",
+        "sellerSummary": "Résumé vendeur",
+        "liveLots": "Lots en direct",
+        "completedSales": "Ventes terminées",
+        "publicProfile": "Public",
+        "liveInventory": "Inventaire en direct",
+        "activeListingsDescription": "Lots actuellement disponibles aux enchères.",
+        "viewAll": "Tout voir",
+        "noBrand": "Aucune marque",
+        "active": "Actif",
+        "noActiveListings": "Aucune annonce active pour le moment",
+        "noActiveDescription": "Ce vendeur n’a aucun lot en direct pour le moment.",
+        "sellerHistory": "Historique vendeur",
+        "soldDescription": "Pièces déjà vendues via la plateforme.",
+        "viewArchive": "Voir l’archive",
+        "sold": "Vendu",
+        "noSoldItems": "Aucun article vendu pour le moment",
+        "noSoldDescription": "Les ventes terminées apparaîtront ici une fois les transactions closes."
+    },
+    "designers": {
+        "title": "Découvrez les marques de créateur de luxe de A à Z",
+        "description": "Explorez des marques de créateur sélectionnées, des labels d’archive, des maisons de luxe et de rares noms streetwear disponibles sur Relora.",
+        "noDesigners": "Aucun créateur trouvé."
+    },
+    "home": {
+        "guestTitlePart1": "Mode rare,",
+        "guestTitlePart2": "marques premium,",
+        "guestTitlePart3": "et enchères à suivre.",
+        "welcomeBack": "Bon retour,",
+        "guestDescription": "Une marketplace d’enchères raffinée pour la mode de créateur, les accessoires remarquables et les pièces de collection avec du caractère.",
+        "memberDescription": "Découvrez de nouvelles arrivées, suivez les pièces qui méritent une enchère et explorez une facette plus sélectionnée de la mode.",
+        "heroTitleLine1": "Saisissez la",
+        "heroTitleLine2": "prochaine sortie.",
+        "heroDescriptionLine1": "Des enchères mode exclusives.",
+        "heroDescriptionLine2": "Des pièces iconiques. Des enchères en temps réel.",
+        "exploreAuctions": "Explorer les enchères",
+        "sellAnItem": "Vendre un article",
+        "membersWorldwide": "12K+ membres dans le monde",
+        "liveAuction": "Enchère en direct",
+        "heroLotTitleLine1": "Stone Island",
+        "heroLotTitleLine2": "Ghost Jacket",
+        "heroLotAlt": "Stone Island Ghost Jacket",
+        "currentBid": "Offre actuelle",
+        "bidCount": "{count} offres",
+        "left": "restant",
+        "viewLot": "Voir le lot",
+        "browseBrands": "Parcourir les marques",
+        "explore": "Explorer",
+        "discoverWorld": "Découvrez l’univers de Relora",
+        "discoverWorldDescription": "Entrez dans des catégories sélectionnées par la mode premium, les trouvailles rares et le goût des collectionneurs.",
+        "viewAllCategories": "Voir toutes les catégories",
+        "category": "Catégorie",
+        "trendingAuctions": "Enchères tendance",
+        "trendingDescription": "Les lots qui attirent le plus d’attention en ce moment.",
+        "browseMore": "Voir plus",
+        "scrollTrending": "Faire défiler les sélections tendance",
+        "categories": "Catégories",
+        "shopByCategory": "Acheter par catégorie",
+        "shopByCategoryDescription": "Explorez des styles marquants dans la mode, le streetwear et les détails de collection.",
+        "whyRelora": "Pourquoi Relora",
+        "whyTitle": "Une marketplace façonnée autour du goût, de la confiance et des pièces remarquables",
+        "whyDescription": "Conçue pour ceux qui veulent plus qu’une infinité d’annonces — un endroit où la découverte semble sélectionnée.",
+        "curatedTitle": "Marketplace soigneusement sélectionnée",
+        "curatedDescription": "Chaque annonce est censée répondre à des standards plus élevés de qualité, de présentation et d’authenticité.",
+        "communityTitle": "Grandir avec notre communauté",
+        "communityDescription": "Nous sommes au début de notre parcours et améliorons continuellement la plateforme grâce aux retours des utilisateurs.",
+        "premiumTitle": "Conçu pour la mode premium",
+        "premiumDescription": "Découvrez vêtements de luxe, sacs de créateur, sneakers, montres et pièces fashion de collection au même endroit.",
+        "trustTitle": "Pensé pour la confiance",
+        "trustDescription": "Comptes sécurisés, annonces transparentes et marketplace centrée sur la confiance durable des acheteurs et vendeurs.",
+        "newListings": "Nouvelles annonces",
+        "newListingsDescription": "De nouvelles arrivées qui méritent un regard de plus près.",
+        "scrollNew": "Faire défiler les enchères récemment ajoutées",
+        "brands": "Marques",
+        "shopByBrand": "Acheter par marque",
+        "shopByBrandDescription": "Explorez des pièces remarquables de labels mondialement reconnus et de noms très désirables.",
+        "brand": "Marque",
+        "endingSoon": "Se termine bientôt",
+        "endingSoonDescription": "Enchères proches de la ligne d’arrivée — dernière chance de placer une offre.",
+        "scrollEnding": "Faire défiler les enchères qui se terminent bientôt",
+        "catalogPreference": "Préférence de catalogue",
+        "currentlyBrowsing": "Catalogue actuel : {preference}",
+        "preferenceDescription": "Vous pouvez changer le catalogue de votre page d’accueil à tout moment. Relora se souviendra de votre choix la prochaine fois.",
+        "seoFooter": "Relora est une marketplace d’enchères en ligne centrée sur la mode rare, les vêtements de créateur et les pièces de collection. Parcourez des annonces sélectionnées, enchérissez en confiance et découvrez des articles distinctifs, mémorables et dignes d’être possédés.",
+        "collections": {
+            "1": {
+                "label": "Direction archive",
+                "title": "Avant-garde",
+                "subtitle": "Rick Owens, Margiela, silhouettes superposées et coupes expérimentales."
+            },
+            "2": {
+                "label": "Luxe moderne",
+                "title": "Minimal Designer",
+                "subtitle": "Lignes épurées, tons neutres, essentiels façon Prada et coupes raffinées."
+            },
+            "3": {
+                "label": "Culture street",
+                "title": "Streetwear élevé",
+                "subtitle": "Coupes oversize, sneakers, hoodies et pièces quotidiennes affirmées."
+            }
+        },
+        "categoryNames": {
+            "Vintage": "Vintage",
+            "Streetwear": "Streetwear",
+            "Designer": "Créateur",
+            "Sneakers": "Sneakers",
+            "Accessories": "Accessoires"
+        },
+        "mockAuctions": {
+            "1": {
+                "title": "Canape vintage en cuir - etat impeccable",
+                "timeLeft": "2 jours 14 heures"
+            },
+            "2": {
+                "title": "Peinture a l huile originale par artiste inconnu",
+                "timeLeft": "3 jours 8 heures"
+            },
+            "3": {
+                "title": "Montre Rolex Submariner edition limitee",
+                "timeLeft": "1 jour 6 heures"
+            },
+            "4": {
+                "title": "Armoire ancienne en bois avec miroir",
+                "timeLeft": "4 jours 20 heures"
+            },
+            "5": {
+                "title": "Collier vintage de perles - chaine or 18K",
+                "timeLeft": "5 jours 12 heures"
+            },
+            "6": {
+                "title": "Ordinateur portable gaming neuf RTX 4090",
+                "timeLeft": "18 heures 30 minutes"
+            },
+            "7": {
+                "title": "Vinyle Beatles signe premiere edition",
+                "timeLeft": "2 jours 5 heures"
+            },
+            "8": {
+                "title": "Vase italien en ceramique fait main",
+                "timeLeft": "6 jours 10 heures"
+            },
+            "9": {
+                "title": "Sac photo vintage en cuir",
+                "timeLeft": "1 jour 12 heures"
+            },
+            "10": {
+                "title": "Appareil photo analogique classique 35mm",
+                "timeLeft": "3 jours 4 heures"
+            },
+            "11": {
+                "title": "Collection de pieces en argent sterling",
+                "timeLeft": "7 jours 2 heures"
+            },
+            "12": {
+                "title": "Display de taxidermie rare",
+                "timeLeft": "4 jours 18 heures"
+            }
+        }
+    },
+    "landing": {
+        "eyebrow": "Marketplace de mode archive",
+        "heroDescription": "Une marketplace d'encheres selectionnee pour la mode rare, les pieces d'archive et les vetements de collection.",
+        "heroTagline": "Pas guide par les tendances. Guide par le temps.",
+        "getEarlyAccess": "Obtenir un acces anticipe",
+        "brandTitle": "Pas de mode de masse. Archive uniquement.",
+        "brandDescription": "Centree sur les vetements rares, les archives de createur et les pieces avec poids culturel.",
+        "aboutTitle": "Concue pour la mode archive",
+        "aboutFirst": "Relora est concue pour les personnes qui valorisent la mode rare, les archives de createur et les pieces qui definissent une identite - pas les tendances rapides.",
+        "aboutSecond": "Chaque annonce doit avoir du poids - des vetements d'archive aux sorties rares qui ne sont plus accessibles dans le retail traditionnel.",
+        "whyEyebrow": "Pourquoi Relora",
+        "whyTitle": "Concue autour de la rarete et de la valeur d'archive",
+        "values": {
+            "archive": {
+                "title": "Archive",
+                "description": "Focus sur les archives de createur et les pieces de saisons passees qui definissent l'histoire de la mode."
+            },
+            "rare": {
+                "title": "Rare",
+                "description": "Pieces limitees avec une vraie rarete - pas un inventaire produit en masse."
+            },
+            "market": {
+                "title": "Guide par le marche",
+                "description": "La valeur est definie par la demande, pas par les etiquettes ou les prix retail."
+            }
+        },
+        "demandTitle": "Pieces d'archive. Demande reelle.",
+        "demandDescription": "Concue pour celles et ceux qui comprennent la mode au-dela des saisons.",
+        "earlyAccess": "Acces anticipe",
+        "earlyTitle": "Accedez a la mode rare avant qu'elle disparaisse",
+        "earlyDescription": "Rejoignez-nous tot et soyez parmi les premiers a explorer les vetements d'archive, les pieces rares et les encheres selectionnees sur Relora.",
+        "emailPlaceholder": "Saisissez votre e-mail",
+        "requestAccess": "Demander l'acces",
+        "consent": "En envoyant ce formulaire, vous acceptez d'etre contacte au sujet de l'acces anticipe et des mises a jour de la plateforme.",
+        "footerDescription": "Relora est une marketplace d'encheres en ligne selectionnee, centree sur la mode rare, les archives de createur et les vetements de collection. La plateforme est developpee pour offrir une experience raffinee, minimale et guidee par la demande afin de decouvrir et d'acquerir des pieces d'archive.",
+        "location": "Riga, Lettonie. Union europeenne"
+    },
+    "info": {
+        "about": {
+            "eyebrow": "A propos de Relora",
+            "title": "Mode rare, encheres raffinees et meilleure attention aux pieces remarquables.",
+            "description": "Relora est une marketplace d'encheres selectionnee pour la mode rare, les pieces intemporelles et le design de collection - pour celles et ceux qui preferent l'individualite a la consommation de masse.",
+            "founded": "Fonde en 2026",
+            "location": "Riga, Lettonie",
+            "curatedMarketplace": "Marketplace selectionnee",
+            "highlightLabel": "Point fort",
+            "highlights": {
+                "curated": {
+                    "title": "Selection soignee",
+                    "text": "Les pieces doivent sembler choisies, pas perdues dans un inventaire generique sans fin."
+                },
+                "auction": {
+                    "title": "Energie d'enchere",
+                    "text": "Les encheres creent du mouvement, du timing et une perception plus forte de la valeur."
+                },
+                "presentation": {
+                    "title": "Presentation claire",
+                    "text": "Une interface plus calme donne plus d'espace a l'article lui-meme."
+                }
+            },
+            "images": {
+                "editorial": "Editorial mode",
+                "clothing": "Vetements de createur",
+                "piece": "Piece mode selectionnee"
+            },
+            "whatEyebrow": "Ce qu'est Relora",
+            "whatTitle": "Une marketplace construite autour de la decouverte, du timing et de la valeur creee par la demande reelle.",
+            "whatParagraphs": [
+                "Relora rassemble acheteurs, collectionneurs, passionnes et vendeurs dans un environnement d'encheres en ligne raffine. La plateforme aide a decouvrir des pieces avec caractere, rarete et attrait durable.",
+                "Au lieu d'un inventaire de masse sans fin, Relora se concentre sur les articles qui se distinguent. Des vetements de createur aux pieces d'archive et objets lifestyle uniques, l'objectif est une marketplace plus intentionnelle.",
+                "La plateforme combine l'energie des encheres en direct avec la clarte du e-commerce moderne. Il ne s'agit pas seulement d'acheter vite, mais de decouvrir, d'attendre le bon moment et de reveler la valeur par l'interet reel."
+            ],
+            "audienceEyebrow": "A qui cela s'adresse",
+            "audienceTitle": "Aux acheteurs, collectionneurs, passionnes de mode et vendeurs qui veulent le bon environnement.",
+            "audienceParagraphs": [
+                "Relora est concue pour les personnes qui veulent plus qu'une experience d'achat ordinaire: pieces rares, accessoires remarquables, objets de collection et marketplace plus calme.",
+                "Elle est aussi faite pour les vendeurs qui veulent que leurs articles soient vus correctement - pas enfouis dans le bruit, mais presentes dans un cadre plus clair ou la qualite compte."
+            ],
+            "discoverEyebrow": "Ce que vous pouvez decouvrir",
+            "discoverTitle": "Mode de createur, vetements d'archive, accessoires, chaussures, sacs et objets de collection dignes d'attention.",
+            "discoverParagraphs": [
+                "La marketplace est destinee a proposer des categories comme la mode de createur, les vetements d'archive, accessoires, chaussures, sacs, objets lifestyle et autres articles de collection.",
+                "Le focus reste sur des pieces qui semblent selectionnees plutot que generiques - choisies pour leur design, rarete, identite ou pertinence culturelle."
+            ],
+            "auctionsEyebrow": "Pourquoi les encheres comptent",
+            "auctionsTitle": "Les encheres creent une relation differente entre acheteur, vendeur et article.",
+            "auctionsDescription": "Au lieu de simplement parcourir et payer, les utilisateurs participent a un processus ou la valeur se decouvre avec le temps. Pour les vendeurs, les encheres creent de la visibilite et une chance d'atteindre la vraie valeur de marche. Pour les acheteurs, elles creent anticipation, concurrence et recompense.",
+            "difference": {
+                "eyebrow": "Ce qui rend Relora differente",
+                "values": {
+                    "curated": "Une marketplace selectionnee au lieu d'un inventaire de masse",
+                    "focus": "Un focus sur la mode rare, le design de collection et les pieces remarquables",
+                    "bidding": "Des encheres en temps reel faconnees par la demande et l'interet du marche",
+                    "interface": "Une interface claire qui garde l'attention sur l'annonce"
+                }
+            },
+            "missionEyebrow": "Notre mission",
+            "missionTitle": "Construire une marketplace ou les pieces rares sont decouvertes, appreciees et valorisees correctement.",
+            "missionDescription": "Relora se construit comme plus qu'une plateforme transactionnelle. La vision a long terme est une destination pour la decouverte selectionnee, des vendeurs fiables et un public qui valorise le style, la rarete et le choix reflechi.",
+            "footerMeta": "Fonde en 2026 - Riga, Lettonie",
+            "footerTagline": "Pas de marche de masse. Jamais ordinaire."
+        },
+        "faq": {
+            "title": "Questions frequentes",
+            "description": "Tout ce qu'il faut savoir sur l'achat, la vente, les encheres, la livraison, les paiements, les retours et l'authenticite sur Relora - la marketplace selectionnee pour la mode de createur, les archives, le streetwear luxe, le vintage et les pieces de collection.",
+            "items": {
+                "1": {
+                    "question": "Qu'est-ce que Relora ?",
+                    "paragraphs": [
+                        "Relora est une marketplace selectionnee dediee a la mode de createur, aux vetements d'archive, au luxury streetwear, au vintage et aux pieces rares de collection.",
+                        "La plateforme permet d'acheter et de vendre des pieces de marques comme Rick Owens, Raf Simons, Balenciaga, Vetements, Helmut Lang, Number (N)ine, Undercover, Chrome Hearts, Maison Margiela, Yohji Yamamoto et bien d'autres.",
+                        "Contrairement aux marketplaces classiques, Relora se concentre sur la culture mode, les annonces selectionnees, une navigation plus claire et une experience premium."
+                    ]
+                },
+                "2": {
+                    "question": "Que puis-je vendre sur Relora ?",
+                    "paragraphs": [
+                        "Vous pouvez vendre des vetements de createur, de la mode archive, du luxury streetwear, du vintage, des sneakers, sacs, accessoires, pieces runway et articles de collection rares.",
+                        "Les categories populaires incluent vestes de createur, hoodies, denim, chaussures, accessoires de luxe, archives runway et collections limitees.",
+                        "Les contrefacons, repliques et annonces trompeuses sont interdites."
+                    ]
+                },
+                "3": {
+                    "question": "Comment creer une annonce ?",
+                    "paragraphs": [
+                        "Les vendeurs creent une annonce en ajoutant des photos, des details d'article, les informations de categorie et un prix ou une configuration d'enchere.",
+                        "Des descriptions precises, mesures, details d'etat et photos claires renforcent la confiance des acheteurs et les chances de vente.",
+                        "Certaines annonces peuvent passer par une moderation avant d'etre visibles publiquement."
+                    ]
+                },
+                "4": {
+                    "question": "Comment fonctionnent les encheres ?",
+                    "paragraphs": [
+                        "Les vendeurs peuvent lancer des encheres limitees dans le temps pour les articles eligibles. Les acheteurs encherissent pendant la periode, et l'offre la plus elevee a la fin gagne.",
+                        "Les encheres sont utiles pour la mode archive rare, les pieces de createur de collection et les articles difficiles a evaluer.",
+                        "La duree et la disponibilite peuvent varier selon les reglages du vendeur et les regles de la marketplace."
+                    ]
+                },
+                "5": {
+                    "question": "Comment Relora gere l'authenticite ?",
+                    "paragraphs": [
+                        "Relora vise a reduire les contrefacons grace a la moderation, au suivi des vendeurs, a des exigences detaillees et a des controles manuels.",
+                        "Les acheteurs doivent examiner photos, etiquettes, coutures, hardware, tags et details d'etat avant d'acheter de la mode de luxe ou de createur.",
+                        "Les annonces suspectees de violer les standards d'authenticite peuvent etre retirees, masquees ou revisees manuellement."
+                    ]
+                },
+                "6": {
+                    "question": "Dans quel etat les articles doivent-ils etre ?",
+                    "paragraphs": [
+                        "Les vendeurs doivent decrire precisement l'etat, y compris defauts, traces d'usure, decolorations, reparations, taches ou retouches.",
+                        "La transparence aide les acheteurs a prendre des decisions informees et reduit les litiges lies a l'etat.",
+                        "La mode archive et vintage peut presenter des signes d'age, qui doivent toujours etre clairement indiques."
+                    ]
+                },
+                "7": {
+                    "question": "Relora prend-elle en charge la livraison mondiale ?",
+                    "paragraphs": [
+                        "De nombreux vendeurs Relora proposent l'expedition internationale pour la mode luxe, archive et de createur.",
+                        "Les couts, delais, frais de douane et taxes d'importation peuvent varier selon le pays et le transporteur.",
+                        "Les acheteurs doivent verifier les details de livraison avant de finaliser l'achat."
+                    ]
+                },
+                "8": {
+                    "question": "Quels moyens de paiement sont pris en charge ?",
+                    "paragraphs": [
+                        "Les moyens de paiement peuvent varier selon la region, les reglages du vendeur et les integrations de la plateforme.",
+                        "Relora continue d'elargir les paiements securises pour ameliorer l'experience des acheteurs, vendeurs, passionnes et collectionneurs.",
+                        "Les acheteurs doivent toujours confirmer les details de commande avant de payer."
+                    ]
+                },
+                "9": {
+                    "question": "Puis-je retourner un article ?",
+                    "paragraphs": [
+                        "L'eligibilite au retour depend des politiques vendeur, de l'etat, des questions d'authenticite et de l'issue d'un examen.",
+                        "Les acheteurs sont encourages a verifier les details, photos, mesures et descriptions avant d'acheter une piece de createur ou d'archive.",
+                        "Les articles nettement differents de leur description peuvent etre eligibles a un examen de litige."
+                    ]
+                },
+                "10": {
+                    "question": "Que se passe-t-il en cas de litige ?",
+                    "paragraphs": [
+                        "Relora developpe des processus de litige pour aider acheteurs et vendeurs sur les problemes de livraison, d'authenticite, de dommages ou de description incorrecte.",
+                        "Acheteurs et vendeurs doivent conserver preuve d'expedition, suivi, communications et photos detaillees lorsque c'est possible.",
+                        "La fraude, l'abus de remboursements ou les comportements malhonnetes peuvent mener a des restrictions de compte ou au retrait de la plateforme."
+                    ]
+                },
+                "11": {
+                    "question": "Pourquoi utiliser Relora plutot qu'une autre marketplace ?",
+                    "paragraphs": [
+                        "Relora se concentre sur la mode de createur selectionnee au lieu de submerger les utilisateurs d'annonces de masse de faible qualite.",
+                        "La plateforme est concue pour la mode archive, les vetements luxe, les pieces de collection, les encheres de createur, le vintage et les communautes mode.",
+                        "Une navigation plus claire, des annonces premium, des categories mode et les encheres creent une experience plus specialisee."
+                    ]
+                },
+                "12": {
+                    "question": "Relora est-elle gratuite ?",
+                    "paragraphs": [
+                        "Parcourir la marketplace est gratuit. Frais de vente, fonctions premium, commissions ou outils optionnels peuvent evoluer avec la plateforme.",
+                        "Relora ameliore continuellement l'infrastructure, la moderation, les outils vendeur et les encheres pour soutenir la croissance."
+                    ]
+                },
+                "13": {
+                    "question": "Comment ameliorer mes chances de vendre ?",
+                    "paragraphs": [
+                        "Des photos de qualite, descriptions exactes, details d'etat transparents, mesures et prix competitifs ameliorent la performance d'une annonce.",
+                        "Les acheteurs d'archive recherchent souvent des collections, saisons runway, vetements rares et pieces de createur difficiles a trouver.",
+                        "Les annonces detaillees renforcent la confiance et la visibilite dans la marketplace."
+                    ]
+                },
+                "14": {
+                    "question": "Les faux ou repliques sont-ils autorises ?",
+                    "paragraphs": [
+                        "Non. Les contrefacons, repliques, faux articles de createur et annonces trompeuses sont interdits sur Relora.",
+                        "Les vendeurs qui diffusent des contrefacons peuvent subir retrait d'annonce, suspension de compte ou exclusion permanente."
+                    ]
+                },
+                "15": {
+                    "question": "Relora se concentre-t-elle seulement sur la mode luxe ?",
+                    "paragraphs": [
+                        "Relora se concentre surtout sur la mode de createur, les collections archive, le luxury streetwear, l'avant-garde et les vetements de collection.",
+                        "La plateforme accueille aussi des pieces mode de qualite qui correspondent a l'esthetique de la marketplace et aux interets de la communaute."
+                    ]
+                }
+            }
+        },
+        "legal": "Legal",
+        "summary": "Resume",
+        "onThisPage": "Sur cette page",
+        "important": "Important",
+        "email": "E-mail",
+        "lastUpdated": "Derniere mise a jour : {date}",
+        "terms": {
+            "title": "Conditions d'utilisation",
+            "description": "Ces Conditions d'utilisation regissent votre acces a la plateforme Relora et son utilisation, y compris la navigation, la creation d'annonces, les encheres et les transactions.",
+            "summary": "En utilisant Relora, vous acceptez de respecter les regles de la plateforme, de fournir des informations exactes et de respecter le processus d'enchere, les obligations de paiement et les standards d'annonce.",
+            "footerMeta": "Relora - Conditions d'utilisation",
+            "footerText": "Des regles claires soutiennent une marketplace plus saine.",
+            "sections": {
+                "1": {
+                    "title": "1. Acceptation des conditions",
+                    "content": [
+                        "En accedant a Relora ou en l'utilisant, vous acceptez d'etre lie par ces Conditions. Si vous n'etes pas d'accord, vous ne devez pas utiliser la plateforme."
+                    ]
+                },
+                "2": {
+                    "title": "2. Comptes utilisateur",
+                    "content": [
+                        "Un compte peut etre requis pour acceder a certaines fonctions. Vous etes responsable de la confidentialite de vos identifiants.",
+                        "Vous acceptez de fournir des informations exactes et completes et de les maintenir a jour."
+                    ]
+                },
+                "3": {
+                    "title": "3. Encheres et offres",
+                    "content": [
+                        "Relora fonctionne comme une marketplace basee sur les encheres ou les utilisateurs peuvent publier des articles et placer des offres.",
+                        "En placant une offre, vous acceptez qu'elle soit contraignante et que vous avez l'intention d'acheter l'article si votre offre est la plus elevee a la fin de l'enchere.",
+                        "Les vendeurs sont responsables de decrire les articles avec exactitude, y compris l'etat, l'authenticite et les details."
+                    ]
+                },
+                "4": {
+                    "title": "4. Transactions",
+                    "content": [
+                        "Lorsqu'une enchere se termine, le plus offrant est tenu de finaliser la transaction.",
+                        "Les conditions de paiement et de livraison peuvent dependre des politiques de la plateforme et des integrations avec les prestataires de paiement.",
+                        "Relora peut agir comme intermediaire mais n'est pas le vendeur direct des articles annonces."
+                    ]
+                },
+                "5": {
+                    "title": "5. Frais et paiements",
+                    "content": [
+                        "Certaines fonctions ou transactions peuvent etre soumises a des frais. Ces frais seront communiques clairement avant de s'appliquer.",
+                        "Relora se reserve le droit de mettre a jour les prix et structures de frais a tout moment."
+                    ]
+                },
+                "6": {
+                    "title": "6. Comportements interdits",
+                    "list": [
+                        "Publier des articles contrefaits ou illegaux",
+                        "Manipuler les encheres ou adopter un comportement frauduleux",
+                        "Presenter des articles de maniere trompeuse ou fournir de fausses informations",
+                        "Utiliser la plateforme a des fins illicites"
+                    ]
+                },
+                "7": {
+                    "title": "7. Limitation de responsabilite",
+                    "content": [
+                        "Relora fournit la plateforme telle quelle et ne garantit pas l'exactitude des annonces, le comportement des utilisateurs ni l'issue des transactions.",
+                        "Dans la mesure permise par la loi, Relora n'est pas responsable des dommages directs ou indirects."
+                    ]
+                },
+                "8": {
+                    "title": "8. Suspension et cloture de compte",
+                    "content": [
+                        "Relora se reserve le droit de suspendre ou cloturer les comptes qui violent ces Conditions ou adoptent un comportement nuisible ou abusif."
+                    ]
+                },
+                "9": {
+                    "title": "9. Modifications des conditions",
+                    "content": [
+                        "Nous pouvons mettre a jour ces Conditions de temps a autre. La poursuite de l'utilisation de la plateforme apres mise a jour vaut acceptation des Conditions revisees."
+                    ]
+                },
+                "10": {
+                    "title": "10. Contact",
+                    "content": [
+                        "Si vous avez des questions sur ces Conditions, vous pouvez nous contacter via la plateforme."
+                    ]
+                }
+            },
+            "updatedDate": "17 mars 2026"
+        },
+        "pages": {
+            "privacy": {
+                "eyebrow": "Juridique",
+                "title": "Politique de confidentialite",
+                "updatedDate": "17 mars 2026",
+                "description": "Cette politique explique comment Relora traite les donnees personnelles lorsque vous naviguez, creez un compte, encherrissez, vendez ou contactez le support.",
+                "summaryTitle": "Resume",
+                "summary": "Nous utilisons les donnees pour faire fonctionner les comptes, les encheres, les transactions, la securite et le support. Nous ne vendons pas les donnees personnelles.",
+                "summaryBullets": [],
+                "stepsEyebrow": "Processus",
+                "stepsTitle": "Les etapes principales",
+                "steps": [{
+                        "number": "01",
+                        "title": "Verifier les informations",
+                        "description": "Lisez les details et exigences avant de continuer."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Rester sur Relora",
+                        "description": "Gardez paiement et echanges dans la plateforme."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Conserver les preuves",
+                        "description": "Gardez photos, messages et suivi."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Suivre les instructions",
+                        "description": "Repondez a temps et suivez les etapes affichees."
+                    }
+                ],
+                "typesEyebrow": "Possibilites",
+                "typesTitle": "Facons de collaborer",
+                "types": [{
+                        "number": "01",
+                        "title": "Marques et designers",
+                        "description": "Collections curatees et pieces d archive pour une audience mode."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Boutiques et retailers",
+                        "description": "Des stocks selectionnes peuvent trouver de nouveaux acheteurs."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Createurs et medias",
+                        "description": "Articles, campagnes et projets de communaute."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Services du secteur",
+                        "description": "Collaboration autour de l authenticite, livraison, preservation et support."
+                    }
+                ],
+                "categoriesEyebrow": "Categories de cookies",
+                "categoriesTitle": "Comment les cookies sont utilises",
+                "categories": [{
+                        "number": "01",
+                        "title": "Strictement necessaires",
+                        "description": "Toujours actifs. Requis pour connexion, securite, paiement et fonctions essentielles."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Preferences",
+                        "description": "Memorise les reglages comme la langue ou la preference catalogue."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Analyse",
+                        "description": "Optionnel. Aide a comprendre l usage et ameliorer la plateforme."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Marketing",
+                        "description": "Optionnel. Peut mesurer les campagnes ou rendre la publicite plus pertinente."
+                    }
+                ],
+                "footerMeta": "Relora - Politique de confidentialite",
+                "footerText": "Des regles de confidentialite claires renforcent la confiance.",
+                "sections": [{
+                        "id": "introduction",
+                        "title": "1. Partie 1",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ]
+                    },
+                    {
+                        "id": "collected",
+                        "title": "2. Partie 2",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ],
+                        "list": [
+                            "Verifier les informations avant d agir",
+                            "Conserver des preuves claires",
+                            "Suivre les instructions de Relora"
+                        ]
+                    },
+                    {
+                        "id": "usage",
+                        "title": "3. Partie 3",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ],
+                        "list": [
+                            "Verifier les informations avant d agir",
+                            "Conserver des preuves claires",
+                            "Suivre les instructions de Relora"
+                        ]
+                    },
+                    {
+                        "id": "legal-basis",
+                        "title": "4. Partie 4",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ]
+                    },
+                    {
+                        "id": "sharing",
+                        "title": "5. Partie 5",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ],
+                        "list": [
+                            "Verifier les informations avant d agir",
+                            "Conserver des preuves claires",
+                            "Suivre les instructions de Relora"
+                        ]
+                    },
+                    {
+                        "id": "cookies",
+                        "title": "6. Partie 6",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ]
+                    },
+                    {
+                        "id": "retention",
+                        "title": "7. Partie 7",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ]
+                    },
+                    {
+                        "id": "security",
+                        "title": "8. Partie 8",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ]
+                    },
+                    {
+                        "id": "rights",
+                        "title": "9. Partie 9",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ]
+                    },
+                    {
+                        "id": "third-party",
+                        "title": "10. Partie 10",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ]
+                    },
+                    {
+                        "id": "children",
+                        "title": "11. Partie 11",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ]
+                    },
+                    {
+                        "id": "changes",
+                        "title": "12. Partie 12",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ]
+                    },
+                    {
+                        "id": "contact",
+                        "title": "13. Partie 13",
+                        "content": [
+                            "Cette section presente les regles essentielles pour la confidentialite. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                        ],
+                        "email": "privacy@relora.com"
+                    }
+                ]
+            },
+            "buyerProtection": {
+                "eyebrow": "Acheter sur Relora",
+                "title": "Protection acheteur",
+                "updatedDate": "24 juillet 2026",
+                "description": "Achetez la mode premium et archive avec plus de confiance lorsque le paiement et la commande restent entierement sur Relora.",
+                "summaryTitle": "Resume de protection",
+                "summary": "Payez via Relora, recevez une livraison suivie et inspectez la commande dans les 48 heures.",
+                "summaryBullets": [
+                    "Paiement securise sur la plateforme",
+                    "Livraison suivie",
+                    "Periode d inspection de 48 heures"
+                ],
+                "stepsEyebrow": "Processus",
+                "stepsTitle": "Les etapes principales",
+                "steps": [{
+                        "number": "01",
+                        "title": "Verifier les informations",
+                        "description": "Lisez les details et exigences avant de continuer."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Rester sur Relora",
+                        "description": "Gardez paiement et echanges dans la plateforme."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Conserver les preuves",
+                        "description": "Gardez photos, messages et suivi."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Suivre les instructions",
+                        "description": "Repondez a temps et suivez les etapes affichees."
+                    }
+                ],
+                "typesEyebrow": "Possibilites",
+                "typesTitle": "Facons de collaborer",
+                "types": [{
+                        "number": "01",
+                        "title": "Marques et designers",
+                        "description": "Collections curatees et pieces d archive pour une audience mode."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Boutiques et retailers",
+                        "description": "Des stocks selectionnes peuvent trouver de nouveaux acheteurs."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Createurs et medias",
+                        "description": "Articles, campagnes et projets de communaute."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Services du secteur",
+                        "description": "Collaboration autour de l authenticite, livraison, preservation et support."
+                    }
+                ],
+                "categoriesEyebrow": "Categories de cookies",
+                "categoriesTitle": "Comment les cookies sont utilises",
+                "categories": [{
+                        "number": "01",
+                        "title": "Strictement necessaires",
+                        "description": "Toujours actifs. Requis pour connexion, securite, paiement et fonctions essentielles."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Preferences",
+                        "description": "Memorise les reglages comme la langue ou la preference catalogue."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Analyse",
+                        "description": "Optionnel. Aide a comprendre l usage et ameliorer la plateforme."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Marketing",
+                        "description": "Optionnel. Peut mesurer les campagnes ou rendre la publicite plus pertinente."
+                    }
+                ],
+                "footerMeta": "Relora - Protection acheteur",
+                "footerText": "Encherissez avec soin. Payez en securite. Inspectez chaque livraison.",
+                "sections": []
+            },
+            "returnsPolicy": {
+                "eyebrow": "Acheter sur Relora",
+                "title": "Politique de retours",
+                "updatedDate": "24 juillet 2026",
+                "description": "Decouvrez quand un article peut etre retourne, comment demander un retour et ce qui se passe apres approbation.",
+                "summaryTitle": "Resume des retours",
+                "summary": "Les retours dependent du motif et du statut du vendeur. Ne renvoyez jamais un article avant de recevoir les instructions.",
+                "summaryBullets": [
+                    "Signaler les problemes sous 48 heures",
+                    "Attendre l approbation avant l expedition",
+                    "Toujours utiliser un retour suivi"
+                ],
+                "stepsEyebrow": "Processus",
+                "stepsTitle": "Les etapes principales",
+                "steps": [{
+                        "number": "01",
+                        "title": "Verifier les informations",
+                        "description": "Lisez les details et exigences avant de continuer."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Rester sur Relora",
+                        "description": "Gardez paiement et echanges dans la plateforme."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Conserver les preuves",
+                        "description": "Gardez photos, messages et suivi."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Suivre les instructions",
+                        "description": "Repondez a temps et suivez les etapes affichees."
+                    }
+                ],
+                "typesEyebrow": "Possibilites",
+                "typesTitle": "Facons de collaborer",
+                "types": [{
+                        "number": "01",
+                        "title": "Marques et designers",
+                        "description": "Collections curatees et pieces d archive pour une audience mode."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Boutiques et retailers",
+                        "description": "Des stocks selectionnes peuvent trouver de nouveaux acheteurs."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Createurs et medias",
+                        "description": "Articles, campagnes et projets de communaute."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Services du secteur",
+                        "description": "Collaboration autour de l authenticite, livraison, preservation et support."
+                    }
+                ],
+                "categoriesEyebrow": "Categories de cookies",
+                "categoriesTitle": "Comment les cookies sont utilises",
+                "categories": [{
+                        "number": "01",
+                        "title": "Strictement necessaires",
+                        "description": "Toujours actifs. Requis pour connexion, securite, paiement et fonctions essentielles."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Preferences",
+                        "description": "Memorise les reglages comme la langue ou la preference catalogue."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Analyse",
+                        "description": "Optionnel. Aide a comprendre l usage et ameliorer la plateforme."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Marketing",
+                        "description": "Optionnel. Peut mesurer les campagnes ou rendre la publicite plus pertinente."
+                    }
+                ],
+                "footerMeta": "Relora - Politique de retours",
+                "footerText": "Des instructions claires rendent chaque retour plus sur.",
+                "sections": []
+            },
+            "howToSell": {
+                "eyebrow": "Vendre sur Relora",
+                "title": "Comment vendre",
+                "updatedDate": "24 juillet 2026",
+                "description": "Listez de la mode premium et archive, touchez des acheteurs interesses et gerez l enchere, la livraison et le paiement via Relora.",
+                "summaryTitle": "Resume vendeur",
+                "summary": "Creez une annonce exacte, passez la moderation, lancez l enchere et expediez avec suivi apres paiement.",
+                "summaryBullets": [
+                    "Articles authentiques uniquement",
+                    "Photos et descriptions claires",
+                    "Livraison suivie apres paiement"
+                ],
+                "primaryAction": "Vendre un article",
+                "secondaryAction": "Mes annonces",
+                "stepsEyebrow": "Processus",
+                "stepsTitle": "Les etapes principales",
+                "steps": [{
+                        "number": "01",
+                        "title": "Verifier les informations",
+                        "description": "Lisez les details et exigences avant de continuer."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Rester sur Relora",
+                        "description": "Gardez paiement et echanges dans la plateforme."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Conserver les preuves",
+                        "description": "Gardez photos, messages et suivi."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Suivre les instructions",
+                        "description": "Repondez a temps et suivez les etapes affichees."
+                    }
+                ],
+                "typesEyebrow": "Possibilites",
+                "typesTitle": "Facons de collaborer",
+                "types": [{
+                        "number": "01",
+                        "title": "Marques et designers",
+                        "description": "Collections curatees et pieces d archive pour une audience mode."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Boutiques et retailers",
+                        "description": "Des stocks selectionnes peuvent trouver de nouveaux acheteurs."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Createurs et medias",
+                        "description": "Articles, campagnes et projets de communaute."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Services du secteur",
+                        "description": "Collaboration autour de l authenticite, livraison, preservation et support."
+                    }
+                ],
+                "categoriesEyebrow": "Categories de cookies",
+                "categoriesTitle": "Comment les cookies sont utilises",
+                "categories": [{
+                        "number": "01",
+                        "title": "Strictement necessaires",
+                        "description": "Toujours actifs. Requis pour connexion, securite, paiement et fonctions essentielles."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Preferences",
+                        "description": "Memorise les reglages comme la langue ou la preference catalogue."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Analyse",
+                        "description": "Optionnel. Aide a comprendre l usage et ameliorer la plateforme."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Marketing",
+                        "description": "Optionnel. Peut mesurer les campagnes ou rendre la publicite plus pertinente."
+                    }
+                ],
+                "footerMeta": "Relora - Comment vendre",
+                "footerText": "Pret a trouver le prochain proprietaire de votre article ?",
+                "footerAction": "Creer une annonce",
+                "sections": []
+            },
+            "sellerProtection": {
+                "eyebrow": "Vendre sur Relora",
+                "title": "Protection vendeur",
+                "updatedDate": "24 juillet 2026",
+                "description": "Decouvrez comment des annonces exactes, des paiements confirmes, le suivi et les preuves peuvent proteger les vendeurs eligibles.",
+                "summaryTitle": "Resume de protection",
+                "summary": "Expediez seulement apres paiement confirme, utilisez l adresse de commande, ajoutez un suivi valide et gardez les preuves.",
+                "summaryBullets": [
+                    "Paiement confirme sur la plateforme",
+                    "Livraison suivie a l adresse de commande",
+                    "Examen fonde sur les preuves"
+                ],
+                "primaryAction": "Vendre un article",
+                "secondaryAction": "Voir les ventes",
+                "stepsEyebrow": "Processus",
+                "stepsTitle": "Les etapes principales",
+                "steps": [{
+                        "number": "01",
+                        "title": "Verifier les informations",
+                        "description": "Lisez les details et exigences avant de continuer."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Rester sur Relora",
+                        "description": "Gardez paiement et echanges dans la plateforme."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Conserver les preuves",
+                        "description": "Gardez photos, messages et suivi."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Suivre les instructions",
+                        "description": "Repondez a temps et suivez les etapes affichees."
+                    }
+                ],
+                "typesEyebrow": "Possibilites",
+                "typesTitle": "Facons de collaborer",
+                "types": [{
+                        "number": "01",
+                        "title": "Marques et designers",
+                        "description": "Collections curatees et pieces d archive pour une audience mode."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Boutiques et retailers",
+                        "description": "Des stocks selectionnes peuvent trouver de nouveaux acheteurs."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Createurs et medias",
+                        "description": "Articles, campagnes et projets de communaute."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Services du secteur",
+                        "description": "Collaboration autour de l authenticite, livraison, preservation et support."
+                    }
+                ],
+                "categoriesEyebrow": "Categories de cookies",
+                "categoriesTitle": "Comment les cookies sont utilises",
+                "categories": [{
+                        "number": "01",
+                        "title": "Strictement necessaires",
+                        "description": "Toujours actifs. Requis pour connexion, securite, paiement et fonctions essentielles."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Preferences",
+                        "description": "Memorise les reglages comme la langue ou la preference catalogue."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Analyse",
+                        "description": "Optionnel. Aide a comprendre l usage et ameliorer la plateforme."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Marketing",
+                        "description": "Optionnel. Peut mesurer les campagnes ou rendre la publicite plus pertinente."
+                    }
+                ],
+                "footerMeta": "Relora - Protection vendeur",
+                "footerText": "Listez avec precision. Expediez en securite. Gardez vos preuves.",
+                "footerAction": "Creer une annonce",
+                "sections": []
+            },
+            "brandPartnerships": {
+                "eyebrow": "Travailler avec Relora",
+                "title": "Partenariats de marque",
+                "updatedDate": "24 juillet 2026",
+                "description": "Nous collaborons avec marques, boutiques, createurs et specialistes pour renforcer le marketplace de mode premium et archive.",
+                "summaryTitle": "Resume du partenariat",
+                "summary": "Nous recherchons des collaborations utiles qui soutiennent l authenticite, la culture mode, la revente responsable et une meilleure experience.",
+                "summaryBullets": [
+                    "Collaborations pertinentes et curatees",
+                    "Valeur claire pour les utilisateurs",
+                    "Relations commerciales transparentes"
+                ],
+                "primaryAction": "Envoyer une proposition",
+                "secondaryAction": "A propos de Relora",
+                "stepsEyebrow": "Processus",
+                "stepsTitle": "Les etapes principales",
+                "steps": [{
+                        "number": "01",
+                        "title": "Verifier les informations",
+                        "description": "Lisez les details et exigences avant de continuer."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Rester sur Relora",
+                        "description": "Gardez paiement et echanges dans la plateforme."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Conserver les preuves",
+                        "description": "Gardez photos, messages et suivi."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Suivre les instructions",
+                        "description": "Repondez a temps et suivez les etapes affichees."
+                    }
+                ],
+                "typesEyebrow": "Possibilites",
+                "typesTitle": "Facons de collaborer",
+                "types": [{
+                        "number": "01",
+                        "title": "Marques et designers",
+                        "description": "Collections curatees et pieces d archive pour une audience mode."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Boutiques et retailers",
+                        "description": "Des stocks selectionnes peuvent trouver de nouveaux acheteurs."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Createurs et medias",
+                        "description": "Articles, campagnes et projets de communaute."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Services du secteur",
+                        "description": "Collaboration autour de l authenticite, livraison, preservation et support."
+                    }
+                ],
+                "categoriesEyebrow": "Categories de cookies",
+                "categoriesTitle": "Comment les cookies sont utilises",
+                "categories": [{
+                        "number": "01",
+                        "title": "Strictement necessaires",
+                        "description": "Toujours actifs. Requis pour connexion, securite, paiement et fonctions essentielles."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Preferences",
+                        "description": "Memorise les reglages comme la langue ou la preference catalogue."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Analyse",
+                        "description": "Optionnel. Aide a comprendre l usage et ameliorer la plateforme."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Marketing",
+                        "description": "Optionnel. Peut mesurer les campagnes ou rendre la publicite plus pertinente."
+                    }
+                ],
+                "footerMeta": "Relora - Partenariats de marque",
+                "footerText": "Vous avez une idee faite pour Relora ?",
+                "footerDescription": "Dites-nous qui vous etes, ce que vous souhaitez creer et comment le partenariat aiderait la communaute Relora.",
+                "footerAction": "Contacter Relora",
+                "sections": []
+            },
+            "auctionRules": {
+                "eyebrow": "Acheter et vendre",
+                "title": "Regles des encheres",
+                "updatedDate": "24 juillet 2026",
+                "description": "Decouvrez comment fonctionnent les encheres Relora, ce qui se passe lorsque vous encherrissez et quelles obligations s appliquent.",
+                "summaryTitle": "Resume des encheres",
+                "summary": "Verifiez l annonce avant d encherir. Toute offre valide est obligatoire et le meilleur encherisseur doit payer a la fin.",
+                "summaryBullets": [
+                    "Les offres engagent l achat",
+                    "La manipulation des encheres est interdite",
+                    "Les gagnants doivent payer a temps"
+                ],
+                "primaryAction": "Voir les encheres",
+                "secondaryAction": "Vendre un article",
+                "stepsEyebrow": "Processus",
+                "stepsTitle": "Les etapes principales",
+                "steps": [{
+                        "number": "01",
+                        "title": "Verifier les informations",
+                        "description": "Lisez les details et exigences avant de continuer."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Rester sur Relora",
+                        "description": "Gardez paiement et echanges dans la plateforme."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Conserver les preuves",
+                        "description": "Gardez photos, messages et suivi."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Suivre les instructions",
+                        "description": "Repondez a temps et suivez les etapes affichees."
+                    }
+                ],
+                "typesEyebrow": "Possibilites",
+                "typesTitle": "Facons de collaborer",
+                "types": [{
+                        "number": "01",
+                        "title": "Marques et designers",
+                        "description": "Collections curatees et pieces d archive pour une audience mode."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Boutiques et retailers",
+                        "description": "Des stocks selectionnes peuvent trouver de nouveaux acheteurs."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Createurs et medias",
+                        "description": "Articles, campagnes et projets de communaute."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Services du secteur",
+                        "description": "Collaboration autour de l authenticite, livraison, preservation et support."
+                    }
+                ],
+                "categoriesEyebrow": "Categories de cookies",
+                "categoriesTitle": "Comment les cookies sont utilises",
+                "categories": [{
+                        "number": "01",
+                        "title": "Strictement necessaires",
+                        "description": "Toujours actifs. Requis pour connexion, securite, paiement et fonctions essentielles."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Preferences",
+                        "description": "Memorise les reglages comme la langue ou la preference catalogue."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Analyse",
+                        "description": "Optionnel. Aide a comprendre l usage et ameliorer la plateforme."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Marketing",
+                        "description": "Optionnel. Peut mesurer les campagnes ou rendre la publicite plus pertinente."
+                    }
+                ],
+                "footerMeta": "Relora - Regles des encheres",
+                "footerText": "Verifiez avec soin. Encherissez de facon responsable. Finalisez chaque achat gagne.",
+                "footerAction": "Voir les encheres",
+                "sections": []
+            },
+            "cookiePolicy": {
+                "eyebrow": "Confidentialite et donnees",
+                "title": "Politique relative aux cookies",
+                "updatedDate": "24 juillet 2026",
+                "description": "Decouvrez comment Relora utilise les cookies et technologies similaires pour la securite, les preferences et l amelioration de la plateforme.",
+                "summaryTitle": "Resume des cookies",
+                "summary": "Les cookies necessaires assurent les fonctions essentielles. Les technologies optionnelles ne doivent etre activees que selon vos choix.",
+                "summaryBullets": [
+                    "Les cookies necessaires gardent Relora fonctionnel",
+                    "Les categories optionnelles dependent de votre choix",
+                    "Les parametres peuvent etre modifies plus tard"
+                ],
+                "primaryAction": "Gerer les cookies",
+                "secondaryAction": "Politique de confidentialite",
+                "stepsEyebrow": "Processus",
+                "stepsTitle": "Les etapes principales",
+                "steps": [{
+                        "number": "01",
+                        "title": "Verifier les informations",
+                        "description": "Lisez les details et exigences avant de continuer."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Rester sur Relora",
+                        "description": "Gardez paiement et echanges dans la plateforme."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Conserver les preuves",
+                        "description": "Gardez photos, messages et suivi."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Suivre les instructions",
+                        "description": "Repondez a temps et suivez les etapes affichees."
+                    }
+                ],
+                "typesEyebrow": "Possibilites",
+                "typesTitle": "Facons de collaborer",
+                "types": [{
+                        "number": "01",
+                        "title": "Marques et designers",
+                        "description": "Collections curatees et pieces d archive pour une audience mode."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Boutiques et retailers",
+                        "description": "Des stocks selectionnes peuvent trouver de nouveaux acheteurs."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Createurs et medias",
+                        "description": "Articles, campagnes et projets de communaute."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Services du secteur",
+                        "description": "Collaboration autour de l authenticite, livraison, preservation et support."
+                    }
+                ],
+                "categoriesEyebrow": "Categories de cookies",
+                "categoriesTitle": "Comment les cookies sont utilises",
+                "categories": [{
+                        "number": "01",
+                        "title": "Strictement necessaires",
+                        "description": "Toujours actifs. Requis pour connexion, securite, paiement et fonctions essentielles."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Preferences",
+                        "description": "Memorise les reglages comme la langue ou la preference catalogue."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Analyse",
+                        "description": "Optionnel. Aide a comprendre l usage et ameliorer la plateforme."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Marketing",
+                        "description": "Optionnel. Peut mesurer les campagnes ou rendre la publicite plus pertinente."
+                    }
+                ],
+                "footerMeta": "Relora - Politique relative aux cookies",
+                "footerText": "Vos choix doivent rester sous votre controle.",
+                "footerDescription": "Consultez ou modifiez vos preferences optionnelles de cookies quand vous le souhaitez.",
+                "footerAction": "Gerer les cookies",
+                "sections": [{
+                    "id": "cookie-details",
+                    "title": "1. Partie 1",
+                    "content": [
+                        "Cette section presente les regles essentielles pour les cookies. Verifiez les informations avec attention, agissez de facon transparente et gardez le paiement, la livraison et les echanges sur Relora."
+                    ],
+                    "list": [
+                        "Verifier les informations avant d agir",
+                        "Conserver des preuves claires",
+                        "Suivre les instructions de Relora"
+                    ]
+                }]
+            },
+            "journal": {
+                "eyebrow": "Relora Journal",
+                "title": "Histoires de mode archive, design, collection et soin.",
+                "description": "Explorez les idees, histoires et connaissances pratiques derriere les pieces a decouvrir, porter et preserver.",
+                "categories": {
+                    "all": "Tout",
+                    "archive": "Archive",
+                    "designers": "Designers",
+                    "guides": "Guides",
+                    "collecting": "Collection",
+                    "care": "Soin",
+                    "culture": "Culture"
+                },
+                "articles": [{
+                        "title": "Pourquoi la mode archive compte encore",
+                        "excerpt": "Un regard sur le design, l histoire et la relevance culturelle des anciennes collections.",
+                        "category": "Archive",
+                        "publishedAt": "24 juillet 2026",
+                        "readTime": "6 min de lecture"
+                    },
+                    {
+                        "title": "Photographier un vetement designer pour une enchere",
+                        "excerpt": "Conseils sur lumiere, labels, details et photos honnetes.",
+                        "category": "Guides",
+                        "publishedAt": "21 juillet 2026",
+                        "readTime": "5 min de lecture"
+                    },
+                    {
+                        "title": "Comprendre l etat dans la mode de seconde main",
+                        "excerpt": "Ce que les etats devraient signifier en revente.",
+                        "category": "Guides",
+                        "publishedAt": "18 juillet 2026",
+                        "readTime": "4 min de lecture"
+                    },
+                    {
+                        "title": "Construire une garde-robe archive",
+                        "excerpt": "Choisir moins de pieces avec plus d identite et de relevance.",
+                        "category": "Collection",
+                        "publishedAt": "14 juillet 2026",
+                        "readTime": "7 min de lecture"
+                    },
+                    {
+                        "title": "Prendre soin de la maille designer",
+                        "excerpt": "Rangement, nettoyage et reparation pour garder les pieces portables.",
+                        "category": "Soin",
+                        "publishedAt": "10 juillet 2026",
+                        "readTime": "5 min de lecture"
+                    },
+                    {
+                        "title": "Pourquoi les encheres changent la valeur",
+                        "excerpt": "Comment timing, rarete et interet reel forment le prix final.",
+                        "category": "Culture",
+                        "publishedAt": "7 juillet 2026",
+                        "readTime": "6 min de lecture"
+                    },
+                    {
+                        "title": "Les details qui revelent la qualite",
+                        "excerpt": "Construction, matieres et finitions a verifier avant d encherir.",
+                        "category": "Designers",
+                        "publishedAt": "3 juillet 2026",
+                        "readTime": "5 min de lecture"
+                    },
+                    {
+                        "title": "Collectionner sans courir apres le hype",
+                        "excerpt": "Pourquoi gout, recherche et patience comptent souvent plus.",
+                        "category": "Collection",
+                        "publishedAt": "28 juin 2026",
+                        "readTime": "8 min de lecture"
+                    },
+                    {
+                        "title": "Reparer ou garder original ?",
+                        "excerpt": "Penser restauration, usure et authenticite.",
+                        "category": "Soin",
+                        "publishedAt": "22 juin 2026",
+                        "readTime": "6 min de lecture"
+                    }
+                ],
+                "featured": "A la une",
+                "readStory": "Lire l article",
+                "latestEyebrow": "Dernieres histoires",
+                "latestTitle": "Explorer le Journal",
+                "emptyCategory": "Il n y a pas encore d articles dans cette categorie.",
+                "editorialEyebrow": "Perspective editoriale",
+                "editorialTitle": "Plus que des produits et des prix.",
+                "editorialDescription": "La mode porte du design, de l histoire, de la technique et du sens personnel. Le Journal Relora regarde au-dela de la transaction.",
+                "aboutAction": "A propos de Relora",
+                "editorialImageAlt": "Editorial mode",
+                "topics": {
+                    "eyebrow": "Nos sujets",
+                    "title": "Connaissances pour acheteurs, vendeurs et collectionneurs.",
+                    "items": [{
+                            "title": "Archive et design",
+                            "description": "Collections, designers, construction et contexte culturel."
+                        },
+                        {
+                            "title": "Achat et collection",
+                            "description": "Recherche, etat, mesures, valeur et selection reflechie."
+                        },
+                        {
+                            "title": "Guides vendeurs",
+                            "description": "Photos, descriptions, prix, emballage et encheres reussies."
+                        },
+                        {
+                            "title": "Soin et preservation",
+                            "description": "Nettoyage, reparation, stockage et propriete durable."
+                        }
+                    ]
+                },
+                "footerMeta": "Relora - Journal",
+                "footerText": "Decouvrez les histoires derriere les pieces qui meritent attention.",
+                "footerAction": "Explorer les encheres"
+            },
+            "sustainability": {
+                "eyebrow": "Durabilite chez Relora",
+                "title": "Les meilleures pieces meritent une vie plus longue.",
+                "description": "Relora soutient une approche plus reflechie de la mode en aidant les pieces designer, premium et archive existantes a rester visibles, utiles et valorisees.",
+                "primaryAction": "Explorer le marketplace",
+                "secondaryAction": "Lire le Journal",
+                "heroImageAlt": "Pieces de mode intemporelles",
+                "principles": {
+                    "eyebrow": "Notre approche",
+                    "title": "La revente est une partie d un systeme mode plus reflechi.",
+                    "description": "Notre role est d aider les pieces existantes a rester utilisees plus longtemps et a rendre leur etat, histoire et valeur plus clairs.",
+                    "items": [{
+                            "title": "Vie produit plus longue",
+                            "description": "Aider la mode existante a rester utile, visible et appreciee."
+                        },
+                        {
+                            "title": "Selection reflechie",
+                            "description": "Donner de la place aux pieces choisies pour design, etat et interet durable."
+                        },
+                        {
+                            "title": "Information honnete",
+                            "description": "Decrire clairement etat, usure, reparations et imperfections."
+                        },
+                        {
+                            "title": "Meilleur soin",
+                            "description": "Soutenir stockage, nettoyage, reparation et preservation responsables."
+                        }
+                    ]
+                },
+                "sections": [{
+                        "eyebrow": "Prolonger la vie produit",
+                        "title": "La piece la plus responsable peut etre celle qui existe deja.",
+                        "content": [
+                            "La revente peut aider les articles existants a rester utiles et valorises plus longtemps."
+                        ],
+                        "imageAlt": "Pieces de mode selectionnees avec soin"
+                    },
+                    {
+                        "eyebrow": "Qualite plutot que remplacement",
+                        "title": "Les pieces durables meritent une attention durable.",
+                        "content": [
+                            "Relora se concentre sur design, construction, rarete et histoire."
+                        ],
+                        "list": [
+                            "Vetements designer et archive",
+                            "Chaussures et accessoires a entretenir",
+                            "Articles reparables"
+                        ],
+                        "imageAlt": "Mode designer durable"
+                    },
+                    {
+                        "eyebrow": "Etat transparent",
+                        "title": "La revente responsable commence par une information honnete.",
+                        "content": [
+                            "Photos claires et descriptions exactes aident a reduire retours et litiges."
+                        ],
+                        "list": [
+                            "Photographier l article reel",
+                            "Montrer l usure et les dommages",
+                            "Fournir des mesures utiles"
+                        ],
+                        "imageAlt": "Details de mode et texture de matiere"
+                    },
+                    {
+                        "eyebrow": "Soin et preservation",
+                        "title": "Un bon soin protege la fonction et l histoire.",
+                        "content": [
+                            "Stockage, nettoyage et reparation influencent la duree de port d une piece."
+                        ],
+                        "list": [
+                            "Suivre les instructions de soin",
+                            "Stocker correctement",
+                            "Reparer les dommages tot"
+                        ],
+                        "imageAlt": "Vetement entretenu avec soin"
+                    }
+                ],
+                "commitments": {
+                    "eyebrow": "Nos engagements",
+                    "title": "Des progres pratiques plutot que des promesses vides.",
+                    "description": "Relora continue d evoluer et communique prudemment sur la durabilite.",
+                    "items": [
+                        "Encourager des descriptions exactes de l etat",
+                        "Demander la divulgation des defauts connus",
+                        "Promouvoir soin et reparation",
+                        "Aider les pieces existantes a trouver de nouveaux proprietaires",
+                        "Eviter les affirmations non prouvees",
+                        "Ameliorer les conseils d emballage et livraison"
+                    ]
+                },
+                "goals": {
+                    "eyebrow": "Ce vers quoi nous travaillons",
+                    "title": "Construire de meilleures habitudes dans le marketplace.",
+                    "items": [{
+                            "title": "Conseils d emballage plus clairs",
+                            "text": "Recommandations pour proteger les articles sans emballage inutile."
+                        },
+                        {
+                            "title": "Meilleure education au soin",
+                            "text": "Guides Journal sur stockage, nettoyage et restauration."
+                        },
+                        {
+                            "title": "Achats mieux informes",
+                            "text": "Mieux comprendre matieres, etat et mesures avant d encherir."
+                        }
+                    ]
+                },
+                "statementEyebrow": "Notre perspective",
+                "statementTitle": "La durabilite n est pas une etiquette collee a chaque achat, mais une relation plus longue avec les choses que nous choisissons de posseder.",
+                "statementDescription": "Relora veut rendre cette relation plus informee, transparente et intentionnelle.",
+                "footerMeta": "Relora - Durabilite",
+                "footerText": "Decouvrez des pieces qui meritent d etre gardees.",
+                "footerAction": "Parcourir Relora"
+            }
+        }
+    },
+    "notFound": {
+        "title": "Cette page n’existe pas.",
+        "description": "La page que vous recherchez a peut-être été supprimée, renommée ou n’a jamais existé.",
+        "backHome": "Retour à l’accueil",
+        "browseAuctions": "Parcourir les enchères",
+        "explore": "Explorer",
+        "trendingLots": "Lots tendance",
+        "trendingDescription": "Découvrez les pièces qui attirent le plus d’attention en ce moment.",
+        "discover": "Découvrir",
+        "newListings": "Nouvelles annonces",
+        "newListingsDescription": "Parcourez les derniers lots ajoutés à la marketplace.",
+        "refine": "Affiner",
+        "categories": "Catégories",
+        "categoriesDescription": "Revenez aux créateurs, au vintage, au streetwear et plus encore.",
+        "tagline": "Pas le marché de masse. Jamais ordinaire."
+    },
+    "seo": {
+        "default": {
+            "title": "Relora — Enchères de mode créateur rare",
+            "description": "Relora est une marketplace sélectionnée pour les enchères de mode créateur rare, vêtements d’archive et luxury streetwear. Découvrez des pièces de créateur authentifiées, vêtements de collection, archives runway et lots fashion exclusifs."
+        },
+        "home": {
+            "title": "Relora — Enchères de mode créateur rare",
+            "description": "Une marketplace d’enchères raffinée pour la mode de créateur, les accessoires remarquables et les pièces de collection avec du caractère."
+        },
+        "catalog": {
+            "title": "Catalogue — Relora",
+            "description": "Parcourez les annonces d’enchères Relora par catégorie, créateur, taille, état, prix et localisation."
+        },
+        "search": {
+            "title": "Recherche — Relora",
+            "description": "Recherchez des lots, marques et catégories Relora dans des enchères de mode sélectionnées."
+        },
+        "designers": {
+            "title": "Marques de créateur — Relora",
+            "description": "Explorez les marques de créateur, labels d’archive, maisons de luxe et noms streetwear disponibles sur Relora."
+        },
+        "login": {
+            "title": "Connexion — Relora",
+            "description": "Connectez-vous pour gérer votre compte Relora, vos commandes, annonces et lots suivis."
+        },
+        "register": {
+            "title": "Créer un compte — Relora",
+            "description": "Créez un compte Relora pour sauvegarder des lots, suivre des vendeurs et participer à des enchères de mode sélectionnées."
+        },
+        "forgotPassword": {
+            "title": "Réinitialisation du mot de passe — Relora",
+            "description": "Demandez un lien pour réinitialiser le mot de passe de votre compte Relora."
+        },
+        "resetPassword": {
+            "title": "Réinitialiser le mot de passe — Relora",
+            "description": "Créez un nouveau mot de passe pour votre compte Relora."
+        },
+        "profile": {
+            "title": "Profil utilisateur — Relora",
+            "description": "Consultez un profil vendeur Relora, ses annonces actives et ses articles vendus."
+        },
+        "lot": {
+            "title": "Lot — Relora",
+            "description": "Consultez un lot d’enchère Relora avec détails de l’article, informations vendeur et historique des enchères."
+        },
+        "editLot": {
+            "title": "Modifier l’annonce — Relora",
+            "description": "Modifiez une annonce Relora existante."
+        },
+        "sell": {
+            "title": "Vendre un article — Relora",
+            "description": "Créez une annonce Relora pour examen et vente aux enchères."
+        },
+        "listings": {
+            "title": "Mes annonces — Relora",
+            "description": "Gérez vos annonces Relora, brouillons, examens et enchères."
+        },
+        "orders": {
+            "title": "Commandes — Relora",
+            "description": "Suivez vos achats Relora et pièces vendues, de l’enchère gagnante à la livraison."
+        },
+        "orderDetails": {
+            "title": "Détails de commande — Relora",
+            "description": "Consultez les détails de commande Relora, paiement, livraison, expédition et litiges."
+        },
+        "about": {
+            "title": "À propos — Relora",
+            "description": "Découvrez Relora, marketplace d’enchères sélectionnée pour la mode rare, les pièces intemporelles et le design de collection."
+        },
+        "faq": {
+            "title": "FAQ — Relora",
+            "description": "Trouvez des réponses aux questions fréquentes sur l’achat, la vente et les enchères sur Relora."
+        },
+        "support": {
+            "title": "Support — Relora",
+            "description": "Contactez le support Relora pour obtenir de l’aide sur les comptes, enchères, commandes et ventes."
+        },
+        "terms": {
+            "title": "Conditions d’utilisation — Relora",
+            "description": "Lisez les Conditions d’utilisation Relora régissant l’accès à la plateforme, les enchères, annonces, offres et transactions."
+        },
+        "privacy": {
+            "title": "Politique de confidentialité — Relora",
+            "description": "Découvrez comment Relora collecte, utilise, conserve et protège les informations personnelles."
+        },
+        "buyerProtection": {
+            "title": "Protection acheteur — Relora",
+            "description": "Découvrez comment la protection acheteur Relora soutient des transactions d’enchères de mode plus sûres."
+        },
+        "returnsPolicy": {
+            "title": "Politique de retour — Relora",
+            "description": "Lisez la politique de retour Relora pour les achats aux enchères et les problèmes de commande éligibles."
+        },
+        "cookiePolicy": {
+            "title": "Politique relative aux cookies — Relora",
+            "description": "Découvrez comment Relora utilise les cookies et technologies similaires."
+        },
+        "howToSell": {
+            "title": "Comment vendre — Relora",
+            "description": "Apprenez à créer une annonce, fixer un prix, expédier et conclure des ventes sur Relora."
+        },
+        "auctionRules": {
+            "title": "Règles des enchères — Relora",
+            "description": "Lisez les règles des enchères concernant les offres, gains, paiements et obligations vendeur sur Relora."
+        },
+        "sellerProtection": {
+            "title": "Protection vendeur — Relora",
+            "description": "Découvrez comment la protection vendeur Relora soutient des ventes plus sûres et le traitement des litiges."
+        },
+        "journal": {
+            "title": "Journal — Relora",
+            "description": "Lisez les articles du journal Relora sur la mode rare, les pièces d’archive et la culture des enchères."
+        },
+        "sustainability": {
+            "title": "Durabilité — Relora",
+            "description": "Découvrez comment Relora soutient une durée de vie plus longue des produits, la revente et une consommation de mode plus intentionnelle."
+        },
+        "brandPartnerships": {
+            "title": "Partenariats de marque — Relora",
+            "description": "Découvrez les opportunités de partenariat de marque avec Relora."
+        },
+        "notFound": {
+            "title": "Page introuvable — Relora",
+            "description": "La page Relora demandée est introuvable."
+        }
+    }
+}

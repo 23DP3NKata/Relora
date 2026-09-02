@@ -1,0 +1,75 @@
+############################
+# IDE
+############################
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+_ReSharper*/
+*.DotSettings.user
+############################
+# OS
+############################
+.DS_Store
+Thumbs.db
+############################
+# Env / Secrets
+############################
+.env
+.env.*
+!.env.example
+*.local
+backend/host/Relora.Host/appsettings.json
+appsettings.*.json
+!appsettings.Development.example.json
+**/Properties/launchSettings.json
+*.pfx
+*.key
+*.pem
+############################
+# Build
+############################
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+############################
+# .NET / NuGet
+############################
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+############################
+# Tests / Coverage
+############################
+[Tt]est[Rr]esult*/
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+coverage/
+*.coverage
+*.coveragexml
+############################
+# MSBuild
+############################
+*.binlog
+############################
+# Docker
+############################
+docker-compose.override.yml
+**/docker-data/
+appsettings.json

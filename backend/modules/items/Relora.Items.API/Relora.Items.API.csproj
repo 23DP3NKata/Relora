@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.9" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\shared\Relora.Shared.Domain\Relora.Shared.Domain.csproj" />
+    <ProjectReference Include="..\..\..\shared\Relora.Shared.Infrastructure\Relora.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\auctions\Relora.Auctions.Application\Relora.Auctions.Application.csproj" />
+    <ProjectReference Include="..\..\identity\Relora.Identity.Infrastructure\Relora.Identity.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

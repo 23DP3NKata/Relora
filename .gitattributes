@@ -1,0 +1,13 @@
+# Keep repository text files consistent across Windows and CI.
+* text=auto eol=lf
+
+# Preserve binary assets.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary

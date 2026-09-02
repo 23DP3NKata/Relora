@@ -1,0 +1,40 @@
+{
+  "common": {
+    "language": "Language",
+    "unavailable": "Unavailable",
+    "loading": "Loading..."
+  },
+  "navigation": {
+    "pendingLots": "Pending Lots",
+    "dashboard": "Dashboard"
+  },
+  "admin": {
+    "title": "Relora Admin",
+    "pending": {
+      "title": "Pending Lots",
+      "description": "Review lots awaiting moderation.",
+      "loading": "Loading pending lots...",
+      "empty": "No pending lots found.",
+      "loadFailed": "Failed to load pending lots.",
+      "approveFailed": "Failed to approve lot.",
+      "rejectFailed": "Failed to reject lot.",
+      "approved": "Lot approved successfully.",
+      "rejected": "Lot rejected successfully.",
+      "approve": "Approve",
+      "reject": "Reject",
+      "lotImage": "Lot image",
+      "untitledLot": "Untitled lot",
+      "unknown": "Unknown",
+      "unknownBrand": "Unknown brand",
+      "seller": "Seller",
+      "created": "Created"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "description": "Admin moderation overview.",
+      "loading": "Loading dashboard...",
+      "empty": "No dashboard data.",
+      "loadFailed": "Failed to load dashboard."
+    }
+  }
+}

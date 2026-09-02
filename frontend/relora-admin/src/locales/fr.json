@@ -1,0 +1,40 @@
+{
+  "common": {
+    "language": "Langue",
+    "unavailable": "Indisponible",
+    "loading": "Chargement..."
+  },
+  "navigation": {
+    "pendingLots": "Lots en attente",
+    "dashboard": "Tableau de bord"
+  },
+  "admin": {
+    "title": "Relora Admin",
+    "pending": {
+      "title": "Lots en attente",
+      "description": "Examinez les lots en attente de moderation.",
+      "loading": "Chargement des lots en attente...",
+      "empty": "Aucun lot en attente trouve.",
+      "loadFailed": "Impossible de charger les lots en attente.",
+      "approveFailed": "Impossible d'approuver le lot.",
+      "rejectFailed": "Impossible de refuser le lot.",
+      "approved": "Lot approuve avec succes.",
+      "rejected": "Lot refuse avec succes.",
+      "approve": "Approuver",
+      "reject": "Refuser",
+      "lotImage": "Image du lot",
+      "untitledLot": "Lot sans titre",
+      "unknown": "Inconnu",
+      "unknownBrand": "Marque inconnue",
+      "seller": "Vendeur",
+      "created": "Cree"
+    },
+    "dashboard": {
+      "title": "Tableau de bord",
+      "description": "Vue d'ensemble de la moderation admin.",
+      "loading": "Chargement du tableau de bord...",
+      "empty": "Aucune donnee de tableau de bord.",
+      "loadFailed": "Impossible de charger le tableau de bord."
+    }
+  }
+}

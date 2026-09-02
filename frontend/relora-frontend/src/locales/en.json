@@ -1,0 +1,2385 @@
+{
+    "announcement": {
+        "title": "Sell on Relora",
+        "description": "Sell with 2%  commission on your first 10 sales",
+        "buttonText": "Start selling"
+    },
+    "common": {
+        "language": "Language",
+        "loading": "Loading...",
+        "loadingProfile": "Loading profile...",
+        "tryAgain": "Try again",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "deleting": "Deleting...",
+        "search": "Search",
+        "filters": "Filters",
+        "clearAll": "Clear all",
+        "showResults": "Show results",
+        "sortCatalog": "Sort catalog",
+        "sortBy": "Sort by: {label}",
+        "close": "Close",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "closeAnnouncement": "Close announcement",
+        "learnMore": "Learn more",
+        "noImage": "No image",
+        "imageUnavailable": "Image unavailable",
+        "seller": "Seller",
+        "currentBid": "Current bid",
+        "currentPrice": "Current price",
+        "shipping": "Shipping",
+        "dispatch": "Dispatch",
+        "shipsFrom": "Ships from",
+        "shipsTo": "Ships to",
+        "days": "days",
+        "hours": "hours",
+        "minutesShort": "min",
+        "secondsShort": "sec",
+        "details": "Details",
+        "statusUnavailable": "Status unavailable",
+        "unavailable": "Unavailable",
+        "any": "Any",
+        "size": "Size {value}",
+        "listingCount": "{count} listings found.",
+        "copyright": "© {year} Relora",
+        "first": "First",
+        "previous": "Previous",
+        "next": "Next",
+        "last": "Last",
+        "morePages": "More pages",
+        "optional": "(optional)",
+        "nextSlide": "Next Slide",
+        "previousSlide": "Previous Slide",
+        "brand": "Relora"
+    },
+    "navigation": {
+        "women": "Women",
+        "men": "Men",
+        "bags": "Bags",
+        "shoes": "Shoes",
+        "jewelryWatches": "Jewelry & Watches",
+        "vintage": "Vintage",
+        "accessories": "Accessories",
+        "designers": "Designers",
+        "about": "About",
+        "sustainability": "Sustainability",
+        "journal": "Journal",
+        "buy": "Buy",
+        "buyerProtection": "Buyer protection",
+        "returnsPolicy": "Returns policy",
+        "sell": "Sell",
+        "howToSell": "How to sell",
+        "sellerProtection": "Seller protection",
+        "sellAnItem": "Sell an item",
+        "brandPartnerships": "Brand partnerships",
+        "help": "Help",
+        "contactUs": "Contact us",
+        "faq": "FAQ",
+        "legal": "Legal",
+        "termsOfService": "Terms of Service",
+        "privacyPolicy": "Privacy Policy",
+        "cookiePolicy": "Cookie Policy",
+        "auctionRules": "Auction Rules",
+        "followUs": "Follow Us",
+        "sellWithUs": "Sell with us",
+        "signIn": "Sign in",
+        "signOut": "Log out",
+        "profile": "Profile",
+        "myProfile": "My Profile",
+        "yourOrders": "Orders",
+        "myListings": "Listings",
+        "settings": "Settings",
+        "myAccount": "My Account",
+        "register": "Register",
+        "signedInAccount": "Signed in account"
+    },
+    "footer": {
+        "noticeTitle": "Important notice",
+        "notice": "Except for official Brand Partners, Relora has no association or affiliation with the brands whose products are offered for sale on our platform. All trademarks, brand names, logos and product names remain the property of their respective owners and are used for identification purposes only. All authentication and quality control services are performed independently by Relora.",
+        "social": {
+            "instagram": "Instagram",
+            "youtube": "YouTube"
+        }
+    },
+    "theme": {
+        "label": "Theme",
+        "description": "Switch between light and dark",
+        "toggle": "Toggle theme",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+    },
+    "search": {
+        "placeholder": "Search lots, brands, and categories...",
+        "mobilePlaceholder": "Search products, brands, categories...",
+        "designerPlaceholder": "Search designer brand...",
+        "resultsFor": "Search results for “{query}”",
+        "enterQuery": "Enter a search query.",
+        "noResultsFor": "No listings found for “{query}”.",
+        "failed": "Failed to load search results."
+    },
+    "catalog": {
+        "title": "Catalog",
+        "noListings": "No listings found.",
+        "failed": "Failed to load catalog.",
+        "drawerLabel": "Catalog filters",
+        "closeFilters": "Close filters",
+        "removeFilter": "Remove {label} filter",
+        "gender": "Gender",
+        "department": "Department",
+        "category": "Category",
+        "rootCategory": "Root category",
+        "subcategory": "Subcategory",
+        "brand": "Brand",
+        "price": "Price",
+        "from": "From",
+        "to": "To",
+        "country": "Country",
+        "condition": "Condition",
+        "size": "Size",
+        "material": "Material",
+        "primaryColor": "Primary color",
+        "productionYear": "Production year",
+        "vintageOnly": "Vintage only",
+        "hasMeasurements": "Has measurements",
+        "hasProofOfOrigin": "Proof submitted",
+        "quickFilters": "Quick filters",
+        "endingSoon": "Ending soon",
+        "newlyListed": "Newly listed",
+        "searchBrands": "Search brands...",
+        "searchCountry": "Search country...",
+        "options": {
+            "Women": "Women",
+            "Men": "Men",
+            "Unisex": "Unisex",
+            "Tops": "Tops",
+            "Bottoms": "Bottoms",
+            "Outerwear": "Outerwear",
+            "Footwear": "Footwear",
+            "Shoes": "Shoes",
+            "Bags": "Bags",
+            "Accessories": "Accessories",
+            "Jewellery": "Jewellery",
+            "Vintage": "Vintage",
+            "Other": "Other",
+            "New": "New",
+            "Worn": "Worn",
+            "Refurbished": "Refurbished",
+            "XXS": "XXS",
+            "XS": "XS",
+            "S": "S",
+            "M": "M",
+            "L": "L",
+            "XL": "XL",
+            "XXL": "XXL",
+            "Latvia": "Latvia",
+            "Lithuania": "Lithuania",
+            "Estonia": "Estonia",
+            "Germany": "Germany",
+            "France": "France",
+            "Italy": "Italy",
+            "Spain": "Spain",
+            "Netherlands": "Netherlands",
+            "Belgium": "Belgium",
+            "Poland": "Poland"
+        },
+        "sort": {
+            "EndingSoon": "Ending soon",
+            "NewlyListed": "Newly listed",
+            "PriceLowToHigh": "Price: low to high",
+            "PriceHighToLow": "Price: high to low",
+            "MostBids": "Most bids"
+        },
+        "status": {
+            "Live": "Live",
+            "Draft": "Draft",
+            "Pending": "Pending",
+            "Approved": "Approved",
+            "Active": "Active",
+            "Rejected": "Rejected",
+            "Sold": "Sold",
+            "Expired": "Expired",
+            "Unknown": "Unknown"
+        }
+    },
+    "auction": {
+        "imageAlt": "{title} — image {number}"
+    },
+    "lot": {
+        "loadingListing": "Loading listing...",
+        "failedLoad": "Failed to load listing.",
+        "unavailableListing": "This listing is not available.",
+        "openGallery": "Open image gallery",
+        "noImageAvailable": "No image available",
+        "imageCount": "{title} - {number} / {total}",
+        "inspectDetails": "Inspect details",
+        "selectImage": "Select image {number}",
+        "currentPrice": "Current price",
+        "dispatchDays": "{count} business days",
+        "auctionEnded": "Auction ended",
+        "auctionEndsIn": "Auction ends in",
+        "endsAt": "Ends: {date}",
+        "placeBid": "Place a bid",
+        "enterBidAmount": "Enter bid amount",
+        "placingBid": "Placing...",
+        "signInToBid": "Sign in to place a bid.",
+        "bidActiveOnly": "Bidding is enabled only when auction is active.",
+        "biddingUnavailable": "Bidding is currently unavailable.",
+        "validBidRequired": "Please enter a valid bid amount.",
+        "bidSuccess": "Bid placed successfully.",
+        "bidFailed": "Failed to place bid.",
+        "description": "Description",
+        "itemDetails": "Item details",
+        "color": "Color",
+        "style": "Style",
+        "year": "Year",
+        "location": "Location",
+        "modelName": "Model",
+        "primaryColor": "Primary color",
+        "secondaryColors": "Secondary colors",
+        "materials": "Materials",
+        "productionYear": "Production year",
+        "acquisitionYear": "Acquisition year",
+        "vintage": "Vintage",
+        "vintageConfirmed": "Vintage eligible",
+        "proofOfOrigin": "Proof of origin",
+        "measurements": "Measurements",
+        "measurementsSellerProvided": "Measurements provided by seller",
+        "proofStatus": {
+            "Submitted": "Proof submitted",
+            "Reviewed": "Proof reviewed",
+            "Rejected": "Proof needs review"
+        },
+        "unknownSeller": "Unknown seller",
+        "sellerUsernameFallback": "seller",
+        "bidHistory": "Bid history",
+        "totalBids": "Total bids",
+        "loadingBids": "Loading bids...",
+        "noBidsYet": "No bids yet.",
+        "lotGallery": "Lot image gallery",
+        "toggleMagnifier": "Toggle magnifier (M)",
+        "magnifier": "Magnifier",
+        "zoomOut": "Zoom out",
+        "resetZoom": "Reset zoom",
+        "resetView": "Reset view (0)",
+        "zoomIn": "Zoom in",
+        "closeGallery": "Close gallery",
+        "closeEsc": "Close (Esc)",
+        "previousImage": "Previous image",
+        "nextImage": "Next image",
+        "openImage": "Open image {number}",
+        "galleryDragZoomReset": "Drag to move - Scroll to zoom - Double-click to reset",
+        "galleryInspectZoom": "Move the cursor over the image to inspect details - Scroll to zoom",
+        "galleryZoomBrowse": "Double-click or scroll to zoom - Arrow keys to browse"
+    },
+    "listings": {
+        "title": "My Listings",
+        "description": "Manage your pieces from draft to completed sale.",
+        "createListing": "Create listing",
+        "checkingSession": "Checking your session",
+        "signInTitle": "Sign in to view your listings",
+        "signInDescription": "Access your drafts, live auctions and sold pieces.",
+        "filterAria": "Filter listings",
+        "searchLabel": "Search listings",
+        "searchPlaceholder": "Search by title or brand",
+        "loadingListings": "Loading listings",
+        "unableLoad": "Unable to load listings",
+        "loadFailed": "We could not load your listings. Please try again.",
+        "imageUnavailable": "Image unavailable",
+        "listedOn": "Listed {date}",
+        "auctionDuration": "Auction duration",
+        "durationDays": "{count} days",
+        "restarting": "Restarting...",
+        "starting": "Starting...",
+        "restartAuction": "Restart auction",
+        "startAuction": "Start auction",
+        "viewListing": "View listing",
+        "edit": "Edit",
+        "submitting": "Submitting...",
+        "submitForReview": "Submit for review",
+        "deleteListing": "Delete listing",
+        "deleteTitle": "Delete \"{title}\"?",
+        "deleteFallbackTitle": "Delete listing?",
+        "deleteConfirmMessage": "Are you sure you want to delete this listing? This action cannot be undone.",
+        "deleted": "Your listing has been deleted.",
+        "deleteFailed": "Delete failed. This listing may no longer be deletable.",
+        "submittedReview": "Listing submitted for review.",
+        "submitFailed": "Failed to submit listing.",
+        "auctionStarted": "Auction started successfully.",
+        "startAuctionFailed": "Failed to start auction.",
+        "filters": {
+            "all": "All listings",
+            "attention": "Needs action",
+            "live": "Live",
+            "sold": "Sold"
+        },
+        "status": {
+            "draft": "Draft",
+            "review": "In review",
+            "rejected": "Changes requested",
+            "ready": "Ready for auction",
+            "live": "Live auction",
+            "sold": "Sold",
+            "unsold": "Unsold",
+            "expired": "Auction ended",
+            "unknown": "Status unavailable"
+        },
+        "actionTitle": {
+            "draft": "Finish the listing",
+            "rejected": "Review the requested changes",
+            "review": "Your listing is being reviewed",
+            "ready": "Ready to go live",
+            "live": "Auction is currently live",
+            "sold": "This piece has been sold",
+            "unsold": "No bids received",
+            "expired": "The auction has ended",
+            "unknown": "Review listing details"
+        },
+        "actionDescription": {
+            "draft": "Complete the details and submit the piece for review.",
+            "rejected": "Edit the listing before submitting it again.",
+            "review": "No action is required while the Relora team reviews it.",
+            "ready": "Choose an auction duration and start the auction.",
+            "live": "Bidders can now discover and bid on this piece.",
+            "sold": "The transaction will continue in your received orders.",
+            "unsold": "Choose a new duration and restart this auction.",
+            "expired": "Review the result before deciding what to do next.",
+            "unknown": "Open the listing to review its current information."
+        },
+        "emptyFirst": {
+            "title": "List your first piece.",
+            "description": "Create a listing to submit an item for review and start selling on Relora.",
+            "action": "Create listing"
+        },
+        "emptyFiltered": {
+            "title": "No matching listings.",
+            "description": "Try another search term or switch to a different listing status.",
+            "action": "Clear filters"
+        }
+    },
+    "editLot": {
+        "sellerDashboard": "Seller dashboard",
+        "title": "Edit listing",
+        "description": "Update your listing details before it is approved and published on Relora.",
+        "loadFailed": "Failed to load listing for editing.",
+        "cannotEdit": "This listing cannot be edited in its current status.",
+        "signInRequired": "You need to sign in before editing.",
+        "completeRequired": "Please complete all required fields with valid values.",
+        "updated": "Listing updated successfully.",
+        "updateToast": "Your listing has been successfully updated.",
+        "updateFailed": "Failed to update listing.",
+        "statusCannotEdit": "This listing cannot be edited because it is currently {status}.",
+        "basicInformation": "Basic information",
+        "basicDescription": "Add the main details buyers will see first.",
+        "locationStyle": "Location and style",
+        "locationStyleDescription": "Tell buyers where the item ships from and what style it belongs to.",
+        "itemDetailsDescription": "Help buyers understand what type of item this is.",
+        "priceDescription": "Set the starting price for your listing.",
+        "shippingDescription": "Buyers pay this delivery cost together with the winning bid.",
+        "brandPlaceholder": "Brand name",
+        "colorPlaceholder": "Black, grey, navy...",
+        "savingChanges": "Saving changes...",
+        "saveChanges": "Save changes",
+        "cancel": "Cancel",
+        "discardChanges": "Discard changes",
+        "discarded": "Changes discarded.",
+        "steps": {
+            "category": "Category",
+            "details": "Details",
+            "measurements": "Measurements",
+            "photos": "Photos",
+            "pricing": "Pricing",
+            "review": "Review"
+        }
+    },
+    "orders": {
+        "title": "Orders",
+        "description": "Follow your purchases and sold pieces from the winning bid to delivery.",
+        "purchasesTab": "Purchases",
+        "ordersTab": "Orders",
+        "checkingSession": "Checking your session",
+        "signInTitle": "Sign in to view your orders",
+        "signInDescription": "Access your purchases, received orders and current actions.",
+        "filterAria": "Filter orders by activity",
+        "loadingOrders": "Loading orders",
+        "unableLoad": "Unable to load orders",
+        "loadFailed": "We couldn't load your orders. Please try again.",
+        "imageUnavailable": "Image unavailable",
+        "auctionPiece": "Auction piece",
+        "untitledPiece": "Untitled piece",
+        "dateUnavailable": "Date unavailable",
+        "orderNumber": "Order #{reference}",
+        "viewOrderFor": "View order for {title}",
+        "details": "Details",
+        "noPurchasesEyebrow": "No purchases yet",
+        "noPurchasesTitle": "Your collection starts here.",
+        "noPurchasesDescription": "Pieces you win at auction will appear here with payment and delivery updates.",
+        "exploreAuctions": "Explore auctions",
+        "noOrdersEyebrow": "No orders yet",
+        "noOrdersTitle": "No customer orders to show.",
+        "noOrdersDescription": "Once one of your lots is sold, its order and fulfilment status will appear here.",
+        "sellItem": "Sell an item",
+        "status": {
+            "paid": "Paid",
+            "pending": "Awaiting payment",
+            "paymentExpired": "Payment expired",
+            "shipped": "In transit",
+            "buyerProtection": "Disputed",
+            "completed": "Completed",
+            "failed": "Payment failed",
+            "cancelled": "Cancelled",
+            "unknown": "Status unavailable"
+        },
+        "hint": {
+            "paidSeller": "Payment received. Prepare the item for shipment.",
+            "paidBuyer": "Payment confirmed. Waiting for the seller to ship.",
+            "pendingSeller": "Waiting for the buyer to complete payment.",
+            "pendingBuyerDeadline": "Complete payment by {date}.",
+            "pendingBuyer": "Complete payment to secure the purchase.",
+            "shippedSeller": "The item has been dispatched.",
+            "shippedBuyer": "Your piece is on the way.",
+            "completed": "The transaction is complete.",
+            "disputeSeller": "The buyer opened a dispute.",
+            "disputeBuyer": "Your dispute is under review.",
+            "expiredSeller": "The buyer did not pay within 3 days.",
+            "expiredBuyer": "The 3-day payment window has expired.",
+            "failedSeller": "Payment failed. Do not ship the item.",
+            "failedBuyer": "Payment was not completed.",
+            "cancelled": "No further action is required.",
+            "unknown": "Open the order to view the latest update."
+        },
+        "transaction": {
+            "sold": "Sold {date}",
+            "purchased": "Purchased {date}",
+            "paid": "Paid {date}"
+        },
+        "total": {
+            "order": "Order total",
+            "sale": "Sale total"
+        }
+    },
+    "support": {
+        "eyebrow": "Relora support",
+        "title": "How can we help?",
+        "description": "Tell us about your question or issue. Our team will review your request and contact you by email.",
+        "beforeContacting": "Before contacting us",
+        "includeDetails": "Include as much detail as possible",
+        "includeDetailsDescription": "Information such as an order number, listing title or a clear description will help us resolve your request faster.",
+        "responseTime": "Response time",
+        "responseTimeDescription": "Most requests are answered within 1-2 business days.",
+        "accountSecurity": "Account security",
+        "accountSecurityDescription": "Never include passwords or payment card information.",
+        "emailUpdates": "Email updates",
+        "emailUpdatesDescription": "Our reply will be sent to the address entered in the form.",
+        "orderEmailNote": "For an existing order, use the same email address associated with your Relora account.",
+        "sendRequest": "Send a request",
+        "allFieldsRequired": "All fields are required.",
+        "category": "Category",
+        "selectCategory": "Select a category",
+        "subject": "Subject",
+        "subjectPlaceholder": "Briefly describe your request",
+        "message": "Message",
+        "messagePlaceholder": "Describe what happened, when it happened and what you need help with.",
+        "charactersLeft": "{count} characters left",
+        "consent": "By submitting this form, you agree that Relora may contact you regarding this request.",
+        "sending": "Sending request...",
+        "sent": "Your request has been received. The Relora team will reply to the email address you provided.",
+        "failed": "We could not send your request. Please review the information and try again.",
+        "categories": {
+            "technical": "Technical issue",
+            "account": "Account & security",
+            "buying": "Buying on Relora",
+            "selling": "Selling on Relora",
+            "suggestion": "Feedback or suggestion",
+            "other": "Something else"
+        }
+    },
+    "orderDetails": {
+        "purchaseDetails": "Purchase details",
+        "saleDetails": "Sale details",
+        "orderDetails": "Order details",
+        "buyer": "Buyer",
+        "seller": "Seller",
+        "counterparty": "Counterparty",
+        "yourSale": "Your sale",
+        "yourPurchase": "Your purchase",
+        "backToOrders": "Back to orders",
+        "loadingOrder": "Loading order",
+        "unableOpen": "Unable to open order",
+        "loadFailed": "We could not load this order. Please try again.",
+        "signInRequired": "Please sign in to view this order.",
+        "orderLine": "Order #{reference} · {title}",
+        "currentStatus": "Current status",
+        "viewingAs": "Viewing as {role}",
+        "untitledPiece": "Untitled piece",
+        "imageAlt": "{title} — view {number}",
+        "imageUnavailable": "Image unavailable",
+        "itemImages": "Item images",
+        "showImage": "Show image {number}",
+        "itemDetails": "Item details",
+        "itemUnavailable": "Item information is unavailable.",
+        "aboutPiece": "About this piece",
+        "viewOriginalListing": "View original listing",
+        "orderTotal": "Order total",
+        "winningBid": "Winning bid",
+        "openingPrice": "Opening price",
+        "auction": "Auction",
+        "started": "Started",
+        "ended": "Ended",
+        "paidOn": "Paid on",
+        "paymentDue": "Payment due",
+        "shipBy": "Ship by",
+        "deliveryAddress": "Delivery address",
+        "fullName": "Full name",
+        "addressLine1": "Address line 1",
+        "addressLine2": "Address line 2",
+        "postcode": "Postcode",
+        "countryCodePlaceholder": "LV",
+        "countryPlaceholder": "Latvia",
+        "phone": "Phone",
+        "openCheckout": "Opening checkout...",
+        "pay": "Pay {amount}",
+        "hiddenAddress": "The delivery address is hidden until payment is completed.",
+        "shipment": "Shipment",
+        "dispatchDeadline": "Dispatch deadline: {date}",
+        "carrierPlaceholder": "Carrier, e.g. Omniva",
+        "trackingPlaceholder": "Tracking number",
+        "saving": "Saving...",
+        "markShipped": "Mark as shipped",
+        "carrier": "Carrier",
+        "carrierUnavailable": "Carrier unavailable",
+        "tracking": "Tracking",
+        "disputedReview": "This order is disputed and is under admin review.",
+        "confirming": "Confirming...",
+        "itemReceived": "Item received",
+        "trackingPending": "Tracking details will appear after the seller dispatches the item.",
+        "reportProblem": "Report a problem",
+        "reportDescription": "Open a dispute if the order needs admin review.",
+        "open": "Open",
+        "resolved": "Resolved",
+        "reason": "Reason",
+        "opened": "Opened",
+        "evidence": "Evidence",
+        "disputeEvidenceAlt": "Dispute evidence",
+        "decision": "Decision: {decision}",
+        "completeOrder": "Complete order",
+        "describeProblem": "Describe what happened",
+        "photoEvidence": "Photo evidence",
+        "remove": "Remove",
+        "problemsAfterPayment": "Problems can be reported after payment is confirmed.",
+        "transaction": "Transaction",
+        "yourRole": "Your role",
+        "orderReference": "Order reference",
+        "auctionReference": "Auction reference",
+        "copied": "Copied",
+        "copy": "Copy",
+        "checkoutAddressRequired": "Please complete the delivery address.",
+        "checkoutFailed": "Could not start checkout.",
+        "shipmentRequired": "Carrier and tracking number are required.",
+        "shipmentSaved": "Shipment details saved.",
+        "shipmentFailed": "Could not save shipment details.",
+        "orderCompletedToast": "Order completed.",
+        "receiptFailed": "Could not confirm receipt.",
+        "problemRequired": "Please describe the problem.",
+        "problemReported": "Problem reported.",
+        "problemFailed": "Could not report the problem.",
+        "status": {
+            "completed": "Completed",
+            "disputed": "Disputed",
+            "inTransit": "In transit",
+            "cancelled": "Cancelled",
+            "paymentExpired": "Payment expired",
+            "paymentFailed": "Payment failed",
+            "awaitingShipment": "Awaiting shipment",
+            "awaitingPayment": "Awaiting payment",
+            "failed": "Failed",
+            "delivered": "Delivered",
+            "notApplicable": "Not applicable",
+            "notStarted": "Not started"
+        },
+        "statusTitle": {
+            "orderCompleted": "Order completed",
+            "problemReported": "Problem reported",
+            "disputeOpened": "Dispute opened",
+            "buyerShipped": "Your piece is on the way",
+            "sellerShipped": "The item is on the way",
+            "orderCancelled": "Order cancelled",
+            "paymentExpired": "Payment deadline expired",
+            "paymentAttention": "Payment needs attention",
+            "completePayment": "Complete your payment",
+            "waitingBuyer": "Waiting for the buyer",
+            "paymentReceived": "Payment received",
+            "paymentConfirmed": "Payment confirmed",
+            "orderReceived": "Order received"
+        },
+        "statusDescription": {
+            "complete": "The transaction and delivery are complete.",
+            "issueBuyer": "Relora has recorded your report. The order is under admin review.",
+            "issueSeller": "The buyer opened a dispute. Check the order details and wait for admin review.",
+            "tracking": "Follow the shipment with tracking number {tracking}.",
+            "handedOver": "The item has been handed over for delivery.",
+            "cancelled": "No further action is required for this order.",
+            "expiredBuyer": "The 3-day payment window has ended, so this order can no longer be paid.",
+            "expiredSeller": "The buyer did not pay within 3 days. The item can be listed again.",
+            "failedBuyer": "The payment was not completed. Please retry when payment becomes available.",
+            "failedSeller": "The payment was not completed. Do not ship the item.",
+            "pendingBuyerDeadline": "Complete payment by {date} to secure your purchase.",
+            "pendingBuyer": "Complete payment to secure your purchase.",
+            "pendingSeller": "The item is reserved. Wait for payment confirmation before shipping.",
+            "paidSeller": "The buyer has paid. Prepare the item for dispatch; shipment details will appear here once available.",
+            "paidBuyer": "Your payment is confirmed. Shipment details will appear here after the seller dispatches the item.",
+            "unknown": "We have the order, but no further status information is available yet."
+        },
+        "progress": {
+            "auctionSold": "Auction sold",
+            "auctionWon": "Auction won",
+            "sellerWinningBid": "The winning bid was {amount}.",
+            "buyerWinningBid": "Your winning bid was {amount}.",
+            "confirmed": "Confirmed",
+            "payment": "Payment",
+            "paymentConfirmed": "Payment confirmed in full.",
+            "paymentExpired": "The 3-day payment window expired.",
+            "paymentNotCompleted": "Payment was not completed.",
+            "waitingPayment": "Waiting for payment confirmation.",
+            "due": "Due {date}",
+            "actionRequired": "Action required",
+            "shipment": "Shipment",
+            "dispatched": "The item has been dispatched.",
+            "disputeReview": "Dispute is under review.",
+            "sellerPrepare": "Prepare the item for dispatch.",
+            "buyerWaitingDispatch": "Waiting for the seller to dispatch.",
+            "afterPayment": "Begins after payment confirmation.",
+            "dispatchedDate": "Dispatched",
+            "currentStep": "Current step",
+            "delivery": "Delivery",
+            "orderCompleted": "The order has been completed.",
+            "reviewOpen": "Dispute review is open.",
+            "parcelOnWay": "The parcel is on its way.",
+            "updatesAfterShipping": "Updates after the item is shipped.",
+            "completed": "Completed",
+            "reported": "Reported",
+            "inProgress": "In progress"
+        },
+        "disputeReasons": {
+            "ItemNotShipped": "Item not shipped",
+            "ItemNotReceived": "Item not received",
+            "WrongItem": "Wrong item arrived",
+            "SignificantlyNotAsDescribed": "Significantly not as described",
+            "Damaged": "Damaged",
+            "SuspectedCounterfeit": "Suspected counterfeit"
+        }
+    },
+    "sell": {
+        "charactersLeft": "{count} characters left",
+        "sellOnRelora": "Sell on Relora",
+        "createListing": "Create listing",
+        "createListingDescription": "Submit your item for review and prepare it to go live on the marketplace.",
+        "progress": "Progress",
+        "stepOf": "Step {step} of {total}",
+        "back": "Back",
+        "continue": "Continue",
+        "uploading": "Uploading...",
+        "submitting": "Submitting...",
+        "submitForReview": "Submit for review",
+        "introTitle": "List your item.",
+        "introDescription": "Create an accurate listing for designer, archive and distinctive fashion pieces. Every item is reviewed before publication.",
+        "startListing": "Start listing",
+        "beforeBegin": "Before you begin",
+        "requirementPhotosTitle": "Add clear photos",
+        "requirementPhotosDescription": "Upload at least five photos showing the item, labels, size details and condition.",
+        "requirementConditionTitle": "Describe the condition",
+        "requirementConditionDescription": "Mention visible wear, flaws, repairs, alterations or missing parts.",
+        "requirementDetailsTitle": "Provide accurate details",
+        "requirementDetailsDescription": "Select the correct brand, category, size, color and item location.",
+        "incompleteNote": "Listings with incomplete or unclear information may be returned for editing.",
+        "photosStat": "5+ photos",
+        "photosStatDescription": "Clear item documentation",
+        "reviewStat": "Manual review",
+        "reviewStatDescription": "Checked before publication",
+        "detailsStat": "Accurate details",
+        "detailsStatDescription": "Better information builds trust",
+        "uploadPhotos": "Upload photos",
+        "photosDescription": "Add at least 5 clear photos of your item. To pass review, photos should clearly show the item, brand tags, stitching, labels, condition details and certificates if available.",
+        "photosCount": "Minimum required: {minimum} photos. Current: {current} / {maximum}.",
+        "clickUpload": "Click to upload photos",
+        "imageFormats": "PNG, JPG, WEBP up to 10MB",
+        "multiImages": "You can select multiple images",
+        "uploadedPhotos": "Uploaded photos",
+        "photosAdded": "{count} photo added | {count} photos added",
+        "remove": "Remove",
+        "noPhotosYet": "No photos uploaded yet.",
+        "noPhotos": "No photos uploaded.",
+        "maxPhotosError": "You can only upload up to {count} photos.",
+        "basicInfo": "Basic item information",
+        "basicInfoDescription": "Add the core details buyers should see first.",
+        "title": "Title",
+        "titlePlaceholder": "e.g. Rick Owens Cropped Bomber Jacket",
+        "brand": "Brand",
+        "brandPlaceholder": "e.g. Rick Owens",
+        "selectCategory": "Select category",
+        "selectGender": "Select gender",
+        "selectSize": "Select size",
+        "conditionAppearance": "Condition and appearance",
+        "conditionAppearanceDescription": "Be accurate about the condition and visible details of the item.",
+        "selectCondition": "Select condition",
+        "color": "Color",
+        "colorPlaceholder": "e.g. Black",
+        "pricing": "Pricing",
+        "pricingDescription": "Set the auction starting price and delivery terms buyers will pay after winning.",
+        "amount": "Amount",
+        "amountPlaceholder": "e.g. 250",
+        "currency": "Currency",
+        "shippingDescription": "Use a manual shipping price for now. Buyers will pay this amount together with the winning bid.",
+        "shippingPrice": "Shipping price",
+        "shippingPricePlaceholder": "e.g. 7.00",
+        "shippingCurrency": "Shipping currency",
+        "handlingTime": "Handling time",
+        "shipsToPlaceholder": "Latvia, Estonia, Lithuania or Worldwide",
+        "additionalDetails": "Additional details",
+        "additionalDetailsDescription": "Describe the item clearly so buyers understand what they are looking at.",
+        "description": "Description",
+        "descriptionPlaceholder": "Describe the item, fit, visible flaws, materials, or anything buyers should know.",
+        "city": "City",
+        "cityPlaceholder": "Riga",
+        "ageYear": "Age / year",
+        "ageYearPlaceholder": "2020, 90s, vintage...",
+        "style": "Style",
+        "stylePlaceholder": "Archive, streetwear, minimalist...",
+        "reviewListing": "Review your listing",
+        "reviewDescription": "Check everything before submitting your item for review.",
+        "item": "Item",
+        "untitledItem": "Untitled item",
+        "noBrandSelected": "No brand selected",
+        "listingDetails": "Listing details",
+        "price": "Price",
+        "dispatchTime": "Dispatch time",
+        "businessDays": "{count} business days",
+        "noDescription": "No description provided.",
+        "uploadOnePhoto": "Please upload at least one photo.",
+        "uploadMinimumPhotos": "Please upload at least {count} photos.",
+        "waitPhotos": "Please wait until all photos finish uploading.",
+        "photosPending": "Some photos are not uploaded yet.",
+        "titleRequired": "Title is required.",
+        "brandRequired": "Brand is required.",
+        "categoryRequired": "Category is required.",
+        "genderRequired": "Gender is required.",
+        "sizeRequired": "Size is required.",
+        "conditionRequired": "Condition is required.",
+        "colorRequired": "Color is required.",
+        "amountRequired": "Amount is required.",
+        "amountPositive": "Amount must be greater than 0.",
+        "currencyRequired": "Currency is required.",
+        "shippingPriceRequired": "Shipping price is required.",
+        "shippingPricePositive": "Shipping price cannot be negative.",
+        "shippingCurrencyRequired": "Shipping currency is required.",
+        "shippingOriginRequired": "Shipping origin country is required.",
+        "shippingDestinationRequired": "Add at least one shipping destination.",
+        "handlingRange": "Handling time must be between 1 and 30 business days.",
+        "descriptionRequired": "Description is required.",
+        "descriptionTooShort": "Description must be at least {count} characters.",
+        "countryRequired": "Country is required.",
+        "cityRequired": "City is required.",
+        "ageRequired": "Age is required.",
+        "styleRequired": "Style is required.",
+        "allRequired": "Please fill in all required fields before submit.",
+        "uploadFailed": "Failed to upload {fileName}",
+        "createSuccess": "Listing created successfully. Lot ID: {lotId}",
+        "submitFailed": "Failed to submit listing.",
+        "lookupsFailed": "Failed to load listing options.",
+        "loadingLookups": "Loading listing options...",
+        "categoryStepTitle": "Choose category",
+        "categoryStepDescription": "Select the department, root category and subcategory. These choices control sizes, measurements and catalogue filters.",
+        "selectDepartment": "Select department",
+        "selectRootCategory": "Select root category",
+        "selectSubcategory": "Select subcategory",
+        "departmentRequired": "Department is required.",
+        "rootCategoryRequired": "Root category is required.",
+        "subcategoryRequired": "Subcategory is required.",
+        "itemDetailsTitle": "Item details",
+        "itemDetailsDescription": "Add the details buyers need to understand the item before bidding.",
+        "modelName": "Model name",
+        "modelNamePlaceholder": "Optional model, line or season",
+        "primaryColor": "Primary color",
+        "secondaryColors": "Secondary colors",
+        "selectColor": "Select color",
+        "materials": "Materials",
+        "materialsOptional": "Materials are optional, but they help buyers evaluate quality and fit.",
+        "materialsLimit": "You can select up to 3 materials.",
+        "materialDuplicate": "Each selected material must be unique.",
+        "addMaterial": "Add material",
+        "selectMaterial": "Select material",
+        "percentPlaceholder": "%",
+        "productionYear": "Production year",
+        "acquisitionYear": "Acquisition year",
+        "markVintage": "Mark as vintage",
+        "vintageHelp": "Vintage is allowed for items at least 15 years old. If production year is unknown, add a note for moderation.",
+        "vintageNotesPlaceholder": "Why do you consider this item vintage?",
+        "vintageTooYoung": "Vintage items must be at least {count} years old.",
+        "vintageNotesRequired": "Vintage notes are required when production year is unknown.",
+        "measurementsTitle": "Measurements",
+        "measurementsDescription": "Measurements are optional, but they reduce uncertainty and improve buyer trust.",
+        "noMeasurementsForCategory": "This category does not need structured measurements.",
+        "measurementsPositive": "Measurement values must be positive.",
+        "waitUploads": "Please wait until all uploads finish.",
+        "proofPrivateLabel": "Private documents",
+        "proofTitle": "Proof of origin (optional)",
+        "proofDescription": "This information will not be publicly displayed.",
+        "proofHint": "Add receipt, authenticity card, or invoice.",
+        "proofType": "Document type",
+        "selectProofType": "Select document type",
+        "addProofDocument": "Add proof document",
+        "proofFormats": "JPEG, PNG, WEBP or PDF up to 10MB",
+        "proofTypeRequired": "Select a document type first.",
+        "proofMaxDocuments": "You can upload up to 5 proof documents.",
+        "proofUploadFailed": "Failed to upload proof document.",
+        "proofDeleteFailed": "Failed to delete proof document.",
+        "coverPhoto": "Cover photo",
+        "makeCover": "Make cover",
+        "replace": "Replace",
+        "retryUpload": "Retry upload",
+        "moveLeft": "Move left",
+        "moveRight": "Move right"
+    },
+    "departments": {
+        "Women": "Women",
+        "Men": "Men",
+        "Unisex": "Unisex"
+    },
+    "categories": {
+        "clothing": "Clothing",
+        "shoes": "Shoes",
+        "bags": "Bags",
+        "accessories": "Accessories",
+        "jewellery": "Jewellery",
+        "watches": "Watches",
+        "tShirts": "T-shirts",
+        "shirts": "Shirts",
+        "poloShirts": "Polo shirts",
+        "hoodies": "Hoodies",
+        "sweatshirts": "Sweatshirts",
+        "knitwear": "Knitwear",
+        "jackets": "Jackets",
+        "coats": "Coats",
+        "blazers": "Blazers",
+        "suits": "Suits",
+        "jeans": "Jeans",
+        "trousers": "Trousers",
+        "shorts": "Shorts",
+        "skirts": "Skirts",
+        "dresses": "Dresses",
+        "jumpsuits": "Jumpsuits",
+        "swimwear": "Swimwear",
+        "underwear": "Underwear",
+        "otherClothing": "Other clothing",
+        "sneakers": "Sneakers",
+        "boots": "Boots",
+        "loafers": "Loafers",
+        "laceUps": "Lace-ups",
+        "sandals": "Sandals",
+        "heels": "Heels",
+        "flats": "Flats",
+        "espadrilles": "Espadrilles",
+        "slippers": "Slippers",
+        "otherShoes": "Other shoes",
+        "backpacks": "Backpacks",
+        "toteBags": "Tote bags",
+        "shoulderBags": "Shoulder bags",
+        "crossbodyBags": "Crossbody bags",
+        "clutches": "Clutches",
+        "briefcases": "Briefcases",
+        "travelBags": "Travel bags",
+        "beltBags": "Belt bags",
+        "wallets": "Wallets",
+        "cardHolders": "Card holders",
+        "otherBags": "Other bags",
+        "belts": "Belts",
+        "sunglasses": "Sunglasses",
+        "scarves": "Scarves",
+        "hats": "Hats",
+        "gloves": "Gloves",
+        "ties": "Ties",
+        "pocketSquares": "Pocket squares",
+        "cufflinks": "Cufflinks",
+        "keychains": "Keychains",
+        "otherAccessories": "Other accessories",
+        "rings": "Rings",
+        "bracelets": "Bracelets",
+        "necklaces": "Necklaces",
+        "earrings": "Earrings",
+        "brooches": "Brooches",
+        "pendants": "Pendants",
+        "otherJewellery": "Other jewellery",
+        "wristWatches": "Wrist watches",
+        "pocketWatches": "Pocket watches",
+        "watchAccessories": "Watch accessories",
+        "otherWatches": "Other watches"
+    },
+    "materials": {
+        "cotton": "Cotton",
+        "wool": "Wool",
+        "cashmere": "Cashmere",
+        "silk": "Silk",
+        "linen": "Linen",
+        "leather": "Leather",
+        "suede": "Suede",
+        "denim": "Denim",
+        "polyester": "Polyester",
+        "nylon": "Nylon",
+        "viscose": "Viscose",
+        "acrylic": "Acrylic",
+        "elastane": "Elastane",
+        "fur": "Fur",
+        "syntheticLeather": "Synthetic leather",
+        "rubber": "Rubber",
+        "metal": "Metal",
+        "gold": "Gold",
+        "silver": "Silver",
+        "platinum": "Platinum",
+        "ceramic": "Ceramic",
+        "canvas": "Canvas",
+        "velvet": "Velvet",
+        "other": "Other",
+        "unknown": "Unknown material"
+    },
+    "colors": {
+        "black": "Black",
+        "white": "White",
+        "grey": "Grey",
+        "beige": "Beige",
+        "brown": "Brown",
+        "red": "Red",
+        "burgundy": "Burgundy",
+        "orange": "Orange",
+        "yellow": "Yellow",
+        "green": "Green",
+        "blue": "Blue",
+        "navy": "Navy",
+        "purple": "Purple",
+        "pink": "Pink",
+        "gold": "Gold",
+        "silver": "Silver",
+        "multicolor": "Multicolor",
+        "transparent": "Transparent",
+        "other": "Other"
+    },
+    "measurements": {
+        "chestWidth": "Chest width",
+        "shoulderWidth": "Shoulder width",
+        "length": "Length",
+        "sleeveLength": "Sleeve length",
+        "hemWidth": "Hem width",
+        "waist": "Waist",
+        "rise": "Rise",
+        "inseam": "Inseam",
+        "outseam": "Outseam",
+        "legOpening": "Leg opening",
+        "thighWidth": "Thigh width",
+        "hips": "Hips",
+        "totalLength": "Total length",
+        "insoleLength": "Insole length",
+        "outsoleLength": "Outsole length",
+        "width": "Width",
+        "heelHeight": "Heel height",
+        "height": "Height",
+        "depth": "Depth",
+        "strapDrop": "Strap drop",
+        "minimumHole": "Minimum hole",
+        "maximumHole": "Maximum hole",
+        "ringSize": "Ring size",
+        "chainLength": "Chain length",
+        "braceletLength": "Bracelet length",
+        "weight": "Weight",
+        "dimensions": "Dimensions",
+        "caseDiameter": "Case diameter",
+        "caseThickness": "Case thickness",
+        "lugWidth": "Lug width",
+        "strapLength": "Strap length"
+    },
+    "proofDocuments": {
+        "receipt": "Receipt",
+        "invoice": "Invoice",
+        "authenticityCard": "Authenticity card",
+        "orderConfirmation": "Order confirmation",
+        "otherSupportingDocument": "Other supporting document",
+        "unknown": "Supporting document"
+    },
+    "sizes": {
+        "xxs": "XXS",
+        "xs": "XS",
+        "s": "S",
+        "m": "M",
+        "l": "L",
+        "xl": "XL",
+        "xxl": "XXL",
+        "xxxl": "XXXL",
+        "eu35": "EU 35",
+        "eu36": "EU 36",
+        "eu37": "EU 37",
+        "eu38": "EU 38",
+        "eu39": "EU 39",
+        "eu40": "EU 40",
+        "eu41": "EU 41",
+        "eu42": "EU 42",
+        "eu43": "EU 43",
+        "eu44": "EU 44",
+        "eu45": "EU 45",
+        "oneSize": "One Size",
+        "unknown": "Unknown",
+        "notApplicable": "Not applicable"
+    },
+    "auth": {
+        "emailAddress": "Email address",
+        "password": "Password",
+        "newPassword": "New password",
+        "confirmPassword": "Confirm password",
+        "username": "Username",
+        "emailPlaceholder": "you{'@'}example.com",
+        "passwordPlaceholder": "Enter your password",
+        "usernamePlaceholder": "Enter your username",
+        "createPasswordPlaceholder": "Create a password",
+        "repeatPasswordPlaceholder": "Repeat your password",
+        "newPasswordPlaceholder": "Create a new password",
+        "repeatNewPasswordPlaceholder": "Repeat your new password",
+        "loginEyebrow": "Sign in",
+        "loginTitle": "Welcome back.",
+        "loginDescription": "Sign in to manage your account, follow curated lots, and stay close to pieces worth watching.",
+        "forgotPassword": "Forgot password?",
+        "noAccount": "Don’t have an account?",
+        "createOne": "Create one",
+        "marketplaceEyebrow": "Curated marketplace",
+        "marketplaceTitle": "Rare pieces. Better attention.",
+        "marketplaceDescription": "Relora is built for designer fashion, archive pieces, and objects that deserve stronger presentation than mass resale platforms usually give them.",
+        "registerEyebrow": "Register",
+        "registerTitle": "Create your account.",
+        "registerDescription": "Start saving standout lots, following sellers, and building your place inside Relora.",
+        "createAccount": "Create account",
+        "alreadyHaveAccount": "Already have an account?",
+        "joinEyebrow": "Join Relora",
+        "joinTitleLine1": "Save better pieces.",
+        "joinTitleLine2": "Follow better taste.",
+        "joinDescription": "Create an account to keep track of lots, discover selected sellers, and stay closer to what’s worth owning.",
+        "passwordReset": "Password reset",
+        "forgotTitle": "Forgot your password?",
+        "forgotDescription": "Enter your email and we’ll send you a link to reset it.",
+        "sendResetLink": "Send reset link",
+        "rememberedPassword": "Remembered your password?",
+        "backToSignIn": "Back to sign in",
+        "resetPassword": "Reset password",
+        "resetTitle": "Create a new password.",
+        "resetDescription": "Choose a secure password to restore access to your account.",
+        "saveNewPassword": "Save new password",
+        "changedMind": "Changed your mind?",
+        "passwordMismatch": "Passwords do not match",
+        "loginSuccess": "You have been successfully logged in.",
+        "loginFailed": "Login failed",
+        "registerSuccess": "You have been successfully registered.",
+        "registrationFailed": "Registration failed",
+        "unexpectedError": "An unexpected error occurred"
+    },
+    "profile": {
+        "failed": "Failed to load profile.",
+        "notFound": "Profile not found",
+        "userProfile": "User profile",
+        "verifiedSeller": "Verified seller",
+        "securePayments": "Secure payments",
+        "description": "Seller profile with active inventory, completed sales, and platform activity.",
+        "follow": "Follow",
+        "message": "Message",
+        "activeListings": "Active listings",
+        "soldItems": "Sold items",
+        "bidsPlaced": "Bids placed",
+        "aboutSeller": "About seller",
+        "focus": "Focus",
+        "focusDescription": "Archive fashion, designer outerwear, accessories, and selected collectible pieces.",
+        "accountStatus": "Account status",
+        "trustedHistory": "Trusted history",
+        "buyerProtection": "Buyer protection",
+        "sellerSummary": "Seller summary",
+        "liveLots": "Live lots",
+        "completedSales": "Completed sales",
+        "publicProfile": "Public",
+        "liveInventory": "Live inventory",
+        "activeListingsDescription": "Lots currently available for bidding.",
+        "viewAll": "View all",
+        "noBrand": "No brand",
+        "active": "Active",
+        "noActiveListings": "No active listings yet",
+        "noActiveDescription": "This seller does not have any live lots at the moment.",
+        "sellerHistory": "Seller history",
+        "soldDescription": "Pieces already sold through the platform.",
+        "viewArchive": "View archive",
+        "sold": "Sold",
+        "noSoldItems": "No sold items yet",
+        "noSoldDescription": "Completed sales will appear here once transactions are closed."
+    },
+    "designers": {
+        "title": "Discover Luxury Designer Brands A–Z",
+        "description": "Explore curated designer brands, archive fashion labels, luxury houses, and rare streetwear names available on Relora.",
+        "noDesigners": "No designers found."
+    },
+    "home": {
+        "guestTitlePart1": "Rare fashion,",
+        "guestTitlePart2": "premium brands,",
+        "guestTitlePart3": "and auctions worth watching.",
+        "welcomeBack": "Welcome back,",
+        "guestDescription": "A refined auction marketplace for designer fashion, standout accessories, and collectible pieces with character.",
+        "memberDescription": "Discover fresh arrivals, track pieces worth bidding on, and explore a more curated side of fashion.",
+        "heroTitleLine1": "Own the",
+        "heroTitleLine2": "next drop.",
+        "heroDescriptionLine1": "Exclusive fashion auctions.",
+        "heroDescriptionLine2": "Iconic pieces. Real-time bidding.",
+        "exploreAuctions": "Explore auctions",
+        "sellAnItem": "Sell an item",
+        "membersWorldwide": "12K+ members worldwide",
+        "liveAuction": "Live auction",
+        "heroLotTitleLine1": "Stone Island",
+        "heroLotTitleLine2": "Ghost Jacket",
+        "heroLotAlt": "Stone Island Ghost Jacket",
+        "currentBid": "Current bid",
+        "bidCount": "{count} bids",
+        "left": "left",
+        "viewLot": "View lot",
+        "browseBrands": "Browse brands",
+        "explore": "Explore",
+        "discoverWorld": "Discover the world of Relora",
+        "discoverWorldDescription": "Step into curated categories shaped by premium fashion, rare finds, and collector taste.",
+        "viewAllCategories": "View all categories",
+        "category": "Category",
+        "trendingAuctions": "Trending Auctions",
+        "trendingDescription": "The lots drawing the most attention right now.",
+        "browseMore": "Browse more",
+        "scrollTrending": "Scroll through trending picks",
+        "categories": "Categories",
+        "shopByCategory": "Shop by category",
+        "shopByCategoryDescription": "Explore standout styles across fashion, streetwear, and collectible detail.",
+        "whyRelora": "Why Relora",
+        "whyTitle": "A marketplace shaped around taste, trust, and standout pieces",
+        "whyDescription": "Built for people who want more than endless listings — a place where discovery feels curated.",
+        "curatedTitle": "Carefully curated marketplace",
+        "curatedDescription": "Every listing is expected to meet higher standards for quality, presentation, and authenticity.",
+        "communityTitle": "Growing with our community",
+        "communityDescription": "We're at the beginning of our journey and are continuously improving the platform based on user feedback.",
+        "premiumTitle": "Built for premium fashion",
+        "premiumDescription": "Discover luxury clothing, designer bags, sneakers, watches, and collectible fashion pieces in one place.",
+        "trustTitle": "Designed for trust",
+        "trustDescription": "Secure accounts, transparent listings, and a marketplace focused on long-term buyer and seller confidence.",
+        "newListings": "New Listings",
+        "newListingsDescription": "Fresh arrivals worth a closer look.",
+        "scrollNew": "Scroll through newly listed auctions",
+        "brands": "Brands",
+        "shopByBrand": "Shop by brand",
+        "shopByBrandDescription": "Explore standout pieces from globally recognized labels and highly desirable names.",
+        "brand": "Brand",
+        "endingSoon": "Ending Soon",
+        "endingSoonDescription": "Auctions nearing the finish line — last chance to place a bid.",
+        "scrollEnding": "Scroll through ending soon auctions",
+        "catalogPreference": "Catalog preference",
+        "currentlyBrowsing": "Currently browsing {preference}",
+        "preferenceDescription": "You can switch your homepage catalog anytime. Relora will remember your choice next time.",
+        "seoFooter": "Relora is an online auction marketplace focused on rare fashion, designer clothing, and collectible pieces. Browse curated listings, place bids with confidence, and discover items that feel distinctive, memorable, and worth owning.",
+        "howItWorks": {
+            "label": "HOW IT WORKS",
+            "title": "Three steps to win",
+            "steps": {
+                "discover": {
+                    "number": "01",
+                    "title": "Discover",
+                    "description": "Find rare pieces from curated auctions."
+                },
+                "bid": {
+                    "number": "02",
+                    "title": "Bid",
+                    "description": "Place your bid and compete in real time."
+                },
+                "win": {
+                    "number": "03",
+                    "title": "Win",
+                    "description": "Win the auction and own the piece."
+                }
+            }
+        },
+        
+        "collections": {
+            "1": {
+                "label": "Archive Direction",
+                "title": "Avant-Garde",
+                "subtitle": "Rick Owens, Margiela, layered silhouettes, and experimental cuts."
+            },
+            "2": {
+                "label": "Modern Luxury",
+                "title": "Minimal Designer",
+                "subtitle": "Clean lines, neutral tones, Prada-style essentials and refined fits."
+            },
+            "3": {
+                "label": "Street Culture",
+                "title": "Elevated Streetwear",
+                "subtitle": "Oversized fits, sneakers, hoodies, and statement everyday pieces."
+            }
+        },
+        "categoryNames": {
+            "Vintage": "Vintage",
+            "Streetwear": "Streetwear",
+            "Designer": "Designer",
+            "Sneakers": "Sneakers",
+            "Accessories": "Accessories"
+        },
+        "mockAuctions": {
+            "1": {
+                "title": "Vintage Leather Sofa - Pristine Condition",
+                "timeLeft": "2 days 14 hours"
+            },
+            "2": {
+                "title": "Original Oil Painting by Unknown Artist",
+                "timeLeft": "3 days 8 hours"
+            },
+            "3": {
+                "title": "Rolex Submariner Watch Limited Edition",
+                "timeLeft": "1 day 6 hours"
+            },
+            "4": {
+                "title": "Antique Wooden Cabinet with Mirror",
+                "timeLeft": "4 days 20 hours"
+            },
+            "5": {
+                "title": "Vintage Pearl Necklace - 18K Gold Chain",
+                "timeLeft": "5 days 12 hours"
+            },
+            "6": {
+                "title": "Brand New Gaming Laptop RTX 4090",
+                "timeLeft": "18 hours 30 minutes"
+            },
+            "7": {
+                "title": "Signed Beatles Vinyl Record First Edition",
+                "timeLeft": "2 days 5 hours"
+            },
+            "8": {
+                "title": "Handmade Italian Ceramic Vase",
+                "timeLeft": "6 days 10 hours"
+            },
+            "9": {
+                "title": "Vintage Leather Camera Bag",
+                "timeLeft": "1 day 12 hours"
+            },
+            "10": {
+                "title": "Classic Analogue Photocamera 35mm",
+                "timeLeft": "3 days 4 hours"
+            },
+            "11": {
+                "title": "Sterling Silver Coin Collection",
+                "timeLeft": "7 days 2 hours"
+            },
+            "12": {
+                "title": "Rare Bird Taxidermy Display",
+                "timeLeft": "4 days 18 hours"
+            }
+        }
+    },
+    "landing": {
+        "eyebrow": "Archive Fashion Marketplace",
+        "heroDescription": "A curated auction marketplace for rare fashion, archive pieces, and collectible garments.",
+        "heroTagline": "Not trend-driven. Time-driven.",
+        "getEarlyAccess": "Get Early Access",
+        "brandTitle": "Not mass fashion. Archive only.",
+        "brandDescription": "Focused on rare garments, designer archive, and pieces with cultural weight.",
+        "aboutTitle": "Built for archive fashion",
+        "aboutFirst": "Relora is designed for people who value rare fashion, designer archive, and pieces that define identity - not fast-moving trends.",
+        "aboutSecond": "Every listing is meant to carry weight - from archival garments to rare releases that are no longer accessible through traditional retail.",
+        "whyEyebrow": "Why Relora",
+        "whyTitle": "Built around rarity and archive value",
+        "values": {
+            "archive": {
+                "title": "Archive",
+                "description": "Focus on designer archive and past-season pieces that define fashion history."
+            },
+            "rare": {
+                "title": "Rare",
+                "description": "Limited pieces with real scarcity - not mass-produced inventory."
+            },
+            "market": {
+                "title": "Market-driven",
+                "description": "Value is defined by demand, not tags or retail pricing."
+            }
+        },
+        "demandTitle": "Archive pieces. Real demand.",
+        "demandDescription": "Built for those who understand fashion beyond seasons.",
+        "earlyAccess": "Early Access",
+        "earlyTitle": "Access rare fashion before it disappears",
+        "earlyDescription": "Join early and be among the first to explore archive garments, rare pieces, and curated auctions on Relora.",
+        "emailPlaceholder": "Enter your email",
+        "requestAccess": "Request Access",
+        "consent": "By submitting this form, you agree to be contacted about early access and platform updates.",
+        "footerDescription": "Relora is a curated online auction marketplace focused on rare fashion, designer archive, and collectible garments. The platform is being developed to offer a refined, minimal, and demand-driven experience for discovering and acquiring archive pieces.",
+        "location": "Riga, Latvia. European Union"
+    },
+    "info": {
+        "about": {
+            "eyebrow": "About Relora",
+            "title": "Rare fashion, refined auctions, and better attention to standout pieces.",
+            "description": "Relora is a curated auction marketplace for rare fashion, timeless pieces, and collectible design - built for people who value individuality over mass-market consumption.",
+            "founded": "Founded in 2026",
+            "location": "Riga, Latvia",
+            "curatedMarketplace": "Curated marketplace",
+            "highlightLabel": "Highlight",
+            "highlights": {
+                "curated": {
+                    "title": "Curated selection",
+                    "text": "Pieces are meant to feel chosen, not lost inside endless generic inventory."
+                },
+                "auction": {
+                    "title": "Auction energy",
+                    "text": "Bidding creates movement, timing, and a stronger sense of value discovery."
+                },
+                "presentation": {
+                    "title": "Clear presentation",
+                    "text": "A quieter interface gives more room for the item itself to stand out."
+                }
+            },
+            "images": {
+                "editorial": "Fashion editorial",
+                "clothing": "Designer clothing",
+                "piece": "Curated fashion piece"
+            },
+            "whatEyebrow": "What Relora is",
+            "whatTitle": "A marketplace built around discovery, timing, and value shaped by real demand.",
+            "whatParagraphs": [
+                "Relora brings together buyers, collectors, enthusiasts, and sellers in a refined online auction environment. It is designed for discovering items that feel special - pieces with character, rarity, and lasting appeal.",
+                "Instead of endless mass-produced inventory, Relora focuses on items that stand out. From designer clothing and archive fashion to unique lifestyle objects and collectible finds, the goal is to create a marketplace that feels more intentional from the start.",
+                "The platform combines the excitement of live bidding with the clarity of modern e-commerce. It is not only about buying quickly - it is about discovery, timing, and value revealed through real interest."
+            ],
+            "audienceEyebrow": "Who it is for",
+            "audienceTitle": "For buyers, collectors, fashion enthusiasts, and sellers who care about the right environment.",
+            "audienceParagraphs": [
+                "Relora is built for people who want more than ordinary shopping experiences. It is made for those looking for rare wardrobe pieces, standout accessories, collectible objects, and a marketplace that feels calmer and more deliberate.",
+                "It is also for sellers who want their items to be seen properly - not buried inside noise, but presented in a cleaner setting where quality and individuality matter more."
+            ],
+            "discoverEyebrow": "What you can discover",
+            "discoverTitle": "Designer fashion, archive clothing, accessories, footwear, bags, and collectible objects worth noticing.",
+            "discoverParagraphs": [
+                "The marketplace is intended to feature categories such as designer fashion, archive clothing, accessories, footwear, bags, lifestyle objects, and other collectible items that deserve attention.",
+                "The focus stays on pieces that feel curated rather than generic - items chosen for their design, rarity, identity, or cultural relevance."
+            ],
+            "auctionsEyebrow": "Why auctions matter",
+            "auctionsTitle": "Auctions create a different relationship between buyer, seller, and item.",
+            "auctionsDescription": "Instead of simply scrolling and checking out, users participate in a process where value is discovered over time. For sellers, auctions create visibility and the possibility of reaching true market value. For buyers, they create anticipation, competition, and a stronger sense of reward.",
+            "difference": {
+                "eyebrow": "What makes Relora different",
+                "values": {
+                    "curated": "A curated marketplace instead of overwhelming mass-market inventory",
+                    "focus": "A focus on rare fashion, collectible design, and standout pieces",
+                    "bidding": "Real-time bidding shaped by actual demand and market interest",
+                    "interface": "A clean interface that keeps attention on the listing"
+                }
+            },
+            "missionEyebrow": "Our mission",
+            "missionTitle": "Build a marketplace where rare pieces are discovered, appreciated, and valued properly.",
+            "missionDescription": "Relora is being shaped as more than a transactional platform. The long-term vision is a destination for curated discovery, trusted sellers, and an audience that values style, scarcity, and thoughtful selection.",
+            "footerMeta": "Founded in 2026 - Riga, Latvia",
+            "footerTagline": "Not mass market. Never ordinary."
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "description": "Everything you need to know about buying, selling, auctions, shipping, payments, returns, and authenticity on Relora - the curated marketplace for designer fashion, archive clothing, luxury streetwear, vintage garments, and collectible fashion pieces.",
+            "items": {
+                "1": {
+                    "question": "What is Relora?",
+                    "paragraphs": [
+                        "Relora is a curated marketplace dedicated to designer fashion, archive clothing, luxury streetwear, vintage fashion, and rare collectible garments.",
+                        "The platform allows users to buy and sell designer pieces from brands such as Rick Owens, Raf Simons, Balenciaga, Vetements, Helmut Lang, Number (N)ine, Undercover, Chrome Hearts, Maison Margiela, Yohji Yamamoto, and many more.",
+                        "Unlike traditional marketplaces, Relora focuses on fashion culture, curated listings, cleaner browsing, and a premium user experience."
+                    ]
+                },
+                "2": {
+                    "question": "What can I sell on Relora?",
+                    "paragraphs": [
+                        "Users can sell designer clothing, archive fashion, luxury streetwear, vintage garments, sneakers, bags, accessories, runway pieces, collectible fashion items, and rare clothing.",
+                        "Popular categories include designer jackets, hoodies, denim, footwear, luxury accessories, runway archive pieces, and limited edition collections.",
+                        "Counterfeit products, replica items, and misleading listings are prohibited."
+                    ]
+                },
+                "3": {
+                    "question": "How do I create a listing?",
+                    "paragraphs": [
+                        "Sellers can create listings by uploading product photos, entering item details, selecting category information, and setting a price or auction configuration.",
+                        "Accurate descriptions, measurements, condition details, and clear product photos help improve buyer trust and increase sales potential.",
+                        "Some listings may go through moderation before becoming publicly visible on the marketplace."
+                    ]
+                },
+                "4": {
+                    "question": "How do auctions work?",
+                    "paragraphs": [
+                        "Sellers can start timed auctions for eligible fashion items. Buyers place bids during the auction period, and the highest bid at the end of the auction wins.",
+                        "Auctions are especially useful for rare archive fashion, collectible designer garments, and difficult-to-price items.",
+                        "Auction duration and availability may vary depending on seller settings and marketplace rules."
+                    ]
+                },
+                "5": {
+                    "question": "How does Relora handle authenticity?",
+                    "paragraphs": [
+                        "Relora aims to reduce counterfeit listings through moderation, seller monitoring, detailed product requirements, and manual review systems.",
+                        "Buyers should carefully inspect product photos, labels, stitching, hardware, tags, and condition details before purchasing luxury fashion or designer clothing.",
+                        "Listings suspected of violating authenticity standards may be removed, hidden, or manually reviewed."
+                    ]
+                },
+                "6": {
+                    "question": "What condition should items be in?",
+                    "paragraphs": [
+                        "Sellers should accurately describe item condition, including any flaws, signs of wear, discoloration, repairs, stains, or alterations.",
+                        "Transparency helps buyers make informed purchasing decisions and reduces disputes related to item condition.",
+                        "Archive and vintage fashion may naturally contain signs of age, which should always be clearly disclosed in the listing."
+                    ]
+                },
+                "7": {
+                    "question": "Does Relora support worldwide shipping?",
+                    "paragraphs": [
+                        "Many sellers on Relora offer international shipping for luxury fashion, archive clothing, and designer garments.",
+                        "Shipping costs, delivery times, customs fees, and import taxes may vary depending on destination country and shipping provider.",
+                        "Buyers should review shipping details before completing a purchase."
+                    ]
+                },
+                "8": {
+                    "question": "What payment methods are supported?",
+                    "paragraphs": [
+                        "Payment methods may vary depending on region, seller configuration, and platform integrations.",
+                        "Relora continues to expand secure payment support to improve the buying and selling experience for fashion enthusiasts, collectors, and luxury consumers.",
+                        "Buyers should always confirm order details before completing payment."
+                    ]
+                },
+                "9": {
+                    "question": "Can I return an item?",
+                    "paragraphs": [
+                        "Return eligibility depends on seller policies, item condition, authenticity concerns, and dispute review outcomes.",
+                        "Buyers are encouraged to carefully review all listing details, photos, measurements, and descriptions before purchasing designer clothing or archive fashion pieces.",
+                        "Items significantly different from their description may qualify for dispute review."
+                    ]
+                },
+                "10": {
+                    "question": "What happens if there is a dispute?",
+                    "paragraphs": [
+                        "Relora is developing dispute handling systems to assist buyers and sellers with issues related to delivery, authenticity, damaged items, or incorrect product descriptions.",
+                        "Buyers and sellers should keep shipping proof, tracking information, communication records, and detailed product photos whenever possible.",
+                        "Fraudulent activity, abuse of refunds, or dishonest behavior may result in account restrictions or removal from the platform."
+                    ]
+                },
+                "11": {
+                    "question": "Why should I use Relora instead of other marketplaces?",
+                    "paragraphs": [
+                        "Relora focuses on curated designer fashion instead of overwhelming users with low-quality mass-market listings.",
+                        "The platform is designed specifically for archive fashion, luxury clothing, collectible garments, designer auctions, vintage fashion, and fashion culture communities.",
+                        "Cleaner browsing, premium listings, fashion-focused categories, and auction functionality help create a more specialized marketplace experience."
+                    ]
+                },
+                "12": {
+                    "question": "Is Relora free to use?",
+                    "paragraphs": [
+                        "Browsing the marketplace is free. Selling fees, premium features, commissions, or optional marketplace tools may vary as the platform evolves.",
+                        "Relora continuously improves marketplace infrastructure, moderation systems, seller tools, and auction functionality to support long-term growth."
+                    ]
+                },
+                "13": {
+                    "question": "How can I improve my chances of selling?",
+                    "paragraphs": [
+                        "High-quality product photos, accurate descriptions, transparent condition details, measurements, and competitive pricing help improve listing performance.",
+                        "Archive fashion buyers often search for specific collections, runway seasons, rare garments, and hard-to-find designer pieces.",
+                        "Detailed listings help build trust and improve visibility within the marketplace."
+                    ]
+                },
+                "14": {
+                    "question": "Are fake or replica items allowed?",
+                    "paragraphs": [
+                        "No. Counterfeit products, replicas, fake designer items, and misleading listings are prohibited on Relora.",
+                        "Sellers attempting to distribute counterfeit fashion products may face listing removal, account suspension, or permanent marketplace bans."
+                    ]
+                },
+                "15": {
+                    "question": "Is Relora focused only on luxury fashion?",
+                    "paragraphs": [
+                        "Relora primarily focuses on designer fashion, archive collections, luxury streetwear, avant-garde fashion, and collectible garments.",
+                        "However, the platform also welcomes quality fashion pieces that align with the marketplace aesthetic and community interests."
+                    ]
+                }
+            }
+        },
+        "legal": "Legal",
+        "summary": "Summary",
+        "onThisPage": "On this page",
+        "important": "Important",
+        "email": "Email",
+        "lastUpdated": "Last updated: {date}",
+        "terms": {
+            "title": "Terms of Service",
+            "description": "These Terms of Service govern your access to and use of the Relora platform, including browsing, listing items, bidding, and completing transactions.",
+            "summary": "By using Relora, you agree to follow the platform rules, provide accurate information, and respect the auction process, payment obligations, and listing standards.",
+            "footerMeta": "Relora - Terms of Service",
+            "footerText": "Clear rules support a cleaner marketplace.",
+            "sections": {
+                "1": {
+                    "title": "1. Acceptance of Terms",
+                    "content": [
+                        "By accessing or using Relora, you agree to be bound by these Terms. If you do not agree, you should not use the platform."
+                    ]
+                },
+                "2": {
+                    "title": "2. User Accounts",
+                    "content": [
+                        "You may be required to create an account to access certain features. You are responsible for maintaining the confidentiality of your account credentials.",
+                        "You agree to provide accurate and complete information and to keep it updated."
+                    ]
+                },
+                "3": {
+                    "title": "3. Auctions and Bidding",
+                    "content": [
+                        "Relora operates as an auction-based marketplace where users can list items and place bids.",
+                        "By placing a bid, you agree that your bid is binding and that you intend to purchase the item if your bid is the highest at the end of the auction.",
+                        "Sellers are responsible for accurately describing items, including condition, authenticity, and details."
+                    ]
+                },
+                "4": {
+                    "title": "4. Transactions",
+                    "content": [
+                        "When an auction ends, the highest bidder is obligated to complete the transaction.",
+                        "Payment and delivery terms may depend on the platform's policies and integrations with payment providers.",
+                        "Relora may act as an intermediary but is not the direct seller of listed items."
+                    ]
+                },
+                "5": {
+                    "title": "5. Fees and Payments",
+                    "content": [
+                        "Certain features or transactions may be subject to fees. These fees will be clearly communicated before they apply.",
+                        "Relora reserves the right to update pricing and fee structures at any time."
+                    ]
+                },
+                "6": {
+                    "title": "6. Prohibited Conduct",
+                    "list": [
+                        "Listing counterfeit or illegal items",
+                        "Manipulating bids or engaging in fraudulent behavior",
+                        "Misrepresenting items or providing false information",
+                        "Using the platform for unlawful purposes"
+                    ]
+                },
+                "7": {
+                    "title": "7. Limitation of Liability",
+                    "content": [
+                        "Relora provides the platform \"as is\" and does not guarantee the accuracy of listings, the behavior of users, or the outcome of transactions.",
+                        "To the maximum extent permitted by law, Relora is not liable for any direct or indirect damages."
+                    ]
+                },
+                "8": {
+                    "title": "8. Account Suspension and Termination",
+                    "content": [
+                        "Relora reserves the right to suspend or terminate accounts that violate these Terms or engage in harmful or abusive behavior."
+                    ]
+                },
+                "9": {
+                    "title": "9. Changes to Terms",
+                    "content": [
+                        "We may update these Terms from time to time. Continued use of the platform after updates constitutes acceptance of the revised Terms."
+                    ]
+                },
+                "10": {
+                    "title": "10. Contact",
+                    "content": [
+                        "If you have questions about these Terms, you may contact us through the platform."
+                    ]
+                }
+            },
+            "updatedDate": "March 17, 2026"
+        },
+        "pages": {
+            "privacy": {
+                "eyebrow": "Legal",
+                "title": "Privacy Policy",
+                "updatedDate": "March 17, 2026",
+                "description": "This Privacy Policy explains how Relora collects, uses, stores, and protects personal information when you use our platform, including browsing auctions, creating an account, listing items, placing bids, or communicating with us.",
+                "summaryTitle": "Summary",
+                "summary": "We collect and use personal information to operate accounts, auctions, transactions, platform security, and support. We do not sell personal information.",
+                "footerMeta": "Relora - Privacy Policy",
+                "footerText": "Clear privacy standards support a more trustworthy marketplace.",
+                "sections": [{
+                        "id": "introduction",
+                        "title": "1. Introduction",
+                        "content": [
+                            "Relora respects your privacy and is committed to protecting your personal data. We aim to process personal information in a transparent, lawful, and secure manner.",
+                            "By using our platform, you acknowledge that your information may be collected and used in accordance with this Privacy Policy."
+                        ]
+                    },
+                    {
+                        "id": "collected",
+                        "title": "2. Information we collect",
+                        "intro": "We may collect the following categories of information:",
+                        "list": [
+                            "Account information, such as name, email address, username, and password",
+                            "Profile information that you choose to provide",
+                            "Transaction and auction activity, including bids, listings, purchases, and sales",
+                            "Communication data, such as messages sent through the platform or support requests",
+                            "Technical data, such as IP address, browser type, device information, and usage activity",
+                            "Payment-related information, where applicable, processed through secure payment providers"
+                        ]
+                    },
+                    {
+                        "id": "usage",
+                        "title": "3. How we use your information",
+                        "intro": "Your information may be used to:",
+                        "list": [
+                            "Create and manage your account",
+                            "Operate auctions, listings, bidding, and transactions",
+                            "Provide customer support and respond to inquiries",
+                            "Improve platform functionality, performance, and security",
+                            "Prevent fraud, abuse, unauthorized access, and policy violations",
+                            "Send important service-related notifications",
+                            "Comply with applicable legal and regulatory obligations"
+                        ]
+                    },
+                    {
+                        "id": "legal-basis",
+                        "title": "4. Legal basis for processing",
+                        "content": [
+                            "Where applicable, we process personal data based on one or more of the following legal grounds: performance of a contract, compliance with legal obligations, legitimate interests, or your consent where consent is required."
+                        ]
+                    },
+                    {
+                        "id": "sharing",
+                        "title": "5. How we share information",
+                        "intro": "We do not sell personal information. We may share information only when necessary, including:",
+                        "list": [
+                            "With service providers who support platform operations",
+                            "With payment processors and related financial service providers",
+                            "With legal authorities when required by law or to protect legal rights",
+                            "In connection with business changes such as a merger, acquisition, or restructuring"
+                        ]
+                    },
+                    {
+                        "id": "cookies",
+                        "title": "6. Cookies and similar technologies",
+                        "content": [
+                            "Relora may use cookies and similar technologies to improve user experience, remember preferences, analyze traffic, and maintain platform security.",
+                            "You may be able to control certain cookie settings through your browser."
+                        ]
+                    },
+                    {
+                        "id": "retention",
+                        "title": "7. Data retention",
+                        "content": [
+                            "We retain personal information only for as long as necessary to provide our services, comply with legal obligations, resolve disputes, enforce agreements, and maintain legitimate business records."
+                        ]
+                    },
+                    {
+                        "id": "security",
+                        "title": "8. Data security",
+                        "content": [
+                            "We take reasonable technical and organizational measures to protect personal information against unauthorized access, loss, misuse, disclosure, or alteration.",
+                            "However, no online system can be guaranteed to be completely secure."
+                        ]
+                    },
+                    {
+                        "id": "rights",
+                        "title": "9. Your rights",
+                        "content": [
+                            "Depending on your jurisdiction, you may have rights related to your personal data, including the right to access, correct, delete, restrict, or object to certain processing activities.",
+                            "You may also have the right to withdraw consent where processing is based on consent."
+                        ]
+                    },
+                    {
+                        "id": "third-party",
+                        "title": "10. Third-party services and links",
+                        "content": [
+                            "Our platform may contain links to third-party services or rely on external providers. We are not responsible for the privacy practices of third-party websites or services."
+                        ]
+                    },
+                    {
+                        "id": "children",
+                        "title": "11. Children’s privacy",
+                        "content": [
+                            "Relora is not intended for children, and we do not knowingly collect personal information from children without an appropriate legal basis or parental authorization where required by law."
+                        ]
+                    },
+                    {
+                        "id": "changes",
+                        "title": "12. Changes to this Privacy Policy",
+                        "content": [
+                            "We may update this Privacy Policy from time to time to reflect changes in our services, legal obligations, or operational practices.",
+                            "The updated version will be published on this page with a revised “Last updated” date."
+                        ]
+                    },
+                    {
+                        "id": "contact",
+                        "title": "13. Contact us",
+                        "content": [
+                            "If you have questions about this Privacy Policy or how your personal information is handled, you can contact us through the platform’s support channels or by email."
+                        ],
+                        "email": "privacy@relora.com"
+                    }
+                ]
+            },
+            "buyerProtection": {
+                "eyebrow": "Buying on Relora",
+                "title": "Buyer Protection",
+                "updatedDate": "July 24, 2026",
+                "description": "Shop premium and archival fashion with greater confidence. Eligible purchases are protected when the payment and order process are completed through Relora.",
+                "summaryTitle": "Protection summary",
+                "summary": "Pay through Relora, receive tracked delivery and inspect your order within 48 hours. Report serious problems before the protection period expires.",
+                "summaryBullets": [
+                    "Secure platform payment",
+                    "Trackable delivery",
+                    "48-hour inspection period"
+                ],
+                "stepsEyebrow": "How it works",
+                "stepsTitle": "Protected from payment to delivery",
+                "steps": [{
+                        "number": "01",
+                        "title": "Pay through Relora",
+                        "description": "Complete the payment through Relora after winning an auction. Payments made outside the platform are not protected."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Seller ships the item",
+                        "description": "The seller must ship the item using a trackable delivery method and provide shipment information."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Inspect your order",
+                        "description": "After delivery, you have 48 hours to inspect the item and report a qualifying problem."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Order is completed",
+                        "description": "If no problem is reported during the protection window, the order is completed and the seller becomes eligible for payment."
+                    }
+                ],
+                "footerMeta": "Relora - Buyer Protection",
+                "footerText": "Bid carefully. Pay securely. Inspect every delivery.",
+                "sections": []
+            },
+            "returnsPolicy": {
+                "eyebrow": "Buying on Relora",
+                "title": "Returns Policy",
+                "updatedDate": "July 24, 2026",
+                "description": "Learn when an item may be returned, how to submit a return request and what happens after a return has been approved.",
+                "summaryTitle": "Return summary",
+                "summary": "Returns depend on the reason for the request and whether the seller is private or professional. Never return an item before receiving return instructions.",
+                "summaryBullets": [
+                    "Report order problems within 48 hours",
+                    "Wait for approval before shipping",
+                    "Always use tracked return delivery"
+                ],
+                "stepsEyebrow": "Return process",
+                "stepsTitle": "How to return an item",
+                "steps": [{
+                        "number": "01",
+                        "title": "Open your order",
+                        "description": "Go to the relevant order in your Relora account and review its delivery and protection status."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Report the return",
+                        "description": "Select “Report a problem” or contact support within the applicable return or protection period."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Wait for instructions",
+                        "description": "Do not ship the item until you receive the return address and return instructions."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Return with tracking",
+                        "description": "Pack the item carefully, use trackable delivery and keep the shipping receipt until the case is completed."
+                    }
+                ],
+                "footerMeta": "Relora - Returns Policy",
+                "footerText": "Clear instructions make every return safer.",
+                "sections": []
+            },
+            "howToSell": {
+                "eyebrow": "Selling on Relora",
+                "title": "How to Sell",
+                "updatedDate": "July 24, 2026",
+                "description": "List premium and archival fashion, reach interested buyers and manage the complete auction, delivery and payout process through Relora.",
+                "summaryTitle": "Seller summary",
+                "summary": "Create an accurate listing, pass moderation, start your auction and ship the item with tracking after the buyer has paid.",
+                "summaryBullets": [
+                    "Authentic items only",
+                    "Clear photos and descriptions",
+                    "Tracked delivery after payment"
+                ],
+                "primaryAction": "Sell an item",
+                "secondaryAction": "My listings",
+                "stepsEyebrow": "Selling process",
+                "stepsTitle": "From listing to payout",
+                "steps": [{
+                        "number": "01",
+                        "title": "Create your listing",
+                        "description": "Add clear photographs, item details, condition information, size and your starting price."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Pass moderation",
+                        "description": "Relora reviews the listing before it becomes available for auction."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Start the auction",
+                        "description": "Choose the auction duration and publish the approved item for buyers to bid on."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Ship and get paid",
+                        "description": "After payment, ship the item with tracking. Your payout becomes available after the order is completed."
+                    }
+                ],
+                "footerMeta": "Relora - How to Sell",
+                "footerText": "Ready to give your item its next owner?",
+                "footerAction": "Create a listing",
+                "sections": []
+            },
+            "sellerProtection": {
+                "eyebrow": "Selling on Relora",
+                "title": "Seller Protection",
+                "updatedDate": "July 24, 2026",
+                "description": "Learn how accurate listings, confirmed payments, tracked delivery and clear evidence can help protect eligible Relora sellers.",
+                "summaryTitle": "Protection summary",
+                "summary": "Ship only after confirmed payment, use the order address, provide valid tracking and keep evidence until the order and payout are completed.",
+                "summaryBullets": [
+                    "Confirmed platform payment",
+                    "Tracked delivery to the order address",
+                    "Evidence-based dispute review"
+                ],
+                "primaryAction": "Sell an item",
+                "secondaryAction": "View sales",
+                "stepsEyebrow": "Protection process",
+                "stepsTitle": "Protect every successful sale",
+                "steps": [{
+                        "number": "01",
+                        "title": "Receive confirmed payment",
+                        "description": "Do not ship until the order shows that the buyer’s payment has been successfully completed."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Ship with tracking",
+                        "description": "Send the item to the address shown on the order and upload valid end-to-end tracking information."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Keep your evidence",
+                        "description": "Save photographs of the item, packaging, shipping label and delivery receipt until the order is completed."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Receive your payout",
+                        "description": "Your payout may become available after delivery, the buyer inspection period and any required review."
+                    }
+                ],
+                "footerMeta": "Relora - Seller Protection",
+                "footerText": "List accurately. Ship securely. Keep your evidence.",
+                "footerAction": "Create a listing",
+                "sections": []
+            },
+            "brandPartnerships": {
+                "eyebrow": "Work with Relora",
+                "title": "Brand Partnerships",
+                "updatedDate": "July 24, 2026",
+                "description": "We collaborate with brands, boutiques, creators and industry specialists who can help build a stronger marketplace for premium and archival fashion.",
+                "summaryTitle": "Partnership summary",
+                "summary": "We are interested in thoughtful collaborations that support authenticity, fashion culture, responsible resale and a better experience for Relora users.",
+                "summaryBullets": [
+                    "Curated and relevant collaborations",
+                    "Clear value for marketplace users",
+                    "Transparent commercial relationships"
+                ],
+                "primaryAction": "Submit a proposal",
+                "secondaryAction": "About Relora",
+                "typesEyebrow": "Partnership opportunities",
+                "typesTitle": "Different ways to work together",
+                "types": [{
+                        "number": "01",
+                        "title": "Brands and designers",
+                        "description": "Present selected collections, archive pieces and brand stories to a fashion-focused audience."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Boutiques and retailers",
+                        "description": "Give past-season, rare or curated inventory another route to reach interested buyers."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Creators and media",
+                        "description": "Collaborate on editorial stories, educational content, campaigns and community projects."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Industry services",
+                        "description": "Work with Relora across authentication, delivery, preservation, technology and other services."
+                    }
+                ],
+                "stepsEyebrow": "Partnership process",
+                "stepsTitle": "From proposal to launch",
+                "steps": [{
+                        "number": "01",
+                        "title": "Tell us about your idea",
+                        "description": "Share information about your organisation, audience, goals and the type of collaboration you have in mind."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Review and discussion",
+                        "description": "We review whether the proposal fits Relora, its users and the direction of the marketplace."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Plan the collaboration",
+                        "description": "Together, we define the format, responsibilities, timeline and expected outcome of the partnership."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Launch and evaluate",
+                        "description": "After launch, we review performance, feedback and opportunities for future collaboration."
+                    }
+                ],
+                "footerMeta": "Relora - Brand Partnerships",
+                "footerText": "Have an idea that belongs on Relora?",
+                "footerDescription": "Tell us who you are, what you would like to create and how the partnership would benefit the Relora community.",
+                "footerAction": "Contact Relora",
+                "sections": []
+            },
+            "auctionRules": {
+                "eyebrow": "Buying and selling",
+                "title": "Auction Rules",
+                "updatedDate": "July 24, 2026",
+                "description": "Learn how Relora auctions operate, what happens when you place a bid and which responsibilities apply to winning buyers and sellers.",
+                "summaryTitle": "Auction summary",
+                "summary": "Review the listing carefully before bidding. Every valid bid is binding, and the highest bidder must complete payment when the auction ends.",
+                "summaryBullets": [
+                    "Bids represent an obligation to buy",
+                    "Bid manipulation is prohibited",
+                    "Winning buyers must pay on time"
+                ],
+                "primaryAction": "Browse auctions",
+                "secondaryAction": "Sell an item",
+                "stepsEyebrow": "Auction process",
+                "stepsTitle": "From first bid to completed order",
+                "steps": [{
+                        "number": "01",
+                        "title": "Review the listing",
+                        "description": "Check the photographs, description, condition, size and disclosed defects before placing a bid."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Place your bid",
+                        "description": "Enter an amount that meets the minimum bid requirements shown on the auction page."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Follow the auction",
+                        "description": "Other buyers may place higher bids until the displayed auction closing time."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Complete the purchase",
+                        "description": "If you are the highest bidder when the auction ends, you must complete payment within the stated deadline."
+                    }
+                ],
+                "footerMeta": "Relora - Auction Rules",
+                "footerText": "Review carefully. Bid responsibly. Complete every winning purchase.",
+                "footerAction": "Browse auctions",
+                "sections": []
+            },
+            "cookiePolicy": {
+                "eyebrow": "Privacy and data",
+                "title": "Cookie Policy",
+                "updatedDate": "July 24, 2026",
+                "description": "Learn how Relora uses cookies and similar technologies to keep the marketplace secure, remember your preferences and improve the platform.",
+                "summaryTitle": "Cookie summary",
+                "summary": "Relora uses necessary cookies for security, authentication and core platform functions. Optional technologies should only be enabled according to your cookie choices.",
+                "summaryBullets": [
+                    "Necessary cookies keep Relora working",
+                    "Optional categories depend on your choice",
+                    "Settings can be changed later"
+                ],
+                "primaryAction": "Manage cookie settings",
+                "secondaryAction": "Privacy Policy",
+                "categoriesEyebrow": "Cookie categories",
+                "categoriesTitle": "How different cookies are used",
+                "categories": [],
+                "footerMeta": "Relora - Cookie Policy",
+                "footerText": "Your choices should remain under your control.",
+                "footerDescription": "Review or update your optional cookie preferences whenever you need to.",
+                "footerAction": "Manage cookie settings",
+                "sections": [{
+                    "id": "cookie-details",
+                    "title": "Cookie details",
+                    "content": [
+                        "This list should be updated whenever Relora adds, removes or changes a cookie or similar technology."
+                    ],
+                    "list": []
+                }]
+            },
+            "journal": {
+                "eyebrow": "Relora Journal",
+                "title": "Stories about archive fashion, design, collecting and care.",
+                "description": "Explore the ideas, histories and practical knowledge behind pieces worth discovering, wearing and preserving.",
+                "categories": {
+                    "all": "All",
+                    "archive": "Archive",
+                    "designers": "Designers",
+                    "guides": "Guides",
+                    "collecting": "Collecting",
+                    "care": "Care",
+                    "culture": "Culture"
+                },
+                "articles": [{
+                        "title": "Why archive fashion still matters",
+                        "excerpt": "A closer look at the design, history and cultural relevance that allow older collections to remain important today.",
+                        "category": "Archive",
+                        "publishedAt": "July 24, 2026",
+                        "readTime": "6 min read"
+                    },
+                    {
+                        "title": "How to photograph designer clothing for an auction",
+                        "excerpt": "A practical guide to lighting, labels, details and honest condition photography.",
+                        "category": "Guides",
+                        "publishedAt": "July 21, 2026",
+                        "readTime": "5 min read"
+                    },
+                    {
+                        "title": "Understanding condition in pre-owned fashion",
+                        "excerpt": "What new, like new, good and fair should mean when an item is presented for resale.",
+                        "category": "Guides",
+                        "publishedAt": "July 18, 2026",
+                        "readTime": "4 min read"
+                    },
+                    {
+                        "title": "Building an archive wardrobe without buying everything",
+                        "excerpt": "How to select fewer pieces with stronger identity, history and long-term relevance.",
+                        "category": "Collecting",
+                        "publishedAt": "July 14, 2026",
+                        "readTime": "7 min read"
+                    },
+                    {
+                        "title": "How to care for designer knitwear",
+                        "excerpt": "Storage, cleaning and repair practices that can help delicate garments remain wearable for longer.",
+                        "category": "Care",
+                        "publishedAt": "July 10, 2026",
+                        "readTime": "5 min read"
+                    },
+                    {
+                        "title": "Why auctions change how value is discovered",
+                        "excerpt": "How timing, scarcity and real buyer interest shape the final value of an item.",
+                        "category": "Culture",
+                        "publishedAt": "July 7, 2026",
+                        "readTime": "6 min read"
+                    },
+                    {
+                        "title": "The details that reveal quality",
+                        "excerpt": "Construction, materials, hardware and finishing details worth examining before placing a bid.",
+                        "category": "Designers",
+                        "publishedAt": "July 3, 2026",
+                        "readTime": "5 min read"
+                    },
+                    {
+                        "title": "Collecting without chasing hype",
+                        "excerpt": "Why personal taste, research and patience often matter more than temporary market attention.",
+                        "category": "Collecting",
+                        "publishedAt": "June 28, 2026",
+                        "readTime": "8 min read"
+                    },
+                    {
+                        "title": "Repair it or leave it original?",
+                        "excerpt": "How to think about restoration, wear and authenticity when caring for older fashion pieces.",
+                        "category": "Care",
+                        "publishedAt": "June 22, 2026",
+                        "readTime": "6 min read"
+                    }
+                ],
+                "featured": "Featured",
+                "readStory": "Read story",
+                "latestEyebrow": "Latest stories",
+                "latestTitle": "Explore the Journal",
+                "emptyCategory": "There are no stories in this category yet.",
+                "editorialEyebrow": "Editorial perspective",
+                "editorialTitle": "More than products and prices.",
+                "editorialDescription": "Fashion carries design, history, technique and personal meaning. The Relora Journal looks beyond the transaction to understand why certain pieces remain relevant and how they can be owned more thoughtfully.",
+                "aboutAction": "About Relora",
+                "editorialImageAlt": "Fashion editorial",
+                "topics": {
+                    "eyebrow": "What we cover",
+                    "title": "Knowledge for buyers, sellers and collectors.",
+                    "items": [{
+                            "title": "Archive and design",
+                            "description": "Collections, designers, construction, references and cultural context."
+                        },
+                        {
+                            "title": "Buying and collecting",
+                            "description": "Research, condition, measurements, value and thoughtful selection."
+                        },
+                        {
+                            "title": "Selling guides",
+                            "description": "Photography, descriptions, pricing, packaging and successful auctions."
+                        },
+                        {
+                            "title": "Care and preservation",
+                            "description": "Cleaning, repair, storage and long-term ownership."
+                        }
+                    ]
+                },
+                "footerMeta": "Relora - Journal",
+                "footerText": "Discover the stories behind pieces worth noticing.",
+                "footerAction": "Explore auctions"
+            },
+            "sustainability": {
+                "eyebrow": "Sustainability at Relora",
+                "title": "Better pieces deserve longer lives.",
+                "description": "Relora supports a more thoughtful approach to fashion by helping existing designer, premium and archival pieces remain visible, useful and valued.",
+                "primaryAction": "Explore the marketplace",
+                "secondaryAction": "Read the Journal",
+                "heroImageAlt": "Timeless fashion pieces",
+                "principles": {
+                    "eyebrow": "Our approach",
+                    "title": "Resale is one part of a more thoughtful fashion system.",
+                    "description": "We do not claim that buying or selling an item has no environmental impact. Our role is to help existing pieces stay in use for longer and to make their condition, history and value easier to understand.",
+                    "items": [{
+                            "title": "Longer product life",
+                            "description": "Helping existing fashion remain useful, visible and appreciated instead of being replaced too quickly."
+                        },
+                        {
+                            "title": "Thoughtful selection",
+                            "description": "Creating space for pieces chosen for their design, condition, identity and long-term appeal."
+                        },
+                        {
+                            "title": "Honest information",
+                            "description": "Encouraging sellers to describe condition, wear, repairs and imperfections clearly."
+                        },
+                        {
+                            "title": "Better care",
+                            "description": "Supporting responsible storage, cleaning, repair and preservation whenever appropriate."
+                        }
+                    ]
+                },
+                "sections": [{
+                        "eyebrow": "Extending product life",
+                        "title": "The most responsible piece can be the one that already exists.",
+                        "content": [
+                            "Fashion has an environmental impact at every stage of its life. Resale does not remove that impact, but it can help existing items remain useful and valued for longer."
+                        ],
+                        "imageAlt": "Carefully selected fashion pieces"
+                    },
+                    {
+                        "eyebrow": "Quality over replacement",
+                        "title": "Pieces with lasting value deserve lasting attention.",
+                        "content": [
+                            "Relora focuses on items that stand out through design, construction, rarity, history or cultural relevance."
+                        ],
+                        "list": [
+                            "Designer and archival clothing",
+                            "Footwear and accessories worth maintaining",
+                            "Rare pieces with cultural or design relevance"
+                        ],
+                        "imageAlt": "Long-lasting designer fashion"
+                    },
+                    {
+                        "eyebrow": "Transparent condition",
+                        "title": "Responsible resale begins with honest information.",
+                        "content": [
+                            "Buyers should understand the condition of an item before placing a bid. Clear photographs and accurate descriptions reduce unnecessary returns, delivery journeys and disputes."
+                        ],
+                        "list": [
+                            "Photograph the actual item clearly",
+                            "Show signs of wear and damage",
+                            "Provide useful measurements"
+                        ],
+                        "imageAlt": "Fashion details and material texture"
+                    },
+                    {
+                        "eyebrow": "Care and preservation",
+                        "title": "Good care can protect both function and history.",
+                        "content": [
+                            "Storage, cleaning and repair decisions can significantly affect how long a piece remains wearable."
+                        ],
+                        "list": [
+                            "Follow the item care instructions",
+                            "Store garments in suitable conditions",
+                            "Repair damage before it becomes more serious"
+                        ],
+                        "imageAlt": "Fashion garment being carefully maintained"
+                    }
+                ],
+                "commitments": {
+                    "eyebrow": "Our commitments",
+                    "title": "Practical progress instead of empty promises.",
+                    "description": "Relora is still developing. We will communicate carefully about sustainability and avoid claims that cannot be properly supported.",
+                    "items": [
+                        "Encourage accurate descriptions of item condition",
+                        "Require sellers to disclose known defects and alterations",
+                        "Promote care, repair and responsible preservation",
+                        "Help existing pieces reach new owners",
+                        "Avoid unsupported environmental claims",
+                        "Improve packaging and delivery guidance over time"
+                    ]
+                },
+                "goals": {
+                    "eyebrow": "What we are working toward",
+                    "title": "Building better habits into the marketplace.",
+                    "items": [{
+                            "title": "Clearer packaging guidance",
+                            "text": "Develop practical recommendations that protect items while avoiding unnecessary packaging."
+                        },
+                        {
+                            "title": "Better care education",
+                            "text": "Publish useful Journal guides about storage, cleaning, restoration and long-term ownership."
+                        },
+                        {
+                            "title": "More informed purchases",
+                            "text": "Help buyers understand materials, condition and measurements before placing a bid."
+                        }
+                    ]
+                },
+                "statementEyebrow": "Our perspective",
+                "statementTitle": "Sustainability is not a label attached to every purchase. It is a longer relationship with the things we choose to own.",
+                "statementDescription": "Relora aims to make that relationship more informed, transparent and intentional.",
+                "footerMeta": "Relora - Sustainability",
+                "footerText": "Discover pieces worth keeping.",
+                "footerAction": "Browse Relora"
+            }
+        }
+    },
+    "notFound": {
+        "title": "This page does not exist.",
+        "description": "The page you are looking for may have been removed, renamed, or never existed in the first place.",
+        "backHome": "Back home",
+        "browseAuctions": "Browse auctions",
+        "explore": "Explore",
+        "trendingLots": "Trending lots",
+        "trendingDescription": "Discover the pieces currently getting the most attention.",
+        "discover": "Discover",
+        "newListings": "New listings",
+        "newListingsDescription": "Browse the latest lots added to the marketplace.",
+        "refine": "Refine",
+        "categories": "Categories",
+        "categoriesDescription": "Go back through designer, vintage, streetwear, and more.",
+        "tagline": "Not mass market. Never ordinary."
+    },
+    "seo": {
+        "default": {
+            "title": "Relora — Rare Designer Fashion Auctions",
+            "description": "Relora is a curated marketplace for rare designer fashion, archive clothing and luxury streetwear auctions. Discover authenticated designer pieces, collectible garments, runway archives and exclusive fashion lots."
+        },
+        "home": {
+            "title": "Relora — Rare Designer Fashion Auctions",
+            "description": "A refined auction marketplace for designer fashion, standout accessories and collectible pieces with character."
+        },
+        "catalog": {
+            "title": "Catalog — Relora",
+            "description": "Browse Relora auction listings by category, designer, size, condition, price and location."
+        },
+        "search": {
+            "title": "Search — Relora",
+            "description": "Search Relora lots, brands and categories across curated fashion auctions."
+        },
+        "designers": {
+            "title": "Designer Brands — Relora",
+            "description": "Explore designer brands, archive fashion labels, luxury houses and streetwear names available on Relora."
+        },
+        "login": {
+            "title": "Sign In — Relora",
+            "description": "Sign in to manage your Relora account, orders, listings and watched auction lots."
+        },
+        "register": {
+            "title": "Create Account — Relora",
+            "description": "Create a Relora account to save lots, follow sellers and participate in curated fashion auctions."
+        },
+        "forgotPassword": {
+            "title": "Password Reset — Relora",
+            "description": "Request a link to reset your Relora account password."
+        },
+        "resetPassword": {
+            "title": "Reset Password — Relora",
+            "description": "Create a new password for your Relora account."
+        },
+        "profile": {
+            "title": "User Profile — Relora",
+            "description": "View a Relora seller profile, active listings and sold items."
+        },
+        "lot": {
+            "title": "Lot — Relora",
+            "description": "View a Relora auction lot with item details, seller information and bid history."
+        },
+        "editLot": {
+            "title": "Edit Listing — Relora",
+            "description": "Edit an existing Relora listing."
+        },
+        "sell": {
+            "title": "Sell an Item — Relora",
+            "description": "Create a Relora listing for review and auction sale."
+        },
+        "listings": {
+            "title": "My Listings — Relora",
+            "description": "Manage your Relora listings, drafts, reviews and auctions."
+        },
+        "orders": {
+            "title": "Orders — Relora",
+            "description": "Follow your Relora purchases and sold pieces from winning bid to delivery."
+        },
+        "orderDetails": {
+            "title": "Order Details — Relora",
+            "description": "View Relora order details, payment, delivery, shipment and dispute information."
+        },
+        "about": {
+            "title": "About — Relora",
+            "description": "Learn about Relora, a curated auction marketplace for rare fashion, timeless pieces and collectible design."
+        },
+        "faq": {
+            "title": "FAQ — Relora",
+            "description": "Find answers to common questions about buying, selling and auctions on Relora."
+        },
+        "support": {
+            "title": "Support — Relora",
+            "description": "Contact Relora support for help with accounts, auctions, orders and selling."
+        },
+        "terms": {
+            "title": "Terms of Service — Relora",
+            "description": "Read the Relora Terms of Service governing platform access, auctions, listings, bids and transactions."
+        },
+        "privacy": {
+            "title": "Privacy Policy — Relora",
+            "description": "Learn how Relora collects, uses, stores and protects personal information."
+        },
+        "buyerProtection": {
+            "title": "Buyer Protection — Relora",
+            "description": "Learn how Relora buyer protection supports safer fashion auction transactions."
+        },
+        "returnsPolicy": {
+            "title": "Returns Policy — Relora",
+            "description": "Read the Relora returns policy for auction purchases and eligible order issues."
+        },
+        "cookiePolicy": {
+            "title": "Cookie Policy — Relora",
+            "description": "Learn how Relora uses cookies and similar technologies."
+        },
+        "howToSell": {
+            "title": "How to Sell — Relora",
+            "description": "Learn how to list, price, ship and complete sales on Relora."
+        },
+        "auctionRules": {
+            "title": "Auction Rules — Relora",
+            "description": "Read the auction rules for bidding, winning, payment and seller obligations on Relora."
+        },
+        "sellerProtection": {
+            "title": "Seller Protection — Relora",
+            "description": "Learn how Relora seller protection supports safer sales and dispute handling."
+        },
+        "journal": {
+            "title": "Journal — Relora",
+            "description": "Read Relora journal stories about rare fashion, archive pieces and auction culture."
+        },
+        "sustainability": {
+            "title": "Sustainability — Relora",
+            "description": "Learn how Relora supports longer product life, resale and more intentional fashion consumption."
+        },
+        "brandPartnerships": {
+            "title": "Brand Partnerships — Relora",
+            "description": "Learn about brand partnership opportunities with Relora."
+        },
+        "notFound": {
+            "title": "Page Not Found — Relora",
+            "description": "The requested Relora page could not be found."
+        }
+    }
+}

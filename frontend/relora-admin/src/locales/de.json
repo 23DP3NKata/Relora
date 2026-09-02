@@ -1,0 +1,40 @@
+{
+  "common": {
+    "language": "Sprache",
+    "unavailable": "Nicht verfuegbar",
+    "loading": "Wird geladen..."
+  },
+  "navigation": {
+    "pendingLots": "Ausstehende Lose",
+    "dashboard": "Dashboard"
+  },
+  "admin": {
+    "title": "Relora Admin",
+    "pending": {
+      "title": "Ausstehende Lose",
+      "description": "Pruefen Sie Lose, die auf Moderation warten.",
+      "loading": "Ausstehende Lose werden geladen...",
+      "empty": "Keine ausstehenden Lose gefunden.",
+      "loadFailed": "Ausstehende Lose konnten nicht geladen werden.",
+      "approveFailed": "Los konnte nicht genehmigt werden.",
+      "rejectFailed": "Los konnte nicht abgelehnt werden.",
+      "approved": "Los erfolgreich genehmigt.",
+      "rejected": "Los erfolgreich abgelehnt.",
+      "approve": "Genehmigen",
+      "reject": "Ablehnen",
+      "lotImage": "Losbild",
+      "untitledLot": "Unbenanntes Los",
+      "unknown": "Unbekannt",
+      "unknownBrand": "Unbekannte Marke",
+      "seller": "Verkaeufer",
+      "created": "Erstellt"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "description": "Uebersicht der Admin-Moderation.",
+      "loading": "Dashboard wird geladen...",
+      "empty": "Keine Dashboard-Daten.",
+      "loadFailed": "Dashboard konnte nicht geladen werden."
+    }
+  }
+}

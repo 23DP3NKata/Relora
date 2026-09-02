@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="MediatR" Version="14.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\identity\Relora.Identity.Application\Relora.Identity.Application.csproj" />
+    <ProjectReference Include="..\..\identity\Relora.Identity.Infrastructure\Relora.Identity.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\items\Relora.Items.Application\Relora.Items.Application.csproj" />
+    <ProjectReference Include="..\..\orders\Relora.Orders.Domain\Relora.Orders.Domain.csproj" />
+    <ProjectReference Include="..\..\..\persistance\Relora.Persistance\Relora.Persistance.csproj" />
+    <ProjectReference Include="..\..\..\shared\Relora.Shared.Application\Relora.Shared.Application.csproj" />
+    <ProjectReference Include="..\Relora.Admin.Domain\Relora.Admin.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

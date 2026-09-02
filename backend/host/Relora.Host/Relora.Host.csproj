@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>369a5571-99e7-43ff-9c1b-03066af2a5e9</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AWSSDK.S3" Version="4.0.18.6" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
+		<PackageReference Include="MediatR" Version="14.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.12" />
+		<PackageReference Include="Stripe.net" Version="50.4.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Relora.Payments.API\Relora.Payments.API.csproj" />
+	  <ProjectReference Include="..\..\Relora.Payments.Infrastructure\Relora.Payments.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\modules\admin\Relora.Admin.API\Relora.Admin.API.csproj" />
+	  <ProjectReference Include="..\..\modules\auctions\Relora.Auctions.API\Relora.Auctions.API.csproj" />
+	  <ProjectReference Include="..\..\modules\auctions\Relora.Auctions.Application\Relora.Auctions.Application.csproj" />
+	  <ProjectReference Include="..\..\modules\auctions\Relora.Auctions.Domain\Relora.Auctions.Domain.csproj" />
+	  <ProjectReference Include="..\..\modules\auctions\Relora.Auctions.Infrastructure\Relora.Auctions.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\modules\bids\Relora.Bids.API\Relora.Bids.API.csproj" />
+	  <ProjectReference Include="..\..\modules\bids\Relora.Bids.Application\Relora.Bids.Application.csproj" />
+	  <ProjectReference Include="..\..\modules\bids\Relora.Bids.Infrastructure\Relora.Bids.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\modules\identity\Relora.Identity.API\Relora.Identity.API.csproj" />
+	  <ProjectReference Include="..\..\modules\identity\Relora.Identity.Infrastructure\Relora.Identity.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\modules\items\Relora.Items.API\Relora.Items.API.csproj" />
+	  <ProjectReference Include="..\..\modules\items\Relora.Items.Infrastructure\Relora.Items.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\modules\orders\Relora.Orders.API\Relora.Orders.API.csproj" />
+	  <ProjectReference Include="..\..\modules\orders\Relora.Orders.Application\Relora.Orders.Application.csproj" />
+	  <ProjectReference Include="..\..\modules\orders\Relora.Orders.Domain\Relora.Orders.Domain.csproj" />
+	  <ProjectReference Include="..\..\modules\orders\Relora.Orders.Infrastructure\Relora.Orders.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\modules\support\Relora.Support.API\Relora.Support.API.csproj" />
+	  <ProjectReference Include="..\..\modules\support\Relora.Support.Application\Relora.Support.Application.csproj" />
+	  <ProjectReference Include="..\..\modules\support\Relora.Support.Infrastructure\Relora.Support.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\persistance\Relora.Persistance\Relora.Persistance.csproj" />
+	  <ProjectReference Include="..\..\realtime\Relora.Realtime\Relora.Realtime.csproj" />
+	  <ProjectReference Include="..\..\shared\Relora.Shared.Domain\Relora.Shared.Domain.csproj" />
+	  <ProjectReference Include="..\..\shared\Relora.Shared.Infrastructure\Relora.Shared.Infrastructure.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\identity\Relora.Identity.Infrastructure\Relora.Identity.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\orders\Relora.Orders.Application\Relora.Orders.Application.csproj" />
+    <ProjectReference Include="..\Relora.Admin.Application\Relora.Admin.Application.csproj" />
+    <ProjectReference Include="..\Relora.Admin.Domain\Relora.Admin.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,39 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+import { setLocale, supportedLocales, type AppLocale } from '@/translate'
+
+const { locale, t } = useI18n()
+
+const options = computed(() =>
+  supportedLocales.map((code) => ({
+    code,
+    label: code.toUpperCase(),
+  })),
+)
+
+const onChange = (event: Event) => {
+  const value = (event.target as HTMLSelectElement).value as AppLocale
+  setLocale(value)
+}
+</script>
+
+<template>
+  <label class="flex items-center gap-2 text-sm text-slate-600">
+    <span>{{ t('common.language') }}</span>
+    <select
+      class="rounded-md border bg-white px-2 py-1 text-slate-900"
+      :value="locale"
+      @change="onChange"
+    >
+      <option
+        v-for="option in options"
+        :key="option.code"
+        :value="option.code"
+      >
+        {{ option.label }}
+      </option>
+    </select>
+  </label>
+</template>
