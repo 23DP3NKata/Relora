@@ -296,14 +296,14 @@ public class Order : AggregateRoot<Guid>
         Status = OrderStatus.Disputed;
     }
 
-    public void MarkAsRefunded(DateTime refundedAtUtc)
+    public void CancelAfterDispute()
     {
         if (Status != OrderStatus.Disputed)
         {
-            throw new InvalidOperationException("Only disputed orders can be refunded by dispute resolution.");
+            throw new InvalidOperationException("Only disputed orders can be cancelled by dispute resolution.");
         }
 
-        Status = OrderStatus.Refunded;
+        Status = OrderStatus.Cancelled;
     }
 
     public void CompleteAfterDispute(DateTime completedAtUtc)

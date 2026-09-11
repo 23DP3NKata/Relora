@@ -611,6 +611,7 @@
         "disputeEvidenceAlt": "Dispute evidence",
         "decision": "Decision: {decision}",
         "completeOrder": "Complete order",
+        "cancelOrder": "Cancel order",
         "describeProblem": "Describe what happened",
         "photoEvidence": "Photo evidence",
         "remove": "Remove",

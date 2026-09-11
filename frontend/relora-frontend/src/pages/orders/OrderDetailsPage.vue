@@ -1742,7 +1742,7 @@ onMounted(async () => {
                   class="rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-xs leading-5 text-emerald-700 dark:text-emerald-300"
                 >
                   <p class="font-medium">
-                    {{ $t('orderDetails.decision', { decision: disputeDecisionName === 'CompleteOrder' ? $t('orderDetails.completeOrder') : disputeDecisionName }) }}
+                    {{ $t('orderDetails.decision', { decision: disputeDecisionName === 'CompleteOrder' ? $t('orderDetails.completeOrder') : $t('orderDetails.cancelOrder') }) }}
                   </p>
                   <p v-if="disputeDecisionReason" class="mt-1">
                     {{ disputeDecisionReason }}

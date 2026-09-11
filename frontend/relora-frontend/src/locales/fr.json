@@ -574,6 +574,7 @@
         "disputeEvidenceAlt": "Preuve de litige",
         "decision": "Decision : {decision}",
         "completeOrder": "Terminer la commande",
+        "cancelOrder": "Annuler la commande",
         "describeProblem": "Decrivez ce qui s'est passe",
         "photoEvidence": "Preuve photo",
         "remove": "Retirer",

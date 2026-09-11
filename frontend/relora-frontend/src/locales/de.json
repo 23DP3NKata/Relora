@@ -574,6 +574,7 @@
         "disputeEvidenceAlt": "Streitfallnachweis",
         "decision": "Entscheidung: {decision}",
         "completeOrder": "Bestellung abschliessen",
+        "cancelOrder": "Bestellung stornieren",
         "describeProblem": "Beschreiben Sie, was passiert ist",
         "photoEvidence": "Fotobeweis",
         "remove": "Entfernen",
