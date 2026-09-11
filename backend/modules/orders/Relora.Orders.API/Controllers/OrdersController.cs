@@ -55,6 +55,20 @@ public sealed class OrdersController(IMediator mediator) : ControllerBase
         return Ok(result);
     }
 
+    [HttpPost("{orderId:guid}/pay")]
+    [Authorize]
+    public async Task<ActionResult> PayOrder(
+        Guid orderId,
+        [FromBody] ShippingAddressRequest? shippingAddress,
+        CancellationToken cancellationToken)
+    {
+        var buyerId = User.Claims.GetUserId();
+
+        await _mediator.Send(new PayOrderCommand(orderId, buyerId, shippingAddress), cancellationToken);
+
+        return Ok();
+    }
+
     [HttpPost("{orderId:guid}/shipment")]
     [Authorize]
     public async Task<ActionResult> MarkOrderShipped(

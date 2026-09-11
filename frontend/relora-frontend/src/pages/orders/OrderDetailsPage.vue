@@ -929,10 +929,16 @@ const submitCheckout = async () => {
     return
   }
 
+  // test mode payment: buyer only confirms it in a dialog
+  if (!window.confirm(t('orderDetails.confirmPayment', { amount: totalPriceLabel.value }))) {
+    return
+  }
+
   try {
     isCheckoutSubmitting.value = true
-    const checkoutUrl = await orderService.createCheckout(orderReference.value, payload)
-    window.location.href = checkoutUrl
+    await orderService.payOrder(orderReference.value, payload)
+    toast.success(t('orderDetails.paymentDone'), { position: 'bottom-right' })
+    await loadOrder()
   } catch (error: any) {
     checkoutError.value =
       error?.response?.data?.message ??
@@ -1573,7 +1579,7 @@ onMounted(async () => {
                   class="min-h-10 w-full rounded-lg bg-foreground px-3 text-sm font-medium text-background transition-opacity hover:opacity-80 disabled:cursor-wait disabled:opacity-50"
                   :disabled="isCheckoutSubmitting"
                 >
-                  {{ isCheckoutSubmitting ? $t('orderDetails.openCheckout') : $t('orderDetails.pay', { amount: totalPriceLabel }) }}
+                  {{ isCheckoutSubmitting ? $t('orderDetails.payingOrder') : $t('orderDetails.pay', { amount: totalPriceLabel }) }}
                 </button>
               </form>
 

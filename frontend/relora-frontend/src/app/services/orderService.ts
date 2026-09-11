@@ -19,13 +19,8 @@ export const orderService = {
     return response.data
   },
 
-  async createCheckout(orderId: string, shippingAddress: ShippingAddressPayload): Promise<string> {
-    const response = await api.post<{ url: string }>(
-      `/orders/${orderId}/checkout`,
-      shippingAddress,
-    )
-
-    return response.data.url
+  async payOrder(orderId: string, shippingAddress: ShippingAddressPayload): Promise<void> {
+    await api.post(`/api/orders/${orderId}/pay`, shippingAddress)
   },
 
   async markOrderShipped(orderId: string, payload: MarkOrderShippedPayload): Promise<void> {
