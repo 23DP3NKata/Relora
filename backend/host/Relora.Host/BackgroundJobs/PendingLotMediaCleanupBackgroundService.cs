@@ -67,6 +67,30 @@ public sealed class PendingLotMediaCleanupBackgroundService(
                     upload.Key);
             }
         }
+
+        var expiredProofUploads = await db.PendingLotProofDocumentUploads
+            .Where(upload => upload.CreatedAtUtc <= cutoffUtc)
+            .OrderBy(upload => upload.CreatedAtUtc)
+            .Take(PendingUploadsBatchSize)
+            .ToListAsync(cancellationToken);
+
+        foreach (var upload in expiredProofUploads)
+        {
+            try
+            {
+                db.PendingLotProofDocumentUploads.Remove(upload);
+                await db.SaveChangesAsync(cancellationToken);
+
+                await mediaUploader.DeleteForLotAsync(upload.StorageKey);
+            }
+            catch (Exception exception)
+            {
+                _logger.LogWarning(
+                    exception,
+                    "Could not remove expired pending proof document {MediaKey}.",
+                    upload.StorageKey);
+            }
+        }
     }
 
     private async Task CleanupLegacyOrphans(CancellationToken cancellationToken)
@@ -99,6 +123,32 @@ public sealed class PendingLotMediaCleanupBackgroundService(
             catch (Exception exception)
             {
                 _logger.LogWarning(exception, "Could not remove orphaned media object {MediaKey}.", key);
+            }
+        }
+
+        var attachedProofKeys = await db.Lots
+            .AsNoTracking()
+            .SelectMany(lot => lot.ProofDocuments.Select(document => document.StorageKey))
+            .ToListAsync(cancellationToken);
+        var pendingProofKeys = await db.PendingLotProofDocumentUploads
+            .AsNoTracking()
+            .Select(upload => upload.StorageKey)
+            .ToListAsync(cancellationToken);
+        var referencedProofKeys = attachedProofKeys
+            .Concat(pendingProofKeys)
+            .ToHashSet(StringComparer.Ordinal);
+
+        var oldProofKeys = await mediaUploader.GetKeysOlderThanAsync("proof-origin/", cutoffUtc, cancellationToken);
+
+        foreach (var key in oldProofKeys.Where(key => !referencedProofKeys.Contains(key)))
+        {
+            try
+            {
+                await mediaUploader.DeleteForLotAsync(key);
+            }
+            catch (Exception exception)
+            {
+                _logger.LogWarning(exception, "Could not remove orphaned proof document {MediaKey}.", key);
             }
         }
     }

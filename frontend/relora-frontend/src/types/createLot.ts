@@ -41,7 +41,7 @@ export type CreateLotPayload = {
   country: string
   city: string
   categoryId: string
-  department: LotDepartment
+  department: number
   primaryColorId: string
   modelName?: string | null
   acquisitionYear?: number | null

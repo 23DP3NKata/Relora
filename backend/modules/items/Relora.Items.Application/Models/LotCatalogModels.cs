@@ -23,7 +23,7 @@ public sealed record CategoryDto(
     int SortOrder,
     bool IsActive,
     string MeasurementProfile,
-    IReadOnlyList<LotDepartment> AllowedDepartments,
+    IReadOnlyList<string> AllowedDepartments,
     IReadOnlyList<CategoryDto> Children);
 
 public sealed record MeasurementDefinitionDto(
@@ -38,7 +38,7 @@ public sealed record MeasurementDefinitionDto(
 public sealed record SizeOptionDto(string Code, string NameKey, string CategoryGroup);
 
 public sealed record LotFormLookupsDto(
-    IReadOnlyList<LotDepartment> Departments,
+    IReadOnlyList<string> Departments,
     IReadOnlyList<CategoryDto> Categories,
     IReadOnlyList<LookupOptionDto> Materials,
     IReadOnlyList<LookupOptionDto> Colors,

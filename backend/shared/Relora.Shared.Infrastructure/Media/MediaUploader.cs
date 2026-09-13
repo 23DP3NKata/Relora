@@ -65,7 +65,9 @@ public sealed class MediaUploader(IOptions<MediaOptions> options, IAmazonS3 s3) 
             InputStream = stream,
             ContentType = string.IsNullOrWhiteSpace(contentType)
                 ? "application/octet-stream"
-                : contentType
+                : contentType,
+            DisablePayloadSigning = true,
+            DisableDefaultChecksumValidation = true
         };
 
         request.Metadata["privacy"] = "proof-of-origin";
