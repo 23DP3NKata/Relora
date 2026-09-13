@@ -51,7 +51,20 @@ docker compose up -d
 Copy-Item appsettings.Development.example.json appsettings.Development.json
 ```
 
-Fill in `appsettings.Development.json` with local credentials. At minimum, use the same PostgreSQL password as `.env`, generate a long random `Jwt:Secret`, and configure a real R2 endpoint. The R2 `ServiceUrl` must be exactly:
+Keep only non-secret local settings in `appsettings.Development.json`. Configure credentials with .NET User Secrets; `user-secrets.example.json` lists all required secret keys:
+
+```powershell
+dotnet user-secrets set "Jwt:Secret" "replace-with-a-long-random-secret"
+dotnet user-secrets set "ConnectionStrings:Postgres" "Host=localhost;Port=5433;Database=relora;Username=postgres;Password=change-me"
+dotnet user-secrets set "R2:AccessKeyId" "replace-with-r2-access-key-id"
+dotnet user-secrets set "R2:SecretAccessKey" "replace-with-r2-secret-access-key"
+dotnet user-secrets set "Stripe:SecretKey" "sk_test_replace_me"
+dotnet user-secrets set "Stripe:WebhookSecret" "whsec_replace_me"
+dotnet user-secrets set "Email:Username" "replace-me"
+dotnet user-secrets set "Email:Password" "replace-me"
+```
+
+Use the same PostgreSQL password as `.env`, generate a long random JWT secret, and configure a real R2 endpoint. The R2 `ServiceUrl` must be exactly:
 
 ```text
 https://<CLOUDFLARE_ACCOUNT_ID>.r2.cloudflarestorage.com
@@ -87,7 +100,7 @@ npm run dev
 
 ## Configuration and secrets
 
-Local `.env` files, `appsettings.Development.json`, certificates, Node modules, and build output are excluded by `.gitignore`. Commit only the supplied `*.example` files. Use your deployment platform's secret store for production credentials.
+Local `.env` files, real `appsettings` files, certificates, Node modules, and build output are excluded by `.gitignore`. Docker also excludes real `appsettings` files so credentials cannot be baked into an image. Commit only the supplied `*.example` files. Use your deployment platform's secret store or runtime environment variables for production credentials.
 
 Required external configuration:
 
