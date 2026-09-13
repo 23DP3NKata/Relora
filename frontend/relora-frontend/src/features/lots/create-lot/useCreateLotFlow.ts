@@ -49,7 +49,8 @@ function createClientId() {
   return `${Date.now()}-${Math.random().toString(36).slice(2)}`
 }
 
-function departmentToLegacyGender(department: LotDepartment | null): number | null {
+function departmentToLegacyGender(department: LotDepartment | number | null): number | null {
+  if (department === 1 || department === 2 || department === 3) return department
   if (department === "Women") return 1
   if (department === "Men") return 2
   if (department === "Unisex") return 3
@@ -674,7 +675,7 @@ export const useCreateLotFlow = () => {
       country: form.country.trim(),
       city: form.city.trim(),
       categoryId: form.categoryId,
-      department: form.department,
+      department: gender,
       primaryColorId: form.primaryColorId,
       modelName: form.modelName.trim() || null,
       acquisitionYear: form.acquisitionYear,

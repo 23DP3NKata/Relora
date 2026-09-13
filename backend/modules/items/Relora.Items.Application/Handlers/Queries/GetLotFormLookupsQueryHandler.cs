@@ -22,7 +22,7 @@ public sealed class GetLotFormLookupsQueryHandler(ILotCatalogRepository catalogR
         var measurementDefinitions = await _catalogRepository.GetMeasurementDefinitionsAsync(cancellationToken);
 
         return new LotFormLookupsDto(
-            Enum.GetValues<LotDepartment>(),
+            Enum.GetNames<LotDepartment>(),
             BuildCategoryTree(categories),
             materials.Select(material => new LookupOptionDto(
                 material.Id,
@@ -79,7 +79,7 @@ public sealed class GetLotFormLookupsQueryHandler(ILotCatalogRepository catalogR
             category.SortOrder,
             category.IsActive,
             category.MeasurementProfile,
-            category.AllowedDepartments.Select(item => item.Department).ToList(),
+            category.AllowedDepartments.Select(item => item.Department.ToString()).ToList(),
             children);
     }
 
