@@ -88,12 +88,13 @@ npm ci
 npm run dev
 ```
 
-Set `VITE_SITE_URL` to the public storefront URL and `VITE_MEDIA_PUBLIC_BASE_URL` to the public R2/custom media URL. Values prefixed with `VITE_` are public and must never contain secrets.
+Set `VITE_API_BASE_URL` to the backend URL, `VITE_SITE_URL` to the storefront URL, and `VITE_MEDIA_PUBLIC_BASE_URL` to the public R2/custom media URL. Values prefixed with `VITE_` are public and must never contain secrets.
 
 ### 4. Run the admin interface
 
 ```powershell
 cd ../relora-admin
+Copy-Item .env.example .env
 npm ci
 npm run dev
 ```
