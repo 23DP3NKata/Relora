@@ -1,4 +1,4 @@
-import { computed, onMounted, reactive, ref, watch } from "vue"
+import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from "vue"
 import { useRouter } from "vue-router"
 import { useI18n } from "vue-i18n"
 
@@ -107,6 +107,7 @@ export const useCreateLotFlow = () => {
   const isUploadingProofDocuments = ref(false)
   const errorMessage = ref("")
   const successMessage = ref("")
+  let lotWasCreated = false
 
   const currentStep = computed<SellStepKey>(() => SELL_STEPS[currentStepIndex.value] ?? "intro")
   const isFirstStep = computed(() => currentStepIndex.value === 0)
@@ -728,6 +729,7 @@ export const useCreateLotFlow = () => {
     try {
       const payload = buildPayload()
       const lotId = await itemService.createLot(payload)
+      lotWasCreated = true
       successMessage.value = t("sell.createSuccess", { lotId })
       router.push(localePath("/listings"))
     } catch (error: unknown) {
@@ -768,6 +770,20 @@ export const useCreateLotFlow = () => {
   )
 
   onMounted(loadLookups)
+
+  onBeforeUnmount(() => {
+    photos.value.forEach((photo) => {
+      if (photo.previewUrl.startsWith("blob:")) {
+        URL.revokeObjectURL(photo.previewUrl)
+      }
+    })
+
+    if (!lotWasCreated) {
+      void Promise.allSettled(
+        uploadedPhotoKeys.value.map((key) => mediaService.deletePhoto(key)),
+      )
+    }
+  })
 
   return {
     form,
