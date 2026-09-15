@@ -10,9 +10,13 @@ import { getCookie } from '@/app/services/cookieService'
 import api from '@/api'
 import { useLocalePath } from '@/composables/useLocalePath'
 import { Search, Compass, Trophy, ArrowRight } from 'lucide-vue-next'
-import heroProductImage from '@/assets/brands/hero_brand.png'
+import { getBidCount, getHomeLiveLots } from '@/app/services/homeService'
+import { auctionRealtimeService } from '@/app/services/auctionRealtimeService'
+import type { HomeLiveLot } from '@/types/home'
 
 import SelectPreferenceModal from '@/components/modals/SelectPreferenceModal.vue'
+import HomeHero from '@/components/home/HomeHero.vue'
+import HomeLiveAuctions from '@/components/home/HomeLiveAuctions.vue'
 import AuctionCard from '@/components/auctions/AuctionCard.vue'
 import TrendingUpIcon from '@/components/ui/icons/TrendingUpIcon.vue'
 import RefreshCwIcon from '@/components/ui/icons/RefreshCwIcon.vue'
@@ -35,9 +39,13 @@ type UserPreference = 'men' | 'women'
 const userPreference = ref<UserPreference>('women')
 const showPreferenceModal = ref(false)
 
-const heroCountdownTarget = Date.now() + ((2 * 3600) + (14 * 60) + 37) * 1000
-const heroCountdown = ref('02 : 14 : 37')
-let heroCountdownTimer: ReturnType<typeof setInterval> | null = null
+// lots for hero and live auctions (first one goes to hero)
+const liveLots = ref<HomeLiveLot[]>([])
+const heroLot = computed(() => liveLots.value[0] ?? null)
+const feedLots = computed(() => liveLots.value.slice(1))
+
+let stopBidPlaced: (() => void) | undefined
+let stopAuctionEnded: (() => void) | undefined
 
 onMounted(() => {
   const preference = getCookie('user_preference')
@@ -68,29 +76,43 @@ async function selectUserPreference(preference: UserPreference) {
   showPreferenceModal.value = false
 }
 
-function formatHeroCountdown(value: number) {
-  const hours = Math.floor(value / 3600)
-  const minutes = Math.floor((value % 3600) / 60)
-  const seconds = value % 60
+onMounted(async () => {
+  liveLots.value = await getHomeLiveLots()
 
-  return [hours, minutes, seconds]
-    .map((part) => part.toString().padStart(2, '0'))
-    .join(' : ')
-}
+  const hero = liveLots.value[0]
+  if (!hero?.auctionId) return
 
-function updateHeroCountdown() {
-  const remainingSeconds = Math.max(0, Math.floor((heroCountdownTarget - Date.now()) / 1000))
-  heroCountdown.value = formatHeroCountdown(remainingSeconds)
-}
+  hero.bidCount = await getBidCount(hero.auctionId)
 
-onMounted(() => {
-  updateHeroCountdown()
-  heroCountdownTimer = setInterval(updateHeroCountdown, 1000)
+  // new bids from server (SignalR), display only
+  stopBidPlaced = auctionRealtimeService.on('BidPlaced', (event) => {
+    const lot = liveLots.value.find((item) => item.auctionId === event.auctionId)
+    if (!lot) return
+
+    // ignore older prices
+    if (event.amount > lot.currentPrice) {
+      lot.currentPrice = event.amount
+    }
+
+    if (lot.bidCount !== null) {
+      lot.bidCount++
+    }
+  })
+
+  stopAuctionEnded = auctionRealtimeService.on('AuctionEnded', (event) => {
+    const lot = liveLots.value.find((item) => item.auctionId === event.auctionId)
+    if (lot) lot.endsAt = new Date().toISOString()
+  })
+
+  auctionRealtimeService.joinAuction(hero.auctionId).catch(() => {})
 })
 
 onBeforeUnmount(() => {
-  if (heroCountdownTimer) {
-    clearInterval(heroCountdownTimer)
+  stopBidPlaced?.()
+  stopAuctionEnded?.()
+
+  if (heroLot.value?.auctionId) {
+    auctionRealtimeService.leaveAuction(heroLot.value.auctionId).catch(() => {})
   }
 })
 
@@ -277,122 +299,13 @@ const endingSoon = computed(() => auctions.value.slice(0, 10))
   />
 
   <div class="space-y-16">
-    <section class="relative overflow-hidden rounded-[32px] border border-[#E5E5E3] bg-[#F7F7F5] px-6 py-6 shadow-[0_8px_30px_rgba(0,0,0,0.03)] sm:px-8 sm:py-8 lg:min-h-[660px] lg:px-12 lg:py-12">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.95),_transparent_42%),radial-gradient(circle_at_80%_15%,_rgba(255,255,255,0.8),_transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.75),rgba(248,248,247,0.92))]" />
-      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.42)_0%,rgba(255,255,255,0)_34%,rgba(0,0,0,0.02)_100%)]" />
+    <!-- keep hero space while loading -->
+    <div v-if="!heroLot" class="h-[min(100svh,860px)]" aria-hidden="true" />
 
-      <div class="relative grid gap-10 lg:min-h-[596px] lg:grid-cols-[0.94fr_1.06fr] lg:items-center xl:gap-14">
-        <div class="flex flex-col justify-center gap-8 lg:self-center lg:pr-6 xl:pr-10">
-          <div class="max-w-2xl pt-8 sm:pt-10 lg:pt-4">
-            <p class="text-[10px] font-medium uppercase tracking-[0.42em] text-[#777777]">
-              RELORA
-            </p>
-
-            <h1
-              v-if="!isAuthenticated"
-              class="mt-6 max-w-xl text-[clamp(3.6rem,7vw,4.75rem)] font-semibold leading-[0.95] tracking-[-0.07em] text-[#111111]"
-            >
-              {{ $t('home.heroTitleLine1') }}<br />
-              <span class="font-medium">{{ $t('home.heroTitleLine2') }}</span>
-            </h1>
-
-            <h1
-              v-else
-              class="mt-6 max-w-xl text-[clamp(3.6rem,7vw,4.75rem)] font-semibold leading-[0.95] tracking-[-0.07em] text-[#111111]"
-            >
-              {{ $t('home.heroTitleLine1') }}<br />
-              <span class="font-medium">{{ $t('home.heroTitleLine2') }}</span>
-            </h1>
-
-            <p class="mt-5 max-w-lg text-[clamp(1rem,1.2vw,1.125rem)] leading-8 text-[#4f4f4f]">
-              {{ $t('home.heroDescriptionLine1') }}<br />
-              {{ $t('home.heroDescriptionLine2') }}
-            </p>
-
-            <div class="mt-7 flex flex-wrap gap-3">
-              <RouterLink
-                :to="localePath('/catalog')"
-                class="inline-flex h-12 items-center justify-center rounded-full bg-black px-6 text-sm font-medium text-white transition duration-200 hover:-translate-y-0.5 hover:bg-black/90"
-              >
-                {{ $t('home.exploreAuctions') }} →
-              </RouterLink>
-
-              <RouterLink
-                :to="localePath('/sell')"
-                class="inline-flex h-12 items-center justify-center rounded-full border border-[#E5E5E3] bg-white px-6 text-sm font-medium text-[#111111] transition duration-200 hover:-translate-y-0.5 hover:border-[#cacac6] hover:bg-[#fbfbfa]"
-              >
-                {{ $t('home.sellAnItem') }}
-              </RouterLink>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="hero-product-stage relative flex min-h-[520px] items-center justify-center overflow-visible -mr-6 -mb-6 sm:-mr-8 sm:-mb-8 lg:-mr-12 lg:-mb-12 lg:min-h-[596px] lg:justify-end">
-          <div class="absolute inset-x-[12%] bottom-[12%] top-[14%] rounded-full bg-[radial-gradient(circle,_rgba(255,255,255,0.95)_0%,_rgba(247,247,245,0.92)_35%,_rgba(224,224,220,0.45)_100%)] blur-3xl" />
-
-          <div class="hero-product-frame relative flex h-full w-full items-center justify-center overflow-visible">
-            <div class="hero-auction-card absolute left-0 top-[33%] z-20 w-[min(100%,21.5rem)] rounded-[20px] border border-[#E5E5E3] bg-white/96 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-[2px] sm:left-[2%] sm:p-6 lg:left-[2%] xl:left-[4%]">
-              <div class="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.28em] text-[#777777]">
-                <span class="hero-live-dot h-2 w-2 rounded-full bg-black" />
-                <span>{{ $t('home.liveAuction') }}</span>
-              </div>
-
-              <h2 class="mt-5 text-[clamp(1.5rem,2vw,1.9rem)] font-medium leading-[1.02] tracking-[-0.05em] text-[#111111]">
-                {{ $t('home.heroLotTitleLine1') }}<br />
-                {{ $t('home.heroLotTitleLine2') }}
-              </h2>
-
-              <div class="mt-8 flex items-end justify-between gap-4">
-                <div>
-                  <p class="text-xs uppercase tracking-[0.22em] text-[#777777]">
-                    {{ $t('home.currentBid') }}
-                  </p>
-                  <p class="mt-2 text-[clamp(2.2rem,3.2vw,2.6rem)] font-semibold leading-none tracking-[-0.06em] text-[#111111]">
-                    €520
-                  </p>
-                </div>
-
-                <p class="pb-1 font-mono text-sm tabular-nums text-[#777777]">
-                  {{ $t('home.bidCount', { count: 12 }) }}
-                </p>
-              </div>
-
-              <div class="mt-6 h-px bg-[#E5E5E3]" />
-
-              <div class="mt-5 flex items-end justify-between gap-4">
-                <div>
-                  <p class="font-mono text-[clamp(1.35rem,1.8vw,1.65rem)] leading-none tracking-[0.04em] text-[#111111] tabular-nums">
-                    {{ heroCountdown }}
-                  </p>
-                  <p class="mt-2 text-xs uppercase tracking-[0.22em] text-[#777777]">
-                    {{ $t('home.left') }}
-                  </p>
-                </div>
-
-                <button class="inline-flex h-11 items-center justify-center rounded-full bg-black px-5 text-sm font-medium text-white transition duration-200 hover:-translate-y-0.5 hover:bg-black/90">
-                  {{ $t('home.viewLot') }}
-                </button>
-              </div>
-            </div>
-
-            <div
-              class="group relative h-full min-h-[520px] w-full overflow-visible lg:min-h-[596px]"
-            >
-              <img
-                :src="heroProductImage"
-                :alt="$t('home.heroLotAlt')"
-                class="hero-product-image absolute right-0 bottom-0 z-10 h-[115%] w-auto max-w-none select-none drop-shadow-[0_35px_50px_rgba(0,0,0,0.16)] transition-transform duration-700 ease-out group-hover:scale-[1.015]"
-                style="
-                  right: -10px;
-                  bottom: -90px;
-                "
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <template v-else>
+      <HomeHero :lot="heroLot" />
+      <HomeLiveAuctions :lots="feedLots" />
+    </template>
 
     <!-- <section>
       <div class="flex items-end justify-between gap-4">
@@ -836,39 +749,3 @@ const endingSoon = computed(() => auctions.value.slice(0, 10))
     </section>
   </div>
 </template>
-
-<style scoped>
-.hero-live-dot {
-  animation: hero-live-dot-blink 1.8s infinite;
-}
-
-@keyframes hero-live-dot-blink {
-  0%,
-  72%,
-  100% {
-    opacity: 1;
-  }
-
-  36% {
-    opacity: 0.25;
-  }
-}
-
-.hero-product-stage:hover .hero-auction-card {
-  transform: translateY(-1px);
-}
-
-.hero-auction-card {
-  transition: transform 300ms ease, box-shadow 300ms ease;
-}
-
-.hero-product-image {
-  transform-origin: center bottom;
-}
-
-@media (min-width: 1024px) {
-  .hero-product-stage:hover .hero-product-image {
-    transform: scale(1.015) translateY(-2px);
-  }
-}
-</style>
