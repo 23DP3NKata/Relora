@@ -906,6 +906,29 @@
         "noDesigners": "Aucun créateur trouvé."
     },
     "home": {
+        "liveHero": {
+            "eyebrow": "Relora — enchères de mode en direct",
+            "titleLine1": "Pièces rares.",
+            "titleLine2": "Enchères live.",
+            "live": "En direct",
+            "preview": "Aperçu",
+            "ended": "Terminée",
+            "lot": "Lot",
+            "currentBid": "Enchère actuelle",
+            "timeLeft": "Temps restant",
+            "bids": "Enchères",
+            "bidNow": "Enchérir",
+            "viewLot": "Voir le lot",
+            "allLots": "Tous les lots en direct",
+            "scroll": "Défiler"
+        },
+        "liveAuctions": {
+            "eyebrow": "En direct",
+            "title": "Enchères live",
+            "description": "Les pièces qui se terminent bientôt, en premier. Chaque prix et chaque minuteur viennent directement de l’enchère.",
+            "viewAll": "Voir toutes les enchères",
+            "closingSoon": "Se termine bientôt"
+        },
         "guestTitlePart1": "Mode rare,",
         "guestTitlePart2": "marques premium,",
         "guestTitlePart3": "et enchères à suivre.",

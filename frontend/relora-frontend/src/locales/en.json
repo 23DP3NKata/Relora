@@ -1187,6 +1187,29 @@
         "noDesigners": "No designers found."
     },
     "home": {
+        "liveHero": {
+            "eyebrow": "Relora — live fashion auctions",
+            "titleLine1": "Rare pieces.",
+            "titleLine2": "Live bids.",
+            "live": "Live",
+            "preview": "Preview",
+            "ended": "Ended",
+            "lot": "Lot",
+            "currentBid": "Current bid",
+            "timeLeft": "Time left",
+            "bids": "Bids",
+            "bidNow": "Bid now",
+            "viewLot": "View lot",
+            "allLots": "All live lots",
+            "scroll": "Scroll"
+        },
+        "liveAuctions": {
+            "eyebrow": "Live now",
+            "title": "Live auctions",
+            "description": "Pieces closing next, soonest first. Every price and timer comes straight from the auction.",
+            "viewAll": "View all auctions",
+            "closingSoon": "Closing soon"
+        },
         "guestTitlePart1": "Rare fashion,",
         "guestTitlePart2": "premium brands,",
         "guestTitlePart3": "and auctions worth watching.",

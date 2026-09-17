@@ -906,6 +906,29 @@
         "noDesigners": "Keine Designer gefunden."
     },
     "home": {
+        "liveHero": {
+            "eyebrow": "Relora — Live-Modeauktionen",
+            "titleLine1": "Seltene Stücke.",
+            "titleLine2": "Live bieten.",
+            "live": "Live",
+            "preview": "Vorschau",
+            "ended": "Beendet",
+            "lot": "Los",
+            "currentBid": "Aktuelles Gebot",
+            "timeLeft": "Restzeit",
+            "bids": "Gebote",
+            "bidNow": "Jetzt bieten",
+            "viewLot": "Los ansehen",
+            "allLots": "Alle Live-Lose",
+            "scroll": "Scrollen"
+        },
+        "liveAuctions": {
+            "eyebrow": "Jetzt live",
+            "title": "Live-Auktionen",
+            "description": "Stücke, die als Nächstes enden. Jeder Preis und jeder Timer kommt direkt aus der Auktion.",
+            "viewAll": "Alle Auktionen ansehen",
+            "closingSoon": "Endet bald"
+        },
         "guestTitlePart1": "Seltene Mode,",
         "guestTitlePart2": "Premium-Marken",
         "guestTitlePart3": "und Auktionen, die man beobachten sollte.",
