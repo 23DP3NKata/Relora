@@ -187,7 +187,7 @@ onBeforeUnmount(() => {
                   </SelectItem>
                 </RouterLink>
 
-                <RouterLink :to="localePath('/')">
+                <RouterLink :to="localePath('/settings')">
                   <SelectItem value="settings">
                     {{ $t('navigation.settings') }}
                   </SelectItem>

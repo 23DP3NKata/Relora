@@ -27,6 +27,7 @@ import SustainabilityPage from '@/pages/info/SustainabilityPage.vue'
 import SearchPage from '@/pages/search/SearchPage.vue'
 import MainLayout from '@/layouts/MainLayout.vue'
 import LotPage from '@/pages/lots/LotPage.vue'
+import UserSettingsPage from '@/pages/user/UserSettingsPage.vue'
 import UserProfilePage from '@/pages/user/UserProfilePage.vue'
 import NotFoundPage from '@/pages/errors/NotFoundPage.vue'
 import CatalogPage from '@/pages/catalog/CatalogPage.vue'
@@ -88,6 +89,11 @@ const routes = [
             redirect: (to: { params: Record<string, unknown> }) => localeHome(
               routeLocale(to.params.locale) ?? getPreferredLocale(),
             ),
+          },
+          {
+            path: 'settings',
+            component: UserSettingsPage,
+            meta: { requiresAuth: true, seoKey: 'settings' },
           },
           {
             path: 'profile/:username',
