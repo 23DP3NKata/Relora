@@ -45,7 +45,8 @@ public class UserRepository(ReloraDbContext context) : IUserRepository
     /// <returns>A task that represents the asynchronous operation.</returns>
     public Task UpdateUserAsync(User user)
     {
-        _context.Users.Update(user);
+        _context.Entry(user).Property(value => value.Name).IsModified = true;
+        _context.Entry(user).Property(value => value.UserName).IsModified = true;
         return _context.SaveChangesAsync();
     }
 
