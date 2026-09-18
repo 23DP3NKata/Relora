@@ -15,6 +15,7 @@ public interface IUserRepository
 
     Task AddUserAsync(User user);
     Task UpdateUserAsync(User user);
+    Task ChangePasswordAsync(User user, string passwordHash, CancellationToken cancellationToken);
     Task DeleteUserAsync(User user);
 
     Task<int> GetUsersBidsPlacedCount(Guid userId);

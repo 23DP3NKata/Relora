@@ -14,6 +14,19 @@ public class UserRepository(ReloraDbContext context) : IUserRepository
 {
     private readonly ReloraDbContext _context = context;
 
+    public async Task ChangePasswordAsync(User user, string passwordHash, CancellationToken cancellationToken)
+    {
+        user.ChangePassword(passwordHash);
+        var tokens = await _context.RefreshTokens
+            .Where(token => token.UserId == user.Id && token.RevokedAtUtc == null)
+            .ToListAsync(cancellationToken);
+        foreach (var token in tokens)
+        {
+            token.Revoke();
+        }
+        await _context.SaveChangesAsync(cancellationToken);
+    }
+
     /// <summary>
     /// Adds user async.
     /// </summary>

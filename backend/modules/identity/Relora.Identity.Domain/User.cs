@@ -70,6 +70,17 @@ public sealed class User
         IsAdmin = isAdmin;
     }
 
+    public void UpdateProfile(string name, string userName)
+    {
+        Name = name;
+        UserName = userName;
+    }
+
+    public void ChangePassword(string passwordHash)
+    {
+        PasswordHash = passwordHash;
+    }
+
     public static User Create(
         string name,
         string email,
