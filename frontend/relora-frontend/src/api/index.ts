@@ -25,8 +25,9 @@ api.interceptors.response.use(
 
     const isUnauthorized = error.response?.status === 401
     const isRefreshRequest = originalRequest.url?.includes('/api/auth/refresh')
+    const isAuthSubmission = ['/api/auth/login', '/api/auth/register'].includes(originalRequest.url ?? '')
 
-    if (isUnauthorized && !originalRequest._retry && !isRefreshRequest) {
+    if (isUnauthorized && !originalRequest._retry && !isRefreshRequest && !isAuthSubmission) {
       originalRequest._retry = true
 
       try {
