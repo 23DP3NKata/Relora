@@ -798,6 +798,8 @@
         "submitFailed": "Angebot konnte nicht gesendet werden."
     },
     "auth": {
+        "signingIn": "Anmeldung läuft…",
+        "creatingAccount": "Konto wird erstellt…",
         "emailRequired": "Gib deine E-Mail-Adresse ein.",
         "emailInvalid": "Gib eine gültige E-Mail-Adresse ein.",
         "passwordRequired": "Gib dein Passwort ein.",

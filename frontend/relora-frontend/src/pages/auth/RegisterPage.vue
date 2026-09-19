@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Button from '@/components/ui/button/Button.vue'
 import Input from '@/components/ui/input/Input.vue'
+import { LoaderCircle } from 'lucide-vue-next'
 import { reactive, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
@@ -14,18 +15,23 @@ const localePath = useLocalePath()
 const { t } = useI18n()
 const authStore = useAuthStore()
 const form = ref<HTMLFormElement | null>(null)
+const isSubmitting = ref(false)
 const values = reactive({ username: '', email: '', password: '', confirmPassword: '' })
 const { errors, touched, errorMessage, validate, edit, submit, showError } = useAuthValidation(values)
 
 const handleRegister = async (): Promise<void> => {
-  if (!await submit(form.value)) return
+  if (isSubmitting.value) return
+  isSubmitting.value = true
 
   try {
+    if (!await submit(form.value)) return
     await authStore.register(values.username, values.email, values.password, values.confirmPassword)
     await router.push(localePath('/home'))
     toast.success(t('auth.registerSuccess'), { position: 'bottom-right' })
   } catch (error) {
     await showError(error, form.value)
+  } finally {
+    isSubmitting.value = false
   }
 }
 </script>
@@ -59,7 +65,7 @@ const handleRegister = async (): Promise<void> => {
               </p>
             </div>
 
-            <form ref="form" novalidate @submit.prevent="handleRegister" class="mt-8 space-y-5">
+            <form ref="form" :aria-busy="isSubmitting" novalidate @submit.prevent="handleRegister" class="mt-8 space-y-5">
               <div v-if="errorMessage" tabindex="-1" data-error-summary role="alert" class="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-800 focus-visible:outline-2 focus-visible:outline-red-600">
                 <p class="font-medium">{{ errorMessage }}</p>
                 <ul v-if="Object.values(errors).some(Boolean)" class="mt-2 space-y-1">
@@ -86,6 +92,7 @@ const handleRegister = async (): Promise<void> => {
                     id="username"
                     type="text"
                     name="username"
+                    :disabled="isSubmitting"
                     required
                     autocomplete="username"
                     :placeholder="$t('auth.usernamePlaceholder')"
@@ -111,6 +118,7 @@ const handleRegister = async (): Promise<void> => {
                     id="email"
                     type="email"
                     name="email"
+                    :disabled="isSubmitting"
                     required
                     autocomplete="email"
                     :placeholder="$t('auth.emailPlaceholder')"
@@ -135,6 +143,7 @@ const handleRegister = async (): Promise<void> => {
                     id="password"
                     type="password"
                     name="password"
+                    :disabled="isSubmitting"
                     required
                     autocomplete="new-password"
                     :placeholder="$t('auth.createPasswordPlaceholder')"
@@ -160,6 +169,7 @@ const handleRegister = async (): Promise<void> => {
                     id="confirmPassword"
                     type="password"
                     name="confirmPassword"
+                    :disabled="isSubmitting"
                     required
                     autocomplete="new-password"
                     :placeholder="$t('auth.repeatPasswordPlaceholder')"
@@ -172,13 +182,16 @@ const handleRegister = async (): Promise<void> => {
               <div class="pt-2">
                 <Button
                   type="submit"
+                  :disabled="isSubmitting"
                   class="flex h-12 w-full items-center justify-center rounded-full bg-black px-5 text-sm font-medium text-white transition hover:bg-black/90"
                 >
-                  {{ $t('auth.createAccount') }}
+                  <LoaderCircle v-if="isSubmitting" class="mr-2 h-4 w-4 motion-safe:animate-spin" aria-hidden="true" />
+                  {{ $t(isSubmitting ? 'auth.creatingAccount' : 'auth.createAccount') }}
                 </Button>
               </div>
 
 
+              <p role="status" class="sr-only">{{ isSubmitting ? $t('auth.creatingAccount') : '' }}</p>
             </form>
 
             <div class="mt-6 text-sm text-black/55">

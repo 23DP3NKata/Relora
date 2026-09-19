@@ -798,6 +798,8 @@
         "submitFailed": "Échec de l’envoi de l’annonce."
     },
     "auth": {
+        "signingIn": "Connexion en cours…",
+        "creatingAccount": "Création du compte…",
         "emailRequired": "Saisissez votre adresse e-mail.",
         "emailInvalid": "Saisissez une adresse e-mail valide.",
         "passwordRequired": "Saisissez votre mot de passe.",

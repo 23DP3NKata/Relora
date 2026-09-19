@@ -29,7 +29,9 @@ export const useAuthStore = defineStore('auth', () => {
       password,
     })
 
-    await checkAuth()
+    if (!await checkAuth()) {
+      throw new Error('Could not confirm the session')
+    }
   }
 
   async function register(username: string, email: string, password: string, confirmPassword: string): Promise<void> {
@@ -40,7 +42,9 @@ export const useAuthStore = defineStore('auth', () => {
       confirmPassword,
     })
 
-    await checkAuth()
+    if (!await checkAuth()) {
+      throw new Error('Could not confirm the session')
+    }
   }
 
   async function logout(): Promise<void> {
