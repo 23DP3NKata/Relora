@@ -82,7 +82,7 @@ const localePath = useLocalePath()
           </RouterLink>
 
           <RouterLink
-            :to="localePath('/')"
+            :to="localePath('/settings')"
             class="flex h-11 items-center justify-center rounded-full border border-border bg-muted text-sm font-medium text-foreground transition hover:bg-accent hover:text-accent-foreground"
             @click="$emit('close')"
           >

@@ -1,36 +1,23 @@
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
 using Relora.Identity.Application.Interfaces;
 
 namespace Relora.Identity.Infrastructure.Cookies;
 
-public class CookieFactory : ICookieFactory
+public class CookieFactory(IHostEnvironment environment) : ICookieFactory
 {
+    private readonly SameSiteMode _sameSite = environment.IsDevelopment()
+        ? SameSiteMode.None
+        : SameSiteMode.Lax;
+
     public void SetAccessTokenCookie(HttpResponse response, string token)
     {
-        // Adds a cookie to the HTTP response.
-        // The browser will store it and automatically send it back
-        // on future requests if the cookie rules allow it.
         response.Cookies.Append("access_token", token, new CookieOptions
         {
-            // Prevents JavaScript from accessing the cookie via document.cookie.
-            // This is important for security because it helps protect the token
-            // from being stolen through XSS attacks.
             HttpOnly = true,
-
-            // Ensures the cookie is sent only over HTTPS connections.
-            // If the site is opened over plain HTTP, this cookie will not be sent.
             Secure = true,
-
-            // Controls when the cookie is sent in cross-site requests.
-            // Lax is a balanced default: safer than None, but less strict than Strict.
-            SameSite = SameSiteMode.Lax,
-
-            // Sets the exact expiration date and time of the cookie.
-            // After this moment, the browser should remove it.
+            SameSite = _sameSite,
             Expires = DateTimeOffset.UtcNow.AddMinutes(30),
-
-            // Makes the cookie available for the entire website.
-            // It will be sent for all routes such as /api, /profile, /orders, etc.
             Path = "/"
         });
     }
@@ -41,7 +28,7 @@ public class CookieFactory : ICookieFactory
         {
             HttpOnly = true,
             Secure = true,
-            SameSite = SameSiteMode.Lax,
+            SameSite = _sameSite,
             Expires = DateTimeOffset.UtcNow.AddDays(7),
             Path = "/"
         });
@@ -53,7 +40,7 @@ public class CookieFactory : ICookieFactory
         {
             HttpOnly = false,
             Secure = true,
-            SameSite = SameSiteMode.Lax,
+            SameSite = _sameSite,
             Expires = DateTimeOffset.UtcNow.AddDays(30),
             Path = "/"
         });
@@ -61,14 +48,11 @@ public class CookieFactory : ICookieFactory
 
     public void DeleteAccessTokenCookie(HttpResponse response)
     {
-        // Deletes the cookie with the given name.
-        // Path should match the original cookie path,
-        // otherwise the browser may not remove the correct cookie.
         response.Cookies.Delete("access_token", new CookieOptions
         {
             Path = "/",
             Secure = true,
-            SameSite = SameSiteMode.Lax,
+            SameSite = _sameSite,
             HttpOnly = true
         });
     }
@@ -79,7 +63,7 @@ public class CookieFactory : ICookieFactory
         {
             Path = "/",
             Secure = true,
-            SameSite = SameSiteMode.Lax,
+            SameSite = _sameSite,
             HttpOnly = true
         });
     }

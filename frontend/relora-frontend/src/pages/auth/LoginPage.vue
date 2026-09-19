@@ -1,42 +1,37 @@
 <script setup lang="ts">
 import Button from '@/components/ui/button/Button.vue'
 import Input from '@/components/ui/input/Input.vue'
-
-import { ref } from 'vue'
+import { LoaderCircle } from 'lucide-vue-next'
+import { reactive, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useAuthStore } from '@/stores/authStore'
-import axios from 'axios'
-import { toast } from "vue-sonner"
+import { toast } from 'vue-sonner'
 import { useLocalePath } from '@/composables/useLocalePath'
+import { useAuthValidation } from '@/composables/useAuthValidation'
 
 const router = useRouter()
 const localePath = useLocalePath()
 const { t } = useI18n()
 const authStore = useAuthStore()
+const form = ref<HTMLFormElement | null>(null)
+const isSubmitting = ref(false)
+const values = reactive({ email: '', password: '' })
+const { errors, touched, errorMessage, validate, edit, submit, showError } = useAuthValidation(values)
 
-const email = ref('')
-const password = ref('')
-const errorMessage = ref('')
+const handleLogin = async (): Promise<void> => {
+  if (isSubmitting.value) return
+  isSubmitting.value = true
 
-const handleLogin = async (): Promise<void>  => {
-    errorMessage.value = ''
-
-    try
-    {
-      await authStore.login(email.value, password.value)
-      router.push(localePath('/home'))
-      toast.success(t('auth.loginSuccess'), { position: "bottom-right" })
-    }
-    catch (error) 
-    {
-      if (axios.isAxiosError(error)) {
-        errorMessage.value = error.response?.data?.message ?? t('auth.loginFailed')
-        toast.error(errorMessage.value, { position: "bottom-right" })
-        return
-    }
-    
-    errorMessage.value = t('auth.unexpectedError')
+  try {
+    if (!await submit(form.value)) return
+    await authStore.login(values.email, values.password)
+    await router.push(localePath('/home'))
+    toast.success(t('auth.loginSuccess'), { position: 'bottom-right' })
+  } catch (error) {
+    await showError(error, form.value)
+  } finally {
+    isSubmitting.value = false
   }
 }
 </script>
@@ -70,22 +65,39 @@ const handleLogin = async (): Promise<void>  => {
               </p>
             </div>
 
-            <form @submit.prevent="handleLogin" class="mt-8 space-y-5">
+            <form ref="form" :aria-busy="isSubmitting" novalidate @submit.prevent="handleLogin" class="mt-8 space-y-5">
+              <div v-if="errorMessage" tabindex="-1" data-error-summary role="alert" class="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-800 focus-visible:outline-2 focus-visible:outline-red-600">
+                <p class="font-medium">{{ errorMessage }}</p>
+                <ul v-if="Object.values(errors).some(Boolean)" class="mt-2 space-y-1">
+                  <template v-for="(message, field) in errors" :key="field">
+                    <li v-if="message">
+                      <a :href="`#${field}`" class="underline underline-offset-2" @click.prevent="form?.querySelector<HTMLInputElement>(`#${field}`)?.focus()">{{ message }}</a>
+                    </li>
+                  </template>
+                </ul>
+              </div>
               <div>
                 <label for="email" class="block text-sm font-medium text-black">
                   {{ $t('auth.emailAddress') }}
                 </label>
                 <div class="mt-2">
                   <Input
-                    v-model="email"
+                    v-model="values.email"
+                    @blur="touched.email = true; validate('email')"
+                    @update:model-value="edit('email')"
+                    :aria-invalid="Boolean(errors.email)"
+                    :aria-describedby="errors.email ? 'email-error' : undefined"
+                    :class="errors.email ? 'border-red-600 bg-red-50 focus:border-red-600 focus-visible:ring-red-600' : ''"
                     id="email"
                     type="email"
                     name="email"
+                    :disabled="isSubmitting"
                     required
                     autocomplete="email"
                     class="block h-12 w-full rounded-2xl border border-black/10 bg-neutral-100 px-4 text-black placeholder:text-black/35 focus:border-black focus:bg-white focus:outline-none"
                     :placeholder="$t('auth.emailPlaceholder')"
                   />
+                  <p v-if="errors.email" id="email-error" class="mt-2 text-sm text-red-700" aria-live="polite">{{ errors.email }}</p>
                 </div>
               </div>
 
@@ -105,29 +117,37 @@ const handleLogin = async (): Promise<void>  => {
 
                 <div class="mt-2">
                   <Input
-                    v-model="password"
+                    v-model="values.password"
+                    @blur="touched.password = true; validate('password')"
+                    @update:model-value="edit('password')"
+                    :aria-invalid="Boolean(errors.password)"
+                    :aria-describedby="errors.password ? 'password-error' : undefined"
+                    :class="errors.password ? 'border-red-600 bg-red-50 focus:border-red-600 focus-visible:ring-red-600' : ''"
                     id="password"
                     type="password"
                     name="password"
+                    :disabled="isSubmitting"
                     required
                     autocomplete="current-password"
                     class="block h-12 w-full rounded-2xl border border-black/10 bg-neutral-100 px-4 text-black placeholder:text-black/35 focus:border-black focus:bg-white focus:outline-none"
                     :placeholder="$t('auth.passwordPlaceholder')"
                   />
+                  <p v-if="errors.password" id="password-error" class="mt-2 text-sm text-red-700" aria-live="polite">{{ errors.password }}</p>
                 </div>
               </div>
 
               <div class="pt-2">
                 <Button
                   type="submit"
+                  :disabled="isSubmitting"
                   class="cursor-pointer flex h-12 w-full items-center justify-center rounded-full bg-black px-5 text-sm font-medium text-white transition hover:bg-black/90"
                 >
-                  {{ $t('navigation.signIn') }}
+                  <LoaderCircle v-if="isSubmitting" class="mr-2 h-4 w-4 motion-safe:animate-spin" aria-hidden="true" />
+                  {{ $t(isSubmitting ? 'auth.signingIn' : 'navigation.signIn') }}
                 </Button>
               </div>
-              <p v-if="errorMessage" class="text-red-500">
-                {{ errorMessage }}
-              </p>
+
+              <p role="status" class="sr-only">{{ isSubmitting ? $t('auth.signingIn') : '' }}</p>
             </form>
 
             <div class="mt-6 text-sm text-black/55">

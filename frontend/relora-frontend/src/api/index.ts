@@ -4,7 +4,7 @@ interface RetryableRequestConfig extends InternalAxiosRequestConfig {
   _retry?: boolean
 }
 
-export const API_BASE_URL = 'https://localhost:7000'
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'https://localhost:7000'
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -25,8 +25,9 @@ api.interceptors.response.use(
 
     const isUnauthorized = error.response?.status === 401
     const isRefreshRequest = originalRequest.url?.includes('/api/auth/refresh')
+    const isAuthSubmission = ['/api/auth/login', '/api/auth/register'].includes(originalRequest.url ?? '')
 
-    if (isUnauthorized && !originalRequest._retry && !isRefreshRequest) {
+    if (isUnauthorized && !originalRequest._retry && !isRefreshRequest && !isAuthSubmission) {
       originalRequest._retry = true
 
       try {

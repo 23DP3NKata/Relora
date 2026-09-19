@@ -4,8 +4,10 @@ interface RetryableRequestConfig extends InternalAxiosRequestConfig {
   _retry?: boolean
 }
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'https://localhost:7000'
+
 const api = axios.create({
-  baseURL: 'https://localhost:7001',
+  baseURL: API_BASE_URL,
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
