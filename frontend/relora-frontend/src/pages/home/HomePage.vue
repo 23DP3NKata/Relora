@@ -6,7 +6,7 @@ import { useAuthStore } from '@/stores/authStore'
 import { storeToRefs } from 'pinia'
 import { getAuctions } from '@/app/services/auctionService'
 import { RouterLink } from "vue-router"
-import { getCookie } from '@/app/services/cookieService'
+import { getCookie, setCookie } from '@/app/services/cookieService'
 import api from '@/api'
 import { useLocalePath } from '@/composables/useLocalePath'
 import { Search, Compass, Trophy, ArrowRight } from 'lucide-vue-next'
@@ -68,12 +68,18 @@ async function changeUserPreference(preference: UserPreference) {
 }
 
 async function selectUserPreference(preference: UserPreference) {
-  await api.post('/api/auth/set-preference', {
-    preference,
-  })
-
+  // close the modal right away, saving can take a moment
   userPreference.value = preference
   showPreferenceModal.value = false
+
+  try {
+    await api.post('/api/auth/set-preference', {
+      preference,
+    })
+  } catch {
+    // server is not available, save the choice in the browser
+    setCookie('user_preference', preference)
+  }
 }
 
 onMounted(async () => {
