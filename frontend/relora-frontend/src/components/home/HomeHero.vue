@@ -402,7 +402,7 @@ onBeforeUnmount(() => {
           </MagneticButton>
 
           <RouterLink
-            :to="localePath('/catalog?sort=EndingSoon')"
+            :to="localePath('/catalog')"
             class="text-center font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
           >
             {{ $t('home.liveHero.allLots') }}

@@ -92,7 +92,7 @@ onBeforeUnmount(() => {
         <p class="max-w-sm text-sm leading-6 text-foreground/65">
           {{ $t('home.liveAuctions.description') }}
         </p>
-        <MagneticButton :to="localePath('/catalog?sort=EndingSoon')" variant="light">
+        <MagneticButton :to="localePath('/catalog')" variant="light">
           {{ $t('home.liveAuctions.viewAll') }}
         </MagneticButton>
       </div>
