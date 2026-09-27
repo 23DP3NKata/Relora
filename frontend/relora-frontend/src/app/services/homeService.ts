@@ -32,18 +32,13 @@ export async function getHomeLiveLots(): Promise<HomeLiveLot[]> {
 
     const results = await Promise.allSettled(withLot.map(loadLiveLot))
 
-    const lots = results
+    return results
       .filter((result) => result.status === 'fulfilled')
       .map((result) => (result as PromiseFulfilledResult<HomeLiveLot>).value)
-
-    if (lots.length > 0) {
-      return lots
-    }
   } catch {
-    // backend is down, show demo lots
+    // backend is down, page shows the empty state
+    return []
   }
-
-  return getDemoLots()
 }
 
 async function loadLiveLot(auction: AuctionListItem): Promise<HomeLiveLot> {
@@ -75,33 +70,20 @@ export async function getBidCount(auctionId: string): Promise<number | null> {
   }
 }
 
-// demo lots so the page isn't empty without backend (shown as "Preview")
-function getDemoLots(): HomeLiveLot[] {
-  const hour = 60 * 60 * 1000
-  const now = Date.now()
-
-  const demo = [
-    { brand: 'Stone Island', title: 'Ghost Jacket', price: 184, endsIn: 0.7 * hour, imageUrl: heroConfig.poster },
-    { brand: 'Balenciaga', title: 'Football Logo Zip Hoodie', price: 420, endsIn: 2.4 * hour, imageUrl: 'https://media-photos.depop.com/b1/51377749/3251202528_7ca0ed8a90b8496c9b8793bd28d3de17/P0.jpg' },
-    { brand: 'Maison Margiela', title: 'Replica Sneakers', price: 240, endsIn: 5 * hour, imageUrl: 'https://media-photos.depop.com/b1/45498419/3517277733_6056232abec546e987925ec83630f810/P0.jpg' },
-    { brand: 'Vetements', title: 'Campaign Logo T-Shirt', price: 180, endsIn: 9 * hour, imageUrl: 'https://media-photos.depop.com/b1/36719830/3498593736_9131744e9156480d90e996a6dcb6ec67/P0.jpg' },
-    { brand: 'Prada', title: 'Knit Zip Jacket', price: 390, endsIn: 20 * hour, imageUrl: 'https://media-photos.depop.com/b1/448068812/3474488748_5e0e9243711c4cbcb6dce7afdff37d6d/P0.jpg' },
-    { brand: 'Enfants Riches Déprimés', title: 'Graphic T-Shirt', price: 310, endsIn: 30 * hour, imageUrl: 'https://media-photos.depop.com/b1/51416371/3553513106_b896da1472a94103a15b55b05dd159f1/P0.jpg' },
-    { brand: 'Maison Margiela', title: 'Numbers Logo T-Shirt', price: 150, endsIn: 52 * hour, imageUrl: 'https://images.thebestshops.com/product_images/original/SL12226-044_01-339d21.jpg' },
-  ]
-
-  return demo.map((item, index) => ({
-    lotId: `demo-${index + 1}`,
+// showcase lot for the hero while there are no real auctions (shown as "Preview")
+export function getShowcaseLot(): HomeLiveLot {
+  return {
+    lotId: 'showcase',
     auctionId: null,
-    title: item.title,
-    brand: item.brand,
-    imageUrl: item.imageUrl,
+    title: 'Ghost Jacket',
+    brand: 'Stone Island',
+    imageUrl: heroConfig.poster,
     sizeName: 'M',
     conditionName: 'Excellent',
-    currentPrice: item.price,
+    currentPrice: 184,
     currency: 'EUR',
-    endsAt: new Date(now + item.endsIn).toISOString(),
+    endsAt: new Date(Date.now() + 42 * 60 * 1000).toISOString(),
     bidCount: null,
     isDemo: true,
-  }))
+  }
 }

@@ -907,6 +907,7 @@
     },
     "home": {
         "liveHero": {
+            "explore": "Lose entdecken",
             "eyebrow": "Relora — Live-Modeauktionen",
             "titleLine1": "Seltene Stücke.",
             "titleLine2": "Live bieten.",
@@ -923,6 +924,8 @@
             "scroll": "Scrollen"
         },
         "liveAuctions": {
+            "emptyTitle": "Weitere Auktionen sind unterwegs.",
+            "emptyText": "Neue Stücke erscheinen hier, sobald ihre Auktion startet. Bis dahin kannst du im Katalog stöbern.",
             "eyebrow": "Jetzt live",
             "title": "Live-Auktionen",
             "description": "Stücke, die als Nächstes enden. Jeder Preis und jeder Timer kommt direkt aus der Auktion.",

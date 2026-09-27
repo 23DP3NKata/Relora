@@ -398,7 +398,7 @@ onBeforeUnmount(() => {
       <div class="hero-cta lg:absolute lg:bottom-[9%] lg:left-0 lg:z-30" data-depth="0.5">
         <div class="hero-reveal flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
           <MagneticButton :to="lotLink" wide>
-            {{ $t('home.liveHero.bidNow') }}
+            {{ lot.isDemo ? $t('home.liveHero.explore') : $t('home.liveHero.bidNow') }}
           </MagneticButton>
 
           <RouterLink

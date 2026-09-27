@@ -1188,6 +1188,7 @@
     },
     "home": {
         "liveHero": {
+            "explore": "Explore lots",
             "eyebrow": "Relora — live fashion auctions",
             "titleLine1": "Rare pieces.",
             "titleLine2": "Live bids.",
@@ -1204,6 +1205,8 @@
             "scroll": "Scroll"
         },
         "liveAuctions": {
+            "emptyTitle": "More auctions are on the way.",
+            "emptyText": "New pieces appear here as soon as their auctions start. Meanwhile, browse the catalog.",
             "eyebrow": "Live now",
             "title": "Live auctions",
             "description": "Pieces closing next, soonest first. Every price and timer comes straight from the auction.",

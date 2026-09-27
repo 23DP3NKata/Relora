@@ -10,7 +10,7 @@ import { getCookie, setCookie } from '@/app/services/cookieService'
 import api from '@/api'
 import { useLocalePath } from '@/composables/useLocalePath'
 import { Search, Compass, Trophy, ArrowRight } from 'lucide-vue-next'
-import { getBidCount, getHomeLiveLots } from '@/app/services/homeService'
+import { getBidCount, getHomeLiveLots, getShowcaseLot } from '@/app/services/homeService'
 import { auctionRealtimeService } from '@/app/services/auctionRealtimeService'
 import type { HomeLiveLot } from '@/types/home'
 
@@ -39,9 +39,13 @@ type UserPreference = 'men' | 'women'
 const userPreference = ref<UserPreference>('women')
 const showPreferenceModal = ref(false)
 
-// lots for hero and live auctions (first one goes to hero)
+// real live lots, the first one goes to the hero
 const liveLots = ref<HomeLiveLot[]>([])
-const heroLot = computed(() => liveLots.value[0] ?? null)
+const lotsLoaded = ref(false)
+const showcaseLot = getShowcaseLot()
+
+// no real auctions yet -> hero shows the showcase lot
+const heroLot = computed(() => liveLots.value[0] ?? showcaseLot)
 const feedLots = computed(() => liveLots.value.slice(1))
 
 let stopBidPlaced: (() => void) | undefined
@@ -84,6 +88,7 @@ async function selectUserPreference(preference: UserPreference) {
 
 onMounted(async () => {
   liveLots.value = await getHomeLiveLots()
+  lotsLoaded.value = true
 
   const hero = liveLots.value[0]
   if (!hero?.auctionId) return
@@ -306,7 +311,7 @@ const endingSoon = computed(() => auctions.value.slice(0, 10))
 
   <div class="space-y-16">
     <!-- keep hero space while loading -->
-    <div v-if="!heroLot" class="h-[min(100svh,860px)]" aria-hidden="true" />
+    <div v-if="!lotsLoaded" class="h-[min(100svh,860px)]" aria-hidden="true" />
 
     <template v-else>
       <HomeHero :lot="heroLot" />

@@ -71,7 +71,6 @@ onBeforeUnmount(() => {
 
 <template>
   <section
-    v-if="featured"
     ref="section"
     class="live-auctions"
     aria-labelledby="live-auctions-title"
@@ -99,7 +98,20 @@ onBeforeUnmount(() => {
       </div>
     </header>
 
-    <div class="mt-10 grid gap-x-8 gap-y-10 lg:mt-14 lg:grid-cols-12">
+    <!-- no live auctions yet -->
+    <div
+      v-if="!featured"
+      class="mt-10 grid gap-6 border-y border-foreground/10 py-12 lg:mt-14 lg:grid-cols-12 lg:gap-10 lg:py-16"
+    >
+      <p class="text-[clamp(1.6rem,3vw,2.5rem)] font-medium leading-[1.1] tracking-[-0.03em] text-foreground lg:col-span-7">
+        {{ $t('home.liveAuctions.emptyTitle') }}
+      </p>
+      <p class="max-w-sm text-sm leading-6 text-foreground/65 lg:col-span-5 lg:self-end">
+        {{ $t('home.liveAuctions.emptyText') }}
+      </p>
+    </div>
+
+    <div v-else class="mt-10 grid gap-x-8 gap-y-10 lg:mt-14 lg:grid-cols-12">
       <div class="lg:col-span-6">
         <HomeLiveLotCard :lot="featured" :index="1" variant="featured" :now="now" />
       </div>
@@ -118,7 +130,7 @@ onBeforeUnmount(() => {
 
     <!-- horizontal scroll on mobile -->
     <div
-      v-if="bottomLots.length"
+      v-if="featured && bottomLots.length"
       class="-mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 lg:mx-0 lg:mt-20 lg:grid lg:grid-cols-12 lg:gap-8 lg:overflow-visible lg:px-0"
     >
       <div

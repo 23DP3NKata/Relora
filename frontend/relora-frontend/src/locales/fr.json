@@ -907,6 +907,7 @@
     },
     "home": {
         "liveHero": {
+            "explore": "Découvrir les lots",
             "eyebrow": "Relora — enchères de mode en direct",
             "titleLine1": "Pièces rares.",
             "titleLine2": "Enchères live.",
@@ -923,6 +924,8 @@
             "scroll": "Défiler"
         },
         "liveAuctions": {
+            "emptyTitle": "D’autres enchères arrivent bientôt.",
+            "emptyText": "Les nouvelles pièces apparaissent ici dès le début de leur enchère. En attendant, parcourez le catalogue.",
             "eyebrow": "En direct",
             "title": "Enchères live",
             "description": "Les pièces qui se terminent bientôt, en premier. Chaque prix et chaque minuteur viennent directement de l’enchère.",
