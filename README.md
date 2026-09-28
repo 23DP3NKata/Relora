@@ -7,7 +7,6 @@ Relora is a fashion/resale auction marketplace. Sellers publish lots, buyers bid
 - Backend: .NET 8, ASP.NET Core, Entity Framework Core, PostgreSQL, MediatR, SignalR
 - Storefront: Vue 3, TypeScript, Vite
 - Media: Cloudflare R2 (S3-compatible API)
-- Payments: Stripe
 
 ## Repository layout
 
@@ -58,8 +57,6 @@ dotnet user-secrets set "Jwt:Secret" "replace-with-a-long-random-secret"
 dotnet user-secrets set "ConnectionStrings:Postgres" "Host=localhost;Port=5433;Database=relora;Username=postgres;Password=change-me"
 dotnet user-secrets set "R2:AccessKeyId" "replace-with-r2-access-key-id"
 dotnet user-secrets set "R2:SecretAccessKey" "replace-with-r2-secret-access-key"
-dotnet user-secrets set "Stripe:SecretKey" "sk_test_replace_me"
-dotnet user-secrets set "Stripe:WebhookSecret" "whsec_replace_me"
 dotnet user-secrets set "Email:Username" "replace-me"
 dotnet user-secrets set "Email:Password" "replace-me"
 ```
@@ -106,7 +103,6 @@ Local `.env` files, real `appsettings` files, certificates, Node modules, and bu
 Required external configuration:
 
 - Cloudflare R2: bucket, account ID, S3 access keys, public media URL
-- Stripe: API secret key, webhook secret, publishable key, checkout URLs
 - SMTP: host and credentials for transactional email
 - PostgreSQL: connection string and database credentials
 

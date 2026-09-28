@@ -91,7 +91,6 @@ public sealed class GetOrderDetailsQueryHandler : IRequestHandler<GetOrderDetail
                 }
                 : null,
             PaymentDeadlineUtc = order.PaymentDeadlineUtc,
-            StripeCheckoutSessionId = order.StripeCheckoutSessionId,
             PaidAtUtc = order.PaidAtUtc,
             Dispute = dispute is null
                 ? null

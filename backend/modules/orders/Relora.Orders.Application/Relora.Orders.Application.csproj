@@ -10,7 +10,6 @@
     <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="MediatR" Version="14.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
-    <PackageReference Include="Stripe.net" Version="50.4.0" />
   </ItemGroup>
 
   <ItemGroup>
