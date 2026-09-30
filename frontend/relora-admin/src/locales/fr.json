@@ -2,7 +2,10 @@
   "common": {
     "language": "Langue",
     "unavailable": "Indisponible",
-    "loading": "Chargement..."
+    "loading": "Chargement...",
+    "refresh": "Actualiser",
+    "cancel": "Annuler",
+    "close": "Fermer"
   },
   "navigation": {
     "pendingLots": "Lots en attente",
@@ -28,14 +31,24 @@
       "unknownBrand": "Marque inconnue",
       "seller": "Vendeur",
       "created": "Cree",
-      "statusPending": "En attente"
+      "statusPending": "En attente",
+      "noImage": "Pas de photo",
+      "emptyHint": "Les nouveaux lots apparaitront ici des que les vendeurs les soumettront.",
+      "rejectReasonLabel": "Motif du refus",
+      "rejectReasonPlaceholder": "Expliquez au vendeur ce qui doit etre corrige...",
+      "rejectReasonRequired": "Veuillez indiquer un motif de refus.",
+      "confirmReject": "Refuser le lot"
     },
     "dashboard": {
       "title": "Tableau de bord",
       "description": "Vue d'ensemble de la moderation admin.",
       "loading": "Chargement du tableau de bord...",
       "empty": "Aucune donnee de tableau de bord.",
-      "loadFailed": "Impossible de charger le tableau de bord."
+      "loadFailed": "Impossible de charger le tableau de bord.",
+      "pendingLotsCount": "Lots a examiner",
+      "activeAuctionsCount": "Encheres actives",
+      "usersCount": "Utilisateurs inscrits",
+      "goToPending": "Examiner les lots"
     }
   }
 }

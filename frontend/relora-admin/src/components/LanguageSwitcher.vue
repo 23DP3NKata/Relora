@@ -20,10 +20,10 @@ const onChange = (event: Event) => {
 </script>
 
 <template>
-  <label class="flex items-center gap-2 text-sm text-slate-600">
-    <span>{{ t('common.language') }}</span>
+  <label class="flex items-center gap-2 text-sm text-slate-500">
+    <span class="sr-only sm:not-sr-only">{{ t('common.language') }}</span>
     <select
-      class="rounded-md border bg-white px-2 py-1 text-slate-900"
+      class="rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-slate-900 focus:border-slate-400 focus:outline-none"
       :value="locale"
       @change="onChange"
     >

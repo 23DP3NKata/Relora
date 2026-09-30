@@ -2,7 +2,10 @@
   "common": {
     "language": "Language",
     "unavailable": "Unavailable",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "refresh": "Refresh",
+    "cancel": "Cancel",
+    "close": "Close"
   },
   "navigation": {
     "pendingLots": "Pending Lots",
@@ -28,14 +31,24 @@
       "unknownBrand": "Unknown brand",
       "seller": "Seller",
       "created": "Created",
-      "statusPending": "Pending"
+      "statusPending": "Pending",
+      "noImage": "No photo",
+      "emptyHint": "New lots will appear here when sellers submit them.",
+      "rejectReasonLabel": "Reason for rejection",
+      "rejectReasonPlaceholder": "Explain to the seller what needs to be fixed...",
+      "rejectReasonRequired": "Please enter a reason for rejection.",
+      "confirmReject": "Reject lot"
     },
     "dashboard": {
       "title": "Dashboard",
       "description": "Admin moderation overview.",
       "loading": "Loading dashboard...",
       "empty": "No dashboard data.",
-      "loadFailed": "Failed to load dashboard."
+      "loadFailed": "Failed to load dashboard.",
+      "pendingLotsCount": "Lots awaiting review",
+      "activeAuctionsCount": "Active auctions",
+      "usersCount": "Registered users",
+      "goToPending": "Review lots"
     }
   }
 }
