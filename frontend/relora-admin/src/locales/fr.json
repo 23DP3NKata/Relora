@@ -27,7 +27,8 @@
       "unknown": "Inconnu",
       "unknownBrand": "Marque inconnue",
       "seller": "Vendeur",
-      "created": "Cree"
+      "created": "Cree",
+      "statusPending": "En attente"
     },
     "dashboard": {
       "title": "Tableau de bord",

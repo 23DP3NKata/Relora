@@ -27,7 +27,8 @@
       "unknown": "Unknown",
       "unknownBrand": "Unknown brand",
       "seller": "Seller",
-      "created": "Created"
+      "created": "Created",
+      "statusPending": "Pending"
     },
     "dashboard": {
       "title": "Dashboard",

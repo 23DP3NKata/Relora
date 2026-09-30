@@ -27,7 +27,8 @@
       "unknown": "Unbekannt",
       "unknownBrand": "Unbekannte Marke",
       "seller": "Verkaeufer",
-      "created": "Erstellt"
+      "created": "Erstellt",
+      "statusPending": "Ausstehend"
     },
     "dashboard": {
       "title": "Dashboard",
