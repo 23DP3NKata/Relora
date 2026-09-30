@@ -2,7 +2,10 @@
   "common": {
     "language": "Sprache",
     "unavailable": "Nicht verfuegbar",
-    "loading": "Wird geladen..."
+    "loading": "Wird geladen...",
+    "refresh": "Aktualisieren",
+    "cancel": "Abbrechen",
+    "close": "Schliessen"
   },
   "navigation": {
     "pendingLots": "Ausstehende Lose",
@@ -28,14 +31,24 @@
       "unknownBrand": "Unbekannte Marke",
       "seller": "Verkaeufer",
       "created": "Erstellt",
-      "statusPending": "Ausstehend"
+      "statusPending": "Ausstehend",
+      "noImage": "Kein Foto",
+      "emptyHint": "Neue Lose erscheinen hier, sobald Verkaeufer sie einreichen.",
+      "rejectReasonLabel": "Grund der Ablehnung",
+      "rejectReasonPlaceholder": "Erklaeren Sie dem Verkaeufer, was korrigiert werden muss...",
+      "rejectReasonRequired": "Bitte geben Sie einen Grund fuer die Ablehnung ein.",
+      "confirmReject": "Los ablehnen"
     },
     "dashboard": {
       "title": "Dashboard",
       "description": "Uebersicht der Admin-Moderation.",
       "loading": "Dashboard wird geladen...",
       "empty": "Keine Dashboard-Daten.",
-      "loadFailed": "Dashboard konnte nicht geladen werden."
+      "loadFailed": "Dashboard konnte nicht geladen werden.",
+      "pendingLotsCount": "Lose zur Pruefung",
+      "activeAuctionsCount": "Aktive Auktionen",
+      "usersCount": "Registrierte Nutzer",
+      "goToPending": "Lose pruefen"
     }
   }
 }
