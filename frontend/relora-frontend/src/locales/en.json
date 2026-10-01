@@ -714,6 +714,30 @@
     },
     "sell": {
         "charactersLeft": "{count} characters left",
+        "landing": {
+            "eyebrow": "Sell with Relora",
+            "title": "Turn your archive pieces into live auctions.",
+            "description": "List designer, archive and distinctive fashion items. Our team reviews every listing, then buyers compete for it in a timed auction.",
+            "start": "Start listing",
+            "manage": "My listings",
+            "note": "Listings with incomplete or unclear information may be returned for editing.",
+            "processEyebrow": "How it works",
+            "processTitle": "Three steps to your first sale",
+            "steps": {
+                "create": {
+                    "title": "Create a listing",
+                    "description": "Add photos, condition, measurements and your starting price."
+                },
+                "review": {
+                    "title": "We review it",
+                    "description": "Moderators check the details and photos before publication."
+                },
+                "live": {
+                    "title": "Go live",
+                    "description": "Your lot goes up for auction and buyers start bidding."
+                }
+            }
+        },
         "sellOnRelora": "Sell on Relora",
         "createListing": "Create listing",
         "createListingDescription": "Submit your item for review and prepare it to go live on the marketplace.",

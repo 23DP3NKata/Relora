@@ -684,6 +684,30 @@
     },
     "sell": {
         "charactersLeft": "{count} caractères restants",
+        "landing": {
+            "eyebrow": "Vendre avec Relora",
+            "title": "Transformez vos pièces d’archive en enchères en direct.",
+            "description": "Mettez en vente des pièces de créateurs, d’archive et de mode singulières. Notre équipe vérifie chaque annonce, puis les acheteurs enchérissent pendant une durée limitée.",
+            "start": "Créer une annonce",
+            "manage": "Mes annonces",
+            "note": "Les annonces incomplètes ou peu claires peuvent être renvoyées pour modification.",
+            "processEyebrow": "Comment ça marche",
+            "processTitle": "Trois étapes vers votre première vente",
+            "steps": {
+                "create": {
+                    "title": "Créez une annonce",
+                    "description": "Ajoutez photos, état, mesures et votre prix de départ."
+                },
+                "review": {
+                    "title": "Nous la vérifions",
+                    "description": "Les modérateurs contrôlent les informations et les photos avant publication."
+                },
+                "live": {
+                    "title": "Mise en ligne",
+                    "description": "Votre lot passe aux enchères et les acheteurs commencent à enchérir."
+                }
+            }
+        },
         "sellOnRelora": "Vendre sur Relora",
         "createListing": "Créer une annonce",
         "createListingDescription": "Soumettez votre article pour examen et préparez-le à être publié sur la marketplace.",

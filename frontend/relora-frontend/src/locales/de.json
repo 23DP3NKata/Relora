@@ -684,6 +684,30 @@
     },
     "sell": {
         "charactersLeft": "{count} Zeichen übrig",
+        "landing": {
+            "eyebrow": "Verkaufen mit Relora",
+            "title": "Mach aus deinen Archivstücken Live-Auktionen.",
+            "description": "Biete Designer-, Archiv- und besondere Modestücke an. Unser Team prüft jedes Angebot, danach bieten Käufer in einer zeitlich begrenzten Auktion darauf.",
+            "start": "Angebot erstellen",
+            "manage": "Meine Angebote",
+            "note": "Angebote mit unvollständigen oder unklaren Angaben können zur Bearbeitung zurückgeschickt werden.",
+            "processEyebrow": "So funktioniert es",
+            "processTitle": "In drei Schritten zum ersten Verkauf",
+            "steps": {
+                "create": {
+                    "title": "Angebot erstellen",
+                    "description": "Füge Fotos, Zustand, Maße und deinen Startpreis hinzu."
+                },
+                "review": {
+                    "title": "Wir prüfen es",
+                    "description": "Moderatoren prüfen Angaben und Fotos vor der Veröffentlichung."
+                },
+                "live": {
+                    "title": "Live gehen",
+                    "description": "Dein Los kommt in die Auktion und Käufer beginnen zu bieten."
+                }
+            }
+        },
         "sellOnRelora": "Auf Relora verkaufen",
         "createListing": "Angebot erstellen",
         "createListingDescription": "Reichen Sie Ihren Artikel zur Prüfung ein und bereiten Sie ihn darauf vor, auf dem Marktplatz live zu gehen.",
