@@ -906,6 +906,14 @@
         "noDesigners": "Aucun créateur trouvé."
     },
     "home": {
+        "newLots": {
+            "eyebrow": "Tout juste arrivé",
+            "title": "Nouveautés",
+            "catalogLabel": "Catalogue",
+            "viewAll": "Tout voir",
+            "empty": "Pas encore de nouveaux lots ici.",
+            "browseAll": "Voir tous les lots"
+        },
         "liveHero": {
             "explore": "Découvrir les lots",
             "eyebrow": "Relora — enchères de mode en direct",

@@ -1187,6 +1187,14 @@
         "noDesigners": "No designers found."
     },
     "home": {
+        "newLots": {
+            "eyebrow": "Just in",
+            "title": "New in",
+            "catalogLabel": "Catalog",
+            "viewAll": "View all",
+            "empty": "No new lots here yet.",
+            "browseAll": "Browse all lots"
+        },
         "liveHero": {
             "explore": "Explore lots",
             "eyebrow": "Relora — live fashion auctions",

@@ -906,6 +906,14 @@
         "noDesigners": "Keine Designer gefunden."
     },
     "home": {
+        "newLots": {
+            "eyebrow": "Gerade eingetroffen",
+            "title": "Neu eingetroffen",
+            "catalogLabel": "Katalog",
+            "viewAll": "Alle ansehen",
+            "empty": "Hier gibt es noch keine neuen Lose.",
+            "browseAll": "Alle Lose ansehen"
+        },
         "liveHero": {
             "explore": "Lose entdecken",
             "eyebrow": "Relora — Live-Modeauktionen",

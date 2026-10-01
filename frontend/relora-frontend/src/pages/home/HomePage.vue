@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { Auction } from '@/types/auction'
 import { useAuthStore } from '@/stores/authStore'
 import { storeToRefs } from 'pinia'
 import { getAuctions } from '@/app/services/auctionService'
@@ -17,17 +16,9 @@ import type { HomeLiveLot } from '@/types/home'
 import SelectPreferenceModal from '@/components/modals/SelectPreferenceModal.vue'
 import HomeHero from '@/components/home/HomeHero.vue'
 import HomeLiveAuctions from '@/components/home/HomeLiveAuctions.vue'
-import AuctionCard from '@/components/auctions/AuctionCard.vue'
-import TrendingUpIcon from '@/components/ui/icons/TrendingUpIcon.vue'
+import HomeNewLots from '@/components/home/HomeNewLots.vue'
 import RefreshCwIcon from '@/components/ui/icons/RefreshCwIcon.vue'
 import TimerIcon from '@/components/ui/icons/TimerIcon.vue'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
 
 const authStore = useAuthStore()
 const localePath = useLocalePath()
@@ -176,118 +167,6 @@ const brands = ref([
   { name: 'Chanel', logo: '/brands/chanel-2-logo.svg' },
 ])
 
-type HomeAuctionItem = Omit<Auction, 'title' | 'timeLeft'> & {
-  titleKey: string
-  timeLeftKey: string
-}
-
-const auctionItems: HomeAuctionItem[] = [
-  {
-    id: 1,
-    brand: "Hermes",
-    titleKey: 'home.mockAuctions.1.title',
-    price: 1000000,
-    imageUrl: "https://media-photos.depop.com/b1/28724162/3191473831_ade6609dc27340629bc6d4af9ac1b841/P0.jpg",
-    timeLeftKey: 'home.mockAuctions.1.timeLeft',
-  },
-  {
-    id: 2,
-    brand: "Gucci",
-    titleKey: 'home.mockAuctions.2.title',
-    price: 320,
-    imageUrl: "https://media-photos.depop.com/b1/38992639/3121126790_b608df72f79c4f8b9cb99737678b74f5/P0.jpg",
-    timeLeftKey: 'home.mockAuctions.2.timeLeft',
-  },
-  {
-    id: 3,
-    brand: "Rolex",
-    titleKey: 'home.mockAuctions.3.title',
-    price: 5400,
-    imageUrl: "https://media-photos.depop.com/b1/40086058/3512274199_d42fb73add7043d586f1be825bfb1f68/P0.jpg",
-    timeLeftKey: 'home.mockAuctions.3.timeLeft',
-  },
-  {
-    id: 4,
-    brand: "Chanel",
-    titleKey: 'home.mockAuctions.4.title',
-    price: 280,
-    imageUrl: "https://media-photos.depop.com/b1/43448124/3109199960_e0915b4487004c61a6f7613dca8db4a9/P0.jpg",
-    timeLeftKey: 'home.mockAuctions.4.timeLeft',
-  },
-  {
-    id: 5,
-    brand: "Tiffany & Co.",
-    titleKey: 'home.mockAuctions.5.title',
-    price: 650,
-    imageUrl: "https://media-photos.depop.com/b1/51377749/3251202528_7ca0ed8a90b8496c9b8793bd28d3de17/P0.jpg",
-    timeLeftKey: 'home.mockAuctions.5.timeLeft',
-  },
-  {
-    id: 6,
-    brand: "Louis Vuitton",
-    titleKey: 'home.mockAuctions.6.title',
-    price: 2100,
-    imageUrl: "https://images.thebestshops.com/product_images/original/SL12226-044_01-339d21.jpg",
-    timeLeftKey: 'home.mockAuctions.6.timeLeft',
-  },
-  {
-    id: 7,
-    brand: "The Beatles",
-    titleKey: 'home.mockAuctions.7.title',
-    price: 3200,
-    imageUrl: "https://media-photos.depop.com/b1/45498419/3517277733_6056232abec546e987925ec83630f810/P0.jpg",
-    timeLeftKey: 'home.mockAuctions.7.timeLeft',
-  },
-  {
-    id: 8,
-    brand: "Prada",
-    titleKey: 'home.mockAuctions.8.title',
-    price: 420,
-    imageUrl: "https://media-photos.depop.com/b1/36719830/3498593736_9131744e9156480d90e996a6dcb6ec67/P0.jpg",
-    timeLeftKey: 'home.mockAuctions.8.timeLeft',
-  },
-  {
-    id: 9,
-    brand: "Yeezy",
-    titleKey: 'home.mockAuctions.9.title',
-    price: 180,
-    imageUrl: "https://media-photos.depop.com/b1/448068812/3474488748_5e0e9243711c4cbcb6dce7afdff37d6d/P0.jpg",
-    timeLeftKey: 'home.mockAuctions.9.timeLeft',
-  },
-  {
-    id: 10,
-    brand: "Balenciaga",
-    titleKey: 'home.mockAuctions.10.title',
-    price: 240,
-    imageUrl: "https://media-photos.depop.com/r1/341927691/3481391174_2e97b19297a44aae8e7e46d6e737e530/P6.jpg",
-    timeLeftKey: 'home.mockAuctions.10.timeLeft',
-  },
-  {
-    id: 11,
-    brand: "Cartier",
-    titleKey: 'home.mockAuctions.11.title',
-    price: 890,
-    imageUrl: "https://media-photos.depop.com/b1/20411984/2751785262_45ca34b51be54edbad51742f72c8c676/P0.jpg",
-    timeLeftKey: 'home.mockAuctions.11.timeLeft',
-  },
-  {
-    id: 12,
-    brand: "Gucci",
-    titleKey: 'home.mockAuctions.12.title',
-    price: 1200,
-    imageUrl: "https://media-photos.depop.com/b1/51416371/3553513106_b896da1472a94103a15b55b05dd159f1/P0.jpg",
-    timeLeftKey: 'home.mockAuctions.12.timeLeft',
-  },
-]
-
-const auctions = computed<Auction[]>(() =>
-  auctionItems.map((auction) => ({
-    ...auction,
-    title: t(auction.titleKey),
-    timeLeft: t(auction.timeLeftKey),
-  })),
-)
-
 const steps = [
   { key: 'discover', icon: Search },
   { key: 'bid', icon: Compass },
@@ -295,11 +174,7 @@ const steps = [
 ]
 
 const loading = ref(false)
-const error = ref('')
 
-const trendingAuctions = computed(() => auctions.value.slice(0, 10))
-const newListings = computed(() => auctions.value.slice(2, 12))
-const endingSoon = computed(() => auctions.value.slice(0, 10))
 </script>
 
 <template>
@@ -316,6 +191,7 @@ const endingSoon = computed(() => auctions.value.slice(0, 10))
     <template v-else>
       <HomeHero :lot="heroLot" />
       <HomeLiveAuctions :lots="feedLots" />
+      <HomeNewLots :preference="userPreference" @change="changeUserPreference" />
     </template>
 
     <!-- <section>
@@ -410,64 +286,6 @@ const endingSoon = computed(() => auctions.value.slice(0, 10))
       </div>
     </section>
     
-    <section class="rounded-[28px] border px-4 py-6 md:px-6">
-      <div class="mb-6 flex items-end justify-between gap-3">
-        <div>
-          <div class="flex items-center gap-2">
-            <h2 class="text-2xl font-semibold tracking-tight">{{ $t('home.trendingAuctions') }}</h2>
-            <TrendingUpIcon class="h-5 w-5" />
-          </div>
-          <p class="mt-2 text-sm text-foreground/70 sm:text-base">
-            {{ $t('home.trendingDescription') }}
-          </p>
-        </div>
-
-        <button class="text-sm text-foreground/70 transition hover:text-foreground">
-          {{ $t('home.browseMore') }}
-        </button>
-      </div>
-
-      <div v-if="error" class="mb-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600 dark:border-red-900/40 dark:bg-red-950/30 dark:text-red-300">
-        {{ error }}
-      </div>
-
-      <Carousel
-        :opts="{ loop: true, align: 'start', slidesToScroll: 1 }"
-        class="w-full"
-      >
-        <CarouselContent class="-ml-3">
-          <CarouselItem
-            v-for="auction in trendingAuctions"
-            :key="auction.id"
-            class="basis-[78%] pl-3 sm:basis-1/2 md:basis-1/3 lg:basis-1/5"
-          >
-            <AuctionCard
-              :brand="auction.brand"
-              :title="auction.title"
-              :price="auction.price"
-              :image-url="auction.imageUrl"
-              :time-left="auction.timeLeft"
-            />
-          </CarouselItem>
-        </CarouselContent>
-
-        <div class="mt-6 flex items-center justify-between">
-          <p class="text-sm text-foreground/70">
-            {{ $t('home.scrollTrending') }}
-          </p>
-
-          <div class="flex items-center gap-2">
-            <CarouselPrevious
-              class="static h-10 w-10 translate-x-0 translate-y-0 rounded-full border bg-background text-foreground shadow-sm hover:bg-black hover:text-white"
-            />
-            <CarouselNext
-              class="static h-10 w-10 translate-x-0 translate-y-0 rounded-full border bg-background text-foreground shadow-sm hover:bg-black hover:text-white"
-            />
-          </div>
-        </div>
-      </Carousel>
-    </section>
-
     <section>
       <div class="max-w-3xl">
         <p class="text-[11px] uppercase tracking-[0.24em] text-foreground/50">
@@ -716,42 +534,6 @@ const endingSoon = computed(() => auctions.value.slice(0, 10))
         </div>
       </Carousel>
     </section> -->
-
-        <section class="rounded-[28px] border bg-background px-6 py-8 text-center">
-      <p class="text-[11px] uppercase tracking-[0.24em] text-foreground/50">
-        {{ $t('home.catalogPreference') }}
-      </p>
-
-      <h2 class="mt-2 text-2xl font-semibold tracking-tight">
-        {{ $t('home.currentlyBrowsing', { preference: $t(userPreference === 'women' ? 'navigation.women' : 'navigation.men') }) }}
-      </h2>
-
-      <p class="mx-auto mt-3 max-w-xl text-sm leading-6 text-foreground/65">
-        {{ $t('home.preferenceDescription') }}
-      </p>
-
-      <div class="mt-6 flex justify-center gap-3">
-        <button
-          class="rounded-full px-5 py-2.5 text-sm font-medium transition"
-          :class="userPreference === 'women'
-            ? 'bg-black text-white dark:bg-white dark:text-black'
-            : 'border bg-background text-foreground hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black'"
-          @click="changeUserPreference('women')"
-        >
-          {{ $t('navigation.women') }}
-        </button>
-
-        <button
-          class="rounded-full px-5 py-2.5 text-sm font-medium transition"
-          :class="userPreference === 'men'
-            ? 'bg-black text-white dark:bg-white dark:text-black'
-            : 'border bg-background text-foreground hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black'"
-          @click="changeUserPreference('men')"
-        >
-          {{ $t('navigation.men') }}
-        </button>
-      </div>
-    </section>
 
     <section class="mx-auto max-w-3xl border-t pt-10 text-center">
       <p class="text-xs leading-7 text-foreground/65 sm:text-base">

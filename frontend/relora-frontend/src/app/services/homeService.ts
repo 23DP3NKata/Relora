@@ -5,6 +5,7 @@ import { buildMediaUrl } from '@/shared/mediaUrl'
 import { heroConfig } from '@/config/homeHero'
 import type { AuctionListItem } from '@/types/auction'
 import type { HomeLiveLot } from '@/types/home'
+import type { LotPreview } from '@/types/lot'
 
 // 1 lot for hero + up to 6 for live auctions
 const LIVE_LOTS_LIMIT = 7
@@ -58,6 +59,22 @@ async function loadLiveLot(auction: AuctionListItem): Promise<HomeLiveLot> {
     endsAt: auction.endDate,
     bidCount: null,
     isDemo: false,
+  }
+}
+
+// newest lots for women or men (unisex lots go to both)
+export async function getNewLots(preference: 'men' | 'women'): Promise<LotPreview[]> {
+  try {
+    const result = await itemService.getLots({
+      departments: [preference === 'men' ? 'Men' : 'Women', 'Unisex'],
+      sort: 'NewlyListed',
+      page: 1,
+      pageSize: 8,
+    })
+
+    return result.items
+  } catch {
+    return []
   }
 }
 
