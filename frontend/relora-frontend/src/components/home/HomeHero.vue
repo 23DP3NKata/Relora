@@ -231,7 +231,7 @@ onBeforeUnmount(() => {
 <template>
   <section
     ref="hero"
-    class="home-hero relative isolate bg-background"
+    class="home-hero relative isolate overflow-x-clip bg-background"
     aria-labelledby="home-hero-title"
   >
     <!-- layer 1: background -->
