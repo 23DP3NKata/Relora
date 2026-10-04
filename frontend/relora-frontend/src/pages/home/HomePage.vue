@@ -17,6 +17,8 @@ import SelectPreferenceModal from '@/components/modals/SelectPreferenceModal.vue
 import HomeHero from '@/components/home/HomeHero.vue'
 import HomeLiveAuctions from '@/components/home/HomeLiveAuctions.vue'
 import HomeNewLots from '@/components/home/HomeNewLots.vue'
+import HomeCategories from '@/components/home/HomeCategories.vue'
+import HomeBrands from '@/components/home/HomeBrands.vue'
 import RefreshCwIcon from '@/components/ui/icons/RefreshCwIcon.vue'
 import TimerIcon from '@/components/ui/icons/TimerIcon.vue'
 
@@ -136,37 +138,6 @@ const exploreCollections = ref([
   },
 ])
 
-const categories = ref([
-  {
-    name: 'Vintage',
-    imageUrl: 'https://pub-d44c1b06b612479f8e654eedc923ffa1.r2.dev/display/Vintage_Category_Icon.png',
-  },
-  {
-    name: 'Streetwear',
-    imageUrl: 'https://pub-d44c1b06b612479f8e654eedc923ffa1.r2.dev/display/Streetwear_Category_Icon.png',
-  },
-  {
-    name: 'Designer',
-    imageUrl: 'https://pub-d44c1b06b612479f8e654eedc923ffa1.r2.dev/display/Designer_Category_Icon.png',
-  },
-  {
-    name: 'Sneakers',
-    imageUrl: 'https://pub-d44c1b06b612479f8e654eedc923ffa1.r2.dev/display/Shoes_Category_Icon.png',
-  },
-  {
-    name: 'Accessories',
-    imageUrl: 'https://pub-d44c1b06b612479f8e654eedc923ffa1.r2.dev/display/Acessories_Categorie_Icon.png',
-  },
-])
-
-const brands = ref([
-  { name: 'Prada', logo: '/brands/prada-logo.svg' },
-  { name: 'Gucci', logo: '/brands/gucci-logo.svg' },
-  { name: 'Dolce Gabbana', logo: '/brands/dolce-gabbana-logo.svg' },
-  { name: 'Dior', logo: '/brands/dior-logo.svg' },
-  { name: 'Chanel', logo: '/brands/chanel-2-logo.svg' },
-])
-
 const steps = [
   { key: 'discover', icon: Search },
   { key: 'bid', icon: Compass },
@@ -246,45 +217,9 @@ const loading = ref(false)
       </div>
     </section> -->
 
-        <section>
-      <div>
-        <p class="text-[11px] uppercase tracking-[0.24em] text-foreground/50">
-          {{ $t('home.categories') }}
-        </p>
-        <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-          {{ $t('home.shopByCategory') }}
-        </h2>
-        <p class="mt-3 max-w-xl text-sm leading-6 text-foreground/70 sm:text-base">
-          {{ $t('home.shopByCategoryDescription') }}
-        </p>
-      </div>
+    <HomeCategories />
 
-      <div class="mt-5 flex gap-4 overflow-x-auto pb-3 sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-5">
-        <article
-          v-for="category in categories"
-          :key="category.name"
-          class="group relative h-[220px] min-w-[230px] cursor-pointer overflow-hidden rounded-[28px] border bg-neutral-100 dark:bg-neutral-900 sm:min-w-0"
-        >
-          <img
-            :src="category.imageUrl"
-            :alt="$t(`home.categoryNames.${category.name}`)"
-            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-          />
-
-          <div class="absolute bottom-0 left-0 right-0 h-[65%] bg-gradient-to-t from-black/70 via-black/25 to-transparent transition duration-300 group-hover:from-black/55" />
-
-          <div class="absolute bottom-0 left-0 p-5">
-            <p class="text-[11px] uppercase tracking-[0.22em] text-white/65 drop-shadow">
-              {{ $t('home.category') }}
-            </p>
-
-            <h3 class="mt-2 text-xl font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">
-              {{ $t(`home.categoryNames.${category.name}`) }}
-            </h3>
-          </div>
-        </article>
-      </div>
-    </section>
+    <HomeBrands />
     
     <section>
       <div class="max-w-3xl">
@@ -449,37 +384,6 @@ const loading = ref(false)
         </div>
       </Carousel>
     </section> -->
-
-    <section>
-      <div>
-        <p class="text-[11px] uppercase tracking-[0.24em] text-foreground/50">
-          {{ $t('home.brands') }}
-        </p>
-        <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-          {{ $t('home.shopByBrand') }}
-        </h2>
-        <p class="mt-3 max-w-xl text-sm leading-6 text-foreground/70 sm:text-base">
-          {{ $t('home.shopByBrandDescription') }}
-        </p>
-      </div>
-
-        <div class="mt-5 flex gap-4 overflow-x-auto pb-3 sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0 lg:grid-cols-5">        <article
-          v-for="brand in brands"
-          :key="brand.name"
-          class="group flex aspect-square cursor-pointer flex-col items-center justify-center rounded-[28px] border bg-background p-6 text-center transition duration-300 hover:bg-black dark:hover:bg-white"
-        >
-          <img
-            :src="brand.logo"
-            :alt="brand.name"
-            class="max-h-30 max-w-[150px] object-contain transition duration-300  group-hover:invert dark:invert group-hover:dark:invert-0"
-          />
-
-          <p class="mt-5 text-[11px] uppercase tracking-[0.22em] text-foreground/45 group-hover:text-white/60 dark:group-hover:text-black/60">
-            {{ $t('home.brand') }}
-          </p>
-        </article>
-      </div>
-    </section>
 
     <!-- <section class="rounded-[28px] border px-4 py-6 md:px-6">
       <div class="mb-6 flex items-end justify-between gap-3">
