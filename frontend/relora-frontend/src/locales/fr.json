@@ -906,6 +906,28 @@
         "noDesigners": "Aucun créateur trouvé."
     },
     "home": {
+        "whyShortTitle": "Goût. Confiance. Pièces rares.",
+        "howItWorks": {
+            "label": "COMMENT ÇA MARCHE",
+            "title": "Trois étapes pour gagner",
+            "steps": {
+                "discover": {
+                    "number": "01",
+                    "title": "Découvrir",
+                    "description": "Trouvez des pièces rares dans des enchères sélectionnées."
+                },
+                "bid": {
+                    "number": "02",
+                    "title": "Enchérir",
+                    "description": "Placez votre enchère et suivez-la en temps réel."
+                },
+                "win": {
+                    "number": "03",
+                    "title": "Gagner",
+                    "description": "Remportez l’enchère et la pièce est à vous."
+                }
+            }
+        },
         "newLots": {
             "eyebrow": "Tout juste arrivé",
             "title": "Nouveautés",

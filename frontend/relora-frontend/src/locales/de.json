@@ -906,6 +906,28 @@
         "noDesigners": "Keine Designer gefunden."
     },
     "home": {
+        "whyShortTitle": "Stil. Vertrauen. Seltene Stücke.",
+        "howItWorks": {
+            "label": "SO FUNKTIONIERT ES",
+            "title": "Drei Schritte zum Zuschlag",
+            "steps": {
+                "discover": {
+                    "number": "01",
+                    "title": "Entdecken",
+                    "description": "Finde seltene Stücke in kuratierten Auktionen."
+                },
+                "bid": {
+                    "number": "02",
+                    "title": "Bieten",
+                    "description": "Gib dein Gebot ab und biete in Echtzeit mit."
+                },
+                "win": {
+                    "number": "03",
+                    "title": "Gewinnen",
+                    "description": "Gewinne die Auktion und sichere dir das Stück."
+                }
+            }
+        },
         "newLots": {
             "eyebrow": "Gerade eingetroffen",
             "title": "Neu eingetroffen",

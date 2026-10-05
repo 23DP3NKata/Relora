@@ -8,7 +8,6 @@ import { RouterLink } from "vue-router"
 import { getCookie, setCookie } from '@/app/services/cookieService'
 import api from '@/api'
 import { useLocalePath } from '@/composables/useLocalePath'
-import { Search, Compass, Trophy, ArrowRight } from 'lucide-vue-next'
 import { getBidCount, getHomeLiveLots, getShowcaseLot } from '@/app/services/homeService'
 import { auctionRealtimeService } from '@/app/services/auctionRealtimeService'
 import type { HomeLiveLot } from '@/types/home'
@@ -19,6 +18,8 @@ import HomeLiveAuctions from '@/components/home/HomeLiveAuctions.vue'
 import HomeNewLots from '@/components/home/HomeNewLots.vue'
 import HomeCategories from '@/components/home/HomeCategories.vue'
 import HomeBrands from '@/components/home/HomeBrands.vue'
+import HomeWhyRelora from '@/components/home/HomeWhyRelora.vue'
+import HomeHowItWorks from '@/components/home/HomeHowItWorks.vue'
 import RefreshCwIcon from '@/components/ui/icons/RefreshCwIcon.vue'
 import TimerIcon from '@/components/ui/icons/TimerIcon.vue'
 
@@ -138,12 +139,6 @@ const exploreCollections = ref([
   },
 ])
 
-const steps = [
-  { key: 'discover', icon: Search },
-  { key: 'bid', icon: Compass },
-  { key: 'win', icon: Trophy },
-]
-
 const loading = ref(false)
 
 </script>
@@ -220,116 +215,10 @@ const loading = ref(false)
     <HomeCategories />
 
     <HomeBrands />
-    
-    <section>
-      <div class="max-w-3xl">
-        <p class="text-[11px] uppercase tracking-[0.24em] text-foreground/50">
-          {{ $t('home.whyRelora') }}
-        </p>
-        <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-          {{ $t('home.whyTitle') }}
-        </h2>
-        <p class="mt-3 text-sm leading-6 text-foreground/70 sm:text-base">
-          {{ $t('home.whyDescription') }}
-        </p>
-      </div>
 
-      <div class="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-        <article class="rounded-[24px] border bg-background px-7 py-8">
-          <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-neutral-100 text-foreground/70 dark:bg-neutral-800">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5V4H2v16h5m10 0v-4a3 3 0 10-6 0v4m6 0H9" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold">
-            {{ $t('home.curatedTitle') }}
-          </h3>
-          <p class="mt-3 text-sm leading-6 text-foreground/70">
-            {{ $t('home.curatedDescription') }}
-          </p>
-        </article>
+    <HomeWhyRelora />
 
-        <article class="rounded-[24px] border bg-background px-7 py-8">
-          <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-neutral-100 text-foreground/70 dark:bg-neutral-800">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 3h12l1 6-7 12L5 9l1-6z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold">
-            {{ $t('home.communityTitle') }}
-          </h3>
-          <p class="mt-3 text-sm leading-6 text-foreground/70">
-            {{ $t('home.communityDescription') }}
-          </p>
-        </article>
-
-        <article class="rounded-[24px] border bg-background px-7 py-8">
-          <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-neutral-100 text-foreground/70 dark:bg-neutral-800">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3v1H8a2 2 0 00-2 2v4h12v-4a2 2 0 00-2-2h-1v-1c0-1.657-1.343-3-3-3z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold">
-            {{ $t('home.premiumTitle') }}
-          </h3>
-          <p class="mt-3 text-sm leading-6 text-foreground/70">
-            {{ $t('home.premiumDescription') }}
-          </p>
-        </article>
-
-        <article class="rounded-[24px] border bg-background px-7 py-8">
-          <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-neutral-100 text-foreground/70 dark:bg-neutral-800">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5V4H2v16h5m10 0a3 3 0 01-6 0m6 0a3 3 0 00-6 0" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold">
-            {{ $t('home.trustTitle') }}
-          </h3>
-          <p class="mt-3 text-sm leading-6 text-foreground/70">
-            {{ $t('home.trustDescription') }}
-          </p>
-        </article>
-      </div>
-    </section>
-
-      <section class="w-full">
-    <div class="rounded-3xl bg-neutral-950 px-6 py-10 text-white sm:px-10 sm:py-12">
-      <div class="flex flex-col gap-10 lg:flex-row lg:items-center">
-        <div class="lg:w-1/4 lg:shrink-0 lg:border-r lg:border-white/10 lg:pr-8">
-          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
-            {{ $t('home.howItWorks.label') }}
-          </span>
-          <h2 class="mt-3 text-2xl font-semibold sm:text-3xl">
-            {{ $t('home.howItWorks.title') }}
-          </h2>
-        </div>
-
-        <div class="flex flex-1 flex-col gap-8 lg:flex-row lg:items-center lg:gap-6 lg:pl-10">
-          <template v-for="(step, index) in steps" :key="step.key">
-            <div class="flex items-start gap-4">
-              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20">
-                <component :is="step.icon" class="h-5 w-5" :stroke-width="1.5" />
-              </div>
-              <div>
-                <p class="text-sm font-semibold text-white">
-                  {{ $t(`home.howItWorks.steps.${step.key}.number`) }}. {{ $t(`home.howItWorks.steps.${step.key}.title`) }}
-                </p>
-                <p class="mt-1 text-sm leading-relaxed text-white/50">
-                  {{ $t(`home.howItWorks.steps.${step.key}.description`) }}
-                </p>
-              </div>
-            </div>
-
-            <ArrowRight
-              v-if="index < steps.length - 1"
-              class="hidden h-5 w-5 shrink-0 text-white/30 lg:block"
-            />
-          </template>
-        </div>
-      </div>
-    </div>
-  </section>
+    <HomeHowItWorks />
 
     <!-- <section class="rounded-[28px] border px-4 py-6 md:px-6">
       <div class="mb-6 flex items-end justify-between gap-3">
@@ -439,8 +328,8 @@ const loading = ref(false)
       </Carousel>
     </section> -->
 
-    <section class="mx-auto max-w-3xl border-t pt-10 text-center">
-      <p class="text-xs leading-7 text-foreground/65 sm:text-base">
+    <section class="border-t border-foreground/10 pt-6">
+      <p class="max-w-3xl text-sm leading-7 text-foreground/55">
         {{ $t('home.seoFooter') }}
       </p>
     </section>
