@@ -1,18 +1,34 @@
 # Relora
 
-Relora is a fashion/resale auction marketplace. Sellers publish lots, buyers bid in real time, and the backend creates an order after a completed auction.
+Relora is an online auction platform for pre-owned clothing, shoes and accessories. Sellers publish lots, administrators moderate them, buyers bid in real time, and the winner of an auction gets an order to pay for and track.
+
+## Features
+
+- Accounts: registration, login, password reset, public profile, interface and notification settings
+- Lots: create and edit a lot with 5-15 photos, submit it for moderation, see the rejection reason
+- Catalog: categories, designers, search and filters
+- Auctions: start an approved lot, re-list an unsold lot, live bids over SignalR, end time is extended for bids in the last seconds
+- Orders: an order is created for the auction winner, the buyer adds a delivery address and pays, the seller adds the carrier and tracking number, the buyer confirms receipt
+- Payment works in test mode: the buyer confirms the payment in a dialog and no real money is charged
+- Disputes: the buyer can open a dispute with photo evidence; an administrator cancels or completes the order
+- Administration: dashboard and lot moderation in the admin interface; overdue shipments, delivery issues and disputes through the admin API
+- Support requests and email notifications
+- Storefront languages: English, German, French
 
 ## Stack
 
-- Backend: .NET 8, ASP.NET Core, Entity Framework Core, PostgreSQL, MediatR, SignalR
-- Storefront: Vue 3, TypeScript, Vite
+- Backend: .NET 8, ASP.NET Core, Entity Framework Core 8, PostgreSQL 16, MediatR, FluentValidation, SignalR
+- Storefront: Vue 3, TypeScript, Vite, Pinia, Vue Router, vue-i18n, Tailwind CSS
+- Admin interface: Vue 3, TypeScript, Vite, Tailwind CSS
 - Media: Cloudflare R2 (S3-compatible API)
+- Email: SMTP
 
 ## Repository layout
 
 ```text
 backend/
   host/Relora.Host/             API entry point, middleware, background jobs and Docker Compose
+                                (auction auto-stop, payment deadline check, unused media cleanup)
   modules/                      Business modules: identity, items, auctions, bids, orders, admin, support
   persistance/                  EF Core DbContext, configurations and migrations
   realtime/                     SignalR hub and notifications
@@ -86,6 +102,8 @@ npm run dev
 ```
 
 Set `VITE_API_BASE_URL` to the backend URL, `VITE_SITE_URL` to the storefront URL, and `VITE_MEDIA_PUBLIC_BASE_URL` to the public R2/custom media URL. Values prefixed with `VITE_` are public and must never contain secrets.
+
+The storefront runs on `http://localhost:5173` and redirects to a language prefix such as `/en`.
 
 ### 4. Run the admin interface
 
