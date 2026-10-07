@@ -1222,42 +1222,13 @@
             "viewAll": "View all auctions",
             "closingSoon": "Closing soon"
         },
-        "guestTitlePart1": "Rare fashion,",
-        "guestTitlePart2": "premium brands,",
-        "guestTitlePart3": "and auctions worth watching.",
-        "welcomeBack": "Welcome back,",
-        "guestDescription": "A refined auction marketplace for designer fashion, standout accessories, and collectible pieces with character.",
-        "memberDescription": "Discover fresh arrivals, track pieces worth bidding on, and explore a more curated side of fashion.",
-        "heroTitleLine1": "Own the",
-        "heroTitleLine2": "next drop.",
-        "heroDescriptionLine1": "Exclusive fashion auctions.",
-        "heroDescriptionLine2": "Iconic pieces. Real-time bidding.",
-        "exploreAuctions": "Explore auctions",
         "sellAnItem": "Sell an item",
-        "membersWorldwide": "12K+ members worldwide",
         "liveAuction": "Live auction",
-        "heroLotTitleLine1": "Stone Island",
-        "heroLotTitleLine2": "Ghost Jacket",
-        "heroLotAlt": "Stone Island Ghost Jacket",
-        "currentBid": "Current bid",
-        "bidCount": "{count} bids",
-        "left": "left",
-        "viewLot": "View lot",
         "browseBrands": "Browse brands",
-        "explore": "Explore",
-        "discoverWorld": "Discover the world of Relora",
-        "discoverWorldDescription": "Step into curated categories shaped by premium fashion, rare finds, and collector taste.",
-        "viewAllCategories": "View all categories",
-        "category": "Category",
-        "trendingAuctions": "Trending Auctions",
-        "trendingDescription": "The lots drawing the most attention right now.",
-        "browseMore": "Browse more",
-        "scrollTrending": "Scroll through trending picks",
         "categories": "Categories",
         "shopByCategory": "Shop by category",
         "shopByCategoryDescription": "Explore standout styles across fashion, streetwear, and collectible detail.",
         "whyRelora": "Why Relora",
-        "whyTitle": "A marketplace shaped around taste, trust, and standout pieces",
         "whyDescription": "Built for people who want more than endless listings — a place where discovery feels curated.",
         "curatedTitle": "Carefully curated marketplace",
         "curatedDescription": "Every listing is expected to meet higher standards for quality, presentation, and authenticity.",
@@ -1267,19 +1238,9 @@
         "premiumDescription": "Discover luxury clothing, designer bags, sneakers, watches, and collectible fashion pieces in one place.",
         "trustTitle": "Designed for trust",
         "trustDescription": "Secure accounts, transparent listings, and a marketplace focused on long-term buyer and seller confidence.",
-        "newListings": "New Listings",
-        "newListingsDescription": "Fresh arrivals worth a closer look.",
-        "scrollNew": "Scroll through newly listed auctions",
         "brands": "Brands",
         "shopByBrand": "Shop by brand",
-        "shopByBrandDescription": "Explore standout pieces from globally recognized labels and highly desirable names.",
         "brand": "Brand",
-        "endingSoon": "Ending Soon",
-        "endingSoonDescription": "Auctions nearing the finish line — last chance to place a bid.",
-        "scrollEnding": "Scroll through ending soon auctions",
-        "catalogPreference": "Catalog preference",
-        "currentlyBrowsing": "Currently browsing {preference}",
-        "preferenceDescription": "You can switch your homepage catalog anytime. Relora will remember your choice next time.",
         "seoFooter": "Relora is an online auction marketplace focused on rare fashion, designer clothing, and collectible pieces. Browse curated listings, place bids with confidence, and discover items that feel distinctive, memorable, and worth owning.",
         "howItWorks": {
             "label": "HOW IT WORKS",
@@ -1300,81 +1261,6 @@
                     "title": "Win",
                     "description": "Win the auction and own the piece."
                 }
-            }
-        },
-        
-        "collections": {
-            "1": {
-                "label": "Archive Direction",
-                "title": "Avant-Garde",
-                "subtitle": "Rick Owens, Margiela, layered silhouettes, and experimental cuts."
-            },
-            "2": {
-                "label": "Modern Luxury",
-                "title": "Minimal Designer",
-                "subtitle": "Clean lines, neutral tones, Prada-style essentials and refined fits."
-            },
-            "3": {
-                "label": "Street Culture",
-                "title": "Elevated Streetwear",
-                "subtitle": "Oversized fits, sneakers, hoodies, and statement everyday pieces."
-            }
-        },
-        "categoryNames": {
-            "Vintage": "Vintage",
-            "Streetwear": "Streetwear",
-            "Designer": "Designer",
-            "Sneakers": "Sneakers",
-            "Accessories": "Accessories"
-        },
-        "mockAuctions": {
-            "1": {
-                "title": "Vintage Leather Sofa - Pristine Condition",
-                "timeLeft": "2 days 14 hours"
-            },
-            "2": {
-                "title": "Original Oil Painting by Unknown Artist",
-                "timeLeft": "3 days 8 hours"
-            },
-            "3": {
-                "title": "Rolex Submariner Watch Limited Edition",
-                "timeLeft": "1 day 6 hours"
-            },
-            "4": {
-                "title": "Antique Wooden Cabinet with Mirror",
-                "timeLeft": "4 days 20 hours"
-            },
-            "5": {
-                "title": "Vintage Pearl Necklace - 18K Gold Chain",
-                "timeLeft": "5 days 12 hours"
-            },
-            "6": {
-                "title": "Brand New Gaming Laptop RTX 4090",
-                "timeLeft": "18 hours 30 minutes"
-            },
-            "7": {
-                "title": "Signed Beatles Vinyl Record First Edition",
-                "timeLeft": "2 days 5 hours"
-            },
-            "8": {
-                "title": "Handmade Italian Ceramic Vase",
-                "timeLeft": "6 days 10 hours"
-            },
-            "9": {
-                "title": "Vintage Leather Camera Bag",
-                "timeLeft": "1 day 12 hours"
-            },
-            "10": {
-                "title": "Classic Analogue Photocamera 35mm",
-                "timeLeft": "3 days 4 hours"
-            },
-            "11": {
-                "title": "Sterling Silver Coin Collection",
-                "timeLeft": "7 days 2 hours"
-            },
-            "12": {
-                "title": "Rare Bird Taxidermy Display",
-                "timeLeft": "4 days 18 hours"
             }
         }
     },

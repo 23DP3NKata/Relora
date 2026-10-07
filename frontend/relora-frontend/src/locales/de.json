@@ -962,42 +962,13 @@
             "viewAll": "Alle Auktionen ansehen",
             "closingSoon": "Endet bald"
         },
-        "guestTitlePart1": "Seltene Mode,",
-        "guestTitlePart2": "Premium-Marken",
-        "guestTitlePart3": "und Auktionen, die man beobachten sollte.",
-        "welcomeBack": "Willkommen zurück,",
-        "guestDescription": "Ein raffinierter Auktionsmarktplatz für Designer-Mode, besondere Accessoires und Sammlerstücke mit Charakter.",
-        "memberDescription": "Entdecken Sie neue Zugänge, verfolgen Sie Stücke, auf die sich ein Gebot lohnt, und erleben Sie eine kuratiertere Seite der Mode.",
-        "heroTitleLine1": "Besitze den",
-        "heroTitleLine2": "naechsten Drop.",
-        "heroDescriptionLine1": "Exklusive Fashion-Auktionen.",
-        "heroDescriptionLine2": "Ikonische Stuecke. Live-Bieten in Echtzeit.",
-        "exploreAuctions": "Auktionen entdecken",
         "sellAnItem": "Artikel verkaufen",
-        "membersWorldwide": "12K+ Mitglieder weltweit",
         "liveAuction": "Live-Auktion",
-        "heroLotTitleLine1": "Stone Island",
-        "heroLotTitleLine2": "Ghost Jacket",
-        "heroLotAlt": "Stone Island Ghost Jacket",
-        "currentBid": "Aktuelles Gebot",
-        "bidCount": "{count} Gebote",
-        "left": "verbleibend",
-        "viewLot": "Lot ansehen",
         "browseBrands": "Marken ansehen",
-        "explore": "Entdecken",
-        "discoverWorld": "Entdecken Sie die Welt von Relora",
-        "discoverWorldDescription": "Treten Sie ein in kuratierte Kategorien, geprägt von Premium-Mode, seltenen Funden und Sammlergeschmack.",
-        "viewAllCategories": "Alle Kategorien anzeigen",
-        "category": "Kategorie",
-        "trendingAuctions": "Beliebte Auktionen",
-        "trendingDescription": "Die Lots, die gerade die meiste Aufmerksamkeit erhalten.",
-        "browseMore": "Mehr ansehen",
-        "scrollTrending": "Durch beliebte Auswahl scrollen",
         "categories": "Kategorien",
         "shopByCategory": "Nach Kategorie shoppen",
         "shopByCategoryDescription": "Entdecken Sie markante Styles aus Mode, Streetwear und sammelwürdigen Details.",
         "whyRelora": "Warum Relora",
-        "whyTitle": "Ein Marktplatz, geprägt von Geschmack, Vertrauen und besonderen Stücken",
         "whyDescription": "Gemacht für Menschen, die mehr wollen als endlose Angebote — ein Ort, an dem Entdecken kuratiert wirkt.",
         "curatedTitle": "Sorgfältig kuratierter Marktplatz",
         "curatedDescription": "Von jedem Angebot wird erwartet, höhere Standards bei Qualität, Präsentation und Authentizität zu erfüllen.",
@@ -1007,94 +978,10 @@
         "premiumDescription": "Entdecken Sie Luxuskleidung, Designer-Taschen, Sneaker, Uhren und sammelwürdige Modestücke an einem Ort.",
         "trustTitle": "Für Vertrauen gestaltet",
         "trustDescription": "Sichere Konten, transparente Angebote und ein Marktplatz mit Fokus auf langfristiges Vertrauen von Käufern und Verkäufern.",
-        "newListings": "Neue Angebote",
-        "newListingsDescription": "Neue Zugänge, die einen genaueren Blick verdienen.",
-        "scrollNew": "Durch neu eingestellte Auktionen scrollen",
         "brands": "Marken",
         "shopByBrand": "Nach Marke shoppen",
-        "shopByBrandDescription": "Entdecken Sie besondere Stücke von weltweit bekannten Labels und begehrten Namen.",
         "brand": "Marke",
-        "endingSoon": "Endet bald",
-        "endingSoonDescription": "Auktionen kurz vor dem Ziel — letzte Chance, ein Gebot abzugeben.",
-        "scrollEnding": "Durch bald endende Auktionen scrollen",
-        "catalogPreference": "Katalogpräferenz",
-        "currentlyBrowsing": "Aktuell angezeigt: {preference}",
-        "preferenceDescription": "Sie können Ihren Homepage-Katalog jederzeit wechseln. Relora merkt sich Ihre Auswahl für das nächste Mal.",
-        "seoFooter": "Relora ist ein Online-Auktionsmarktplatz für seltene Mode, Designer-Kleidung und Sammlerstücke. Durchsuchen Sie kuratierte Angebote, bieten Sie mit Vertrauen und entdecken Sie Stücke, die unverwechselbar, einprägsam und besitzenswert wirken.",
-        "collections": {
-            "1": {
-                "label": "Archiv-Richtung",
-                "title": "Avantgarde",
-                "subtitle": "Rick Owens, Margiela, geschichtete Silhouetten und experimentelle Schnitte."
-            },
-            "2": {
-                "label": "Moderner Luxus",
-                "title": "Minimal Designer",
-                "subtitle": "Klare Linien, neutrale Töne, Essentials im Prada-Stil und raffinierte Fits."
-            },
-            "3": {
-                "label": "Street-Kultur",
-                "title": "Elevated Streetwear",
-                "subtitle": "Oversized Fits, Sneaker, Hoodies und ausdrucksstarke Alltagsstücke."
-            }
-        },
-        "categoryNames": {
-            "Vintage": "Vintage",
-            "Streetwear": "Streetwear",
-            "Designer": "Designer",
-            "Sneakers": "Sneaker",
-            "Accessories": "Accessoires"
-        },
-        "mockAuctions": {
-            "1": {
-                "title": "Vintage-Ledersofa - makelloser Zustand",
-                "timeLeft": "2 Tage 14 Stunden"
-            },
-            "2": {
-                "title": "Originales Oelgemaelde eines unbekannten Kuenstlers",
-                "timeLeft": "3 Tage 8 Stunden"
-            },
-            "3": {
-                "title": "Rolex Submariner Uhr limitierte Edition",
-                "timeLeft": "1 Tag 6 Stunden"
-            },
-            "4": {
-                "title": "Antiker Holzschrank mit Spiegel",
-                "timeLeft": "4 Tage 20 Stunden"
-            },
-            "5": {
-                "title": "Vintage-Perlenkette - 18K Goldkette",
-                "timeLeft": "5 Tage 12 Stunden"
-            },
-            "6": {
-                "title": "Neuer Gaming-Laptop RTX 4090",
-                "timeLeft": "18 Stunden 30 Minuten"
-            },
-            "7": {
-                "title": "Signierte Beatles-Vinylplatte Erstausgabe",
-                "timeLeft": "2 Tage 5 Stunden"
-            },
-            "8": {
-                "title": "Handgefertigte italienische Keramikvase",
-                "timeLeft": "6 Tage 10 Stunden"
-            },
-            "9": {
-                "title": "Vintage-Lederkameratasche",
-                "timeLeft": "1 Tag 12 Stunden"
-            },
-            "10": {
-                "title": "Klassische analoge Fotokamera 35mm",
-                "timeLeft": "3 Tage 4 Stunden"
-            },
-            "11": {
-                "title": "Sterling-Silber-Muenzsammlung",
-                "timeLeft": "7 Tage 2 Stunden"
-            },
-            "12": {
-                "title": "Seltenes Taxidermie-Display",
-                "timeLeft": "4 Tage 18 Stunden"
-            }
-        }
+        "seoFooter": "Relora ist ein Online-Auktionsmarktplatz für seltene Mode, Designer-Kleidung und Sammlerstücke. Durchsuchen Sie kuratierte Angebote, bieten Sie mit Vertrauen und entdecken Sie Stücke, die unverwechselbar, einprägsam und besitzenswert wirken."
     },
     "landing": {
         "eyebrow": "Marktplatz fuer Archivmode",
