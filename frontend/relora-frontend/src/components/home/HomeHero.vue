@@ -56,12 +56,10 @@ const hasVideo = computed(() => {
 
 const videoMp4 = isMobile && heroConfig.videoMp4Mobile ? heroConfig.videoMp4Mobile : heroConfig.videoMp4
 
-// demo image has no background, don't crop it
-const isCutout = computed(() => props.lot.imageUrl === heroConfig.poster)
-
 let mm: gsap.MatchMedia | undefined
 let floatTween: gsap.core.Tween | undefined
 let observer: IntersectionObserver | undefined
+let heroOnScreen = false
 let stopPress: (() => void) | undefined
 
 function playHeavyStuff() {
@@ -71,6 +69,11 @@ function playHeavyStuff() {
     video.value.muted = true
     video.value.play().catch(() => {})
   }
+}
+
+// the browser can pause the video in a hidden tab, start it again when the tab is back
+function onVisibilityChange() {
+  if (!document.hidden && heroOnScreen) playHeavyStuff()
 }
 
 function pauseHeavyStuff() {
@@ -116,9 +119,11 @@ function setupAnimations() {
       const nx = ((event.clientX - rect.left) / rect.width - 0.5) * 2
       const ny = ((event.clientY - rect.top) / rect.height - 0.5) * 2
 
+      // max shift is 20px * depth (24px for the deepest layer),
+      // edge layers are inset by 24px so they never leave the hero
       for (const mover of movers) {
-        mover.x(nx * mover.depth * 40)
-        mover.y(ny * mover.depth * 40)
+        mover.x(nx * mover.depth * 20)
+        mover.y(ny * mover.depth * 20)
       }
 
       tiltX(nx * 6)
@@ -207,11 +212,14 @@ onMounted(() => {
 
   // pause video and float when hero is off screen
   observer = new IntersectionObserver((entries) => {
-    if (entries[0]?.isIntersecting) playHeavyStuff()
+    heroOnScreen = Boolean(entries[0]?.isIntersecting)
+
+    if (heroOnScreen) playHeavyStuff()
     else pauseHeavyStuff()
   })
 
   if (hero.value) observer.observe(hero.value)
+  document.addEventListener('visibilitychange', onVisibilityChange)
 
   if (mediaFrame.value && !reduceMotion) {
     stopPress = press(mediaFrame.value, (element) => {
@@ -224,6 +232,7 @@ onMounted(() => {
 onBeforeUnmount(() => {
   mm?.revert()
   observer?.disconnect()
+  document.removeEventListener('visibilitychange', onVisibilityChange)
   stopPress?.()
 })
 </script>
@@ -256,7 +265,7 @@ onBeforeUnmount(() => {
     </span>
 
     <!-- top meta row -->
-    <div class="hero-reveal flex items-center justify-between gap-4 border-b border-foreground/10 pb-3 font-mono text-[10px] uppercase tracking-[0.24em] text-foreground/55 sm:text-[11px]">
+    <div class="hero-reveal flex items-center justify-between gap-4 border-b border-foreground/10 pb-3 font-mono lg:px-6 text-[10px] uppercase tracking-[0.24em] text-foreground/55 sm:text-[11px]">
       <span>{{ $t('home.liveHero.eyebrow') }}</span>
 
       <span class="inline-flex items-center gap-2">
@@ -278,10 +287,10 @@ onBeforeUnmount(() => {
         id="home-hero-title"
         class="hero-title text-[clamp(3.1rem,15vw,5.5rem)] font-semibold uppercase leading-[0.86] tracking-[-0.065em] text-foreground lg:static lg:text-[clamp(5.5rem,10.5vw,10.25rem)]"
       >
-        <span class="hero-line hero-line-1 block overflow-hidden pb-[0.04em] lg:absolute lg:left-0 lg:top-[9%] lg:z-20" data-depth="0.35">
+        <span class="hero-line hero-line-1 block overflow-hidden pb-[0.04em] lg:absolute lg:left-6 lg:top-[9%] lg:z-20" data-depth="0.35">
           <span class="hero-line-inner block">{{ $t('home.liveHero.titleLine1') }}</span>
         </span>
-        <span class="hero-line hero-line-2 block overflow-hidden pb-[0.04em] lg:absolute lg:bottom-[7%] lg:right-0 lg:z-20 lg:text-right" data-depth="0.6">
+        <span class="hero-line hero-line-2 block overflow-hidden pb-[0.04em] lg:absolute lg:bottom-[7%] lg:right-6 lg:z-20 lg:text-right" data-depth="0.6">
           <span class="hero-line-inner block">{{ $t('home.liveHero.titleLine2') }}</span>
         </span>
       </h1>
@@ -323,8 +332,7 @@ onBeforeUnmount(() => {
                 :alt="`${lot.brand} ${lot.title}`"
                 fetchpriority="high"
                 decoding="async"
-                class="hero-media-content h-full w-full"
-                :class="isCutout ? 'object-contain object-bottom pt-10' : 'object-cover'"
+                class="hero-media-content h-full w-full object-cover"
               />
 
               <!-- lot details on hover (always visible on mobile) -->
@@ -341,7 +349,7 @@ onBeforeUnmount(() => {
 
       <!-- layer 4: auction info -->
       <div class="hero-info grid grid-cols-2 gap-x-6 gap-y-5 lg:contents">
-        <div class="hero-meta-left col-span-2 lg:absolute lg:left-0 lg:top-[44%] lg:z-30 lg:w-[min(24vw,300px)]" data-depth="0.9">
+        <div class="hero-meta-left col-span-2 lg:absolute lg:left-6 lg:top-[44%] lg:z-30 lg:w-[min(24vw,300px)]" data-depth="0.9">
           <p class="hero-reveal font-mono text-[10px] uppercase tracking-[0.24em] text-foreground/55 sm:text-[11px]">
             {{ $t('home.liveHero.lot') }} {{ lotNumber }} — {{ lot.brand }}
           </p>
@@ -376,7 +384,7 @@ onBeforeUnmount(() => {
           </p>
         </div>
 
-        <div class="hero-meta-right text-right lg:absolute lg:right-0 lg:top-[30%] lg:z-30" data-depth="1.2">
+        <div class="hero-meta-right text-right lg:absolute lg:right-6 lg:top-[30%] lg:z-30" data-depth="1.2">
           <p class="hero-reveal font-mono text-[10px] uppercase tracking-[0.24em] text-foreground/55 sm:text-[11px]">
             {{ $t('home.liveHero.timeLeft') }}
           </p>
@@ -395,7 +403,7 @@ onBeforeUnmount(() => {
       </div>
 
       <!-- CTA -->
-      <div class="hero-cta lg:absolute lg:bottom-[9%] lg:left-0 lg:z-30" data-depth="0.5">
+      <div class="hero-cta lg:absolute lg:bottom-[9%] lg:left-6 lg:z-30" data-depth="0.5">
         <div class="hero-reveal flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
           <MagneticButton :to="lotLink" wide>
             {{ lot.isDemo ? $t('home.liveHero.explore') : $t('home.liveHero.bidNow') }}
