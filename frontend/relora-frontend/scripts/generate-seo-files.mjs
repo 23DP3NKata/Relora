@@ -1,20 +1,25 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
-import { dirname, resolve } from 'node:path'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 const root = resolve(import.meta.dirname, '..')
 const envPath = resolve(root, '.env')
-const env = Object.fromEntries(
-  readFileSync(envPath, 'utf8')
-    .split(/\r?\n/)
-    .map(line => line.trim())
-    .filter(line => line && !line.startsWith('#'))
-    .map(line => {
-      const separator = line.indexOf('=')
-      return [line.slice(0, separator), line.slice(separator + 1)]
-    }),
-)
 
-const siteUrl = env.VITE_SITE_URL?.replace(/\/$/, '')
+// Local builds use .env, hosting (Cloudflare Pages) passes variables via process.env
+let env = {}
+if (existsSync(envPath)) {
+  env = Object.fromEntries(
+    readFileSync(envPath, 'utf8')
+      .split(/\r?\n/)
+      .map(line => line.trim())
+      .filter(line => line && !line.startsWith('#'))
+      .map(line => {
+        const separator = line.indexOf('=')
+        return [line.slice(0, separator), line.slice(separator + 1)]
+      }),
+  )
+}
+
+const siteUrl = (process.env.VITE_SITE_URL ?? env.VITE_SITE_URL)?.replace(/\/$/, '')
 
 if (!siteUrl || !URL.canParse(siteUrl)) {
   throw new Error('VITE_SITE_URL must contain an absolute URL.')
