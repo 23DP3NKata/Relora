@@ -56,10 +56,12 @@ const hasVideo = computed(() => {
 
 const videoMp4 = isMobile && heroConfig.videoMp4Mobile ? heroConfig.videoMp4Mobile : heroConfig.videoMp4
 
+// demo image has no background, don't crop it
+const isCutout = computed(() => props.lot.imageUrl === heroConfig.poster)
+
 let mm: gsap.MatchMedia | undefined
 let floatTween: gsap.core.Tween | undefined
 let observer: IntersectionObserver | undefined
-let heroOnScreen = false
 let stopPress: (() => void) | undefined
 
 function playHeavyStuff() {
@@ -69,11 +71,6 @@ function playHeavyStuff() {
     video.value.muted = true
     video.value.play().catch(() => {})
   }
-}
-
-// the browser can pause the video in a hidden tab, start it again when the tab is back
-function onVisibilityChange() {
-  if (!document.hidden && heroOnScreen) playHeavyStuff()
 }
 
 function pauseHeavyStuff() {
@@ -212,14 +209,11 @@ onMounted(() => {
 
   // pause video and float when hero is off screen
   observer = new IntersectionObserver((entries) => {
-    heroOnScreen = Boolean(entries[0]?.isIntersecting)
-
-    if (heroOnScreen) playHeavyStuff()
+    if (entries[0]?.isIntersecting) playHeavyStuff()
     else pauseHeavyStuff()
   })
 
   if (hero.value) observer.observe(hero.value)
-  document.addEventListener('visibilitychange', onVisibilityChange)
 
   if (mediaFrame.value && !reduceMotion) {
     stopPress = press(mediaFrame.value, (element) => {
@@ -232,7 +226,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   mm?.revert()
   observer?.disconnect()
-  document.removeEventListener('visibilitychange', onVisibilityChange)
   stopPress?.()
 })
 </script>
@@ -332,7 +325,8 @@ onBeforeUnmount(() => {
                 :alt="`${lot.brand} ${lot.title}`"
                 fetchpriority="high"
                 decoding="async"
-                class="hero-media-content h-full w-full object-cover"
+                class="hero-media-content h-full w-full"
+                :class="isCutout ? 'object-contain object-bottom pt-10' : 'object-cover'"
               />
 
               <!-- lot details on hover (always visible on mobile) -->

@@ -92,8 +92,8 @@ export function getShowcaseLot(): HomeLiveLot {
   return {
     lotId: 'showcase',
     auctionId: null,
-    title: 'Mountain Down Jacket',
-    brand: 'The North Face',
+    title: 'Ghost Jacket',
+    brand: 'Stone Island',
     imageUrl: heroConfig.poster,
     sizeName: 'M',
     conditionName: 'Excellent',
