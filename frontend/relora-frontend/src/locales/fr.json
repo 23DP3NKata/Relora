@@ -906,42 +906,69 @@
         "noDesigners": "Aucun créateur trouvé."
     },
     "home": {
-        "guestTitlePart1": "Mode rare,",
-        "guestTitlePart2": "marques premium,",
-        "guestTitlePart3": "et enchères à suivre.",
-        "welcomeBack": "Bon retour,",
-        "guestDescription": "Une marketplace d’enchères raffinée pour la mode de créateur, les accessoires remarquables et les pièces de collection avec du caractère.",
-        "memberDescription": "Découvrez de nouvelles arrivées, suivez les pièces qui méritent une enchère et explorez une facette plus sélectionnée de la mode.",
-        "heroTitleLine1": "Saisissez la",
-        "heroTitleLine2": "prochaine sortie.",
-        "heroDescriptionLine1": "Des enchères mode exclusives.",
-        "heroDescriptionLine2": "Des pièces iconiques. Des enchères en temps réel.",
-        "exploreAuctions": "Explorer les enchères",
+        "whyShortTitle": "Goût. Confiance. Pièces rares.",
+        "howItWorks": {
+            "label": "COMMENT ÇA MARCHE",
+            "title": "Trois étapes pour gagner",
+            "steps": {
+                "discover": {
+                    "number": "01",
+                    "title": "Découvrir",
+                    "description": "Trouvez des pièces rares dans des enchères sélectionnées."
+                },
+                "bid": {
+                    "number": "02",
+                    "title": "Enchérir",
+                    "description": "Placez votre enchère et suivez-la en temps réel."
+                },
+                "win": {
+                    "number": "03",
+                    "title": "Gagner",
+                    "description": "Remportez l’enchère et la pièce est à vous."
+                }
+            }
+        },
+        "newLots": {
+            "eyebrow": "Tout juste arrivé",
+            "title": "Nouveautés",
+            "catalogLabel": "Catalogue",
+            "viewAll": "Tout voir",
+            "empty": "Pas encore de nouveaux lots ici.",
+            "browseAll": "Voir tous les lots"
+        },
+        "liveHero": {
+            "explore": "Découvrir les lots",
+            "eyebrow": "Relora — enchères de mode en direct",
+            "titleLine1": "Pièces rares.",
+            "titleLine2": "Enchères live.",
+            "live": "En direct",
+            "preview": "Aperçu",
+            "ended": "Terminée",
+            "lot": "Lot",
+            "currentBid": "Enchère actuelle",
+            "timeLeft": "Temps restant",
+            "bids": "Enchères",
+            "bidNow": "Enchérir",
+            "viewLot": "Voir le lot",
+            "allLots": "Tous les lots en direct",
+            "scroll": "Défiler"
+        },
+        "liveAuctions": {
+            "emptyTitle": "D’autres enchères arrivent bientôt.",
+            "emptyText": "Les nouvelles pièces apparaissent ici dès le début de leur enchère. En attendant, parcourez le catalogue.",
+            "eyebrow": "En direct",
+            "title": "Enchères live",
+            "description": "Les pièces qui se terminent bientôt, en premier. Chaque prix et chaque minuteur viennent directement de l’enchère.",
+            "viewAll": "Voir toutes les enchères",
+            "closingSoon": "Se termine bientôt"
+        },
         "sellAnItem": "Vendre un article",
-        "membersWorldwide": "12K+ membres dans le monde",
         "liveAuction": "Enchère en direct",
-        "heroLotTitleLine1": "Stone Island",
-        "heroLotTitleLine2": "Ghost Jacket",
-        "heroLotAlt": "Stone Island Ghost Jacket",
-        "currentBid": "Offre actuelle",
-        "bidCount": "{count} offres",
-        "left": "restant",
-        "viewLot": "Voir le lot",
         "browseBrands": "Parcourir les marques",
-        "explore": "Explorer",
-        "discoverWorld": "Découvrez l’univers de Relora",
-        "discoverWorldDescription": "Entrez dans des catégories sélectionnées par la mode premium, les trouvailles rares et le goût des collectionneurs.",
-        "viewAllCategories": "Voir toutes les catégories",
-        "category": "Catégorie",
-        "trendingAuctions": "Enchères tendance",
-        "trendingDescription": "Les lots qui attirent le plus d’attention en ce moment.",
-        "browseMore": "Voir plus",
-        "scrollTrending": "Faire défiler les sélections tendance",
         "categories": "Catégories",
         "shopByCategory": "Acheter par catégorie",
         "shopByCategoryDescription": "Explorez des styles marquants dans la mode, le streetwear et les détails de collection.",
         "whyRelora": "Pourquoi Relora",
-        "whyTitle": "Une marketplace façonnée autour du goût, de la confiance et des pièces remarquables",
         "whyDescription": "Conçue pour ceux qui veulent plus qu’une infinité d’annonces — un endroit où la découverte semble sélectionnée.",
         "curatedTitle": "Marketplace soigneusement sélectionnée",
         "curatedDescription": "Chaque annonce est censée répondre à des standards plus élevés de qualité, de présentation et d’authenticité.",
@@ -951,94 +978,10 @@
         "premiumDescription": "Découvrez vêtements de luxe, sacs de créateur, sneakers, montres et pièces fashion de collection au même endroit.",
         "trustTitle": "Pensé pour la confiance",
         "trustDescription": "Comptes sécurisés, annonces transparentes et marketplace centrée sur la confiance durable des acheteurs et vendeurs.",
-        "newListings": "Nouvelles annonces",
-        "newListingsDescription": "De nouvelles arrivées qui méritent un regard de plus près.",
-        "scrollNew": "Faire défiler les enchères récemment ajoutées",
         "brands": "Marques",
         "shopByBrand": "Acheter par marque",
-        "shopByBrandDescription": "Explorez des pièces remarquables de labels mondialement reconnus et de noms très désirables.",
         "brand": "Marque",
-        "endingSoon": "Se termine bientôt",
-        "endingSoonDescription": "Enchères proches de la ligne d’arrivée — dernière chance de placer une offre.",
-        "scrollEnding": "Faire défiler les enchères qui se terminent bientôt",
-        "catalogPreference": "Préférence de catalogue",
-        "currentlyBrowsing": "Catalogue actuel : {preference}",
-        "preferenceDescription": "Vous pouvez changer le catalogue de votre page d’accueil à tout moment. Relora se souviendra de votre choix la prochaine fois.",
-        "seoFooter": "Relora est une marketplace d’enchères en ligne centrée sur la mode rare, les vêtements de créateur et les pièces de collection. Parcourez des annonces sélectionnées, enchérissez en confiance et découvrez des articles distinctifs, mémorables et dignes d’être possédés.",
-        "collections": {
-            "1": {
-                "label": "Direction archive",
-                "title": "Avant-garde",
-                "subtitle": "Rick Owens, Margiela, silhouettes superposées et coupes expérimentales."
-            },
-            "2": {
-                "label": "Luxe moderne",
-                "title": "Minimal Designer",
-                "subtitle": "Lignes épurées, tons neutres, essentiels façon Prada et coupes raffinées."
-            },
-            "3": {
-                "label": "Culture street",
-                "title": "Streetwear élevé",
-                "subtitle": "Coupes oversize, sneakers, hoodies et pièces quotidiennes affirmées."
-            }
-        },
-        "categoryNames": {
-            "Vintage": "Vintage",
-            "Streetwear": "Streetwear",
-            "Designer": "Créateur",
-            "Sneakers": "Sneakers",
-            "Accessories": "Accessoires"
-        },
-        "mockAuctions": {
-            "1": {
-                "title": "Canape vintage en cuir - etat impeccable",
-                "timeLeft": "2 jours 14 heures"
-            },
-            "2": {
-                "title": "Peinture a l huile originale par artiste inconnu",
-                "timeLeft": "3 jours 8 heures"
-            },
-            "3": {
-                "title": "Montre Rolex Submariner edition limitee",
-                "timeLeft": "1 jour 6 heures"
-            },
-            "4": {
-                "title": "Armoire ancienne en bois avec miroir",
-                "timeLeft": "4 jours 20 heures"
-            },
-            "5": {
-                "title": "Collier vintage de perles - chaine or 18K",
-                "timeLeft": "5 jours 12 heures"
-            },
-            "6": {
-                "title": "Ordinateur portable gaming neuf RTX 4090",
-                "timeLeft": "18 heures 30 minutes"
-            },
-            "7": {
-                "title": "Vinyle Beatles signe premiere edition",
-                "timeLeft": "2 jours 5 heures"
-            },
-            "8": {
-                "title": "Vase italien en ceramique fait main",
-                "timeLeft": "6 jours 10 heures"
-            },
-            "9": {
-                "title": "Sac photo vintage en cuir",
-                "timeLeft": "1 jour 12 heures"
-            },
-            "10": {
-                "title": "Appareil photo analogique classique 35mm",
-                "timeLeft": "3 jours 4 heures"
-            },
-            "11": {
-                "title": "Collection de pieces en argent sterling",
-                "timeLeft": "7 jours 2 heures"
-            },
-            "12": {
-                "title": "Display de taxidermie rare",
-                "timeLeft": "4 jours 18 heures"
-            }
-        }
+        "seoFooter": "Relora est une marketplace d’enchères en ligne centrée sur la mode rare, les vêtements de créateur et les pièces de collection. Parcourez des annonces sélectionnées, enchérissez en confiance et découvrez des articles distinctifs, mémorables et dignes d’être possédés."
     },
     "landing": {
         "eyebrow": "Marketplace de mode archive",
