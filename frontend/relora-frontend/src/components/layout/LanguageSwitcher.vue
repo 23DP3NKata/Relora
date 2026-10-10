@@ -149,7 +149,7 @@ const selectedLanguage = computed<LanguageOption>(() => {
       position="popper"
       align="end"
       :side-offset="8"
-      class="min-w-[210px] rounded-2xl border-border p-1.5 shadow-xl"
+      class="z-[80] min-w-[210px] rounded-2xl border-border p-1.5 shadow-xl"
     >
       <SelectGroup>
         <SelectItem
