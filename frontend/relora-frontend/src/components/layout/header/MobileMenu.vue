@@ -82,12 +82,18 @@ const emit = defineEmits<{
                     @update:model-value="emit('update:searchQuery', String($event))"
                     @keydown.enter="emit('search')"
                     :placeholder="$t('search.mobilePlaceholder')"
-                    class="h-12 rounded-full border border-input bg-muted/80 pl-11 pr-20 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-0"
+                    class="h-12 rounded-full border border-input bg-muted/80 pl-11 pr-24 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-0"
                   />
+
+                  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+                    <svg class="h-4 w-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
 
                   <button
                     type="button"
-                    class="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground transition hover:opacity-90"
+                    class="absolute inset-y-1 right-1 inline-flex items-center rounded-full bg-primary px-4 text-xs font-medium text-primary-foreground transition hover:opacity-90"
                     @click="emit('search')"
                   >
                     {{ $t('common.search') }}
