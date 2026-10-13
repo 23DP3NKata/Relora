@@ -51,12 +51,12 @@ const footerColumns = [
 const socialLinks = [
   {
     labelKey: 'footer.social.instagram',
-    href: 'https://www.instagram.com/relora_auctions/',
+    href: '#',
     icon: 'instagram',
   },
   {
     labelKey: 'footer.social.youtube',
-    href: 'https://www.youtube.com/channel/UC5dwCRPbNoxNyYrbd6RSwRA',
+    href: '#',
     icon: 'youtube',
   }
 ]
@@ -101,8 +101,6 @@ const socialLinks = [
                 :key="social.labelKey"
                 :href="social.href"
                 :aria-label="$t(social.labelKey)"
-                target="_blank"
-                rel="noopener noreferrer"
                 class="flex size-9 items-center justify-center rounded-full border border-border text-foreground/60 transition-colors hover:border-foreground hover:text-foreground"
               >
                 <svg
