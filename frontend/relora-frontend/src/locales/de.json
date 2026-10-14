@@ -973,8 +973,7 @@
             "timeLeft": "Restzeit",
             "bidNow": "Jetzt bieten",
             "viewLot": "Los ansehen",
-            "allLots": "Alle Live-Lose",
-            "scroll": "Scrollen"
+            "allLots": "Alle Live-Lose"
         },
         "liveAuctions": {
             "emptyTitle": "Weitere Auktionen sind unterwegs.",

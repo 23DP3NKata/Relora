@@ -192,7 +192,7 @@ onBeforeUnmount(() => {
     </div>
 
     <!-- top meta row -->
-    <div class="hero-reveal flex min-h-[29px] items-center justify-end gap-4 border-b border-foreground/10 pb-3 font-mono lg:px-6 text-[10px] uppercase tracking-[0.24em] text-foreground/55 sm:text-[11px]">
+    <div class="hero-reveal flex min-h-[29px] items-center justify-end gap-4 border-b border-foreground/10 pb-3 lg:px-6 text-[10px] uppercase tracking-[0.16em] text-foreground/55 sm:text-[11px]">
       <span v-if="!lot.isDemo" class="inline-flex items-center gap-2">
         <span
           class="h-1.5 w-1.5 rounded-full"
@@ -259,7 +259,7 @@ onBeforeUnmount(() => {
               />
 
               <!-- lot details on hover (always visible on mobile) -->
-              <div class="absolute inset-x-3 bottom-3 flex items-center justify-between gap-3 bg-white/90 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-[#111111] backdrop-blur-sm transition duration-500 ease-out lg:translate-y-[calc(100%+12px)] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-visible:translate-y-0 lg:group-focus-visible:opacity-100">
+              <div class="absolute inset-x-3 bottom-3 flex items-center justify-between gap-3 bg-white/90 px-4 py-3 text-[10px] uppercase tracking-[0.18em] text-[#111111] backdrop-blur-sm transition duration-500 ease-out lg:translate-y-[calc(100%+12px)] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-visible:translate-y-0 lg:group-focus-visible:opacity-100">
                 <span class="truncate">
                   {{ lot.sizeName }} · {{ lot.conditionName }}
                 </span>
@@ -273,14 +273,14 @@ onBeforeUnmount(() => {
       <!-- layer 4: auction info -->
       <div class="hero-info grid grid-cols-2 gap-x-6 gap-y-5 lg:contents">
         <div class="hero-meta-left col-span-2 lg:absolute lg:left-6 lg:top-[44%] lg:z-30 lg:w-[min(24vw,300px)]">
-          <p class="hero-reveal font-mono text-[10px] uppercase tracking-[0.24em] text-foreground/55 sm:text-[11px]">
+          <p class="hero-reveal text-[10px] uppercase tracking-[0.16em] text-foreground/55 sm:text-[11px]">
             {{ $t('home.liveHero.lot') }} {{ lotNumber }} — {{ lot.brand }}
           </p>
           <p class="hero-reveal mt-2 text-lg font-medium leading-tight tracking-[-0.02em] text-foreground lg:text-xl">
             {{ lot.title }}
           </p>
           <div class="hero-rule mt-5 hidden h-px bg-foreground/15 lg:block" />
-          <p class="hero-reveal mt-5 hidden font-mono text-[10px] uppercase tracking-[0.24em] text-foreground/55 lg:block">
+          <p class="hero-reveal mt-5 hidden text-[10px] uppercase tracking-[0.16em] text-foreground/55 lg:block">
             {{ $t('home.liveHero.currentBid') }}
           </p>
           <p class="mt-2 hidden overflow-hidden lg:block">
@@ -296,7 +296,7 @@ onBeforeUnmount(() => {
 
         <!-- price on mobile -->
         <div class="lg:hidden">
-          <p class="font-mono text-[10px] uppercase tracking-[0.24em] text-foreground/55">
+          <p class="text-[10px] uppercase tracking-[0.16em] text-foreground/55">
             {{ $t('home.liveHero.currentBid') }}
           </p>
           <p
@@ -308,11 +308,11 @@ onBeforeUnmount(() => {
         </div>
 
         <div class="hero-meta-right text-right lg:absolute lg:right-6 lg:top-[30%] lg:z-30">
-          <p class="hero-reveal font-mono text-[10px] uppercase tracking-[0.24em] text-foreground/55 sm:text-[11px]">
+          <p class="hero-reveal text-[10px] uppercase tracking-[0.16em] text-foreground/55 sm:text-[11px]">
             {{ $t('home.liveHero.timeLeft') }}
           </p>
           <p
-            class="hero-reveal mt-1.5 font-mono text-[1.6rem] leading-none tracking-[-0.02em] tabular-nums lg:mt-2 lg:text-[clamp(1.6rem,2.2vw,2.1rem)]"
+            class="hero-reveal mt-1.5 text-[1.6rem] font-semibold leading-none tracking-[-0.03em] tabular-nums lg:mt-2 lg:text-[clamp(1.6rem,2.2vw,2.1rem)]"
             :class="isClosingSoon ? 'text-[var(--auction-accent)]' : 'text-foreground'"
           >
             {{ isEnded ? $t('home.liveHero.ended') : timeLeft }}
@@ -329,17 +329,11 @@ onBeforeUnmount(() => {
 
           <RouterLink
             :to="localePath('/catalog')"
-            class="text-center font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
+            class="text-center text-[11px] uppercase tracking-[0.2em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
           >
             {{ $t('home.liveHero.allLots') }}
           </RouterLink>
         </div>
-      </div>
-
-      <!-- scroll hint -->
-      <div class="pointer-events-none absolute bottom-0 left-1/2 hidden -translate-x-1/2 translate-y-1/2 items-center gap-3 font-mono text-[10px] uppercase tracking-[0.24em] text-foreground/45 lg:flex" aria-hidden="true">
-        <span class="hero-scroll-line block h-6 w-px bg-foreground/30" />
-        {{ $t('home.liveHero.scroll') }}
       </div>
     </div>
   </section>
@@ -390,34 +384,8 @@ onBeforeUnmount(() => {
   }
 }
 
-.hero-scroll-line {
-  transform-origin: top;
-  animation: hero-scroll-line 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
-}
-
-@keyframes hero-scroll-line {
-  0% {
-    transform: scaleY(0);
-  }
-
-  50% {
-    transform: scaleY(1);
-    transform-origin: top;
-  }
-
-  51% {
-    transform-origin: bottom;
-  }
-
-  100% {
-    transform: scaleY(0);
-    transform-origin: bottom;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .hero-live-dot,
-  .hero-scroll-line {
+  .hero-live-dot {
     animation: none;
   }
 }

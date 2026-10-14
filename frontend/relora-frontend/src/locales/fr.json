@@ -973,8 +973,7 @@
             "timeLeft": "Temps restant",
             "bidNow": "Enchérir",
             "viewLot": "Voir le lot",
-            "allLots": "Tous les lots en direct",
-            "scroll": "Défiler"
+            "allLots": "Tous les lots en direct"
         },
         "liveAuctions": {
             "emptyTitle": "D’autres enchères arrivent bientôt.",

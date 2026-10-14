@@ -1206,8 +1206,7 @@
             "timeLeft": "Time left",
             "bidNow": "Bid now",
             "viewLot": "View lot",
-            "allLots": "All live lots",
-            "scroll": "Scroll"
+            "allLots": "All live lots"
         },
         "liveAuctions": {
             "emptyTitle": "More auctions are on the way.",
