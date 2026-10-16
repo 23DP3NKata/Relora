@@ -934,7 +934,6 @@
     "home": {
         "whyShortTitle": "Stil. Vertrauen. Seltene Stücke.",
         "howItWorks": {
-            "label": "SO FUNKTIONIERT ES",
             "title": "Drei Schritte zum Zuschlag",
             "steps": {
                 "discover": {
@@ -955,7 +954,6 @@
             }
         },
         "newLots": {
-            "eyebrow": "Gerade eingetroffen",
             "title": "Neu eingetroffen",
             "catalogLabel": "Katalog",
             "viewAll": "Alle ansehen",
@@ -964,6 +962,7 @@
         },
         "liveHero": {
             "explore": "Lose entdecken",
+            "viewAll": "Alle ansehen",
             "titleLine1": "Seltene Stücke.",
             "titleLine2": "Live bieten.",
             "live": "Live",
@@ -971,14 +970,11 @@
             "lot": "Los",
             "currentBid": "Aktuelles Gebot",
             "timeLeft": "Restzeit",
-            "bidNow": "Jetzt bieten",
-            "viewLot": "Los ansehen",
-            "allLots": "Alle Live-Lose"
+            "bidNow": "Jetzt bieten"
         },
         "liveAuctions": {
             "emptyTitle": "Weitere Auktionen sind unterwegs.",
             "emptyText": "Neue Stücke erscheinen hier, sobald ihre Auktion startet. Bis dahin kannst du im Katalog stöbern.",
-            "eyebrow": "Jetzt live",
             "title": "Live-Auktionen",
             "description": "Stücke, die als Nächstes enden. Jeder Preis und jeder Timer kommt direkt aus der Auktion.",
             "viewAll": "Alle Auktionen ansehen",
@@ -987,10 +983,8 @@
         "sellAnItem": "Artikel verkaufen",
         "liveAuction": "Live-Auktion",
         "browseBrands": "Marken ansehen",
-        "categories": "Kategorien",
         "shopByCategory": "Nach Kategorie shoppen",
         "shopByCategoryDescription": "Entdecken Sie markante Styles aus Mode, Streetwear und sammelwürdigen Details.",
-        "whyRelora": "Warum Relora",
         "whyDescription": "Gemacht für Menschen, die mehr wollen als endlose Angebote — ein Ort, an dem Entdecken kuratiert wirkt.",
         "curatedTitle": "Sorgfältig kuratierter Marktplatz",
         "curatedDescription": "Von jedem Angebot wird erwartet, höhere Standards bei Qualität, Präsentation und Authentizität zu erfüllen.",
@@ -1000,7 +994,6 @@
         "premiumDescription": "Entdecken Sie Luxuskleidung, Designer-Taschen, Sneaker, Uhren und sammelwürdige Modestücke an einem Ort.",
         "trustTitle": "Für Vertrauen gestaltet",
         "trustDescription": "Sichere Konten, transparente Angebote und ein Marktplatz mit Fokus auf langfristiges Vertrauen von Käufern und Verkäufern.",
-        "brands": "Marken",
         "shopByBrand": "Nach Marke shoppen",
         "brand": "Marke",
         "seoFooter": "Relora ist ein Online-Auktionsmarktplatz für seltene Mode, Designer-Kleidung und Sammlerstücke. Durchsuchen Sie kuratierte Angebote, bieten Sie mit Vertrauen und entdecken Sie Stücke, die unverwechselbar, einprägsam und besitzenswert wirken."
@@ -2288,125 +2281,125 @@
         "tagline": "Kein Massenmarkt. Nie gewöhnlich."
     },
     "seo": {
-        "settings": {"title": "Kontoeinstellungen — Relora", "description": "Verwalte Profil, Passwort und Einstellungen."},
+        "settings": {"title": "Kontoeinstellungen - Relora", "description": "Verwalte Profil, Passwort und Einstellungen."},
         "default": {
-            "title": "Relora — Auktionen für seltene Designer-Mode",
+            "title": "Relora - Auktionen für seltene Designer-Mode",
             "description": "Relora ist ein kuratierter Marktplatz für seltene Designer-Mode, Archivkleidung und Luxus-Streetwear-Auktionen. Entdecken Sie authentifizierte Designerstücke, Sammlerkleidung, Laufstegarchive und exklusive Fashion-Lots."
         },
         "home": {
-            "title": "Relora — Auktionen für seltene Designer-Mode",
+            "title": "Relora - Auktionen für seltene Designer-Mode",
             "description": "Ein raffinierter Auktionsmarktplatz für Designer-Mode, besondere Accessoires und Sammlerstücke mit Charakter."
         },
         "catalog": {
-            "title": "Katalog — Relora",
+            "title": "Katalog - Relora",
             "description": "Durchsuchen Sie Relora-Auktionsangebote nach Kategorie, Designer, Größe, Zustand, Preis und Standort."
         },
         "search": {
-            "title": "Suche — Relora",
+            "title": "Suche - Relora",
             "description": "Suchen Sie Relora-Lots, Marken und Kategorien in kuratierten Fashion-Auktionen."
         },
         "designers": {
-            "title": "Designer-Marken — Relora",
+            "title": "Designer-Marken - Relora",
             "description": "Entdecken Sie Designer-Marken, Archivlabels, Luxushäuser und Streetwear-Namen auf Relora."
         },
         "login": {
-            "title": "Anmelden — Relora",
+            "title": "Anmelden - Relora",
             "description": "Melden Sie sich an, um Ihr Relora-Konto, Bestellungen, Angebote und beobachtete Auktionslots zu verwalten."
         },
         "register": {
-            "title": "Konto erstellen — Relora",
+            "title": "Konto erstellen - Relora",
             "description": "Erstellen Sie ein Relora-Konto, um Lots zu speichern, Verkäufern zu folgen und an kuratierten Fashion-Auktionen teilzunehmen."
         },
         "forgotPassword": {
-            "title": "Passwort zurücksetzen — Relora",
+            "title": "Passwort zurücksetzen - Relora",
             "description": "Fordern Sie einen Link an, um das Passwort Ihres Relora-Kontos zurückzusetzen."
         },
         "resetPassword": {
-            "title": "Passwort erneuern — Relora",
+            "title": "Passwort erneuern - Relora",
             "description": "Erstellen Sie ein neues Passwort für Ihr Relora-Konto."
         },
         "profile": {
-            "title": "Benutzerprofil — Relora",
+            "title": "Benutzerprofil - Relora",
             "description": "Sehen Sie ein Relora-Verkäuferprofil, aktive Angebote und verkaufte Artikel."
         },
         "lot": {
-            "title": "Lot — Relora",
+            "title": "Lot - Relora",
             "description": "Sehen Sie ein Relora-Auktionslot mit Artikeldetails, Verkäuferinformationen und Gebotshistorie."
         },
         "editLot": {
-            "title": "Angebot bearbeiten — Relora",
+            "title": "Angebot bearbeiten - Relora",
             "description": "Bearbeiten Sie ein bestehendes Relora-Angebot."
         },
         "sell": {
-            "title": "Artikel verkaufen — Relora",
+            "title": "Artikel verkaufen - Relora",
             "description": "Erstellen Sie ein Relora-Angebot zur Prüfung und Auktion."
         },
         "listings": {
-            "title": "Meine Angebote — Relora",
+            "title": "Meine Angebote - Relora",
             "description": "Verwalten Sie Ihre Relora-Angebote, Entwürfe, Prüfungen und Auktionen."
         },
         "orders": {
-            "title": "Bestellungen — Relora",
+            "title": "Bestellungen - Relora",
             "description": "Verfolgen Sie Ihre Relora-Käufe und verkauften Stücke vom erfolgreichen Gebot bis zur Lieferung."
         },
         "orderDetails": {
-            "title": "Bestelldetails — Relora",
+            "title": "Bestelldetails - Relora",
             "description": "Sehen Sie Relora-Bestelldetails, Zahlung, Lieferung, Versand und Streitfallinformationen."
         },
         "about": {
-            "title": "Über uns — Relora",
+            "title": "Über uns - Relora",
             "description": "Erfahren Sie mehr über Relora, einen kuratierten Auktionsmarktplatz für seltene Mode, zeitlose Stücke und sammelwürdiges Design."
         },
         "faq": {
-            "title": "FAQ — Relora",
+            "title": "FAQ - Relora",
             "description": "Antworten auf häufige Fragen zum Kaufen, Verkaufen und zu Auktionen auf Relora."
         },
         "support": {
-            "title": "Support — Relora",
+            "title": "Support - Relora",
             "description": "Kontaktieren Sie den Relora-Support für Hilfe zu Konten, Auktionen, Bestellungen und Verkauf."
         },
         "terms": {
-            "title": "Nutzungsbedingungen — Relora",
+            "title": "Nutzungsbedingungen - Relora",
             "description": "Lesen Sie die Relora-Nutzungsbedingungen für Plattformzugang, Auktionen, Angebote, Gebote und Transaktionen."
         },
         "privacy": {
-            "title": "Datenschutzerklärung — Relora",
+            "title": "Datenschutzerklärung - Relora",
             "description": "Erfahren Sie, wie Relora personenbezogene Daten erhebt, nutzt, speichert und schützt."
         },
         "buyerProtection": {
-            "title": "Käuferschutz — Relora",
+            "title": "Käuferschutz - Relora",
             "description": "Erfahren Sie, wie der Relora-Käuferschutz sicherere Fashion-Auktionstransaktionen unterstützt."
         },
         "cookiePolicy": {
-            "title": "Cookie-Richtlinie — Relora",
+            "title": "Cookie-Richtlinie - Relora",
             "description": "Erfahren Sie, wie Relora Cookies und ähnliche Technologien verwendet."
         },
         "howToSell": {
-            "title": "So verkaufen Sie — Relora",
+            "title": "So verkaufen Sie - Relora",
             "description": "Erfahren Sie, wie Sie auf Relora listen, bepreisen, versenden und Verkäufe abschließen."
         },
         "auctionRules": {
-            "title": "Auktionsregeln — Relora",
+            "title": "Auktionsregeln - Relora",
             "description": "Lesen Sie die Auktionsregeln für Gebote, Zuschläge, Zahlung und Verkäuferpflichten auf Relora."
         },
         "sellerProtection": {
-            "title": "Verkäuferschutz — Relora",
+            "title": "Verkäuferschutz - Relora",
             "description": "Erfahren Sie, wie der Relora-Verkäuferschutz sicherere Verkäufe und Streitfallbearbeitung unterstützt."
         },
         "journal": {
-            "title": "Journal — Relora",
+            "title": "Journal - Relora",
             "description": "Lesen Sie Relora-Journalbeiträge über seltene Mode, Archivstücke und Auktionskultur."
         },
         "sustainability": {
-            "title": "Nachhaltigkeit — Relora",
+            "title": "Nachhaltigkeit - Relora",
             "description": "Erfahren Sie, wie Relora längere Produktnutzung, Wiederverkauf und bewussteren Modekonsum unterstützt."
         },
         "brandPartnerships": {
-            "title": "Markenpartnerschaften — Relora",
+            "title": "Markenpartnerschaften - Relora",
             "description": "Erfahren Sie mehr über Möglichkeiten für Markenpartnerschaften mit Relora."
         },
         "notFound": {
-            "title": "Seite nicht gefunden — Relora",
+            "title": "Seite nicht gefunden - Relora",
             "description": "Die angeforderte Relora-Seite konnte nicht gefunden werden."
         }
     }

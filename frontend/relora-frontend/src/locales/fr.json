@@ -934,7 +934,6 @@
     "home": {
         "whyShortTitle": "Goût. Confiance. Pièces rares.",
         "howItWorks": {
-            "label": "COMMENT ÇA MARCHE",
             "title": "Trois étapes pour gagner",
             "steps": {
                 "discover": {
@@ -955,7 +954,6 @@
             }
         },
         "newLots": {
-            "eyebrow": "Tout juste arrivé",
             "title": "Nouveautés",
             "catalogLabel": "Catalogue",
             "viewAll": "Tout voir",
@@ -964,6 +962,7 @@
         },
         "liveHero": {
             "explore": "Découvrir les lots",
+            "viewAll": "Tout voir",
             "titleLine1": "Pièces rares.",
             "titleLine2": "Enchères live.",
             "live": "En direct",
@@ -971,14 +970,11 @@
             "lot": "Lot",
             "currentBid": "Enchère actuelle",
             "timeLeft": "Temps restant",
-            "bidNow": "Enchérir",
-            "viewLot": "Voir le lot",
-            "allLots": "Tous les lots en direct"
+            "bidNow": "Enchérir"
         },
         "liveAuctions": {
             "emptyTitle": "D’autres enchères arrivent bientôt.",
             "emptyText": "Les nouvelles pièces apparaissent ici dès le début de leur enchère. En attendant, parcourez le catalogue.",
-            "eyebrow": "En direct",
             "title": "Enchères live",
             "description": "Les pièces qui se terminent bientôt, en premier. Chaque prix et chaque minuteur viennent directement de l’enchère.",
             "viewAll": "Voir toutes les enchères",
@@ -987,10 +983,8 @@
         "sellAnItem": "Vendre un article",
         "liveAuction": "Enchère en direct",
         "browseBrands": "Parcourir les marques",
-        "categories": "Catégories",
         "shopByCategory": "Acheter par catégorie",
         "shopByCategoryDescription": "Explorez des styles marquants dans la mode, le streetwear et les détails de collection.",
-        "whyRelora": "Pourquoi Relora",
         "whyDescription": "Conçue pour ceux qui veulent plus qu’une infinité d’annonces — un endroit où la découverte semble sélectionnée.",
         "curatedTitle": "Marketplace soigneusement sélectionnée",
         "curatedDescription": "Chaque annonce est censée répondre à des standards plus élevés de qualité, de présentation et d’authenticité.",
@@ -1000,7 +994,6 @@
         "premiumDescription": "Découvrez vêtements de luxe, sacs de créateur, sneakers, montres et pièces fashion de collection au même endroit.",
         "trustTitle": "Pensé pour la confiance",
         "trustDescription": "Comptes sécurisés, annonces transparentes et marketplace centrée sur la confiance durable des acheteurs et vendeurs.",
-        "brands": "Marques",
         "shopByBrand": "Acheter par marque",
         "brand": "Marque",
         "seoFooter": "Relora est une marketplace d’enchères en ligne centrée sur la mode rare, les vêtements de créateur et les pièces de collection. Parcourez des annonces sélectionnées, enchérissez en confiance et découvrez des articles distinctifs, mémorables et dignes d’être possédés."
@@ -2288,125 +2281,125 @@
         "tagline": "Pas le marché de masse. Jamais ordinaire."
     },
     "seo": {
-        "settings": {"title": "Paramètres du compte — Relora", "description": "Gérez votre profil, mot de passe et préférences."},
+        "settings": {"title": "Paramètres du compte - Relora", "description": "Gérez votre profil, mot de passe et préférences."},
         "default": {
-            "title": "Relora — Enchères de mode créateur rare",
+            "title": "Relora - Enchères de mode créateur rare",
             "description": "Relora est une marketplace sélectionnée pour les enchères de mode créateur rare, vêtements d’archive et luxury streetwear. Découvrez des pièces de créateur authentifiées, vêtements de collection, archives runway et lots fashion exclusifs."
         },
         "home": {
-            "title": "Relora — Enchères de mode créateur rare",
+            "title": "Relora - Enchères de mode créateur rare",
             "description": "Une marketplace d’enchères raffinée pour la mode de créateur, les accessoires remarquables et les pièces de collection avec du caractère."
         },
         "catalog": {
-            "title": "Catalogue — Relora",
+            "title": "Catalogue - Relora",
             "description": "Parcourez les annonces d’enchères Relora par catégorie, créateur, taille, état, prix et localisation."
         },
         "search": {
-            "title": "Recherche — Relora",
+            "title": "Recherche - Relora",
             "description": "Recherchez des lots, marques et catégories Relora dans des enchères de mode sélectionnées."
         },
         "designers": {
-            "title": "Marques de créateur — Relora",
+            "title": "Marques de créateur - Relora",
             "description": "Explorez les marques de créateur, labels d’archive, maisons de luxe et noms streetwear disponibles sur Relora."
         },
         "login": {
-            "title": "Connexion — Relora",
+            "title": "Connexion - Relora",
             "description": "Connectez-vous pour gérer votre compte Relora, vos commandes, annonces et lots suivis."
         },
         "register": {
-            "title": "Créer un compte — Relora",
+            "title": "Créer un compte - Relora",
             "description": "Créez un compte Relora pour sauvegarder des lots, suivre des vendeurs et participer à des enchères de mode sélectionnées."
         },
         "forgotPassword": {
-            "title": "Réinitialisation du mot de passe — Relora",
+            "title": "Réinitialisation du mot de passe - Relora",
             "description": "Demandez un lien pour réinitialiser le mot de passe de votre compte Relora."
         },
         "resetPassword": {
-            "title": "Réinitialiser le mot de passe — Relora",
+            "title": "Réinitialiser le mot de passe - Relora",
             "description": "Créez un nouveau mot de passe pour votre compte Relora."
         },
         "profile": {
-            "title": "Profil utilisateur — Relora",
+            "title": "Profil utilisateur - Relora",
             "description": "Consultez un profil vendeur Relora, ses annonces actives et ses articles vendus."
         },
         "lot": {
-            "title": "Lot — Relora",
+            "title": "Lot - Relora",
             "description": "Consultez un lot d’enchère Relora avec détails de l’article, informations vendeur et historique des enchères."
         },
         "editLot": {
-            "title": "Modifier l’annonce — Relora",
+            "title": "Modifier l’annonce - Relora",
             "description": "Modifiez une annonce Relora existante."
         },
         "sell": {
-            "title": "Vendre un article — Relora",
+            "title": "Vendre un article - Relora",
             "description": "Créez une annonce Relora pour examen et vente aux enchères."
         },
         "listings": {
-            "title": "Mes annonces — Relora",
+            "title": "Mes annonces - Relora",
             "description": "Gérez vos annonces Relora, brouillons, examens et enchères."
         },
         "orders": {
-            "title": "Commandes — Relora",
+            "title": "Commandes - Relora",
             "description": "Suivez vos achats Relora et pièces vendues, de l’enchère gagnante à la livraison."
         },
         "orderDetails": {
-            "title": "Détails de commande — Relora",
+            "title": "Détails de commande - Relora",
             "description": "Consultez les détails de commande Relora, paiement, livraison, expédition et litiges."
         },
         "about": {
-            "title": "À propos — Relora",
+            "title": "À propos - Relora",
             "description": "Découvrez Relora, marketplace d’enchères sélectionnée pour la mode rare, les pièces intemporelles et le design de collection."
         },
         "faq": {
-            "title": "FAQ — Relora",
+            "title": "FAQ - Relora",
             "description": "Trouvez des réponses aux questions fréquentes sur l’achat, la vente et les enchères sur Relora."
         },
         "support": {
-            "title": "Support — Relora",
+            "title": "Support - Relora",
             "description": "Contactez le support Relora pour obtenir de l’aide sur les comptes, enchères, commandes et ventes."
         },
         "terms": {
-            "title": "Conditions d’utilisation — Relora",
+            "title": "Conditions d’utilisation - Relora",
             "description": "Lisez les Conditions d’utilisation Relora régissant l’accès à la plateforme, les enchères, annonces, offres et transactions."
         },
         "privacy": {
-            "title": "Politique de confidentialité — Relora",
+            "title": "Politique de confidentialité - Relora",
             "description": "Découvrez comment Relora collecte, utilise, conserve et protège les informations personnelles."
         },
         "buyerProtection": {
-            "title": "Protection acheteur — Relora",
+            "title": "Protection acheteur - Relora",
             "description": "Découvrez comment la protection acheteur Relora soutient des transactions d’enchères de mode plus sûres."
         },
         "cookiePolicy": {
-            "title": "Politique relative aux cookies — Relora",
+            "title": "Politique relative aux cookies - Relora",
             "description": "Découvrez comment Relora utilise les cookies et technologies similaires."
         },
         "howToSell": {
-            "title": "Comment vendre — Relora",
+            "title": "Comment vendre - Relora",
             "description": "Apprenez à créer une annonce, fixer un prix, expédier et conclure des ventes sur Relora."
         },
         "auctionRules": {
-            "title": "Règles des enchères — Relora",
+            "title": "Règles des enchères - Relora",
             "description": "Lisez les règles des enchères concernant les offres, gains, paiements et obligations vendeur sur Relora."
         },
         "sellerProtection": {
-            "title": "Protection vendeur — Relora",
+            "title": "Protection vendeur - Relora",
             "description": "Découvrez comment la protection vendeur Relora soutient des ventes plus sûres et le traitement des litiges."
         },
         "journal": {
-            "title": "Journal — Relora",
+            "title": "Journal - Relora",
             "description": "Lisez les articles du journal Relora sur la mode rare, les pièces d’archive et la culture des enchères."
         },
         "sustainability": {
-            "title": "Durabilité — Relora",
+            "title": "Durabilité - Relora",
             "description": "Découvrez comment Relora soutient une durée de vie plus longue des produits, la revente et une consommation de mode plus intentionnelle."
         },
         "brandPartnerships": {
-            "title": "Partenariats de marque — Relora",
+            "title": "Partenariats de marque - Relora",
             "description": "Découvrez les opportunités de partenariat de marque avec Relora."
         },
         "notFound": {
-            "title": "Page introuvable — Relora",
+            "title": "Page introuvable - Relora",
             "description": "La page Relora demandée est introuvable."
         }
     }

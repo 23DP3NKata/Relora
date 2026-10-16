@@ -12,15 +12,13 @@ const steps = ['discover', 'bid', 'win']
 <template>
   <section aria-labelledby="how-title">
     <HomeSectionHeader
-      number="07"
-      :eyebrow="$t('home.howItWorks.label')"
       :title="$t('home.howItWorks.title')"
       title-id="how-title"
     >
       <!-- entry point for sellers -->
       <RouterLink
         :to="localePath('/sell')"
-        class="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
+        class="text-[11px] uppercase tracking-[0.14em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
       >
         {{ $t('home.sellAnItem') }} →
       </RouterLink>

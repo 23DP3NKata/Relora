@@ -20,14 +20,14 @@ type UserPreference = 'men' | 'women'
 const userPreference = ref<UserPreference>('women')
 const showPreferenceModal = ref(false)
 
-// real live lots, the first one goes to the hero
+// real live lots
 const liveLots = ref<HomeLiveLot[]>([])
 const lotsLoaded = ref(false)
 const showcaseLot = getShowcaseLot()
 
-// no real auctions yet -> hero shows the showcase lot
-const heroLot = computed(() => liveLots.value[0] ?? showcaseLot)
-const feedLots = computed(() => liveLots.value.slice(1))
+// for now hero always shows the showcase lot, all real lots go to the feed
+const heroLot = computed(() => showcaseLot)
+const feedLots = computed(() => liveLots.value)
 
 let stopBidPlaced: (() => void) | undefined
 let stopAuctionEnded: (() => void) | undefined
@@ -71,6 +71,7 @@ onMounted(async () => {
   liveLots.value = await getHomeLiveLots()
   lotsLoaded.value = true
 
+  // live updates for the first lot in the feed
   const hero = liveLots.value[0]
   if (!hero?.auctionId) return
 
@@ -103,8 +104,9 @@ onBeforeUnmount(() => {
   stopBidPlaced?.()
   stopAuctionEnded?.()
 
-  if (heroLot.value?.auctionId) {
-    auctionRealtimeService.leaveAuction(heroLot.value.auctionId).catch(() => {})
+  const firstLot = liveLots.value[0]
+  if (firstLot?.auctionId) {
+    auctionRealtimeService.leaveAuction(firstLot.auctionId).catch(() => {})
   }
 })
 </script>

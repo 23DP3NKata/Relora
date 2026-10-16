@@ -1188,7 +1188,6 @@
     "home": {
         "whyShortTitle": "Taste. Trust. Rare finds.",
         "newLots": {
-            "eyebrow": "Just in",
             "title": "New in",
             "catalogLabel": "Catalog",
             "viewAll": "View all",
@@ -1197,6 +1196,7 @@
         },
         "liveHero": {
             "explore": "Explore lots",
+            "viewAll": "View all",
             "titleLine1": "Rare pieces.",
             "titleLine2": "Live bids.",
             "live": "Live",
@@ -1204,14 +1204,11 @@
             "lot": "Lot",
             "currentBid": "Current bid",
             "timeLeft": "Time left",
-            "bidNow": "Bid now",
-            "viewLot": "View lot",
-            "allLots": "All live lots"
+            "bidNow": "Bid now"
         },
         "liveAuctions": {
             "emptyTitle": "More auctions are on the way.",
             "emptyText": "New pieces appear here as soon as their auctions start. Meanwhile, browse the catalog.",
-            "eyebrow": "Live now",
             "title": "Live auctions",
             "description": "Pieces closing next, soonest first. Every price and timer comes straight from the auction.",
             "viewAll": "View all auctions",
@@ -1220,10 +1217,8 @@
         "sellAnItem": "Sell an item",
         "liveAuction": "Live auction",
         "browseBrands": "Browse brands",
-        "categories": "Categories",
         "shopByCategory": "Shop by category",
         "shopByCategoryDescription": "Explore standout styles across fashion, streetwear, and collectible detail.",
-        "whyRelora": "Why Relora",
         "whyDescription": "Built for people who want more than endless listings — a place where discovery feels curated.",
         "curatedTitle": "Carefully curated marketplace",
         "curatedDescription": "Every listing is expected to meet higher standards for quality, presentation, and authenticity.",
@@ -1233,12 +1228,10 @@
         "premiumDescription": "Discover luxury clothing, designer bags, sneakers, watches, and collectible fashion pieces in one place.",
         "trustTitle": "Designed for trust",
         "trustDescription": "Secure accounts, transparent listings, and a marketplace focused on long-term buyer and seller confidence.",
-        "brands": "Brands",
         "shopByBrand": "Shop by brand",
         "brand": "Brand",
         "seoFooter": "Relora is an online auction marketplace focused on rare fashion, designer clothing, and collectible pieces. Browse curated listings, place bids with confidence, and discover items that feel distinctive, memorable, and worth owning.",
         "howItWorks": {
-            "label": "HOW IT WORKS",
             "title": "Three steps to win",
             "steps": {
                 "discover": {
@@ -2202,125 +2195,125 @@
         "tagline": "Not mass market. Never ordinary."
     },
     "seo": {
-        "settings": {"title": "Account settings — Relora", "description": "Manage your profile, password and preferences."},
+        "settings": {"title": "Account settings - Relora", "description": "Manage your profile, password and preferences."},
         "default": {
-            "title": "Relora — Rare Designer Fashion Auctions",
+            "title": "Relora - Rare Designer Fashion Auctions",
             "description": "Relora is a curated marketplace for rare designer fashion, archive clothing and luxury streetwear auctions. Discover authenticated designer pieces, collectible garments, runway archives and exclusive fashion lots."
         },
         "home": {
-            "title": "Relora — Rare Designer Fashion Auctions",
+            "title": "Relora - Rare Designer Fashion Auctions",
             "description": "A refined auction marketplace for designer fashion, standout accessories and collectible pieces with character."
         },
         "catalog": {
-            "title": "Catalog — Relora",
+            "title": "Catalog - Relora",
             "description": "Browse Relora auction listings by category, designer, size, condition, price and location."
         },
         "search": {
-            "title": "Search — Relora",
+            "title": "Search - Relora",
             "description": "Search Relora lots, brands and categories across curated fashion auctions."
         },
         "designers": {
-            "title": "Designer Brands — Relora",
+            "title": "Designer Brands - Relora",
             "description": "Explore designer brands, archive fashion labels, luxury houses and streetwear names available on Relora."
         },
         "login": {
-            "title": "Sign In — Relora",
+            "title": "Sign In - Relora",
             "description": "Sign in to manage your Relora account, orders, listings and watched auction lots."
         },
         "register": {
-            "title": "Create Account — Relora",
+            "title": "Create Account - Relora",
             "description": "Create a Relora account to save lots, follow sellers and participate in curated fashion auctions."
         },
         "forgotPassword": {
-            "title": "Password Reset — Relora",
+            "title": "Password Reset - Relora",
             "description": "Request a link to reset your Relora account password."
         },
         "resetPassword": {
-            "title": "Reset Password — Relora",
+            "title": "Reset Password - Relora",
             "description": "Create a new password for your Relora account."
         },
         "profile": {
-            "title": "User Profile — Relora",
+            "title": "User Profile - Relora",
             "description": "View a Relora seller profile, active listings and sold items."
         },
         "lot": {
-            "title": "Lot — Relora",
+            "title": "Lot - Relora",
             "description": "View a Relora auction lot with item details, seller information and bid history."
         },
         "editLot": {
-            "title": "Edit Listing — Relora",
+            "title": "Edit Listing - Relora",
             "description": "Edit an existing Relora listing."
         },
         "sell": {
-            "title": "Sell an Item — Relora",
+            "title": "Sell an Item - Relora",
             "description": "Create a Relora listing for review and auction sale."
         },
         "listings": {
-            "title": "My Listings — Relora",
+            "title": "My Listings - Relora",
             "description": "Manage your Relora listings, drafts, reviews and auctions."
         },
         "orders": {
-            "title": "Orders — Relora",
+            "title": "Orders - Relora",
             "description": "Follow your Relora purchases and sold pieces from winning bid to delivery."
         },
         "orderDetails": {
-            "title": "Order Details — Relora",
+            "title": "Order Details - Relora",
             "description": "View Relora order details, payment, delivery, shipment and dispute information."
         },
         "about": {
-            "title": "About — Relora",
+            "title": "About - Relora",
             "description": "Learn about Relora, a curated auction marketplace for rare fashion, timeless pieces and collectible design."
         },
         "faq": {
-            "title": "FAQ — Relora",
+            "title": "FAQ - Relora",
             "description": "Find answers to common questions about buying, selling and auctions on Relora."
         },
         "support": {
-            "title": "Support — Relora",
+            "title": "Support - Relora",
             "description": "Contact Relora support for help with accounts, auctions, orders and selling."
         },
         "terms": {
-            "title": "Terms of Service — Relora",
+            "title": "Terms of Service - Relora",
             "description": "Read the Relora Terms of Service governing platform access, auctions, listings, bids and transactions."
         },
         "privacy": {
-            "title": "Privacy Policy — Relora",
+            "title": "Privacy Policy - Relora",
             "description": "Learn how Relora collects, uses, stores and protects personal information."
         },
         "buyerProtection": {
-            "title": "Buyer Protection — Relora",
+            "title": "Buyer Protection - Relora",
             "description": "Learn how Relora buyer protection supports safer fashion auction transactions."
         },
         "cookiePolicy": {
-            "title": "Cookie Policy — Relora",
+            "title": "Cookie Policy - Relora",
             "description": "Learn how Relora uses cookies and similar technologies."
         },
         "howToSell": {
-            "title": "How to Sell — Relora",
+            "title": "How to Sell - Relora",
             "description": "Learn how to list, price, ship and complete sales on Relora."
         },
         "auctionRules": {
-            "title": "Auction Rules — Relora",
+            "title": "Auction Rules - Relora",
             "description": "Read the auction rules for bidding, winning, payment and seller obligations on Relora."
         },
         "sellerProtection": {
-            "title": "Seller Protection — Relora",
+            "title": "Seller Protection - Relora",
             "description": "Learn how Relora seller protection supports safer sales and dispute handling."
         },
         "journal": {
-            "title": "Journal — Relora",
+            "title": "Journal - Relora",
             "description": "Read Relora journal stories about rare fashion, archive pieces and auction culture."
         },
         "sustainability": {
-            "title": "Sustainability — Relora",
+            "title": "Sustainability - Relora",
             "description": "Learn how Relora supports longer product life, resale and more intentional fashion consumption."
         },
         "brandPartnerships": {
-            "title": "Brand Partnerships — Relora",
+            "title": "Brand Partnerships - Relora",
             "description": "Learn about brand partnership opportunities with Relora."
         },
         "notFound": {
-            "title": "Page Not Found — Relora",
+            "title": "Page Not Found - Relora",
             "description": "The requested Relora page could not be found."
         }
     }

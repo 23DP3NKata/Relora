@@ -41,8 +41,6 @@ watch(() => props.preference, loadLots)
 <template>
   <section aria-labelledby="new-lots-title">
     <HomeSectionHeader
-      number="03"
-      :eyebrow="$t('home.newLots.eyebrow')"
       :title="$t('home.newLots.title')"
       title-id="new-lots-title"
     >
@@ -55,7 +53,7 @@ watch(() => props.preference, loadLots)
           v-for="option in options"
           :key="option"
           type="button"
-          class="h-10 rounded-full px-5 font-mono text-[11px] uppercase tracking-[0.18em] transition"
+          class="h-10 rounded-full px-5 text-[11px] uppercase tracking-[0.14em] transition"
           :class="preference === option
             ? 'bg-[#111111] text-white dark:bg-white dark:text-[#111111]'
             : 'text-foreground/60 hover:text-foreground'"
@@ -68,7 +66,7 @@ watch(() => props.preference, loadLots)
 
       <RouterLink
         :to="catalogLink"
-        class="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
+        class="text-[11px] uppercase tracking-[0.14em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
       >
         {{ $t('home.newLots.viewAll') }} →
       </RouterLink>
@@ -97,7 +95,7 @@ watch(() => props.preference, loadLots)
       </p>
       <RouterLink
         :to="localePath('/catalog')"
-        class="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
+        class="text-[11px] uppercase tracking-[0.14em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
       >
         {{ $t('home.newLots.browseAll') }} →
       </RouterLink>
