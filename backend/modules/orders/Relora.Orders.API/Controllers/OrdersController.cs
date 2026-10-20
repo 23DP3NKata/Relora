@@ -124,20 +124,4 @@ public sealed class OrdersController(IMediator mediator) : ControllerBase
 
         return Ok(new { disputeId });
     }
-
-    [HttpPost("{orderId:guid}/not-delivered")]
-    [Authorize]
-    public async Task<ActionResult> ReportOrderNotDelivered(
-        Guid orderId,
-        [FromBody] ReportOrderNotDeliveredRequest? request,
-        CancellationToken cancellationToken)
-    {
-        var buyerId = User.Claims.GetUserId();
-
-        await _mediator.Send(
-            new ReportOrderNotDeliveredCommand(orderId, buyerId, request?.Reason),
-            cancellationToken);
-
-        return Ok();
-    }
 }

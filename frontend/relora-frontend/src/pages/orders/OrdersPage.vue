@@ -220,9 +220,9 @@ const normalizeLot = (source: unknown): LotSummary => {
 const statusKey = (row: OrderListRow): OrderStatusKey => {
   const label = row.statusName.toLowerCase()
 
-  if (/(buyerprotection|buyer protection|disputed)/.test(label)) return 'buyer_protection'
+  if (/disputed/.test(label)) return 'buyer_protection'
   if (/(paymentexpired|payment expired)/.test(label)) return 'payment_expired'
-  if (/(cancel|refund)/.test(label)) return 'cancelled'
+  if (/cancel/.test(label)) return 'cancelled'
   if (/(fail|declin|expired)/.test(label)) return 'failed'
   if (/(delivered|completed)/.test(label)) return 'completed'
   if (/(shipped|dispatched|in transit)/.test(label)) return 'shipped'

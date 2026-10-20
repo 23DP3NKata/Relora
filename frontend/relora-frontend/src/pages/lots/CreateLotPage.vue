@@ -43,13 +43,10 @@ const {
   isLoadingLookups,
   isSubmitting,
   isUploadingPhotos,
-  isUploadingProofDocuments,
   errorMessage,
   successMessage,
   handleStart,
   handleFilesSelected,
-  handleProofDocumentsSelected,
-  removeProofDocument,
   removePhoto,
   replacePhoto,
   retryPhoto,
@@ -66,7 +63,6 @@ const reviewForm = computed(() => ({
   gender: form.department ? localizedOptionLabel(`departments.${form.department}`) : "",
   size: localizedOptionLabel(getOptionLabel(form.size, SIZE_OPTIONS)),
   condition: localizedOptionLabel(getOptionLabel(form.condition, CONDITION_OPTIONS)),
-  proofCount: form.proofDocuments.length,
   measurementsCount: form.measurements.length,
   materials: form.materials
     .map((material) => lookups.value?.materials.find((option) => option.id === material.materialId)?.nameKey)
@@ -162,13 +158,8 @@ function manageListings() {
       <SellPhotosStep
         v-else-if="currentStep === 'photos'"
         :photos="photos"
-        :proof-documents="form.proofDocuments"
-        :proof-document-types="lookups?.proofDocumentTypes ?? []"
         :is-uploading="isUploadingPhotos"
-        :is-uploading-proof-documents="isUploadingProofDocuments"
         @files-selected="handleFilesSelected"
-        @proof-documents-selected="handleProofDocumentsSelected"
-        @remove-proof-document="removeProofDocument"
         @remove-photo="removePhoto"
         @replace-photo="replacePhoto"
         @retry-photo="retryPhoto"
@@ -219,7 +210,7 @@ function manageListings() {
         <button
           type="button"
           class="inline-flex items-center justify-center rounded-2xl border px-5 py-3 text-sm font-medium transition hover:bg-foreground hover:text-background disabled:cursor-not-allowed disabled:opacity-50"
-          :disabled="isFirstStep || isSubmitting || isUploadingPhotos || isUploadingProofDocuments"
+          :disabled="isFirstStep || isSubmitting || isUploadingPhotos"
           @click="goToPreviousStep"
         >
           {{ $t("sell.back") }}
@@ -229,17 +220,17 @@ function manageListings() {
           v-if="!isLastStep"
           type="button"
           class="inline-flex items-center justify-center rounded-2xl bg-foreground px-5 py-3 text-sm font-medium text-background transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
-          :disabled="isSubmitting || isUploadingPhotos || isUploadingProofDocuments"
+          :disabled="isSubmitting || isUploadingPhotos"
           @click="goToNextStep"
         >
-          {{ isUploadingPhotos || isUploadingProofDocuments ? $t("sell.uploading") : $t("sell.continue") }}
+          {{ isUploadingPhotos ? $t("sell.uploading") : $t("sell.continue") }}
         </button>
 
         <button
           v-else
           type="button"
           class="inline-flex items-center justify-center rounded-2xl bg-foreground px-5 py-3 text-sm font-medium text-background transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
-          :disabled="isSubmitting || isUploadingPhotos || isUploadingProofDocuments"
+          :disabled="isSubmitting || isUploadingPhotos"
           @click="handleSubmit"
         >
           {{ isSubmitting ? $t("sell.submitting") : $t("sell.submitForReview") }}

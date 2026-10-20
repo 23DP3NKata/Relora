@@ -13,13 +13,9 @@ const statusMapByNumber: Record<number, OrderStatusNormalized> = {
   3: 'awaiting_shipment',
   4: 'shipped',
   5: 'shipped',
-  6: 'buyer_protection',
-  7: 'paid',
-  8: 'completed',
-  9: 'cancelled',
-  10: 'disputed',
-  11: 'cancelled',
-  12: 'failed',
+  6: 'completed',
+  7: 'cancelled',
+  8: 'disputed',
 }
 
 export function normalizeOrderStatus(status: string | number | null | undefined): OrderStatusNormalized {
@@ -29,7 +25,6 @@ export function normalizeOrderStatus(status: string | number | null | undefined)
 
   const value = String(status ?? '').toLowerCase().trim()
   if (!value) return 'unknown'
-  if (value.includes('buyerprotection') || value.includes('buyer protection')) return 'buyer_protection'
   if (value.includes('disputed')) return 'disputed'
   if (value.includes('paymentexpired') || value.includes('payment expired')) return 'payment_expired'
   if (value.includes('pending') || value.includes('unpaid')) return 'unpaid'
@@ -37,7 +32,7 @@ export function normalizeOrderStatus(status: string | number | null | undefined)
   if (value.includes('paid')) return 'paid'
   if (value.includes('ship')) return 'shipped'
   if (value.includes('complete')) return 'completed'
-  if (value.includes('cancel') || value.includes('refund')) return 'cancelled'
+  if (value.includes('cancel')) return 'cancelled'
   if (value.includes('failed') || value.includes('expired')) return 'failed'
   return 'unknown'
 }
@@ -67,7 +62,7 @@ export function normalizeShippingStatus(status: string | number | null | undefin
   const value = String(status ?? '').toLowerCase().trim()
   if (!value) return 'unknown'
   if (value.includes('complete')) return 'completed'
-  if (value.includes('buyerprotection') || value.includes('buyer protection') || value.includes('disputed')) return 'buyer_protection'
+  if (value.includes('disputed')) return 'buyer_protection'
   if (value.includes('ship')) return 'shipped'
   if (value.includes('paid') || value.includes('pending') || value.includes('await')) return 'awaiting_shipment'
   return 'unknown'

@@ -99,16 +99,6 @@ public sealed class AdminController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("orders/delivery-issues")]
-    public async Task<ActionResult<IReadOnlyList<DeliveryIssueOrderDto>>> GetDeliveryIssueOrders(
-        CancellationToken cancellationToken)
-    {
-        var adminId = User.Claims.GetUserId();
-        var result = await _mediator.Send(new GetDeliveryIssueOrders(adminId), cancellationToken);
-
-        return Ok(result);
-    }
-
     [HttpGet("disputes")]
     public async Task<ActionResult<IReadOnlyList<AdminOrderDisputeDto>>> GetOrderDisputes(
         CancellationToken cancellationToken)

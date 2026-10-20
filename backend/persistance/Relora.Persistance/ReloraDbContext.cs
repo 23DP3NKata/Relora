@@ -20,9 +20,7 @@ public sealed class ReloraDbContext : DbContext
     public DbSet<Material> Materials => Set<Material>();
     public DbSet<ItemColor> Colors => Set<ItemColor>();
     public DbSet<MeasurementDefinition> MeasurementDefinitions => Set<MeasurementDefinition>();
-    public DbSet<ProofDocumentType> ProofDocumentTypes => Set<ProofDocumentType>();
     public DbSet<PendingLotMediaUpload> PendingLotMediaUploads => Set<PendingLotMediaUpload>();
-    public DbSet<PendingLotProofDocumentUpload> PendingLotProofDocumentUploads => Set<PendingLotProofDocumentUpload>();
     public DbSet<Bid> Bids => Set<Bid>();
     public DbSet<User> Users => Set<User>();
     public DbSet<Order> Orders => Set<Order>();

@@ -166,12 +166,5 @@ public sealed class EditLotCommandValidator : AbstractValidator<EditLotCommand>
             .Must(measurements => measurements is null ||
                                   measurements.Select(measurement => measurement.Key.Trim().ToLowerInvariant()).Distinct().Count() == measurements.Count)
             .WithMessage("Measurement keys must be unique.");
-
-        RuleFor(x => x.proofDocuments)
-            .Must(documents => documents is null ||
-                               documents.All(document => document.UploadId != Guid.Empty) &&
-                               documents.Select(document => document.UploadId).Distinct().Count() == documents.Count &&
-                               documents.Count <= 5)
-            .WithMessage("Proof document upload ids must be unique, non-empty, and limited to 5 documents.");
     }
 }

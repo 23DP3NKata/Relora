@@ -41,6 +41,5 @@ public sealed record EditLotCommand(
     IReadOnlyList<string>? photoKeys,
     string? coverPhotoKey,
     IReadOnlyList<LotMaterialInput>? materials,
-    IReadOnlyList<LotMeasurementInput>? measurements,
-    IReadOnlyList<ProofDocumentUploadInput>? proofDocuments
+    IReadOnlyList<LotMeasurementInput>? measurements
 ) : IRequest;

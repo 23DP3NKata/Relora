@@ -69,13 +69,14 @@ public sealed class GetLotQueryHandler(
         }
 
         var catalogContext = await CreateCatalogContextAsync(cancellationToken);
-        var canShowPrivateProofDocuments = lot.CanShowProofMetadata(request.ViewerUserId, request.ViewerIsAdmin);
+        // vintage notes are shown only to the seller and admins
+        var canShowPrivateDetails = request.ViewerIsAdmin || request.ViewerUserId == lot.SellerId;
 
         return LotReadModelMapper.ToDetails(
             lot,
             catalogContext,
             _publicBaseUrl,
-            canShowPrivateProofDocuments,
+            canShowPrivateDetails,
             new LotSellerDto
             {
                 Id = seller.Id,
@@ -89,9 +90,8 @@ public sealed class GetLotQueryHandler(
         var categories = await _catalogRepository.GetCategoriesAsync(cancellationToken);
         var colors = await _catalogRepository.GetColorsAsync(cancellationToken);
         var materials = await _catalogRepository.GetMaterialsAsync(cancellationToken);
-        var proofTypes = await _catalogRepository.GetProofDocumentTypesAsync(cancellationToken);
         var measurements = await _catalogRepository.GetMeasurementDefinitionsAsync(cancellationToken);
 
-        return LotReadModelMapper.CreateContext(categories, colors, materials, proofTypes, measurements);
+        return LotReadModelMapper.CreateContext(categories, colors, materials, measurements);
     }
 }

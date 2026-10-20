@@ -60,8 +60,6 @@ public sealed class OrderDispute : AggregateRoot<Guid>
             OrderStatus.PendingPayment or
             OrderStatus.PaymentExpired or
             OrderStatus.Cancelled or
-            OrderStatus.Failed or
-            OrderStatus.Refunded or
             OrderStatus.Completed)
         {
             throw new InvalidOperationException("This order cannot be disputed.");

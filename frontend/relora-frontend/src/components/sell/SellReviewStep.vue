@@ -15,7 +15,6 @@ type ReviewForm = {
   primaryColor: string
   materials: string[]
   measurementsCount: number
-  proofCount: number
   shippingPrice: number | null
   shippingCurrency: string
   shippingOriginCountry: string
@@ -133,13 +132,6 @@ const props = defineProps<{
               <span>{{ $t("sell.measurementsTitle") }}</span>
               <span class="text-right text-foreground">
                 {{ form.measurementsCount }}
-              </span>
-            </div>
-
-            <div class="flex items-start justify-between gap-4">
-              <span>{{ $t("sell.proofTitle") }}</span>
-              <span class="text-right text-foreground">
-                {{ form.proofCount }}
               </span>
             </div>
 

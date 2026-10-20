@@ -47,14 +47,6 @@ public sealed class DeleteLotCommandHandler(
             lotToDelete.DeletePhoto(media);
         }
 
-        foreach (var document in lotToDelete.ProofDocuments.ToList())
-        {
-            if (!string.IsNullOrWhiteSpace(document.StorageKey))
-            {
-                await _mediaUploader.DeleteForLotAsync(document.StorageKey);
-            }
-        }
-
         await _lotRepository.DeleteLotAsync(lotToDelete, cancellationToken);
     }
 }

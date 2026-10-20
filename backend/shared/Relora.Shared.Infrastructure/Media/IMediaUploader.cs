@@ -13,8 +13,6 @@ namespace Relora.Shared.Infrastructure.Media;
 public interface IMediaUploader
 {
     Task<string> UploadAsync(Guid ownerId, Stream stream, string fileName, string contentType);
-    Task<string> UploadPrivateAsync(Guid ownerId, Stream stream, string fileName, string contentType);
-    Task<string> CreatePrivateReadUrlAsync(string key, TimeSpan lifetime, CancellationToken cancellationToken);
     Task DeleteAsync(Guid ownerId, string key);
     Task DeleteForLotAsync(string key);
     Task<IReadOnlyList<string>> GetKeysOlderThanAsync(string prefix, DateTime cutoffUtc, CancellationToken cancellationToken);

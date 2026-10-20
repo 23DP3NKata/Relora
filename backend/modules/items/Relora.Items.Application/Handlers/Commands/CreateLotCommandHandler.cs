@@ -19,7 +19,6 @@ public sealed class CreateLotCommandHandler : IRequestHandler<CreateLotCommand, 
     private readonly ILotRepository _lotRepository;
     private readonly ILotCatalogRepository _catalogRepository;
     private readonly IPendingLotMediaUploadRepository _pendingUploads;
-    private readonly IPendingLotProofDocumentUploadRepository _pendingProofUploads;
     private readonly ITransactionRunner _transactions;
     private readonly IClock _clock;
 
@@ -30,14 +29,12 @@ public sealed class CreateLotCommandHandler : IRequestHandler<CreateLotCommand, 
         ILotRepository lotRepository,
         ILotCatalogRepository catalogRepository,
         IPendingLotMediaUploadRepository pendingUploads,
-        IPendingLotProofDocumentUploadRepository pendingProofUploads,
         ITransactionRunner transactions,
         IClock clock)
     {
         _lotRepository = lotRepository;
         _catalogRepository = catalogRepository;
         _pendingUploads = pendingUploads;
-        _pendingProofUploads = pendingProofUploads;
         _transactions = transactions;
         _clock = clock;
     }
@@ -113,70 +110,13 @@ public sealed class CreateLotCommandHandler : IRequestHandler<CreateLotCommand, 
                 index,
                 string.Equals(key, coverPhotoKey, StringComparison.Ordinal))));
 
-        var proofUploads = await GetProofUploadsAsync(request, cancellationToken);
-        foreach (var upload in proofUploads)
-        {
-            lot.AddProofDocument(
-                upload.Id,
-                request.SellerId,
-                upload.DocumentTypeId,
-                upload.OriginalFileName,
-                upload.StorageKey,
-                upload.MimeType,
-                upload.SizeBytes,
-                upload.CreatedAtUtc);
-        }
-
         await _transactions.ExecuteAsync(async ct =>
         {
             await _lotRepository.AddLotAsync(lot, ct);
             await _pendingUploads.DeleteRangeAsync(uploads, ct);
-            await _pendingProofUploads.DeleteRangeAsync(proofUploads, ct);
         }, cancellationToken);
 
         return lot.Id;
-    }
-
-    private async Task<IReadOnlyList<PendingLotProofDocumentUpload>> GetProofUploadsAsync(
-        CreateLotCommand request,
-        CancellationToken cancellationToken)
-    {
-        var uploadIds = (request.ProofDocuments ?? [])
-            .Select(upload => upload.UploadId)
-            .Where(uploadId => uploadId != Guid.Empty)
-            .Distinct()
-            .ToArray();
-
-        if (uploadIds.Length == 0)
-        {
-            return [];
-        }
-
-        if (uploadIds.Length != request.ProofDocuments!.Count)
-        {
-            throw new InvalidOperationException("Proof document upload ids must be unique and non-empty.");
-        }
-
-        var uploads = await _pendingProofUploads.GetByOwnerAndIdsAsync(
-            request.SellerId,
-            uploadIds,
-            cancellationToken);
-
-        if (uploads.Count != uploadIds.Length)
-        {
-            throw new InvalidOperationException("Every proof document must be uploaded by the seller before creating the lot.");
-        }
-
-        foreach (var upload in uploads)
-        {
-            var type = await _catalogRepository.GetProofDocumentTypeByIdAsync(upload.DocumentTypeId, cancellationToken);
-            if (type is null || !type.IsActive)
-            {
-                throw new InvalidOperationException("One or more proof document types are not available.");
-            }
-        }
-
-        return uploads;
     }
 
     private static string[] NormalizePhotoKeys(IReadOnlyList<string>? photoKeys)

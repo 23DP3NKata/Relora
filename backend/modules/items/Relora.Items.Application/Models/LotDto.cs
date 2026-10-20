@@ -78,8 +78,6 @@ public sealed class LotDto
     public string? VintageNotes { get; set; }
     public IReadOnlyList<LotMaterialDto> Materials { get; set; } = [];
     public IReadOnlyList<LotMeasurementDto> Measurements { get; set; } = [];
-    public string ProofStatus { get; set; } = "notProvided";
-    public IReadOnlyList<LotProofDocumentDto> ProofDocuments { get; set; } = [];
 
     public LotStatus Status { get; set; }
     public string StatusName { get; set; }

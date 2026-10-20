@@ -303,18 +303,6 @@ const materialsLabel = computed(() => {
     .join(', ')
 })
 
-const proofStatusLabel = computed(() => {
-  const status = lot.value?.proofStatus
-
-  if (!status || status === 'NotProvided') {
-    return ''
-  }
-
-  const key = `lot.proofStatus.${status}`
-
-  return te(key) ? t(key) : status
-})
-
 const detailRows = computed(() => {
   const currentLot = lot.value
 
@@ -377,10 +365,6 @@ const detailRows = computed(() => {
       value: currentLot.isVintage
         ? t('lot.vintageConfirmed')
         : '',
-    },
-    {
-      label: t('lot.proofOfOrigin'),
-      value: proofStatusLabel.value,
     },
     {
       label: t('lot.style'),

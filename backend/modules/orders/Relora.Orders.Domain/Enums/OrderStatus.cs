@@ -11,11 +11,7 @@ public enum OrderStatus
     AwaitingShipment,
     Shipped,
     Delivered,
-    BuyerProtection,
-    PayoutPending,
     Completed,
     Cancelled,
-    Disputed,
-    Refunded,
-    Failed
+    Disputed
 }

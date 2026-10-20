@@ -35,6 +35,5 @@ public sealed record CreateLotRequest
     IReadOnlyList<string>? PhotoKeys,
     string? CoverPhotoKey,
     IReadOnlyList<LotMaterialInput>? Materials,
-    IReadOnlyList<LotMeasurementInput>? Measurements,
-    IReadOnlyList<ProofDocumentUploadInput>? ProofDocuments
+    IReadOnlyList<LotMeasurementInput>? Measurements
 );

@@ -120,11 +120,6 @@ public static class LotQueryExtensions
             query = query.Where(lot => lot.Measurements.Any());
         }
 
-        if (request.HasProofOfOrigin)
-        {
-            query = query.Where(lot => lot.ProofDocuments.Any());
-        }
-
         if (request.NewlyListed)
         {
             var listedAfter = utcNow.AddDays(-7);

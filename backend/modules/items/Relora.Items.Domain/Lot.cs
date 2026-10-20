@@ -14,7 +14,6 @@ public sealed class Lot : Entity<Guid>
     private readonly List<LotMaterial> _materials = new();
     private readonly List<LotSecondaryColor> _secondaryColors = new();
     private readonly List<LotMeasurement> _measurements = new();
-    private readonly List<LotProofDocument> _proofDocuments = new();
 
     private Lot()
     {
@@ -191,7 +190,6 @@ public sealed class Lot : Entity<Guid>
     public List<LotMaterial> Materials => _materials;
     public List<LotSecondaryColor> SecondaryColors => _secondaryColors;
     public List<LotMeasurement> Measurements => _measurements;
-    public List<LotProofDocument> ProofDocuments => _proofDocuments;
 
     public void Edit(
         Guid sellerId,
@@ -421,56 +419,6 @@ public sealed class Lot : Entity<Guid>
         }
     }
 
-    public void AddProofDocument(
-        Guid id,
-        Guid ownerId,
-        Guid documentTypeId,
-        string originalFileName,
-        string storageKey,
-        string mimeType,
-        long sizeBytes,
-        DateTime createdAtUtc)
-    {
-        EnsureSellerCanEdit(ownerId);
-        EnsureEditable();
-
-        if (_proofDocuments.Count >= 5)
-        {
-            throw new InvalidOperationException("Maximum 5 proof documents are allowed.");
-        }
-
-        if (_proofDocuments.Any(document => document.StorageKey == storageKey.Trim()))
-        {
-            return;
-        }
-
-        _proofDocuments.Add(new LotProofDocument(
-            id,
-            Id,
-            ownerId,
-            documentTypeId,
-            originalFileName,
-            storageKey,
-            mimeType,
-            sizeBytes,
-            createdAtUtc));
-    }
-
-    public LotProofDocument RemoveProofDocument(Guid ownerId, Guid documentId)
-    {
-        EnsureSellerCanEdit(ownerId);
-        EnsureEditable();
-
-        var document = _proofDocuments.FirstOrDefault(item => item.Id == documentId);
-        if (document is null)
-        {
-            throw new KeyNotFoundException("Proof document not found.");
-        }
-
-        _proofDocuments.Remove(document);
-        return document;
-    }
-
     public void Publish()
     {
         if (Status != LotStatus.Pending)
@@ -570,11 +518,6 @@ public sealed class Lot : Entity<Guid>
         ModerationReviewedByAdminId = adminId;
         ModerationReviewedAtUtc = reviewedAtUtc;
         Status = LotStatus.Published;
-    }
-
-    public bool CanShowProofMetadata(Guid? viewerUserId, bool viewerIsAdmin)
-    {
-        return viewerIsAdmin || (viewerUserId.HasValue && viewerUserId.Value == SellerId);
     }
 
     private void SetCoreDetails(
@@ -973,69 +916,4 @@ public sealed class Lot : Entity<Guid>
         public string Unit { get; private set; } = "cm";
     }
 
-    public sealed class LotProofDocument
-    {
-        private LotProofDocument()
-        {
-        }
-
-        public LotProofDocument(
-            Guid id,
-            Guid lotId,
-            Guid ownerId,
-            Guid documentTypeId,
-            string originalFileName,
-            string storageKey,
-            string mimeType,
-            long sizeBytes,
-            DateTime createdAtUtc)
-        {
-            if (id == Guid.Empty)
-            {
-                throw new ArgumentException("Proof document id is required.");
-            }
-
-            if (lotId == Guid.Empty)
-            {
-                throw new ArgumentException("Lot id is required.");
-            }
-
-            if (ownerId == Guid.Empty)
-            {
-                throw new ArgumentException("Owner id is required.");
-            }
-
-            if (documentTypeId == Guid.Empty)
-            {
-                throw new ArgumentException("Document type is required.");
-            }
-
-            if (string.IsNullOrWhiteSpace(storageKey))
-            {
-                throw new ArgumentException("Storage key is required.");
-            }
-
-            Id = id;
-            LotId = lotId;
-            OwnerId = ownerId;
-            DocumentTypeId = documentTypeId;
-            OriginalFileName = Path.GetFileName(originalFileName ?? string.Empty);
-            StorageKey = storageKey.Trim();
-            MimeType = string.IsNullOrWhiteSpace(mimeType)
-                ? "application/octet-stream"
-                : mimeType.Trim().ToLowerInvariant();
-            SizeBytes = sizeBytes;
-            CreatedAtUtc = createdAtUtc;
-        }
-
-        public Guid Id { get; private set; }
-        public Guid LotId { get; private set; }
-        public Guid OwnerId { get; private set; }
-        public Guid DocumentTypeId { get; private set; }
-        public string OriginalFileName { get; private set; } = default!;
-        public string StorageKey { get; private set; } = default!;
-        public string MimeType { get; private set; } = default!;
-        public long SizeBytes { get; private set; }
-        public DateTime CreatedAtUtc { get; private set; }
-    }
 }

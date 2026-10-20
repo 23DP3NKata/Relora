@@ -28,7 +28,6 @@ export type CatalogFilterKey =
   | 'productionYear'
   | 'vintageOnly'
   | 'hasMeasurements'
-  | 'hasProofOfOrigin'
   | 'endingSoon'
   | 'newlyListed'
 
@@ -52,7 +51,6 @@ export type CatalogFilters = {
 
   vintageOnly: boolean
   hasMeasurements: boolean
-  hasProofOfOrigin: boolean
   endingSoon: boolean
   newlyListed: boolean
 }
@@ -105,7 +103,6 @@ export type GetLotsListParams = {
 
   vintageOnly?: boolean
   hasMeasurements?: boolean
-  hasProofOfOrigin?: boolean
   endingSoon?: boolean
   newlyListed?: boolean
 
@@ -136,7 +133,6 @@ export function createEmptyCatalogFilters(): CatalogFilters {
 
     vintageOnly: false,
     hasMeasurements: false,
-    hasProofOfOrigin: false,
     endingSoon: false,
     newlyListed: false,
   }
@@ -165,7 +161,6 @@ export function cloneCatalogFilters(
 
     vintageOnly: filters.vintageOnly,
     hasMeasurements: filters.hasMeasurements,
-    hasProofOfOrigin: filters.hasProofOfOrigin,
     endingSoon: filters.endingSoon,
     newlyListed: filters.newlyListed,
   }

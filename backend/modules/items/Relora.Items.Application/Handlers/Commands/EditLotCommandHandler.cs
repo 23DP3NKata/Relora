@@ -21,7 +21,6 @@ public sealed class EditLotCommandHandler : IRequestHandler<EditLotCommand>
     private readonly ILotRepository _lotRepository;
     private readonly ILotCatalogRepository _catalogRepository;
     private readonly IPendingLotMediaUploadRepository _pendingMediaUploads;
-    private readonly IPendingLotProofDocumentUploadRepository _pendingProofUploads;
     private readonly ITransactionRunner _transactions;
     private readonly IMediaUploader _mediaUploader;
     private readonly IClock _clock;
@@ -33,7 +32,6 @@ public sealed class EditLotCommandHandler : IRequestHandler<EditLotCommand>
         ILotRepository lotRepository,
         ILotCatalogRepository catalogRepository,
         IPendingLotMediaUploadRepository pendingMediaUploads,
-        IPendingLotProofDocumentUploadRepository pendingProofUploads,
         ITransactionRunner transactions,
         IMediaUploader mediaUploader,
         IClock clock)
@@ -41,7 +39,6 @@ public sealed class EditLotCommandHandler : IRequestHandler<EditLotCommand>
         _lotRepository = lotRepository;
         _catalogRepository = catalogRepository;
         _pendingMediaUploads = pendingMediaUploads;
-        _pendingProofUploads = pendingProofUploads;
         _transactions = transactions;
         _mediaUploader = mediaUploader;
         _clock = clock;
@@ -128,20 +125,6 @@ public sealed class EditLotCommandHandler : IRequestHandler<EditLotCommand>
 
         var photoChanges = await ApplyPhotoChangesAsync(lot, request, cancellationToken);
 
-        var proofUploads = await GetProofUploadsAsync(request, cancellationToken);
-        foreach (var upload in proofUploads)
-        {
-            lot.AddProofDocument(
-                upload.Id,
-                request.sellerId,
-                upload.DocumentTypeId,
-                upload.OriginalFileName,
-                upload.StorageKey,
-                upload.MimeType,
-                upload.SizeBytes,
-                upload.CreatedAtUtc);
-        }
-
         await _transactions.ExecuteAsync(async ct =>
         {
             await _lotRepository.SaveLotAsync(lot, ct);
@@ -149,11 +132,6 @@ public sealed class EditLotCommandHandler : IRequestHandler<EditLotCommand>
             if (photoChanges.PendingUploads.Count > 0)
             {
                 await _pendingMediaUploads.DeleteRangeAsync(photoChanges.PendingUploads, ct);
-            }
-
-            if (proofUploads.Count > 0)
-            {
-                await _pendingProofUploads.DeleteRangeAsync(proofUploads, ct);
             }
         }, cancellationToken);
 
@@ -213,48 +191,6 @@ public sealed class EditLotCommandHandler : IRequestHandler<EditLotCommand>
                 string.Equals(key, coverPhotoKey, StringComparison.Ordinal))));
 
         return new PhotoChangeSet(uploads, removedPhotoKeys);
-    }
-
-    private async Task<IReadOnlyList<PendingLotProofDocumentUpload>> GetProofUploadsAsync(
-        EditLotCommand request,
-        CancellationToken cancellationToken)
-    {
-        var uploadIds = (request.proofDocuments ?? [])
-            .Select(upload => upload.UploadId)
-            .Where(uploadId => uploadId != Guid.Empty)
-            .Distinct()
-            .ToArray();
-
-        if (uploadIds.Length == 0)
-        {
-            return [];
-        }
-
-        if (uploadIds.Length != request.proofDocuments!.Count)
-        {
-            throw new InvalidOperationException("Proof document upload ids must be unique and non-empty.");
-        }
-
-        var uploads = await _pendingProofUploads.GetByOwnerAndIdsAsync(
-            request.sellerId,
-            uploadIds,
-            cancellationToken);
-
-        if (uploads.Count != uploadIds.Length)
-        {
-            throw new InvalidOperationException("Every proof document must be uploaded by the seller before editing the lot.");
-        }
-
-        foreach (var upload in uploads)
-        {
-            var type = await _catalogRepository.GetProofDocumentTypeByIdAsync(upload.DocumentTypeId, cancellationToken);
-            if (type is null || !type.IsActive)
-            {
-                throw new InvalidOperationException("One or more proof document types are not available.");
-            }
-        }
-
-        return uploads;
     }
 
     private static string[]? NormalizeOptionalPhotoKeys(IReadOnlyList<string>? photoKeys)

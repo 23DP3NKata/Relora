@@ -10,7 +10,6 @@ namespace Relora.Orders.Domain;
 public class Order : AggregateRoot<Guid>
 {
     public static readonly TimeSpan PaymentWindow = TimeSpan.FromDays(3);
-    public static readonly TimeSpan DeliveryIssueWindow = TimeSpan.FromDays(14);
 
     /// <summary>
     /// Gets or sets the auction id used by this type.
@@ -46,9 +45,6 @@ public class Order : AggregateRoot<Guid>
     public DateTime? ShippedAtUtc { get; private set; }
     public DateTime? DeliveredAtUtc { get; private set; }
     public DateTime? CompletedAtUtc { get; private set; }
-    public DateTime? DeliveryIssueAvailableFromUtc { get; private set; }
-    public DateTime? DeliveryIssueReportedAtUtc { get; private set; }
-    public string? DeliveryIssueReason { get; private set; }
     public string? CarrierName { get; private set; }
     public string? TrackingNumber { get; private set; }
     public string? ShippingFullName { get; private set; }
@@ -166,26 +162,6 @@ public class Order : AggregateRoot<Guid>
     }
 
     /// <summary>
-    /// Marks as failed.
-    /// </summary>
-    /// <param name="paidAtUtc">Date and time for the operation.</param>
-    public void MarkAsFailed(DateTime paidAtUtc)
-    {
-        if (Status != OrderStatus.PendingPayment)
-        {
-            throw new InvalidOperationException("Order is not payable.");
-        }
-
-        if (paidAtUtc > PaymentDeadlineUtc)
-        {
-            throw new InvalidOperationException("Payment deadline expired.");
-        }
-
-        Status = OrderStatus.Failed;
-        PaidAtUtc = paidAtUtc;
-    }
-
-    /// <summary>
     /// Marks as expired.
     /// </summary>
     /// <param name="expiredAtUtc">Expired at utc.</param>
@@ -253,7 +229,6 @@ public class Order : AggregateRoot<Guid>
         CarrierName = NormalizeRequired(carrierName, "Carrier");
         TrackingNumber = NormalizeRequired(trackingNumber, "Tracking number");
         ShippedAtUtc = shippedAtUtc;
-        DeliveryIssueAvailableFromUtc = shippedAtUtc.Add(DeliveryIssueWindow);
         Status = OrderStatus.Shipped;
         AddDomainEvent(new OrderShippedDomainEvent(Id, BuyerId, CarrierName, TrackingNumber, shippedAtUtc));
     }
@@ -276,9 +251,7 @@ public class Order : AggregateRoot<Guid>
         if (Status is
             OrderStatus.PendingPayment or
             OrderStatus.PaymentExpired or
-            OrderStatus.Cancelled or
-            OrderStatus.Failed or
-            OrderStatus.Refunded)
+            OrderStatus.Cancelled)
         {
             throw new InvalidOperationException("This order cannot be disputed.");
         }
@@ -312,32 +285,6 @@ public class Order : AggregateRoot<Guid>
         CompletedAtUtc = completedAtUtc;
         Status = OrderStatus.Completed;
         AddDomainEvent(new OrderCompletedDomainEvent(Id, BuyerId, SellerId, completedAtUtc));
-    }
-
-    public void ReportNotDelivered(string? reason, DateTime reportedAtUtc)
-    {
-        if (Status != OrderStatus.Shipped)
-        {
-            throw new InvalidOperationException("Only shipped orders can be reported as not delivered.");
-        }
-
-        if (DeliveryIssueAvailableFromUtc != null && reportedAtUtc < DeliveryIssueAvailableFromUtc.Value)
-        {
-            throw new InvalidOperationException("The delivery protection window has not opened yet.");
-        }
-
-        DeliveryIssueReportedAtUtc = reportedAtUtc;
-        DeliveryIssueReason = string.IsNullOrWhiteSpace(reason)
-            ? null
-            : reason.Trim();
-        Status = OrderStatus.BuyerProtection;
-
-        AddDomainEvent(new OrderDeliveryIssueReportedDomainEvent(
-            Id,
-            BuyerId,
-            SellerId,
-            DeliveryIssueReason,
-            reportedAtUtc));
     }
 
     private bool CanShipTo(string destination)

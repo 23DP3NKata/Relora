@@ -48,8 +48,6 @@ public sealed record GetLotsListQuery
 
     public bool HasMeasurements { get; init; }
 
-    public bool HasProofOfOrigin { get; init; }
-
     public decimal? MinPrice { get; init; }
 
     public decimal? MaxPrice { get; init; }

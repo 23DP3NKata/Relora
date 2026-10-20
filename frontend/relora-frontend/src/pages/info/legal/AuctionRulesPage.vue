@@ -295,7 +295,7 @@ const sections: AuctionRuleSection[] = [
     content: [
       'A completed auction does not remove Buyer Protection or mandatory consumer rights that may apply to the transaction.',
       'The buyer may report a qualifying problem when the item is not delivered, appears counterfeit, contains significant undisclosed damage or is materially different from the listing.',
-      'Change-of-mind returns, size issues and other return requests are handled according to the Relora Returns Policy and the seller’s legal status.',
+      'Relora does not process returns. Change of mind and size issues are not a reason to open a dispute.',
     ],
   },
   {

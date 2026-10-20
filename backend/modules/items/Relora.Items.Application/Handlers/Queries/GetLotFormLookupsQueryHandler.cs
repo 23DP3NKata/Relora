@@ -18,7 +18,6 @@ public sealed class GetLotFormLookupsQueryHandler(ILotCatalogRepository catalogR
         var categories = await _catalogRepository.GetCategoriesAsync(cancellationToken);
         var materials = await _catalogRepository.GetMaterialsAsync(cancellationToken);
         var colors = await _catalogRepository.GetColorsAsync(cancellationToken);
-        var proofTypes = await _catalogRepository.GetProofDocumentTypesAsync(cancellationToken);
         var measurementDefinitions = await _catalogRepository.GetMeasurementDefinitionsAsync(cancellationToken);
 
         return new LotFormLookupsDto(
@@ -36,12 +35,6 @@ public sealed class GetLotFormLookupsQueryHandler(ILotCatalogRepository catalogR
                 color.NameKey,
                 color.SortOrder,
                 color.IsActive)).ToList(),
-            proofTypes.Select(type => new LookupOptionDto(
-                type.Id,
-                type.Code,
-                type.NameKey,
-                type.SortOrder,
-                type.IsActive)).ToList(),
             measurementDefinitions.Select(definition => new MeasurementDefinitionDto(
                 definition.Id,
                 definition.Profile,

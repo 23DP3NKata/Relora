@@ -128,7 +128,6 @@ const activeCount = computed(() => {
     Number(draft.value.productionYearTo !== null) +
     Number(draft.value.vintageOnly) +
     Number(draft.value.hasMeasurements) +
-    Number(draft.value.hasProofOfOrigin) +
     Number(draft.value.endingSoon) +
     Number(draft.value.newlyListed)
   )
@@ -965,20 +964,6 @@ function handleKeydown(
 
                   <input
                     v-model="draft.hasMeasurements"
-                    type="checkbox"
-                    class="h-4 w-4 accent-foreground"
-                  />
-                </label>
-
-                <label
-                  class="flex cursor-pointer items-center justify-between rounded-xl border border-border px-4 py-3"
-                >
-                  <span class="text-sm">
-                    {{ $t('catalog.hasProofOfOrigin') }}
-                  </span>
-
-                  <input
-                    v-model="draft.hasProofOfOrigin"
                     type="checkbox"
                     class="h-4 w-4 accent-foreground"
                   />

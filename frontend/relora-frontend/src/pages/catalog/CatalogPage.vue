@@ -481,15 +481,6 @@ const activeFilters = computed<CatalogActiveFilter[]>(() => {
     })
   }
 
-  if (effectiveFilters.value.hasProofOfOrigin) {
-    result.push({
-      id: 'hasProofOfOrigin',
-      key: 'hasProofOfOrigin',
-      label: t('catalog.hasProofOfOrigin'),
-      removable: true,
-    })
-  }
-
   if (effectiveFilters.value.endingSoon) {
     result.push({
       id: 'endingSoon',
@@ -570,7 +561,6 @@ const loadLots = async (): Promise<void> => {
 
       vintageOnly: filters.vintageOnly,
       hasMeasurements: filters.hasMeasurements,
-      hasProofOfOrigin: filters.hasProofOfOrigin,
       endingSoon: filters.endingSoon,
       newlyListed: filters.newlyListed,
 
@@ -702,10 +692,6 @@ const removeActiveFilter = async (
 
   if (filter.key === 'hasMeasurements') {
     nextFilters.hasMeasurements = false
-  }
-
-  if (filter.key === 'hasProofOfOrigin') {
-    nextFilters.hasProofOfOrigin = false
   }
 
   if (filter.key === 'endingSoon') {
