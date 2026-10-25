@@ -14,25 +14,25 @@ const sellingSteps = [
     number: '01',
     title: 'Create your listing',
     description:
-      'Add clear photographs, item details, condition information, size and your starting price.',
+      'Add photos, item details, condition, size, starting price and shipping conditions.',
   },
   {
     number: '02',
     title: 'Pass moderation',
     description:
-      'Relora reviews the listing before it becomes available for auction.',
+      'An administrator checks the listing and approves or rejects it with a reason.',
   },
   {
     number: '03',
     title: 'Start the auction',
     description:
-      'Choose the auction duration and publish the approved item for buyers to bid on.',
+      'Choose the auction duration. The lot appears in the catalog and buyers can bid.',
   },
   {
     number: '04',
-    title: 'Ship and get paid',
+    title: 'Ship the item',
     description:
-      'After payment, ship the item with tracking. Your payout becomes available after the order is completed.',
+      'After the buyer pays, ship the item and add the carrier and tracking number.',
   },
 ]
 
@@ -41,333 +41,142 @@ const sections: SellSection[] = [
     id: 'overview',
     title: '1. Selling on Relora',
     content: [
-      'Relora is an auction marketplace for premium, designer and archival fashion. Sellers can create listings, receive bids and sell items directly to buyers through the platform.',
-      'To provide a safer marketplace, listings may be reviewed before publication and sellers must provide accurate information about every item they offer.',
-      'The complete sale, payment, delivery and order process should remain on Relora.',
+      'Relora is an auction platform for used clothing, shoes and accessories. Every registered user can both buy and sell.',
+      'Every listing is checked by an administrator before it can go to auction. The sale, payment and delivery all happen on Relora.',
     ],
-  },
-  {
-    id: 'seller-account',
-    title: '2. Prepare Your Seller Account',
-    content: [
-      'Before listing an item, make sure your Relora account contains accurate personal and contact information.',
-      'You may also be required to complete seller onboarding and provide information requested by Relora or its payment provider before receiving payouts.',
-    ],
-    list: [
-      'Use your real name and current contact information',
-      'Confirm your email address',
-      'Add a valid shipping location',
-      'Complete identity or payment verification when requested',
-      'Provide payout information through the approved payment provider',
-      'Keep your account information updated',
-    ],
-    note:
-      'The name and information used for seller verification should match the person or business receiving the payout.',
   },
   {
     id: 'eligible-items',
-    title: '3. What You Can Sell',
+    title: '2. What You Can Sell',
     content: [
-      'Relora is intended for authentic premium, designer, luxury and archival fashion items.',
-      'Every item must be legally owned by the seller and available to ship when the auction ends.',
+      'You can sell items for women, men or unisex in these categories:',
     ],
     list: [
       'Clothing',
-      'Footwear',
+      'Shoes',
       'Bags',
       'Accessories',
-      'Jewellery permitted by Relora',
-      'Collectible and archival fashion pieces',
+      'Jewellery',
+      'Watches',
     ],
     note:
-      'Only list an item when you are certain that it is authentic and that you have the legal right to sell it.',
+      'Only list items that you own and that you can ship when the auction ends.',
   },
   {
     id: 'prohibited-items',
-    title: '4. Items You Must Not List',
-    content: [
-      'Listings that violate Relora rules or applicable law may be rejected or removed.',
-    ],
+    title: '3. Items You Must Not List',
     list: [
-      'Counterfeit, replica or unauthorised items',
-      'Stolen goods',
-      'Items that you do not own',
-      'Items containing misleading brand information',
-      'Illegal, dangerous or restricted goods',
-      'Items with intentionally hidden damage',
-      'Digital products or services',
-      'Items that cannot be shipped legally',
-      'Listings created only to advertise another website or platform',
-    ],
-  },
-  {
-    id: 'prepare-item',
-    title: '5. Prepare the Item',
-    content: [
-      'Inspect the item carefully before creating the listing. Buyers rely on your description and photographs when deciding whether to place a bid.',
-      'Clean the item where appropriate, but do not use treatments that could damage it or hide its true condition.',
-    ],
-    list: [
-      'Check the item for stains, holes, scratches and repairs',
-      'Confirm the brand, model, size and material',
-      'Locate labels, serial numbers and authenticity details',
-      'Collect original packaging, receipts or accessories when available',
-      'Measure the item accurately',
-      'Make sure the item is ready to ship',
-    ],
-  },
-  {
-    id: 'photographs',
-    title: '6. Take Clear Photographs',
-    content: [
-      'Photographs should show the actual item being sold. Do not use only catalogue images, promotional photographs or photographs taken from another seller.',
-      'Use good lighting and show the item from several angles. Buyers should be able to understand the item’s condition before bidding.',
-    ],
-    list: [
-      'Front and back of the complete item',
-      'Brand label and size label',
-      'Material and care labels',
-      'Serial numbers or production codes when applicable',
-      'Close-up photographs of important details',
-      'Photographs of every defect or sign of wear',
-      'Original packaging and included accessories',
-      'Soles, hardware, corners and other high-wear areas',
+      'Counterfeit or replica items',
+      'Stolen goods or items you do not own',
+      'Items with hidden damage',
+      'Illegal or dangerous goods',
     ],
     note:
-      'Do not edit photographs in a way that changes the item’s colour, condition or appearance.',
+      'Such listings are rejected by the administrator.',
   },
   {
-    id: 'description',
-    title: '7. Write an Accurate Description',
+    id: 'create-listing',
+    title: '4. Create a Listing',
     content: [
-      'The listing description must be clear, complete and truthful. Important information should not be hidden or left only in photographs.',
-      'Describe the item as it currently exists, not how it looked when it was new.',
+      'The listing form has 7 steps: start, category, details, measurements, photos, price and shipping, and review. Each step checks the required fields before you can continue.',
+      'Required details are the title (5 to 120 characters), description (100 to 2000 characters), brand, size, condition, main colour and the country where the item is located.',
+      'Materials, measurements, model name, production year and purchase year are optional but help buyers.',
+    ],
+  },
+  {
+    id: 'photos',
+    title: '5. Photos',
+    content: [
+      'Add 5 to 15 photos in JPEG, PNG or WebP format, each up to 10 MB. Photos are made smaller in the browser before upload.',
+      'Choose a cover photo - it is shown in the catalog. By default it is the first photo.',
     ],
     list: [
-      'Correct brand and item name',
-      'Category and gender classification where relevant',
-      'Labelled size and practical measurements',
-      'Material and colour',
-      'Current condition',
-      'Known defects, repairs or alterations',
-      'Included packaging and accessories',
-      'Purchase history or proof of purchase when available',
+      'Show the whole item from the front and back',
+      'Add close-ups of labels and details',
+      'Show every defect clearly',
+      'Use natural light and a plain background',
     ],
   },
   {
     id: 'condition',
-    title: '8. Select the Correct Condition',
+    title: '6. Condition and Vintage',
     content: [
-      'Choose the condition that most accurately represents the item. Selecting a better condition than the item actually has may result in a Buyer Protection claim.',
+      'Choose the condition that matches the item: new, used or refurbished. Always describe defects in the description.',
+      'An item can be marked as vintage if it is at least 15 years old. If you do not know the production year, explain in the vintage notes why the item is vintage.',
     ],
-    list: [
-      'New — unused and in new condition',
-      'Like new — used very little with minimal signs of wear',
-      'Good — used with visible but acceptable signs of wear',
-      'Fair — heavily used with clear wear or defects',
-    ],
-    note:
-      'Always describe specific defects even when they are normal for the selected condition.',
   },
   {
     id: 'price',
-    title: '9. Set Your Auction Price',
+    title: '7. Price and Shipping',
     content: [
-      'Choose a starting price that you would genuinely be willing to accept if the item receives only one valid bid.',
-      'Before setting the price, consider the item’s brand, condition, rarity, recent market demand and comparable sales.',
-      'Once a valid bid has been placed, you may not be able to change important auction details or withdraw the item without a valid reason.',
-    ],
-    list: [
-      'Research similar items',
-      'Consider the current condition',
-      'Account for Relora seller fees',
-      'Consider packaging and shipping responsibilities',
-      'Do not artificially inflate the price using false bids',
-    ],
-  },
-  {
-    id: 'auction-duration',
-    title: '10. Choose the Auction Duration',
-    content: [
-      'After the listing has been approved, you can select the available auction duration and start the auction.',
-      'Depending on the options currently available on Relora, an auction may run for 3, 7 or 14 days.',
-      'While the auction is active, buyers can place bids until the closing time.',
-    ],
-    list: [
-      '3 days for a faster sale',
-      '7 days for a standard auction',
-      '14 days for additional exposure',
+      'Set the starting price - bidding starts from this amount. Also set the shipping price, the country you ship from and the countries you ship to (or "Worldwide").',
+      'Set the handling time - how many business days (1 to 30) you need to ship the item after payment.',
     ],
   },
   {
     id: 'moderation',
-    title: '11. Listing Moderation',
+    title: '8. Drafts and Moderation',
     content: [
-      'Listings may be reviewed before they appear publicly on Relora.',
-      'Moderation helps identify incomplete, misleading, prohibited or suspicious listings. It does not replace the seller’s responsibility for authenticity and accuracy.',
-      'Relora may approve the listing, reject it or request additional information.',
+      'A new listing is saved as a draft. When it is ready, submit it for moderation and its status changes to "pending review".',
+      'An administrator approves or rejects the listing. A rejected listing shows the reason in your listings. After you fix it, it becomes a draft again and you can submit it again.',
     ],
     list: [
-      'Additional photographs',
-      'More detailed condition information',
-      'Measurements',
-      'Proof of purchase',
-      'Serial numbers or authenticity details',
-      'Corrections to the category, brand or description',
+      'You can edit a listing with the status draft, pending review or rejected',
+      'You can delete only a draft',
     ],
-    note:
-      'Approval does not mean that Relora becomes the owner or seller of the item.',
   },
   {
-    id: 'active-auction',
-    title: '12. During the Auction',
+    id: 'auction',
+    title: '9. Start the Auction',
     content: [
-      'Keep the item safe and available while the auction is active.',
-      'Respond honestly if Relora or a potential buyer requests additional information.',
-      'You must not manipulate the auction or encourage buyers to complete the transaction outside Relora.',
+      'When the listing is approved, start the auction from your listings and choose the duration: 1 hour, 6 hours, 3 days, 7 days or 14 days.',
+      'The current price starts from your starting price and the lot appears in the catalog.',
     ],
-    list: [
-      'Do not place bids on your own item',
-      'Do not ask another person to increase the price artificially',
-      'Do not advertise external payment methods',
-      'Do not sell the item elsewhere while valid bids are active',
-      'Do not change or damage the item after listing it',
-      'Keep all transaction-related communication on Relora',
+  },
+  {
+    id: 'during-auction',
+    title: '10. During the Auction',
+    content: [
+      'Every new bid must be higher than the current price. All viewers see new bids without reloading the page.',
+      'If a bid is placed in the last 10 seconds, the auction is extended by 30 seconds. You cannot bid on your own lot.',
     ],
   },
   {
     id: 'auction-end',
-    title: '13. When the Auction Ends',
+    title: '11. When the Auction Ends',
     content: [
-      'When an auction ends with a valid winning bid, an order is created for the winning buyer.',
-      'The buyer is required to complete payment within the period shown on the order.',
-      'Do not ship the item before Relora confirms that the buyer’s payment has been completed.',
-      'If the buyer does not pay within the required period, the order may be cancelled or handled according to Relora’s auction rules.',
+      'The auction ends automatically. The highest bidder wins and an order is created with the status "awaiting payment". The buyer has 3 days to pay.',
+      'If there were no bids or the buyer did not pay in time, the lot becomes unsold and you can start a new auction for it.',
     ],
   },
   {
     id: 'shipping',
-    title: '14. Ship the Item',
+    title: '12. Ship the Item',
     content: [
-      'After payment has been confirmed, prepare the item for delivery and ship it within the deadline displayed on the order.',
-      'Use a reliable delivery method that provides end-to-end tracking.',
-    ],
-    list: [
-      'Confirm the shipping address shown on the order',
-      'Photograph the item before packing it',
-      'Use clean and protective packaging',
-      'Protect the item from moisture and impact',
-      'Use tracked delivery',
-      'Keep the shipping receipt',
-      'Add the tracking number to the Relora order',
-      'Ship before the order deadline',
-    ],
-    note:
-      'Only ship to the address shown in the Relora order. A privately requested address change may not be protected.',
-  },
-  {
-    id: 'packaging',
-    title: '15. Packaging Guidelines',
-    content: [
-      'The seller is responsible for packaging the item appropriately for delivery.',
-      'Premium items should be protected from water, dirt, compression and impact. Poor packaging may make the seller responsible for damage that occurs during delivery.',
-    ],
-    list: [
-      'Use a strong box or suitable mailing package',
-      'Place the item inside protective wrapping',
-      'Protect fragile hardware and accessories',
-      'Do not place shipping tape directly on product packaging',
-      'Remove or cover old delivery labels',
-      'Seal the parcel securely',
+      'After payment you can see the delivery address and the date by which you must ship. Ship the item with tracking and enter the carrier and tracking number on the order page.',
+      'The buyer receives an email about the shipment. Orders that are not shipped in time are shown to administrators.',
     ],
   },
   {
-    id: 'delivery',
-    title: '16. Delivery and Buyer Inspection',
+    id: 'completion',
+    title: '13. Completion and Disputes',
     content: [
-      'Tracking information is used to follow the delivery and determine when the order was delivered.',
-      'After delivery, the buyer receives the applicable period to inspect the item and report a qualifying problem.',
-      'During this period, the seller may be asked to provide photographs, shipping documents or other information.',
+      'The order is completed when the buyer confirms receipt.',
+      'If there is a problem, the buyer can open a dispute. An administrator decides it: in favour of the buyer the order is cancelled, in favour of the seller the order is completed. Relora does not process returns.',
     ],
   },
   {
-    id: 'payout',
-    title: '17. Receiving Your Payout',
+    id: 'payments',
+    title: '14. Payments',
     content: [
-      'Seller payouts are processed through Relora’s supported payment provider.',
-      'A payout may become available after delivery has been confirmed, the buyer inspection period has passed and no unresolved problem remains.',
-      'The amount received by the seller may be reduced by applicable marketplace fees, payment processing costs, refunds, adjustments or other amounts displayed before the sale.',
-      'Payment processing times may depend on the payment provider, the seller’s verification status and the seller’s bank.',
-    ],
-    note:
-      'Complete seller onboarding and payment verification early to avoid unnecessary payout delays.',
-  },
-  {
-    id: 'fees',
-    title: '18. Seller Fees',
-    content: [
-      'Relora may charge a seller fee when an item is successfully sold.',
-      'The applicable fee and estimated seller earnings should be displayed before the seller confirms the listing or auction.',
-      'Fees may be deducted automatically from the sale amount before the seller receives the payout.',
-    ],
-    list: [
-      'Marketplace commission',
-      'Payment processing costs where applicable',
-      'Refund or dispute adjustments where applicable',
-      'Optional paid services selected by the seller',
-    ],
-  },
-  {
-    id: 'returns',
-    title: '19. Returns and Buyer Protection',
-    content: [
-      'A buyer may report a problem when an item is not delivered, appears counterfeit, has significant undisclosed damage or is materially different from the listing.',
-      'If a case is opened, Relora may pause completion of the order and request evidence from both parties.',
-      'When a return is approved, the seller must cooperate with the return instructions and inspect the returned item after delivery.',
-      'The seller’s legal responsibilities may also depend on whether the seller acts as a private individual or a professional seller.',
-    ],
-  },
-  {
-    id: 'seller-responsibilities',
-    title: '20. Seller Responsibilities',
-    content: [
-      'Sellers are responsible for the legality, authenticity, accuracy, condition, packaging and timely shipment of the items they list.',
-    ],
-    list: [
-      'List only authentic items that you own',
-      'Describe every item accurately',
-      'Disclose all known defects',
-      'Use original photographs',
-      'Keep the item available during the auction',
-      'Ship the correct item on time',
-      'Provide valid tracking information',
-      'Respond to order and support requests',
-      'Follow Relora’s policies and applicable law',
-    ],
-  },
-  {
-    id: 'tips',
-    title: '21. Tips for a Successful Sale',
-    content: [
-      'The strongest listings give buyers enough information to bid confidently.',
-    ],
-    list: [
-      'Use bright, sharp and consistent photographs',
-      'Write a specific title instead of a generic one',
-      'Provide useful measurements',
-      'Show every defect clearly',
-      'Choose a realistic starting price',
-      'Reply quickly when more information is requested',
-      'Package the item professionally',
-      'Ship as soon as possible after payment',
+      'Payments on Relora are test payments. Sellers do not receive real money and there are no payouts or seller fees.',
     ],
   },
   {
     id: 'support',
-    title: '22. Seller Support',
+    title: '15. Seller Support',
     content: [
-      'For a problem with an active listing, auction or order, open the relevant page and use the available support option.',
-      'For general questions about listing items, verification, shipping, fees or payouts, contact Relora through the Contact us page.',
+      'For questions about selling, send a request through the Contact us page. You will get a confirmation email.',
     ],
   },
 ]
@@ -403,9 +212,13 @@ const sections: SellSection[] = [
             <p
               class="mt-5 max-w-2xl text-sm leading-7 text-foreground/65 sm:text-base"
             >
-              List premium and archival fashion, reach interested buyers and
-              manage the complete auction, delivery and payout process through
-              Relora.
+              List your clothing, shoes and accessories, reach interested
+              buyers and manage the auction and delivery on Relora.
+            </p>
+
+            <p class="mt-4 text-xs text-foreground/40">
+              Relora is not a real working marketplace yet. Payments are test
+              payments and no real money is transferred.
             </p>
 
             <div class="mt-7 flex flex-wrap gap-3">
@@ -417,7 +230,7 @@ const sections: SellSection[] = [
               </RouterLink>
 
               <RouterLink
-                to="/seller/listings"
+                to="/listings"
                 class="inline-flex min-h-11 items-center justify-center rounded-full border px-6 text-sm font-medium text-foreground transition hover:bg-neutral-100 dark:hover:bg-neutral-800"
               >
                 My listings
@@ -487,7 +300,7 @@ const sections: SellSection[] = [
         <h2
           class="mt-3 text-3xl font-semibold tracking-tight text-foreground"
         >
-          From listing to payout
+          From listing to delivery
         </h2>
       </div>
 
