@@ -27,6 +27,8 @@ const MIN_PHOTOS = 5
 const MAX_PHOTOS = 15
 const MIN_DESCRIPTION_LENGTH = 100
 const VINTAGE_MIN_AGE_YEARS = 15
+const MIN_PRODUCTION_YEAR = 1800
+const MIN_ACQUISITION_YEAR = 1900
 
 type ApiError = {
   response?: {
@@ -425,6 +427,45 @@ export const useCreateLotFlow = () => {
     return true
   }
 
+  const validateYears = (): boolean => {
+    const currentYear = new Date().getFullYear()
+    const productionYear = form.productionYear
+    const acquisitionYear = form.acquisitionYear
+
+    if (
+      typeof productionYear === "number" &&
+      (!Number.isInteger(productionYear) || productionYear < MIN_PRODUCTION_YEAR || productionYear > currentYear)
+    ) {
+      errorMessage.value = t("sell.productionYearRange", {
+        min: MIN_PRODUCTION_YEAR,
+        max: currentYear,
+      })
+      return false
+    }
+
+    if (
+      typeof acquisitionYear === "number" &&
+      (!Number.isInteger(acquisitionYear) || acquisitionYear < MIN_ACQUISITION_YEAR || acquisitionYear > currentYear)
+    ) {
+      errorMessage.value = t("sell.acquisitionYearRange", {
+        min: MIN_ACQUISITION_YEAR,
+        max: currentYear,
+      })
+      return false
+    }
+
+    if (
+      typeof productionYear === "number" &&
+      typeof acquisitionYear === "number" &&
+      acquisitionYear < productionYear
+    ) {
+      errorMessage.value = t("sell.acquisitionBeforeProduction")
+      return false
+    }
+
+    return true
+  }
+
   const validateCurrentStep = (): boolean => {
     errorMessage.value = ""
 
@@ -499,6 +540,10 @@ export const useCreateLotFlow = () => {
 
         if (!form.country.trim()) {
           errorMessage.value = t("sell.countryRequired")
+          return false
+        }
+
+        if (!validateYears()) {
           return false
         }
 

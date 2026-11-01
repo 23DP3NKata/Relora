@@ -28,15 +28,8 @@ using Relora.Items.Application.Validators;
 using Relora.Items.Infrastructure.Repository;
 using Relora.Orders.API.Controllers;
 using Relora.Orders.Application.Interfaces;
-using Relora.Orders.Application.Service;
 using Relora.Orders.Application.Validators;
-using Relora.Orders.Infrastructure.Options;
 using Relora.Orders.Infrastructure.Repository;
-using Relora.Payments.API;
-using Relora.Payments.Application.Interfaces;
-using Relora.Payments.Application.Service;
-using Relora.Payments.Domain;
-using Relora.Payments.Infrastructure.Repository;
 using Relora.Persistance;
 using Relora.Realtime.Extensions;
 using Relora.Shared.Domain.Time;
@@ -47,7 +40,6 @@ using Relora.Shared.Infrastructure.Media;
 using Relora.Shared.Infrastructure.Pipelines;
 using Relora.Shared.Infrastructure.Time;
 using Relora.Shared.Application.Emails;
-using Relora.Shared.Application.Payments;
 using Relora.Shared.Infrastructure.Emails;
 using Relora.Support.API.Controllers;
 using Relora.Support.Application.Interfaces;
@@ -95,8 +87,6 @@ builder.Services.AddControllers()
     .AddApplicationPart(typeof(AdminController).Assembly)
     .AddApplicationPart(typeof(OrdersController).Assembly)
     .AddApplicationPart(typeof(AuthController).Assembly)
-    .AddApplicationPart(typeof(PaymentsController).Assembly)
-    .AddApplicationPart(typeof(SellerStripeController).Assembly)
     .AddApplicationPart(typeof(SupportController).Assembly);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -252,17 +242,6 @@ builder.Services.AddRateLimiter(options =>
             }));
 });
 
-builder.Services
-    .AddOptions<StripeOptions>()
-    .Bind(builder.Configuration.GetSection(StripeOptions.SectionName))
-    .ValidateDataAnnotations()
-    .ValidateOnStart();
-
-builder.Services.AddSingleton<Stripe.Checkout.SessionService>();
-
-var stripeOptions = builder.Configuration.GetSection(StripeOptions.SectionName).Get<StripeOptions>()!;
-Stripe.StripeConfiguration.ApiKey = stripeOptions.SecretKey;
-
 builder.Services.AddDbContext<ReloraDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres"));
@@ -310,16 +289,11 @@ builder.Services.AddScoped<ICookieFactory, CookieFactory>();
 builder.Services.AddScoped<IOrderRepository, OrdersRepository>();
 builder.Services.AddScoped<ITransactionRunner, TransactionRunner>();
 builder.Services.AddScoped<IOrderDisputeRepository, OrderDisputeRepository>();
-builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
-builder.Services.AddScoped<Relora.Payments.Application.Service.PaymentService>();
-builder.Services.AddScoped<IPaymentRefundService, StripePaymentRefundService>();
 builder.Services.AddSingleton<IClock, SystemClock>();
-builder.Services.AddScoped<ISellerPaymentAccountRepository, SellerPaymentAccountRepository>();
 builder.Services.AddScoped<ISupportRequestRepository, SupportRequestRepository>();
 
 builder.Services.AddHostedService<AuctionAutoStopBackgroundService>();
 builder.Services.AddHostedService<OrderPaymentExpirationBackgroundService>();
-builder.Services.AddHostedService<SellerPayoutBackgroundService>();
 builder.Services.AddHostedService<PendingLotMediaCleanupBackgroundService>();
 
 builder.Services.AddScoped<IMediaUploader, MediaUploader>();

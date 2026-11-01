@@ -70,12 +70,12 @@ public sealed class ResolveOrderDisputeCommandValidator : AbstractValidator<Reso
     }
 }
 
-public sealed class CreateOrderPaymentSessionCommandValidator : AbstractValidator<CreateOrderPaymentSessionCommand>
+public sealed class PayOrderCommandValidator : AbstractValidator<PayOrderCommand>
 {
-    public CreateOrderPaymentSessionCommandValidator()
+    public PayOrderCommandValidator()
     {
         RuleFor(x => x.OrderId).NotEmpty();
-        RuleFor(x => x.UserId).NotEmpty();
+        RuleFor(x => x.BuyerId).NotEmpty();
 
         When(x => x.ShippingAddress is not null, () =>
         {

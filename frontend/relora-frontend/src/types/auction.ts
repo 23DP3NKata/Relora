@@ -40,12 +40,3 @@ export type AuctionDurationOption =
   | 'Flash6Hours'
 
 export type StartAuctionDuration = '3' | '5' | '7'
-
-export type Auction = {
-  id: number
-  brand: string
-  title: string
-  price: number
-  imageUrl: string
-  timeLeft: string
-}

@@ -18,4 +18,5 @@ public sealed class PendingLotPreviewDto
 
     public Guid SellerId { get; init; }
     public string? MainPhotoKey { get; init; }
+    public DateTime CreatedAt { get; init; }
 }

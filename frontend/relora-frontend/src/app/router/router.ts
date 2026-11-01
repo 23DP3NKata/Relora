@@ -225,15 +225,15 @@ const routes = [
               seoKey: 'orderDetails',
             },
           },
-          // {
-          //   path: 'catalog',
-          //   name: 'catalog',
-          //   component: CatalogPage,
-          //   meta: {
-          //     requiresAuth: false,
-          //     seoKey: 'catalog',
-          //   },
-          // },
+          {
+            path: 'catalog',
+            name: 'catalog',
+            component: CatalogPage,
+            meta: {
+              requiresAuth: false,
+              seoKey: 'catalog',
+            },
+          },
           // {
           //   path: 'auctions',
           //   name: 'auctions',

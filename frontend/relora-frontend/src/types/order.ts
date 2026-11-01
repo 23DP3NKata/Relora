@@ -56,7 +56,7 @@ export type OrderDisputeReason =
   | 'Damaged'
   | 'SuspectedCounterfeit'
 
-export type OrderDisputeDecision = 'Refund' | 'CompleteOrder'
+export type OrderDisputeDecision = 'CancelOrder' | 'CompleteOrder'
 
 export type OrderDisputeEvidence = {
   id?: string

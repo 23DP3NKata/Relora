@@ -4,8 +4,6 @@ using Relora.Orders.Application.Interfaces;
 using Relora.Shared.Domain.Time;
 using Relora.Shared.Domain.Persistence;
 using Relora.Shared.Infrastructure.Interfaces;
-using Relora.Shared.Application.Payments;
-using Relora.Orders.Domain.Enums;
 
 using MediatR;
 
@@ -18,7 +16,6 @@ public sealed class ResolveOrderDisputeCommandHandler : IRequestHandler<ResolveO
     private readonly IUserRepository _userRepository;
     private readonly IClock _clock;
     private readonly IDomainEventDispatcher _domainEventDispatcher;
-    private readonly IPaymentRefundService _paymentRefundService;
     private readonly ITransactionRunner _transactionRunner;
 
     public ResolveOrderDisputeCommandHandler(
@@ -27,7 +24,6 @@ public sealed class ResolveOrderDisputeCommandHandler : IRequestHandler<ResolveO
         IUserRepository userRepository,
         IClock clock,
         IDomainEventDispatcher domainEventDispatcher,
-        IPaymentRefundService paymentRefundService,
         ITransactionRunner transactionRunner)
     {
         _orderRepository = orderRepository;
@@ -35,7 +31,6 @@ public sealed class ResolveOrderDisputeCommandHandler : IRequestHandler<ResolveO
         _userRepository = userRepository;
         _clock = clock;
         _domainEventDispatcher = domainEventDispatcher;
-        _paymentRefundService = paymentRefundService;
         _transactionRunner = transactionRunner;
     }
 
@@ -57,11 +52,6 @@ public sealed class ResolveOrderDisputeCommandHandler : IRequestHandler<ResolveO
         if (order is null)
         {
             throw new KeyNotFoundException($"Order {dispute.OrderId} not found.");
-        }
-
-        if (request.Decision == OrderDisputeDecision.Refund)
-        {
-            await _paymentRefundService.RefundOrderAsync(order.Id, cancellationToken);
         }
 
         dispute.Resolve(order, request.AdminId, request.Decision, request.Reason, _clock.UtcNow);

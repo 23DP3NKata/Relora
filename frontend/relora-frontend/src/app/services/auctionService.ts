@@ -1,6 +1,5 @@
 import api from '@/api'
 import type {
-  Auction,
   AuctionDetails,
   AuctionDurationOption,
   AuctionListItem,
@@ -48,16 +47,4 @@ export const auctionService = {
   async stopAuction(auctionId: string): Promise<void> {
     await api.post(`/api/auction/stop/${auctionId}`)
   },
-}
-
-export async function getAuctions(): Promise<Auction[]> {
-  const items = await auctionService.getAuctions()
-  return items.map((item, index) => ({
-    id: index + 1,
-    brand: 'Auction',
-    title: `Auction ${index + 1}`,
-    price: item.currentPrice ?? 0,
-    imageUrl: '',
-    timeLeft: item.endDate ? new Date(item.endDate).toLocaleString() : item.status,
-  }))
 }

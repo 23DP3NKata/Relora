@@ -40,6 +40,8 @@ public sealed class GetPendingLotsPreviewHandler
         var pendingLots = await _context.Lots
             .AsNoTracking()
             .Where(l => l.Status == LotStatus.Pending)
+            // vecākie loti pirmie, lai admins tos izskata rindas kārtībā
+            .OrderBy(l => l.CreatedAt)
             .Select(l => new PendingLotPreviewDto
             {
                 Id = l.Id,
@@ -53,7 +55,8 @@ public sealed class GetPendingLotsPreviewHandler
                 MainPhotoKey = l.Media
                     .Where(m => m.Type == "photo")
                     .Select(m => m.Key)
-                    .FirstOrDefault()
+                    .FirstOrDefault(),
+                CreatedAt = l.CreatedAt
             })
             .ToListAsync(cancellationToken);
 
