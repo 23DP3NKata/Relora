@@ -117,9 +117,10 @@ public sealed class OrderDispute : AggregateRoot<Guid>
         ResolvedAtUtc = resolvedAtUtc;
         ResolvedByAdminId = adminId;
 
-        if (decision == OrderDisputeDecision.Refund)
+        // no money is moved, the decision only changes the order status
+        if (decision == OrderDisputeDecision.CancelOrder)
         {
-            order.MarkAsRefunded(resolvedAtUtc);
+            order.CancelAfterDispute();
         }
         else
         {

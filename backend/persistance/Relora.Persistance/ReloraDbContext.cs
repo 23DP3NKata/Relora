@@ -5,7 +5,6 @@ using Relora.Items.Domain;
 using Relora.Bids.Domain;
 using Relora.Identity.Domain;
 using Relora.Orders.Domain;
-using Relora.Payments.Domain;
 using Relora.Support.Domain;
 
 namespace Relora.Persistance;
@@ -30,9 +29,6 @@ public sealed class ReloraDbContext : DbContext
     public DbSet<OrderDispute> OrderDisputes => Set<OrderDispute>();
     public DbSet<OrderDisputeEvidence> OrderDisputeEvidence => Set<OrderDisputeEvidence>();
     public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
-    public DbSet<SellerPaymentAccount> SellerPaymentAccounts => Set<SellerPaymentAccount>();
-    public DbSet<Payment> Payments => Set<Payment>();
-    public DbSet<Payout> Payouts => Set<Payout>();
     public DbSet<SupportRequest> SupportRequests => Set<SupportRequest>();
 
     public ReloraDbContext(DbContextOptions<ReloraDbContext> options) : base(options)

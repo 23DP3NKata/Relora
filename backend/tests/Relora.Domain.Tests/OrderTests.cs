@@ -37,7 +37,7 @@ public sealed class OrderTests
     }
 
     [Fact]
-    public void ResolveDisputeWithRefund_MarksOrderRefunded()
+    public void ResolveDisputeForBuyer_CancelsOrder()
     {
         var buyerId = Guid.NewGuid();
         var order = CreateOrder(DateTime.UtcNow.AddDays(3), buyerId: buyerId);
@@ -54,13 +54,13 @@ public sealed class OrderTests
         dispute.Resolve(
             order,
             Guid.NewGuid(),
-            OrderDisputeDecision.Refund,
+            OrderDisputeDecision.CancelOrder,
             "Shipping deadline was missed.",
             DateTime.UtcNow);
 
         Assert.Equal(OrderDisputeStatus.Resolved, dispute.Status);
-        Assert.Equal(OrderDisputeDecision.Refund, dispute.Decision);
-        Assert.Equal(OrderStatus.Refunded, order.Status);
+        Assert.Equal(OrderDisputeDecision.CancelOrder, dispute.Decision);
+        Assert.Equal(OrderStatus.Cancelled, order.Status);
     }
 
     [Fact]

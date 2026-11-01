@@ -19,6 +19,5 @@
     <ProjectReference Include="..\..\modules\items\Relora.Items.Domain\Relora.Items.Domain.csproj" />
     <ProjectReference Include="..\..\modules\orders\Relora.Orders.Application\Relora.Orders.Application.csproj" />
     <ProjectReference Include="..\..\modules\orders\Relora.Orders.Domain\Relora.Orders.Domain.csproj" />
-    <ProjectReference Include="..\..\Relora.Payments.Domain\Relora.Payments.Domain.csproj" />
   </ItemGroup>
 </Project>

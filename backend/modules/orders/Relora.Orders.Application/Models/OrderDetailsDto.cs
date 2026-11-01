@@ -64,10 +64,6 @@ public sealed class OrderDetailsDto
     /// </summary>
     public DateTime PaymentDeadlineUtc { get; init; }
     /// <summary>
-    /// Gets or sets the stripe checkout session id used by this type.
-    /// </summary>
-    public string? StripeCheckoutSessionId { get; init; }
-    /// <summary>
     /// Gets or sets the paid at utc used by this type.
     /// </summary>
     public DateTime? PaidAtUtc { get; init; }

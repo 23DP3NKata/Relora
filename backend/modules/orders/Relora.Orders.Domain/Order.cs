@@ -69,11 +69,6 @@ public class Order : AggregateRoot<Guid>
     public DateTime PaymentDeadlineUtc { get; private set; }
 
     /// <summary>
-    /// Gets or sets the stripe checkout session id used by this type.
-    /// </summary>
-    public string? StripeCheckoutSessionId { get; private set; }
-    public int CheckoutSessionVersion { get; private set; }
-    /// <summary>
     /// Gets or sets the paid at utc used by this type.
     /// </summary>
     public DateTime? PaidAtUtc { get; private set; }
@@ -296,14 +291,14 @@ public class Order : AggregateRoot<Guid>
         Status = OrderStatus.Disputed;
     }
 
-    public void MarkAsRefunded(DateTime refundedAtUtc)
+    public void CancelAfterDispute()
     {
         if (Status != OrderStatus.Disputed)
         {
-            throw new InvalidOperationException("Only disputed orders can be refunded by dispute resolution.");
+            throw new InvalidOperationException("Only disputed orders can be cancelled by dispute resolution.");
         }
 
-        Status = OrderStatus.Refunded;
+        Status = OrderStatus.Cancelled;
     }
 
     public void CompleteAfterDispute(DateTime completedAtUtc)
@@ -343,34 +338,6 @@ public class Order : AggregateRoot<Guid>
             SellerId,
             DeliveryIssueReason,
             reportedAtUtc));
-    }
-
-    /// <summary>
-    /// Sets stripe session.
-    /// </summary>
-    /// <param name="sessionId">Identifier of session.</param>
-    public void SetStripeSession(string sessionId)
-    {
-        if (string.IsNullOrWhiteSpace(sessionId))
-        {
-            throw new ArgumentException("Stripe checkout session id is required.");
-        }
-
-        StripeCheckoutSessionId = sessionId;
-    }
-
-    public string GetCheckoutIdempotencyKey()
-    {
-        return $"checkout:{Id:N}:{CheckoutSessionVersion}";
-    }
-
-    public void ClearStripeSession(string sessionId)
-    {
-        if (StripeCheckoutSessionId == sessionId)
-        {
-            StripeCheckoutSessionId = null;
-            CheckoutSessionVersion++;
-        }
     }
 
     private bool CanShipTo(string destination)

@@ -57,8 +57,6 @@ public sealed class OrdersConfiguration : IEntityTypeConfiguration<Order>
             .IsRequired();
 
         builder.Property(x => x.PaymentDeadlineUtc).IsRequired();
-        builder.Property(x => x.StripeCheckoutSessionId).HasMaxLength(200);
-        builder.Property(x => x.CheckoutSessionVersion).IsRequired();
         builder.Property(x => x.PaidAtUtc);
         builder.Property(x => x.ShipByUtc);
         builder.Property(x => x.ShippedAtUtc);

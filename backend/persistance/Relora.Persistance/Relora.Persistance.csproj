@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-	<ProjectReference Include="..\..\Relora.Payments.Domain\Relora.Payments.Domain.csproj" />
 	<ProjectReference Include="..\..\modules\identity\Relora.Identity.Domain\Relora.Identity.Domain.csproj" />
 	<ProjectReference Include="..\..\modules\auctions\Relora.Auctions.Domain\Relora.Auctions.Domain.csproj" />
     <ProjectReference Include="..\..\modules\bids\Relora.Bids.Domain\Relora.Bids.Domain.csproj" />
