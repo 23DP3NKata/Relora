@@ -48,7 +48,7 @@
     },
     "announcement": {
         "title": "Vendez sur Relora",
-        "description": "Profitez de seulement 2 % de commission sur vos 10 premières ventes",
+        "description": "Publiez vos articles et lancez une enchère",
         "buttonText": "Commencer à vendre"
     },
     "common": {
@@ -113,7 +113,6 @@
         "journal": "Journal",
         "buy": "Acheter",
         "buyerProtection": "Protection acheteur",
-        "returnsPolicy": "Politique de retour",
         "sell": "Vendre",
         "howToSell": "Comment vendre",
         "sellerProtection": "Protection vendeur",
@@ -1159,7 +1158,7 @@
                 "9": {
                     "question": "Puis-je retourner un article ?",
                     "paragraphs": [
-                        "L'eligibilite au retour depend des politiques vendeur, de l'etat, des questions d'authenticite et de l'issue d'un examen.",
+                        "Relora ne gere pas les retours. Si l'article n'est pas arrive, est endommage ou differe de l'annonce, ouvrez un litige sur la page de la commande.",
                         "Les acheteurs sont encourages a verifier les details, photos, mesures et descriptions avant d'acheter une piece de createur ou d'archive.",
                         "Les articles nettement differents de leur description peuvent etre eligibles a un examen de litige."
                     ]
@@ -1569,91 +1568,6 @@
                 ],
                 "footerMeta": "Relora - Protection acheteur",
                 "footerText": "Encherissez avec soin. Payez en securite. Inspectez chaque livraison.",
-                "sections": []
-            },
-            "returnsPolicy": {
-                "eyebrow": "Acheter sur Relora",
-                "title": "Politique de retours",
-                "updatedDate": "24 juillet 2026",
-                "description": "Decouvrez quand un article peut etre retourne, comment demander un retour et ce qui se passe apres approbation.",
-                "summaryTitle": "Resume des retours",
-                "summary": "Les retours dependent du motif et du statut du vendeur. Ne renvoyez jamais un article avant de recevoir les instructions.",
-                "summaryBullets": [
-                    "Signaler les problemes sous 48 heures",
-                    "Attendre l approbation avant l expedition",
-                    "Toujours utiliser un retour suivi"
-                ],
-                "stepsEyebrow": "Processus",
-                "stepsTitle": "Les etapes principales",
-                "steps": [{
-                        "number": "01",
-                        "title": "Verifier les informations",
-                        "description": "Lisez les details et exigences avant de continuer."
-                    },
-                    {
-                        "number": "02",
-                        "title": "Rester sur Relora",
-                        "description": "Gardez paiement et echanges dans la plateforme."
-                    },
-                    {
-                        "number": "03",
-                        "title": "Conserver les preuves",
-                        "description": "Gardez photos, messages et suivi."
-                    },
-                    {
-                        "number": "04",
-                        "title": "Suivre les instructions",
-                        "description": "Repondez a temps et suivez les etapes affichees."
-                    }
-                ],
-                "typesEyebrow": "Possibilites",
-                "typesTitle": "Facons de collaborer",
-                "types": [{
-                        "number": "01",
-                        "title": "Marques et designers",
-                        "description": "Collections curatees et pieces d archive pour une audience mode."
-                    },
-                    {
-                        "number": "02",
-                        "title": "Boutiques et retailers",
-                        "description": "Des stocks selectionnes peuvent trouver de nouveaux acheteurs."
-                    },
-                    {
-                        "number": "03",
-                        "title": "Createurs et medias",
-                        "description": "Articles, campagnes et projets de communaute."
-                    },
-                    {
-                        "number": "04",
-                        "title": "Services du secteur",
-                        "description": "Collaboration autour de l authenticite, livraison, preservation et support."
-                    }
-                ],
-                "categoriesEyebrow": "Categories de cookies",
-                "categoriesTitle": "Comment les cookies sont utilises",
-                "categories": [{
-                        "number": "01",
-                        "title": "Strictement necessaires",
-                        "description": "Toujours actifs. Requis pour connexion, securite, paiement et fonctions essentielles."
-                    },
-                    {
-                        "number": "02",
-                        "title": "Preferences",
-                        "description": "Memorise les reglages comme la langue ou la preference catalogue."
-                    },
-                    {
-                        "number": "03",
-                        "title": "Analyse",
-                        "description": "Optionnel. Aide a comprendre l usage et ameliorer la plateforme."
-                    },
-                    {
-                        "number": "04",
-                        "title": "Marketing",
-                        "description": "Optionnel. Peut mesurer les campagnes ou rendre la publicite plus pertinente."
-                    }
-                ],
-                "footerMeta": "Relora - Politique de retours",
-                "footerText": "Des instructions claires rendent chaque retour plus sur.",
                 "sections": []
             },
             "howToSell": {
@@ -2442,10 +2356,6 @@
         "buyerProtection": {
             "title": "Protection acheteur — Relora",
             "description": "Découvrez comment la protection acheteur Relora soutient des transactions d’enchères de mode plus sûres."
-        },
-        "returnsPolicy": {
-            "title": "Politique de retour — Relora",
-            "description": "Lisez la politique de retour Relora pour les achats aux enchères et les problèmes de commande éligibles."
         },
         "cookiePolicy": {
             "title": "Politique relative aux cookies — Relora",

@@ -232,8 +232,8 @@ import {
 
         <AccordionContent>
           <p>
-            Return eligibility depends on seller policies, item condition,
-            authenticity concerns, and dispute review outcomes.
+            Relora does not process returns. If the item was not received, is
+            damaged or differs from the listing, open a dispute on the order page.
           </p>
 
           <p class="mt-3">

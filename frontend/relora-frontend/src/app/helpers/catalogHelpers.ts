@@ -58,7 +58,6 @@ const catalogFilterQueryKeys = [
   'productionYearTo',
   'vintageOnly',
   'hasMeasurements',
-  'hasProofOfOrigin',
   'endingSoon',
   'newlyListed',
 ]
@@ -256,11 +255,6 @@ export function parseCatalogFilters(
       'hasMeasurements',
     ),
 
-    hasProofOfOrigin: readBoolean(
-      query,
-      'hasProofOfOrigin',
-    ),
-
     endingSoon: readBoolean(
       query,
       'endingSoon',
@@ -361,10 +355,6 @@ export function serializeCatalogFilters(
     query.hasMeasurements = 'true'
   }
 
-  if (filters.hasProofOfOrigin) {
-    query.hasProofOfOrigin = 'true'
-  }
-
   if (filters.endingSoon) {
     query.endingSoon = 'true'
   }
@@ -416,7 +406,6 @@ export function mergeLockedFilters(
       locked.vintageOnly === true ||
       filters.vintageOnly,
     hasMeasurements: filters.hasMeasurements,
-    hasProofOfOrigin: filters.hasProofOfOrigin,
     endingSoon: filters.endingSoon,
     newlyListed: filters.newlyListed,
   }
@@ -450,7 +439,6 @@ export function stripLockedFilters(
         ? false
         : filters.vintageOnly,
     hasMeasurements: filters.hasMeasurements,
-    hasProofOfOrigin: filters.hasProofOfOrigin,
     endingSoon: filters.endingSoon,
     newlyListed: filters.newlyListed,
   }

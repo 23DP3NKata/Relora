@@ -44,10 +44,6 @@ export type MarkOrderShippedPayload = {
   trackingNumber: string
 }
 
-export type ReportOrderNotDeliveredPayload = {
-  reason?: string | null
-}
-
 export type OrderDisputeReason =
   | 'ItemNotShipped'
   | 'ItemNotReceived'
@@ -110,9 +106,6 @@ export type OrderItem = {
   shippedAtUtc?: string | null
   deliveredAtUtc?: string | null
   completedAtUtc?: string | null
-  deliveryIssueAvailableFromUtc?: string | null
-  deliveryIssueReportedAtUtc?: string | null
-  deliveryIssueReason?: string | null
   carrierName?: string | null
   trackingNumber?: string | null
   canViewShippingAddress?: boolean

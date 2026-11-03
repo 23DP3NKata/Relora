@@ -106,10 +106,9 @@ public class GetLotsListQueryHandler : IRequestHandler<GetLotsListQuery, PagedRe
         var categories = await _catalogRepository.GetCategoriesAsync(cancellationToken);
         var colors = await _catalogRepository.GetColorsAsync(cancellationToken);
         var materials = await _catalogRepository.GetMaterialsAsync(cancellationToken);
-        var proofTypes = await _catalogRepository.GetProofDocumentTypesAsync(cancellationToken);
         var measurements = await _catalogRepository.GetMeasurementDefinitionsAsync(cancellationToken);
 
-        return LotReadModelMapper.CreateContext(categories, colors, materials, proofTypes, measurements);
+        return LotReadModelMapper.CreateContext(categories, colors, materials, measurements);
     }
 
     private async Task<IQueryable<Lot>> ApplyCategorySlugFiltersAsync(

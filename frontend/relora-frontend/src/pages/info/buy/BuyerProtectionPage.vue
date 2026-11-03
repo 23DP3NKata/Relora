@@ -10,27 +10,27 @@ type ProtectionSection = {
 const protectionSteps = [
   {
     number: '01',
-    title: 'Pay through Relora',
+    title: 'Pay for the order',
     description:
-      'Complete the payment through Relora after winning an auction. Payments made outside the platform are not protected.',
+      'After winning an auction, enter your delivery address and pay within 3 days. It is a test payment and no real money is charged.',
   },
   {
     number: '02',
     title: 'Seller ships the item',
     description:
-      'The seller must ship the item using a trackable delivery method and provide shipment information.',
+      'The seller ships the item within the handling time from the listing and adds the carrier and tracking number.',
   },
   {
     number: '03',
-    title: 'Inspect your order',
+    title: 'Check the delivery',
     description:
-      'After delivery, you have 48 hours to inspect the item and report a qualifying problem.',
+      'You receive an email when the item is shipped. When it arrives, compare it with the listing.',
   },
   {
     number: '04',
-    title: 'Order is completed',
+    title: 'Confirm or open a dispute',
     description:
-      'If no problem is reported during the protection window, the order is completed and the seller becomes eligible for payment.',
+      'Confirm receipt to complete the order. If something is wrong, open a dispute instead of confirming.',
   },
 ]
 
@@ -39,162 +39,101 @@ const sections: ProtectionSection[] = [
     id: 'overview',
     title: '1. What Buyer Protection Means',
     content: [
-      'Buyer Protection is designed to make purchases on Relora safer. It applies to eligible orders that are paid for and completed entirely through the Relora platform.',
-      'After the item is delivered, you receive a limited inspection period. During this time, you may report a problem if the item was not received, is materially different from the listing, or appears to be counterfeit.',
-      'Buyer Protection is not a general return policy and does not cover a change of mind, an incorrect size choice, or details that were clearly disclosed before bidding.',
+      'Buyer Protection on Relora means that a buyer can open a dispute when there is a serious problem with an order. An administrator reviews the dispute and makes a decision.',
+      'Relora does not process returns or refunds. Payments on Relora are test payments, so no money is transferred between the buyer and the seller.',
     ],
   },
   {
     id: 'before-bidding',
     title: '2. Before Placing a Bid',
     content: [
-      'Every bid placed on Relora is intended to be binding. Before bidding, carefully review the complete listing and make sure that the item is suitable for you.',
+      'A bid cannot be withdrawn after it is placed. Before bidding, review the listing carefully.',
     ],
     list: [
-      'Read the full title, description and condition information',
-      'Review all available photographs',
-      'Check the listed size and available measurements',
-      'Review disclosed defects, alterations and signs of wear',
-      'Ask for additional information before placing a bid',
-      'Confirm that the delivery destination is correct',
-    ],
-    note:
-      'Buyer Protection does not replace the buyer’s responsibility to review the listing before bidding.',
-  },
-  {
-    id: 'covered',
-    title: '3. What May Be Covered',
-    content: [
-      'A purchase may be eligible for Buyer Protection when one of the following problems can be supported by the order information and evidence provided.',
-    ],
-    list: [
-      'The item was not delivered',
-      'The buyer received a different item',
-      'The item appears to be counterfeit or an unauthorised replica',
-      'The item has major damage that was not disclosed in the listing',
-      'The condition is materially worse than described',
-      'Important components or accessories shown in the listing are missing',
-      'The item arrived significantly damaged during delivery',
+      'Read the title, description and condition',
+      'Review all photographs',
+      'Check the size and measurements',
+      'Check the shipping price and the countries the seller ships to',
     ],
   },
   {
-    id: 'not-covered',
-    title: '4. What Is Not Covered',
+    id: 'payment',
+    title: '3. Payment',
     content: [
-      'Buyer Protection is intended for serious order problems. It is not intended to provide unrestricted returns for auction purchases.',
-    ],
-    list: [
-      'You changed your mind after winning the auction',
-      'The item does not fit or the size was selected incorrectly',
-      'You no longer want or need the item',
-      'A defect or sign of wear was clearly shown or described',
-      'Minor differences caused by lighting, screens or photography',
-      'Normal wear expected from the item’s disclosed condition',
-      'The item was altered, washed, repaired or damaged after delivery',
-      'Payment or communication was moved outside Relora',
-      'The problem was reported after the protection period expired',
+      'When an auction ends, the winner gets an order with the status "awaiting payment". The total is the winning bid plus the shipping price.',
+      'The buyer enters a delivery address and confirms the payment within 3 days. The seller must ship to the selected country. If the order is not paid in time, it expires and the seller can list the item again.',
     ],
   },
   {
     id: 'delivery',
-    title: '5. Delivery and Inspection Period',
+    title: '4. Shipping and Delivery',
     content: [
-      'The seller must use a delivery method that provides shipment tracking. Buyers should monitor the order status and make sure that the delivery address is complete and accurate.',
-      'Once the order is marked as delivered, the buyer has 48 hours to inspect the item. The seller’s payment remains pending during this inspection period.',
-      'If no problem is reported before the inspection period expires, the order may be automatically completed and the seller may become eligible to receive the payment.',
+      'After payment the seller has to ship the item within the handling time shown in the listing (in business days) and enter the carrier and tracking number.',
+      'The buyer receives an email when the item is shipped and can see the tracking number on the order page. Administrators can see orders that were not shipped in time.',
+      'When the item arrives, the buyer confirms receipt and the order is completed.',
+    ],
+  },
+  {
+    id: 'covered',
+    title: '5. When You Can Open a Dispute',
+    content: [
+      'A dispute can be opened for a paid order that is not completed or cancelled, so open it before confirming receipt.',
     ],
     list: [
-      'Check the package before discarding any packaging',
-      'Compare the received item with the listing photographs',
-      'Inspect the condition, label, size and included accessories',
-      'Keep the shipping label and original packaging until the order is completed',
-      'Report any serious problem as soon as it is discovered',
+      'The item was not shipped',
+      'The item was not received',
+      'A different item was received',
+      'The item is significantly different from the description',
+      'The item is damaged',
+      'The item may be counterfeit',
+    ],
+  },
+  {
+    id: 'not-covered',
+    title: '6. What Is Not a Reason for a Dispute',
+    list: [
+      'You changed your mind after winning the auction',
+      'The item does not fit or the size was chosen incorrectly',
+      'A defect was clearly shown or described in the listing',
+      'Small colour differences caused by photos or screens',
     ],
   },
   {
     id: 'reporting',
-    title: '6. Reporting a Problem',
+    title: '7. Opening a Dispute',
     content: [
-      'To request assistance, open the relevant order and select “Report a problem” before the 48-hour inspection period expires.',
-      'Describe the issue clearly and provide evidence that shows how the received item differs from the listing.',
-    ],
-    list: [
-      'Photographs of the complete item',
-      'Close-up photographs of the reported problem',
-      'Photographs of labels, serial numbers or authenticity details',
-      'Photographs of the package and shipping label',
-      'A delivery or unboxing video, when available',
-      'Any other information requested during the review',
+      'Open the order and choose "Report a problem". Select a reason and describe the problem (up to 2000 characters).',
+      'You can add up to 10 photos as evidence (JPEG, PNG or WebP, up to 10 MB each).',
     ],
     note:
-      'Do not return the item without instructions from Relora. An unauthorised return may delay or affect the review.',
+      'Do not send the item back. Relora does not process returns.',
   },
   {
     id: 'review',
-    title: '7. How a Case Is Reviewed',
+    title: '8. How a Dispute Is Decided',
     content: [
-      'When a qualifying problem is reported, Relora may pause completion of the order while the case is reviewed.',
-      'Relora may examine the original listing, photographs, condition description, tracking information, payment records and evidence submitted by both parties.',
-      'The buyer and seller may be asked to provide additional information within a specified period. Failure to respond may affect the final decision.',
+      'When a dispute is opened, the order gets the status "disputed" and administrators receive an email.',
+      'An administrator reviews the description and photos and makes a decision with a short explanation. The buyer and the seller receive an email with the decision.',
     ],
     list: [
-      'Approve a return and refund',
-      'Reject the claim and complete the order',
-      'Request additional evidence from the buyer or seller',
-      'Require the item to be returned using tracked delivery',
-      'Take action against an account that violates platform rules',
-    ],
-  },
-  {
-    id: 'returns-refunds',
-    title: '8. Returns and Refunds',
-    content: [
-      'When a return is approved, the buyer must follow the return instructions provided by Relora and use a trackable delivery method.',
-      'The item must be returned in the same condition in which it was received. It must not be worn, washed, repaired, altered or damaged.',
-      'A refund may be issued after the return has been delivered and the required conditions have been verified. Refund processing times depend on the payment provider and the buyer’s bank.',
-      'Responsibility for return delivery costs may depend on the reason for the return and the outcome of the case.',
+      'In favour of the buyer - the order is cancelled',
+      'In favour of the seller - the order is completed',
     ],
   },
   {
     id: 'authenticity',
-    title: '9. Counterfeit and Authenticity Concerns',
+    title: '9. Counterfeit Items',
     content: [
-      'Counterfeit, replica and intentionally misrepresented items are prohibited on Relora.',
-      'Relora may review listings before publication and may request additional photographs, purchase records, serial numbers or other supporting information from a seller.',
-      'Moderation reduces risk but does not mean that every item has received a physical expert authentication. Buyers should review each listing carefully and report any authenticity concerns during the protection period.',
-      'If an item is determined to violate Relora’s authenticity rules, the listing may be removed and action may be taken against the seller’s account.',
-    ],
-  },
-  {
-    id: 'off-platform',
-    title: '10. Off-Platform Transactions',
-    content: [
-      'Buyer Protection applies only when the auction, payment and order process remain on Relora.',
-      'Never send money directly to a seller, use an external payment link, or agree to complete the transaction privately.',
-      'Relora cannot reliably investigate or protect payments, deliveries or agreements made outside the platform.',
-    ],
-  },
-  {
-    id: 'buyer-responsibilities',
-    title: '11. Buyer Responsibilities',
-    content: [
-      'To remain eligible for Buyer Protection, buyers must act honestly, respond to requests for information and preserve the item while a case is being reviewed.',
-    ],
-    list: [
-      'Provide complete and accurate information',
-      'Submit original and relevant evidence',
-      'Do not make false or misleading claims',
-      'Do not alter the item during a review',
-      'Follow all return and delivery instructions',
-      'Communicate respectfully with the seller and Relora support',
+      'Counterfeit and replica items are not allowed. Every listing is checked by an administrator before it can go to auction.',
+      'Moderation is based on the listing photos and description and is not a physical authentication. If you suspect a counterfeit, open a dispute with the reason "possible counterfeit".',
     ],
   },
   {
     id: 'contact',
-    title: '12. Contact and Support',
+    title: '10. Contact and Support',
     content: [
-      'If you have a problem with an active order, use the “Report a problem” option from the order page.',
-      'For general questions about Buyer Protection, delivery or refunds, contact Relora through the Contact us page.',
+      'For a problem with an order, use "Report a problem" on the order page.',
+      'For other questions, send a request through the Contact us page. You will get a confirmation email.',
     ],
   },
 ]
@@ -226,9 +165,13 @@ const sections: ProtectionSection[] = [
             <p
               class="mt-5 max-w-2xl text-sm leading-7 text-foreground/65 sm:text-base"
             >
-              Shop premium and archival fashion with greater confidence.
-              Eligible purchases are protected when the payment and order
-              process are completed through Relora.
+              If something goes wrong with an order, you can open a dispute
+              and an administrator will make a decision.
+            </p>
+
+            <p class="mt-4 text-xs text-foreground/40">
+              Relora is not a real working marketplace yet. Payments are test
+              payments and no real money is transferred.
             </p>
           </div>
 
@@ -241,9 +184,9 @@ const sections: ProtectionSection[] = [
               </p>
 
               <p class="mt-3 text-sm leading-7 text-foreground/65">
-                Pay through Relora, receive tracked delivery and inspect your
-                order within 48 hours. Report serious problems before the
-                protection period expires.
+                Pay for the order, wait for the tracked delivery and check the
+                item. If there is a serious problem, open a dispute before
+                confirming receipt.
               </p>
 
               <div class="mt-5 space-y-3">
@@ -253,7 +196,7 @@ const sections: ProtectionSection[] = [
                   />
 
                   <span class="text-sm leading-6 text-foreground/60">
-                    Secure platform payment
+                    Test payment within 3 days
                   </span>
                 </div>
 
@@ -263,7 +206,7 @@ const sections: ProtectionSection[] = [
                   />
 
                   <span class="text-sm leading-6 text-foreground/60">
-                    Trackable delivery
+                    Tracking number from the seller
                   </span>
                 </div>
 
@@ -273,7 +216,7 @@ const sections: ProtectionSection[] = [
                   />
 
                   <span class="text-sm leading-6 text-foreground/60">
-                    48-hour inspection period
+                    Dispute reviewed by an administrator
                   </span>
                 </div>
               </div>
@@ -291,7 +234,7 @@ const sections: ProtectionSection[] = [
         </p>
 
         <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
-          Protected from payment to delivery
+          From payment to delivery
         </h2>
       </div>
 
@@ -409,7 +352,7 @@ const sections: ProtectionSection[] = [
         </p>
 
         <p class="mt-3 text-lg font-medium text-foreground/65">
-          Bid carefully. Pay securely. Inspect every delivery.
+          Bid carefully. Check every delivery.
         </p>
       </div>
     </section>

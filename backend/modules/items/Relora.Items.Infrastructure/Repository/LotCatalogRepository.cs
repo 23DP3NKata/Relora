@@ -160,20 +160,4 @@ public sealed class LotCatalogRepository(ReloraDbContext context) : ILotCatalogR
             .OrderBy(definition => definition.SortOrder)
             .ToListAsync(cancellationToken);
     }
-
-    public async Task<IReadOnlyList<ProofDocumentType>> GetProofDocumentTypesAsync(CancellationToken cancellationToken)
-    {
-        return await _context.ProofDocumentTypes
-            .AsNoTracking()
-            .OrderBy(type => type.SortOrder)
-            .ThenBy(type => type.NameKey)
-            .ToListAsync(cancellationToken);
-    }
-
-    public Task<ProofDocumentType?> GetProofDocumentTypeByIdAsync(Guid id, CancellationToken cancellationToken)
-    {
-        return _context.ProofDocumentTypes
-            .AsNoTracking()
-            .FirstOrDefaultAsync(type => type.Id == id, cancellationToken);
-    }
 }

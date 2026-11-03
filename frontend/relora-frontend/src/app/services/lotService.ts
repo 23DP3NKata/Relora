@@ -69,7 +69,6 @@ function buildLotsQueryParams(request: GetLotsListParams): URLSearchParams {
 
   appendBoolean(params, "vintageOnly", request.vintageOnly)
   appendBoolean(params, "hasMeasurements", request.hasMeasurements)
-  appendBoolean(params, "hasProofOfOrigin", request.hasProofOfOrigin)
   appendBoolean(params, "endingSoon", request.endingSoon)
   appendBoolean(params, "newlyListed", request.newlyListed)
 
@@ -83,11 +82,7 @@ function buildLotsQueryParams(request: GetLotsListParams): URLSearchParams {
   return params
 }
 
-export type EditLotPayload = Omit<CreateLotPayload, "proofDocuments"> & {
-  proofDocuments?: {
-    uploadId: string
-  }[]
-}
+export type EditLotPayload = CreateLotPayload
 
 export type GetLotsFilters = {
   search?: string

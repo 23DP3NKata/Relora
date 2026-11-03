@@ -27,7 +27,6 @@ public sealed class PendingLotMediaUploadTests
             lots,
             new InMemoryLotCatalogRepository(),
             pendingUploads,
-            new InMemoryPendingProofUploadRepository(),
             new InlineTransactionRunner(),
             new FixedClock());
 
@@ -53,7 +52,6 @@ public sealed class PendingLotMediaUploadTests
             lots,
             new InMemoryLotCatalogRepository(),
             pendingUploads,
-            new InMemoryPendingProofUploadRepository(),
             new InlineTransactionRunner(),
             new FixedClock());
 
@@ -163,7 +161,6 @@ public sealed class PendingLotMediaUploadTests
             photoKeys,
             null,
             null,
-            null,
             null);
     }
 
@@ -240,25 +237,6 @@ public sealed class PendingLotMediaUploadTests
         }
     }
 
-    private sealed class InMemoryPendingProofUploadRepository : IPendingLotProofDocumentUploadRepository
-    {
-        public Task AddAsync(PendingLotProofDocumentUpload upload, CancellationToken cancellationToken) => Task.CompletedTask;
-
-        public Task<PendingLotProofDocumentUpload?> GetByOwnerAndIdAsync(
-            Guid ownerId,
-            Guid id,
-            CancellationToken cancellationToken) => Task.FromResult<PendingLotProofDocumentUpload?>(null);
-
-        public Task<IReadOnlyList<PendingLotProofDocumentUpload>> GetByOwnerAndIdsAsync(
-            Guid ownerId,
-            IReadOnlyCollection<Guid> ids,
-            CancellationToken cancellationToken) => Task.FromResult<IReadOnlyList<PendingLotProofDocumentUpload>>([]);
-
-        public Task DeleteAsync(PendingLotProofDocumentUpload upload, CancellationToken cancellationToken) => Task.CompletedTask;
-
-        public Task DeleteRangeAsync(IEnumerable<PendingLotProofDocumentUpload> uploads, CancellationToken cancellationToken) => Task.CompletedTask;
-    }
-
     private sealed class InMemoryLotCatalogRepository : ILotCatalogRepository
     {
         private readonly Category _category;
@@ -309,8 +287,6 @@ public sealed class PendingLotMediaUploadTests
         public Task<ItemColor?> GetColorByCodeAsync(string code, CancellationToken cancellationToken) => Task.FromResult<ItemColor?>(code == _otherColor.Code ? _otherColor : null);
         public Task<IReadOnlyList<MeasurementDefinition>> GetMeasurementDefinitionsAsync(CancellationToken cancellationToken) => Task.FromResult<IReadOnlyList<MeasurementDefinition>>([]);
         public Task<IReadOnlyList<MeasurementDefinition>> GetMeasurementDefinitionsByProfileAsync(string profile, CancellationToken cancellationToken) => Task.FromResult<IReadOnlyList<MeasurementDefinition>>([]);
-        public Task<IReadOnlyList<ProofDocumentType>> GetProofDocumentTypesAsync(CancellationToken cancellationToken) => Task.FromResult<IReadOnlyList<ProofDocumentType>>([]);
-        public Task<ProofDocumentType?> GetProofDocumentTypeByIdAsync(Guid id, CancellationToken cancellationToken) => Task.FromResult<ProofDocumentType?>(null);
     }
 
     private sealed class FixedClock : IClock

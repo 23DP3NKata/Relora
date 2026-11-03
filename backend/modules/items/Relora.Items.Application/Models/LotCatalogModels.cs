@@ -6,8 +6,6 @@ public sealed record LotMaterialInput(Guid MaterialId, decimal? Percentage, stri
 
 public sealed record LotMeasurementInput(string Key, decimal Value, string? Unit);
 
-public sealed record ProofDocumentUploadInput(Guid UploadId);
-
 public sealed record LookupOptionDto(
     Guid Id,
     string Code,
@@ -42,7 +40,6 @@ public sealed record LotFormLookupsDto(
     IReadOnlyList<CategoryDto> Categories,
     IReadOnlyList<LookupOptionDto> Materials,
     IReadOnlyList<LookupOptionDto> Colors,
-    IReadOnlyList<LookupOptionDto> ProofDocumentTypes,
     IReadOnlyList<MeasurementDefinitionDto> MeasurementDefinitions,
     IReadOnlyList<SizeOptionDto> SizeOptions);
 
@@ -56,13 +53,3 @@ public sealed record LotMaterialDto(
 public sealed record LotColorDto(Guid ColorId, string Code, string NameKey);
 
 public sealed record LotMeasurementDto(string Key, decimal Value, string Unit, string? LabelKey);
-
-public sealed record LotProofDocumentDto(
-    Guid Id,
-    Guid DocumentTypeId,
-    string TypeCode,
-    string TypeNameKey,
-    string OriginalFileName,
-    string MimeType,
-    long SizeBytes,
-    DateTime CreatedAtUtc);

@@ -21,8 +21,8 @@ import {
   type CreateLotFormState,
   type UploadedPhoto,
 } from "@/types/createLot"
-import type { CategoryNode, LotDepartment, LotFormLookups, LotMaterialInput, LotMeasurementInput, UploadedProofDocument } from "@/types/lotCatalog"
-import type { Lot, LotMedia, LotProofDocument } from "@/types/lot"
+import type { CategoryNode, LotDepartment, LotFormLookups, LotMaterialInput, LotMeasurementInput } from "@/types/lotCatalog"
+import type { Lot, LotMedia } from "@/types/lot"
 import { useLocalePath } from "@/composables/useLocalePath"
 
 const MIN_PHOTOS = 5
@@ -58,7 +58,6 @@ const photos = ref<UploadedPhoto[]>([])
 const isLoading = ref(true)
 const isSubmitting = ref(false)
 const isUploadingPhotos = ref(false)
-const isUploadingProofDocuments = ref(false)
 const errorMessage = ref("")
 const successMessage = ref("")
 const currentStepIndex = ref(0)
@@ -68,7 +67,6 @@ const form = reactive<CreateLotFormState>({
   ...DEFAULT_CREATE_LOT_FORM,
   materials: [...DEFAULT_CREATE_LOT_FORM.materials],
   measurements: [...DEFAULT_CREATE_LOT_FORM.measurements],
-  proofDocuments: [...DEFAULT_CREATE_LOT_FORM.proofDocuments],
   photoKeys: [...DEFAULT_CREATE_LOT_FORM.photoKeys],
   coverPhotoKey: DEFAULT_CREATE_LOT_FORM.coverPhotoKey,
 })
@@ -140,7 +138,6 @@ const reviewForm = computed(() => ({
   gender: form.department ? localizedOptionLabel(`departments.${form.department}`) : "",
   size: localizedOptionLabel(getOptionLabel(form.size, SIZE_OPTIONS)),
   condition: localizedOptionLabel(getOptionLabel(form.condition, CONDITION_OPTIONS)),
-  proofCount: form.proofDocuments.length,
   measurementsCount: form.measurements.length,
   materials: form.materials
     .map((material) => lookups.value?.materials.find((option) => option.id === material.materialId)?.nameKey)
@@ -252,19 +249,6 @@ function mapExistingPhoto(media: LotMedia): UploadedPhoto {
   }
 }
 
-function mapExistingProofDocument(document: LotProofDocument): UploadedProofDocument {
-  return {
-    id: document.id,
-    uploadId: "",
-    documentTypeId: document.documentTypeId,
-    originalFileName: document.originalFileName,
-    mimeType: document.mimeType,
-    sizeBytes: document.sizeBytes,
-    createdAtUtc: document.createdAtUtc,
-    isExisting: true,
-  }
-}
-
 function syncPhotoState() {
   const uploadedPhotos = photos.value.filter((photo) => photo.key && photo.uploadStatus !== "failed")
   const coverPhoto = uploadedPhotos.find((photo) => photo.isCover) ?? uploadedPhotos[0] ?? null
@@ -283,11 +267,6 @@ function createSnapshot() {
       ...form,
       materials: form.materials.map((material) => ({ ...material })),
       measurements: form.measurements.map((measurement) => ({ ...measurement })),
-      proofDocuments: form.proofDocuments.map((document) => ({
-        id: document.id,
-        uploadId: document.uploadId,
-        isExisting: Boolean(document.isExisting),
-      })),
     },
     photos: photos.value.map((photo) => ({
       id: photo.id,
@@ -342,7 +321,6 @@ function hydrateForm(data: Lot) {
     value: measurement.value,
     unit: measurement.unit,
   }))
-  form.proofDocuments = (data.proofDocuments ?? []).map(mapExistingProofDocument)
   form.shippingPrice = Number(data.shippingPrice ?? 0)
   form.shippingCurrency = data.shippingCurrency || data.currency || "EUR"
   form.shippingOriginCountry = data.shippingOriginCountry || data.country
@@ -549,62 +527,6 @@ function makeCoverPhoto(photoId: string) {
   syncPhotoState()
 }
 
-async function handleProofDocumentsSelected(documentTypeId: string, files: File[]) {
-  errorMessage.value = ""
-
-  if (!documentTypeId) {
-    errorMessage.value = t("sell.proofTypeRequired")
-    return
-  }
-
-  if (form.proofDocuments.length + files.length > 5) {
-    errorMessage.value = t("sell.proofMaxDocuments")
-    return
-  }
-
-  isUploadingProofDocuments.value = true
-
-  try {
-    for (const file of files) {
-      const response = await mediaService.uploadProofDocument(file, documentTypeId)
-      form.proofDocuments.push({
-        id: createClientId(),
-        uploadId: response.uploadId,
-        documentTypeId: response.documentTypeId,
-        originalFileName: response.originalFileName,
-        mimeType: response.mimeType,
-        sizeBytes: response.sizeBytes,
-        createdAtUtc: response.createdAtUtc,
-        isExisting: false,
-      })
-    }
-  } catch (error) {
-    console.error("Failed to upload proof document", error)
-    errorMessage.value = t("sell.proofUploadFailed")
-  } finally {
-    isUploadingProofDocuments.value = false
-  }
-}
-
-async function removeProofDocument(id: string) {
-  const document = form.proofDocuments.find((item) => item.id === id)
-  if (!document) {
-    return
-  }
-
-  if (document.isExisting && lot.value) {
-    try {
-      await mediaService.deleteProofDocument(lot.value.id, document.id)
-    } catch (error) {
-      console.error("Failed to delete proof document", error)
-      errorMessage.value = t("sell.proofDeleteFailed")
-      return
-    }
-  }
-
-  form.proofDocuments = form.proofDocuments.filter((item) => item.id !== id)
-}
-
 function validateVintage(): boolean {
   if (!form.isVintage) {
     return true
@@ -766,7 +688,7 @@ function validateCurrentStep(): boolean {
         return false
       }
 
-      if (isUploadingPhotos.value || isUploadingProofDocuments.value) {
+      if (isUploadingPhotos.value) {
         errorMessage.value = t("sell.waitUploads")
         return false
       }
@@ -931,11 +853,6 @@ function buildPayload(): EditLotPayload {
         key: measurement.key,
         value: measurement.value,
         unit: measurement.unit || "cm",
-      })),
-    proofDocuments: form.proofDocuments
-      .filter((document) => !document.isExisting && document.uploadId)
-      .map((document) => ({
-        uploadId: document.uploadId,
       })),
   }
 }
@@ -1152,13 +1069,8 @@ onBeforeUnmount(() => {
           <SellPhotosStep
             v-else-if="currentStep === 'photos'"
             :photos="photos"
-            :proof-documents="form.proofDocuments"
-            :proof-document-types="lookups?.proofDocumentTypes ?? []"
             :is-uploading="isUploadingPhotos"
-            :is-uploading-proof-documents="isUploadingProofDocuments"
             @files-selected="handleFilesSelected"
-            @proof-documents-selected="handleProofDocumentsSelected"
-            @remove-proof-document="removeProofDocument"
             @remove-photo="removePhoto"
             @replace-photo="replacePhoto"
             @retry-photo="retryPhoto"
@@ -1185,7 +1097,7 @@ onBeforeUnmount(() => {
               <button
                 type="button"
                 class="inline-flex items-center justify-center rounded-2xl border px-5 py-3 text-sm font-medium transition hover:bg-foreground hover:text-background disabled:cursor-not-allowed disabled:opacity-50"
-                :disabled="isFirstStep || isSubmitting || isUploadingPhotos || isUploadingProofDocuments"
+                :disabled="isFirstStep || isSubmitting || isUploadingPhotos"
                 @click="goToPreviousStep"
               >
                 {{ $t("sell.back") }}
@@ -1194,7 +1106,7 @@ onBeforeUnmount(() => {
               <button
                 type="button"
                 class="inline-flex items-center justify-center rounded-2xl border px-5 py-3 text-sm font-medium transition hover:bg-foreground hover:text-background disabled:cursor-not-allowed disabled:opacity-50"
-                :disabled="isSubmitting || isUploadingPhotos || isUploadingProofDocuments"
+                :disabled="isSubmitting || isUploadingPhotos"
                 @click="cancelEdit"
               >
                 {{ $t("editLot.cancel") }}
@@ -1203,7 +1115,7 @@ onBeforeUnmount(() => {
               <button
                 type="button"
                 class="inline-flex items-center justify-center rounded-2xl border px-5 py-3 text-sm font-medium transition hover:bg-foreground hover:text-background disabled:cursor-not-allowed disabled:opacity-50"
-                :disabled="!isDirty || isSubmitting || isUploadingPhotos || isUploadingProofDocuments"
+                :disabled="!isDirty || isSubmitting || isUploadingPhotos"
                 @click="discardChanges"
               >
                 {{ $t("editLot.discardChanges") }}
@@ -1214,17 +1126,17 @@ onBeforeUnmount(() => {
               v-if="!isLastStep"
               type="button"
               class="inline-flex items-center justify-center rounded-2xl bg-foreground px-5 py-3 text-sm font-medium text-background transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
-              :disabled="isSubmitting || isUploadingPhotos || isUploadingProofDocuments"
+              :disabled="isSubmitting || isUploadingPhotos"
               @click="goToNextStep"
             >
-              {{ isUploadingPhotos || isUploadingProofDocuments ? $t("sell.uploading") : $t("sell.continue") }}
+              {{ isUploadingPhotos ? $t("sell.uploading") : $t("sell.continue") }}
             </button>
 
             <button
               v-else
               type="button"
               class="inline-flex items-center justify-center rounded-2xl bg-foreground px-5 py-3 text-sm font-medium text-background transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
-              :disabled="!canEdit || isSubmitting || isUploadingPhotos || isUploadingProofDocuments"
+              :disabled="!canEdit || isSubmitting || isUploadingPhotos"
               @click="submit"
             >
               {{ isSubmitting ? $t("editLot.savingChanges") : $t("editLot.saveChanges") }}

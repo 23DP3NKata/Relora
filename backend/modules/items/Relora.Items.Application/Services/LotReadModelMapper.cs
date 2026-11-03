@@ -9,7 +9,6 @@ public sealed record LotCatalogReadContext(
     IReadOnlyDictionary<Guid, Category> Categories,
     IReadOnlyDictionary<Guid, ItemColor> Colors,
     IReadOnlyDictionary<Guid, Material> Materials,
-    IReadOnlyDictionary<Guid, ProofDocumentType> ProofDocumentTypes,
     IReadOnlyDictionary<string, MeasurementDefinition> MeasurementDefinitions);
 
 public static class LotReadModelMapper
@@ -47,7 +46,6 @@ public static class LotReadModelMapper
             ProductionYear = lot.ProductionYear,
             IsVintage = lot.IsVintage,
             HasMeasurements = lot.Measurements.Count > 0,
-            ProofStatus = lot.ProofDocuments.Count > 0 ? "submitted" : "notProvided",
             Status = lot.Status,
             StatusName = lot.Status.ToString(),
             ShippingPrice = lot.ShippingPrice,
@@ -65,7 +63,7 @@ public static class LotReadModelMapper
         Lot lot,
         LotCatalogReadContext catalog,
         string publicBaseUrl,
-        bool includePrivateProofDocuments,
+        bool includePrivateDetails,
         LotSellerDto seller)
     {
         var category = ResolveCategory(lot, catalog);
@@ -107,15 +105,11 @@ public static class LotReadModelMapper
             AcquisitionYear = lot.AcquisitionYear,
             ProductionYear = lot.ProductionYear,
             IsVintage = lot.IsVintage,
-            VintageNotes = includePrivateProofDocuments ? lot.VintageNotes : null,
+            VintageNotes = includePrivateDetails ? lot.VintageNotes : null,
             Materials = lot.Materials.Select(material => ToMaterialDto(material, catalog)).ToList(),
             Measurements = lot.Measurements
                 .Select(measurement => ToMeasurementDto(measurement, category, catalog))
                 .ToList(),
-            ProofStatus = lot.ProofDocuments.Count > 0 ? "submitted" : "notProvided",
-            ProofDocuments = includePrivateProofDocuments
-                ? lot.ProofDocuments.Select(document => ToProofDocumentDto(document, catalog)).ToList()
-                : [],
             Status = lot.Status,
             StatusName = lot.Status.ToString(),
             CreatedAt = lot.CreatedAt,
@@ -180,8 +174,6 @@ public static class LotReadModelMapper
             Measurements = lot.Measurements
                 .Select(measurement => ToMeasurementDto(measurement, category, catalog))
                 .ToList(),
-            ProofStatus = preview.ProofStatus,
-            ProofDocuments = lot.ProofDocuments.Select(document => ToProofDocumentDto(document, catalog)).ToList(),
             Status = lot.Status,
             StatusName = lot.Status.ToString(),
             AuctionId = null,
@@ -209,14 +201,12 @@ public static class LotReadModelMapper
         IReadOnlyList<Category> categories,
         IReadOnlyList<ItemColor> colors,
         IReadOnlyList<Material> materials,
-        IReadOnlyList<ProofDocumentType> proofDocumentTypes,
         IReadOnlyList<MeasurementDefinition> measurementDefinitions)
     {
         return new LotCatalogReadContext(
             categories.ToDictionary(category => category.Id),
             colors.ToDictionary(color => color.Id),
             materials.ToDictionary(material => material.Id),
-            proofDocumentTypes.ToDictionary(type => type.Id),
             measurementDefinitions.ToDictionary(
                 definition => $"{definition.Profile}:{definition.Key}",
                 StringComparer.OrdinalIgnoreCase));
@@ -299,33 +289,5 @@ public static class LotReadModelMapper
             : null;
 
         return new LotMeasurementDto(measurement.Key, measurement.Value, measurement.Unit, labelKey);
-    }
-
-    private static LotProofDocumentDto ToProofDocumentDto(
-        Lot.LotProofDocument document,
-        LotCatalogReadContext catalog)
-    {
-        if (!catalog.ProofDocumentTypes.TryGetValue(document.DocumentTypeId, out var type))
-        {
-            return new LotProofDocumentDto(
-                document.Id,
-                document.DocumentTypeId,
-                "unknown",
-                "proofDocuments.unknown",
-                document.OriginalFileName,
-                document.MimeType,
-                document.SizeBytes,
-                document.CreatedAtUtc);
-        }
-
-        return new LotProofDocumentDto(
-            document.Id,
-            type.Id,
-            type.Code,
-            type.NameKey,
-            document.OriginalFileName,
-            document.MimeType,
-            document.SizeBytes,
-            document.CreatedAtUtc);
     }
 }

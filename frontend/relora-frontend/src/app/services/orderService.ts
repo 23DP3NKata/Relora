@@ -4,7 +4,6 @@ import type {
   OpenOrderDisputePayload,
   OrderDetails,
   OrderItem,
-  ReportOrderNotDeliveredPayload,
   ShippingAddressPayload,
 } from '@/types/order'
 
@@ -29,10 +28,6 @@ export const orderService = {
 
   async confirmOrderReceived(orderId: string): Promise<void> {
     await api.post(`/api/orders/${orderId}/received`)
-  },
-
-  async reportNotDelivered(orderId: string, payload: ReportOrderNotDeliveredPayload): Promise<void> {
-    await api.post(`/api/orders/${orderId}/not-delivered`, payload)
   },
 
   async openDispute(orderId: string, payload: OpenOrderDisputePayload): Promise<string> {

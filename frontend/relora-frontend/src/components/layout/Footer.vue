@@ -19,7 +19,6 @@ const footerColumns = [
     titleKey: 'navigation.buy',
     links: [
       { labelKey: 'navigation.buyerProtection', to: '/buyer-protection' },
-      { labelKey: 'navigation.returnsPolicy', to: '/returns-policy' },
     ],
   },
   {

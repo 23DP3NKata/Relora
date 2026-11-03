@@ -283,7 +283,6 @@ builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 builder.Services.AddScoped<ILotRepository, LotRepository>();
 builder.Services.AddScoped<ILotCatalogRepository, LotCatalogRepository>();
 builder.Services.AddScoped<IPendingLotMediaUploadRepository, PendingLotMediaUploadRepository>();
-builder.Services.AddScoped<IPendingLotProofDocumentUploadRepository, PendingLotProofDocumentUploadRepository>();
 builder.Services.AddScoped<IDomainEventDispatcher, DomainEventDispatcher>();
 builder.Services.AddScoped<ICookieFactory, CookieFactory>();
 builder.Services.AddScoped<IOrderRepository, OrdersRepository>();

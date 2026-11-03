@@ -20,7 +20,6 @@ import type {
   LotFormLookups,
   LotMaterialInput,
   LotMeasurementInput,
-  UploadedProofDocument,
 } from "@/types/lotCatalog"
 
 const MIN_PHOTOS = 5
@@ -97,7 +96,6 @@ export const useCreateLotFlow = () => {
     ...DEFAULT_CREATE_LOT_FORM,
     materials: [...DEFAULT_CREATE_LOT_FORM.materials],
     measurements: [...DEFAULT_CREATE_LOT_FORM.measurements],
-    proofDocuments: [...DEFAULT_CREATE_LOT_FORM.proofDocuments],
     photoKeys: [...DEFAULT_CREATE_LOT_FORM.photoKeys],
     coverPhotoKey: DEFAULT_CREATE_LOT_FORM.coverPhotoKey,
   })
@@ -106,7 +104,6 @@ export const useCreateLotFlow = () => {
   const isLoadingLookups = ref(false)
   const isSubmitting = ref(false)
   const isUploadingPhotos = ref(false)
-  const isUploadingProofDocuments = ref(false)
   const errorMessage = ref("")
   const successMessage = ref("")
   let lotWasCreated = false
@@ -255,46 +252,6 @@ export const useCreateLotFlow = () => {
     } finally {
       isUploadingPhotos.value = false
     }
-  }
-
-  const handleProofDocumentsSelected = async (documentTypeId: string, files: File[]) => {
-    clearMessages()
-
-    if (!documentTypeId) {
-      errorMessage.value = t("sell.proofTypeRequired")
-      return
-    }
-
-    if (form.proofDocuments.length + files.length > 5) {
-      errorMessage.value = t("sell.proofMaxDocuments")
-      return
-    }
-
-    isUploadingProofDocuments.value = true
-
-    try {
-      for (const file of files) {
-        const response = await mediaService.uploadProofDocument(file, documentTypeId)
-        form.proofDocuments.push({
-          id: createClientId(),
-          uploadId: response.uploadId,
-          documentTypeId: response.documentTypeId,
-          originalFileName: response.originalFileName,
-          mimeType: response.mimeType,
-          sizeBytes: response.sizeBytes,
-          createdAtUtc: response.createdAtUtc,
-        })
-      }
-    } catch (error) {
-      console.error("Failed to upload proof document", error)
-      errorMessage.value = t("sell.proofUploadFailed")
-    } finally {
-      isUploadingProofDocuments.value = false
-    }
-  }
-
-  const removeProofDocument = (id: string) => {
-    form.proofDocuments = form.proofDocuments.filter((document) => document.id !== id)
   }
 
   const removePhoto = (photoId: string) => {
@@ -574,7 +531,7 @@ export const useCreateLotFlow = () => {
           return false
         }
 
-        if (isUploadingPhotos.value || isUploadingProofDocuments.value) {
+        if (isUploadingPhotos.value) {
           errorMessage.value = t("sell.waitUploads")
           return false
         }
@@ -753,9 +710,6 @@ export const useCreateLotFlow = () => {
           value: measurement.value,
           unit: measurement.unit || "cm",
         })),
-      proofDocuments: form.proofDocuments.map((document: UploadedProofDocument) => ({
-        uploadId: document.uploadId,
-      })),
     }
   }
 
@@ -846,13 +800,10 @@ export const useCreateLotFlow = () => {
     isLoadingLookups,
     isSubmitting,
     isUploadingPhotos,
-    isUploadingProofDocuments,
     errorMessage,
     successMessage,
     handleStart,
     handleFilesSelected,
-    handleProofDocumentsSelected,
-    removeProofDocument,
     removePhoto,
     replacePhoto,
     retryPhoto,

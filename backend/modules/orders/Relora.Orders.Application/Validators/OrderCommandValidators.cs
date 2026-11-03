@@ -47,18 +47,6 @@ public sealed class OpenOrderDisputeCommandValidator : AbstractValidator<OpenOrd
     }
 }
 
-public sealed class ReportOrderNotDeliveredCommandValidator : AbstractValidator<ReportOrderNotDeliveredCommand>
-{
-    public ReportOrderNotDeliveredCommandValidator()
-    {
-        RuleFor(x => x.OrderId).NotEmpty();
-        RuleFor(x => x.BuyerId).NotEmpty();
-        RuleFor(x => x.Reason)
-            .MaximumLength(1000)
-            .When(x => !string.IsNullOrWhiteSpace(x.Reason));
-    }
-}
-
 public sealed class ResolveOrderDisputeCommandValidator : AbstractValidator<ResolveOrderDisputeCommand>
 {
     public ResolveOrderDisputeCommandValidator()

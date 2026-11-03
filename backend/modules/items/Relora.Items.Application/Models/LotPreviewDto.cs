@@ -69,7 +69,6 @@ public class LotPreviewDto
     public int? ProductionYear { get; set; }
     public bool IsVintage { get; set; }
     public bool HasMeasurements { get; set; }
-    public string ProofStatus { get; set; } = "notProvided";
 
     public LotStatus Status { get; set; }
     public string StatusName { get; set; }

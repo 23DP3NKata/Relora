@@ -44,8 +44,6 @@ export type Lot = {
   vintageNotes?: string | null
   materials?: LotMaterial[]
   measurements?: LotMeasurement[]
-  proofStatus?: string
-  proofDocuments?: LotProofDocument[]
   status?: number | string
   statusName?: string
   media: LotMedia[]
@@ -90,7 +88,6 @@ export type LotPreview = {
   productionYear?: number | null
   isVintage?: boolean
   hasMeasurements?: boolean
-  proofStatus?: string
   status?: number | string
   statusName?: string
   media: LotMedia[]
@@ -143,17 +140,6 @@ export type LotMeasurement = {
   value: number
   unit: string
   labelKey?: string | null
-}
-
-export type LotProofDocument = {
-  id: string
-  documentTypeId: string
-  typeCode: string
-  typeNameKey: string
-  originalFileName: string
-  mimeType: string
-  sizeBytes: number
-  createdAtUtc: string
 }
 
 

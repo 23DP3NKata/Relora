@@ -37,7 +37,6 @@ public class LotRepository : ILotRepository
             .Include(l => l.Materials)
             .Include(l => l.SecondaryColors)
             .Include(l => l.Measurements)
-            .Include(l => l.ProofDocuments)
             .FirstOrDefaultAsync(l => l.Id == id, cancellationToken);
     }
 
@@ -49,7 +48,6 @@ public class LotRepository : ILotRepository
             .Include(l => l.Materials)
             .Include(l => l.SecondaryColors)
             .Include(l => l.Measurements)
-            .Include(l => l.ProofDocuments)
             .Where(l => l.SellerId == sellerId)
             .OrderByDescending(l => l.Id)
             .ToListAsync(cancellationToken);
@@ -102,7 +100,6 @@ public class LotRepository : ILotRepository
             .Include(x => x.Materials)
             .Include(x => x.SecondaryColors)
             .Include(x => x.Measurements)
-            .Include(x => x.ProofDocuments)
             .AsQueryable()
             .AsNoTracking();
     }

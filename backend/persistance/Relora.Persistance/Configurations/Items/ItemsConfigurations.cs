@@ -210,24 +210,6 @@ public sealed class LotConfiguration : IEntityTypeConfiguration<Lot>
             measurement.HasIndex("LotId", "Key").IsUnique();
         });
 
-        builder.OwnsMany(l => l.ProofDocuments, document =>
-        {
-            document.ToTable("lot_proof_documents");
-            document.WithOwner().HasForeignKey("LotId");
-            document.HasKey(d => d.Id);
-            document.Property(d => d.Id).ValueGeneratedNever();
-            document.Property(d => d.LotId).IsRequired();
-            document.Property(d => d.OwnerId).IsRequired();
-            document.Property(d => d.DocumentTypeId).IsRequired();
-            document.Property(d => d.OriginalFileName).HasMaxLength(240).IsRequired();
-            document.Property(d => d.StorageKey).HasMaxLength(500).IsRequired();
-            document.Property(d => d.MimeType).HasMaxLength(120).IsRequired();
-            document.Property(d => d.SizeBytes).IsRequired();
-            document.Property(d => d.CreatedAtUtc).IsRequired();
-            document.HasIndex("LotId", "StorageKey").IsUnique();
-            document.HasIndex(d => d.OwnerId);
-        });
-
         builder.HasIndex(l => l.CategoryId);
         builder.HasIndex(l => l.Department);
         builder.HasIndex(l => l.PrimaryColorId);

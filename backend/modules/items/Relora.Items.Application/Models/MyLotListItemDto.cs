@@ -38,8 +38,6 @@ public sealed class MyLotListItemDto
     public IReadOnlyList<LotMaterialDto> Materials { get; init; } = [];
     public IReadOnlyList<LotColorDto> SecondaryColors { get; init; } = [];
     public IReadOnlyList<LotMeasurementDto> Measurements { get; init; } = [];
-    public string ProofStatus { get; init; } = "notProvided";
-    public IReadOnlyList<LotProofDocumentDto> ProofDocuments { get; init; } = [];
     public LotStatus Status { get; init; }
     public string StatusName { get; init; } = default!;
     public Guid? AuctionId { get; init; }

@@ -18,6 +18,4 @@ public interface ILotCatalogRepository
     Task<ItemColor?> GetColorByCodeAsync(string code, CancellationToken cancellationToken);
     Task<IReadOnlyList<MeasurementDefinition>> GetMeasurementDefinitionsAsync(CancellationToken cancellationToken);
     Task<IReadOnlyList<MeasurementDefinition>> GetMeasurementDefinitionsByProfileAsync(string profile, CancellationToken cancellationToken);
-    Task<IReadOnlyList<ProofDocumentType>> GetProofDocumentTypesAsync(CancellationToken cancellationToken);
-    Task<ProofDocumentType?> GetProofDocumentTypeByIdAsync(Guid id, CancellationToken cancellationToken);
 }

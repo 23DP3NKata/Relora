@@ -77,8 +77,7 @@ public sealed class ItemController : ControllerBase
             command.PhotoKeys,
             command.CoverPhotoKey,
             command.Materials,
-            command.Measurements,
-            command.ProofDocuments
+            command.Measurements
         );
 
         var lotId = await _mediator.Send(request, cancellationToken);
@@ -130,8 +129,7 @@ public sealed class ItemController : ControllerBase
             request.PhotoKeys,
             request.CoverPhotoKey,
             request.Materials,
-            request.Measurements,
-            request.ProofDocuments);
+            request.Measurements);
         await _mediator.Send(command, cancellationToken);
         return Ok();
     }

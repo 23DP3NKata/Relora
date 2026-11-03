@@ -48,7 +48,7 @@
     },
     "announcement": {
         "title": "Sell on Relora",
-        "description": "Sell with 2%  commission on your first 10 sales",
+        "description": "List your items and start an auction",
         "buttonText": "Start selling"
     },
     "common": {
@@ -114,7 +114,6 @@
         "journal": "Journal",
         "buy": "Buy",
         "buyerProtection": "Buyer protection",
-        "returnsPolicy": "Returns policy",
         "sell": "Sell",
         "howToSell": "How to sell",
         "sellerProtection": "Seller protection",
@@ -190,7 +189,6 @@
         "productionYear": "Production year",
         "vintageOnly": "Vintage only",
         "hasMeasurements": "Has measurements",
-        "hasProofOfOrigin": "Proof submitted",
         "quickFilters": "Quick filters",
         "endingSoon": "Ending soon",
         "newlyListed": "Newly listed",
@@ -290,14 +288,8 @@
         "acquisitionYear": "Acquisition year",
         "vintage": "Vintage",
         "vintageConfirmed": "Vintage eligible",
-        "proofOfOrigin": "Proof of origin",
         "measurements": "Measurements",
         "measurementsSellerProvided": "Measurements provided by seller",
-        "proofStatus": {
-            "Submitted": "Proof submitted",
-            "Reviewed": "Proof reviewed",
-            "Rejected": "Proof needs review"
-        },
         "unknownSeller": "Unknown seller",
         "sellerUsernameFallback": "seller",
         "bidHistory": "Bid history",
@@ -875,18 +867,6 @@
         "noMeasurementsForCategory": "This category does not need structured measurements.",
         "measurementsPositive": "Measurement values must be positive.",
         "waitUploads": "Please wait until all uploads finish.",
-        "proofPrivateLabel": "Private documents",
-        "proofTitle": "Proof of origin (optional)",
-        "proofDescription": "This information will not be publicly displayed.",
-        "proofHint": "Add receipt, authenticity card, or invoice.",
-        "proofType": "Document type",
-        "selectProofType": "Select document type",
-        "addProofDocument": "Add proof document",
-        "proofFormats": "JPEG, PNG, WEBP or PDF up to 10MB",
-        "proofTypeRequired": "Select a document type first.",
-        "proofMaxDocuments": "You can upload up to 5 proof documents.",
-        "proofUploadFailed": "Failed to upload proof document.",
-        "proofDeleteFailed": "Failed to delete proof document.",
         "coverPhoto": "Cover photo",
         "makeCover": "Make cover",
         "replace": "Replace",
@@ -1048,14 +1028,6 @@
         "caseThickness": "Case thickness",
         "lugWidth": "Lug width",
         "strapLength": "Strap length"
-    },
-    "proofDocuments": {
-        "receipt": "Receipt",
-        "invoice": "Invoice",
-        "authenticityCard": "Authenticity card",
-        "orderConfirmation": "Order confirmation",
-        "otherSupportingDocument": "Other supporting document",
-        "unknown": "Supporting document"
     },
     "sizes": {
         "xxs": "XXS",
@@ -1440,7 +1412,7 @@
                 "9": {
                     "question": "Can I return an item?",
                     "paragraphs": [
-                        "Return eligibility depends on seller policies, item condition, authenticity concerns, and dispute review outcomes.",
+                        "Relora does not process returns. If the item was not received, is damaged or differs from the listing, open a dispute on the order page.",
                         "Buyers are encouraged to carefully review all listing details, photos, measurements, and descriptions before purchasing designer clothing or archive fashion pieces.",
                         "Items significantly different from their description may qualify for dispute review."
                     ]
@@ -1741,45 +1713,6 @@
                 ],
                 "footerMeta": "Relora - Buyer Protection",
                 "footerText": "Bid carefully. Pay securely. Inspect every delivery.",
-                "sections": []
-            },
-            "returnsPolicy": {
-                "eyebrow": "Buying on Relora",
-                "title": "Returns Policy",
-                "updatedDate": "July 24, 2026",
-                "description": "Learn when an item may be returned, how to submit a return request and what happens after a return has been approved.",
-                "summaryTitle": "Return summary",
-                "summary": "Returns depend on the reason for the request and whether the seller is private or professional. Never return an item before receiving return instructions.",
-                "summaryBullets": [
-                    "Report order problems within 48 hours",
-                    "Wait for approval before shipping",
-                    "Always use tracked return delivery"
-                ],
-                "stepsEyebrow": "Return process",
-                "stepsTitle": "How to return an item",
-                "steps": [{
-                        "number": "01",
-                        "title": "Open your order",
-                        "description": "Go to the relevant order in your Relora account and review its delivery and protection status."
-                    },
-                    {
-                        "number": "02",
-                        "title": "Report the return",
-                        "description": "Select “Report a problem” or contact support within the applicable return or protection period."
-                    },
-                    {
-                        "number": "03",
-                        "title": "Wait for instructions",
-                        "description": "Do not ship the item until you receive the return address and return instructions."
-                    },
-                    {
-                        "number": "04",
-                        "title": "Return with tracking",
-                        "description": "Pack the item carefully, use trackable delivery and keep the shipping receipt until the case is completed."
-                    }
-                ],
-                "footerMeta": "Relora - Returns Policy",
-                "footerText": "Clear instructions make every return safer.",
                 "sections": []
             },
             "howToSell": {
@@ -2337,10 +2270,6 @@
         "buyerProtection": {
             "title": "Buyer Protection — Relora",
             "description": "Learn how Relora buyer protection supports safer fashion auction transactions."
-        },
-        "returnsPolicy": {
-            "title": "Returns Policy — Relora",
-            "description": "Read the Relora returns policy for auction purchases and eligible order issues."
         },
         "cookiePolicy": {
             "title": "Cookie Policy — Relora",

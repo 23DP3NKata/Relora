@@ -481,86 +481,6 @@ namespace Relora.Persistance.Migrations
                     b.ToTable("pending_lot_media_uploads", (string)null);
                 });
 
-            modelBuilder.Entity("Relora.Items.Domain.PendingLotProofDocumentUpload", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime>("CreatedAtUtc")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<Guid>("DocumentTypeId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("MimeType")
-                        .IsRequired()
-                        .HasMaxLength(120)
-                        .HasColumnType("character varying(120)");
-
-                    b.Property<string>("OriginalFileName")
-                        .IsRequired()
-                        .HasMaxLength(240)
-                        .HasColumnType("character varying(240)");
-
-                    b.Property<Guid>("OwnerId")
-                        .HasColumnType("uuid");
-
-                    b.Property<long>("SizeBytes")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("StorageKey")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("character varying(500)");
-
-                    b.Property<uint>("xmin")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("xid")
-                        .HasColumnName("xmin");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CreatedAtUtc");
-
-                    b.HasIndex("OwnerId");
-
-                    b.HasIndex("StorageKey")
-                        .IsUnique();
-
-                    b.ToTable("pending_lot_proof_document_uploads", (string)null);
-                });
-
-            modelBuilder.Entity("Relora.Items.Domain.ProofDocumentType", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasMaxLength(80)
-                        .HasColumnType("character varying(80)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("NameKey")
-                        .IsRequired()
-                        .HasMaxLength(160)
-                        .HasColumnType("character varying(160)");
-
-                    b.Property<int>("SortOrder")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Code")
-                        .IsUnique();
-
-                    b.ToTable("proof_document_types", (string)null);
-                });
-
             modelBuilder.Entity("Relora.Orders.Domain.Order", b =>
                 {
                     b.Property<Guid>("Id")
@@ -586,16 +506,6 @@ namespace Relora.Persistance.Migrations
                         .HasColumnType("character varying(3)");
 
                     b.Property<DateTime?>("DeliveredAtUtc")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime?>("DeliveryIssueAvailableFromUtc")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("DeliveryIssueReason")
-                        .HasMaxLength(1000)
-                        .HasColumnType("character varying(1000)");
-
-                    b.Property<DateTime?>("DeliveryIssueReportedAtUtc")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime?>("PaidAtUtc")
@@ -691,8 +601,6 @@ namespace Relora.Persistance.Migrations
                     b.HasIndex("BuyerId");
 
                     b.HasIndex("SellerId");
-
-                    b.HasIndex("Status", "DeliveryIssueReportedAtUtc");
 
                     b.HasIndex("Status", "PaymentDeadlineUtc");
 
@@ -1028,54 +936,6 @@ namespace Relora.Persistance.Migrations
                                 .HasForeignKey("LotId");
                         });
 
-                    b.OwnsMany("Relora.Items.Domain.Lot+LotProofDocument", "ProofDocuments", b1 =>
-                        {
-                            b1.Property<Guid>("Id")
-                                .HasColumnType("uuid");
-
-                            b1.Property<DateTime>("CreatedAtUtc")
-                                .HasColumnType("timestamp with time zone");
-
-                            b1.Property<Guid>("DocumentTypeId")
-                                .HasColumnType("uuid");
-
-                            b1.Property<Guid>("LotId")
-                                .HasColumnType("uuid");
-
-                            b1.Property<string>("MimeType")
-                                .IsRequired()
-                                .HasMaxLength(120)
-                                .HasColumnType("character varying(120)");
-
-                            b1.Property<string>("OriginalFileName")
-                                .IsRequired()
-                                .HasMaxLength(240)
-                                .HasColumnType("character varying(240)");
-
-                            b1.Property<Guid>("OwnerId")
-                                .HasColumnType("uuid");
-
-                            b1.Property<long>("SizeBytes")
-                                .HasColumnType("bigint");
-
-                            b1.Property<string>("StorageKey")
-                                .IsRequired()
-                                .HasMaxLength(500)
-                                .HasColumnType("character varying(500)");
-
-                            b1.HasKey("Id");
-
-                            b1.HasIndex("OwnerId");
-
-                            b1.HasIndex("LotId", "StorageKey")
-                                .IsUnique();
-
-                            b1.ToTable("lot_proof_documents", (string)null);
-
-                            b1.WithOwner()
-                                .HasForeignKey("LotId");
-                        });
-
                     b.OwnsMany("Relora.Items.Domain.Lot+LotSecondaryColor", "SecondaryColors", b1 =>
                         {
                             b1.Property<Guid>("Id")
@@ -1129,8 +989,6 @@ namespace Relora.Persistance.Migrations
 
                     b.Navigation("Price")
                         .IsRequired();
-
-                    b.Navigation("ProofDocuments");
 
                     b.Navigation("SecondaryColors");
                 });

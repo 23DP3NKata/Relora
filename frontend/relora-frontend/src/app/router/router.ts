@@ -40,7 +40,6 @@ import DesignersPage from '@/pages/designers/DesignersPage.vue'
 import FrequentlyAskedQuestions from '@/pages/info/FrequentlyAskedQuestions.vue'
 import SupportPage from '@/pages/info/SupportPage.vue'
 import BuyerProtectionPage from '@/pages/info/buy/BuyerProtectionPage.vue'
-import ReturnsPolicyPage from '@/pages/info/buy/ReturnsPolicyPage.vue'
 
 function localeHome(locale: AppLocale): string {
   return `/${locale}`
@@ -147,11 +146,6 @@ const routes = [
             path: 'buyer-protection',
             component: BuyerProtectionPage,
             meta: { seoKey: 'buyerProtection' },
-          },
-          {
-            path: 'returns-policy',
-            component: ReturnsPolicyPage,
-            meta: { seoKey: 'returnsPolicy' },
           },
           {
             path: 'cookie-policy',

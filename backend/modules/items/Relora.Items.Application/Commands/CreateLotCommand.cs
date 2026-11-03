@@ -40,6 +40,5 @@ public sealed record CreateLotCommand(
     IReadOnlyList<string>? PhotoKeys,
     string? CoverPhotoKey,
     IReadOnlyList<LotMaterialInput>? Materials,
-    IReadOnlyList<LotMeasurementInput>? Measurements,
-    IReadOnlyList<ProofDocumentUploadInput>? ProofDocuments
+    IReadOnlyList<LotMeasurementInput>? Measurements
 ) : IRequest<Guid>;

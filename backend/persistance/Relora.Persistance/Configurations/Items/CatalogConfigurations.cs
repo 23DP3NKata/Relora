@@ -81,39 +81,3 @@ public sealed class MeasurementDefinitionConfiguration : IEntityTypeConfiguratio
         builder.HasIndex(definition => new { definition.Profile, definition.Key }).IsUnique();
     }
 }
-
-public sealed class ProofDocumentTypeConfiguration : IEntityTypeConfiguration<ProofDocumentType>
-{
-    public void Configure(EntityTypeBuilder<ProofDocumentType> builder)
-    {
-        builder.ToTable("proof_document_types");
-        builder.HasKey(type => type.Id);
-        builder.Property(type => type.Id).ValueGeneratedNever();
-        builder.Property(type => type.Code).HasMaxLength(80).IsRequired();
-        builder.Property(type => type.NameKey).HasMaxLength(160).IsRequired();
-        builder.Property(type => type.SortOrder).IsRequired();
-        builder.Property(type => type.IsActive).IsRequired();
-        builder.HasIndex(type => type.Code).IsUnique();
-    }
-}
-
-public sealed class PendingLotProofDocumentUploadConfiguration
-    : IEntityTypeConfiguration<PendingLotProofDocumentUpload>
-{
-    public void Configure(EntityTypeBuilder<PendingLotProofDocumentUpload> builder)
-    {
-        builder.ToTable("pending_lot_proof_document_uploads");
-        builder.HasKey(upload => upload.Id);
-        builder.Property<uint>("xmin").IsRowVersion();
-        builder.Property(upload => upload.OwnerId).IsRequired();
-        builder.Property(upload => upload.DocumentTypeId).IsRequired();
-        builder.Property(upload => upload.OriginalFileName).HasMaxLength(240).IsRequired();
-        builder.Property(upload => upload.StorageKey).HasMaxLength(500).IsRequired();
-        builder.Property(upload => upload.MimeType).HasMaxLength(120).IsRequired();
-        builder.Property(upload => upload.SizeBytes).IsRequired();
-        builder.Property(upload => upload.CreatedAtUtc).IsRequired();
-        builder.HasIndex(upload => upload.StorageKey).IsUnique();
-        builder.HasIndex(upload => upload.OwnerId);
-        builder.HasIndex(upload => upload.CreatedAtUtc);
-    }
-}

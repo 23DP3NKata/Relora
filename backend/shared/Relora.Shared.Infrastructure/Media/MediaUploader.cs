@@ -48,56 +48,6 @@ public sealed class MediaUploader(IOptions<MediaOptions> options, IAmazonS3 s3) 
         return key;
     }
 
-    public async Task<string> UploadPrivateAsync(Guid ownerId, Stream stream, string fileName, string contentType)
-    {
-        if (ownerId == Guid.Empty)
-        {
-            throw new ArgumentException("Media owner id is required.");
-        }
-
-        var extension = Path.GetExtension(fileName);
-        var key = $"proof-origin/{ownerId:N}/{Guid.NewGuid():N}{extension}";
-
-        var request = new PutObjectRequest
-        {
-            BucketName = _mediaOptions.BucketName,
-            Key = key,
-            InputStream = stream,
-            ContentType = string.IsNullOrWhiteSpace(contentType)
-                ? "application/octet-stream"
-                : contentType,
-            DisablePayloadSigning = true,
-            DisableDefaultChecksumValidation = true
-        };
-
-        request.Metadata["privacy"] = "proof-of-origin";
-        request.Headers.CacheControl = "private, max-age=0, no-store";
-
-        await _s3.PutObjectAsync(request);
-
-        return key;
-    }
-
-    public Task<string> CreatePrivateReadUrlAsync(string key, TimeSpan lifetime, CancellationToken cancellationToken)
-    {
-        if (string.IsNullOrWhiteSpace(key) ||
-            key.Contains("..", StringComparison.Ordinal) ||
-            key.StartsWith("/", StringComparison.Ordinal) ||
-            !key.StartsWith("proof-origin/", StringComparison.Ordinal))
-        {
-            throw new UnauthorizedAccessException("Invalid private media key.");
-        }
-
-        var request = new GetPreSignedUrlRequest
-        {
-            BucketName = _mediaOptions.BucketName,
-            Key = key.Trim(),
-            Expires = DateTime.UtcNow.Add(lifetime)
-        };
-
-        return Task.FromResult(_s3.GetPreSignedURL(request));
-    }
-
     public async Task DeleteAsync(Guid ownerId, string key)
     {
         if (ownerId == Guid.Empty)

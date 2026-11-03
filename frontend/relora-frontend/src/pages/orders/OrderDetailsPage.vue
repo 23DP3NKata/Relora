@@ -369,17 +369,6 @@ const deliveredAt = computed(() =>
   ]),
 )
 
-const deliveryIssueReportedAt = computed(() =>
-  firstValue(orderRecord.value, [
-    'deliveryIssueReportedAtUtc',
-    'deliveryIssueReportedAt',
-  ]),
-)
-
-const deliveryIssueReasonText = computed(() =>
-  firstText(orderRecord.value, ['deliveryIssueReason']),
-)
-
 const disputeRecord = computed(() =>
   asRecord(firstValue(orderRecord.value, ['dispute'])),
 )
@@ -407,14 +396,12 @@ const disputeDecisionReason = computed(() =>
 )
 
 const disputeDescription = computed(() =>
-  firstText(disputeRecord.value, ['description']) || deliveryIssueReasonText.value,
+  firstText(disputeRecord.value, ['description']),
 )
 
-const disputeReasonName = computed(() => {
-  const reason = firstText(disputeRecord.value, ['reasonName', 'reason'])
-  if (!reason && deliveryIssueReportedAt.value) return 'ItemNotReceived'
-  return reason
-})
+const disputeReasonName = computed(() =>
+  firstText(disputeRecord.value, ['reasonName', 'reason']),
+)
 
 const disputeReasonLabel = computed(() => {
   const reason = disputeReasonName.value
@@ -526,10 +513,7 @@ const shippingState = computed<ShippingState>(() => {
   ]).toLowerCase()
   const combinedLabel = `${shippingLabel} ${overallLabel}`
 
-  if (
-    deliveryIssueReportedAt.value ||
-    /(buyerprotection|buyer protection|disputed|not delivered)/.test(combinedLabel)
-  ) {
+  if (/disputed/.test(combinedLabel)) {
     return 'issue'
   }
 
@@ -846,7 +830,7 @@ const progressSteps = computed<ProgressStep[]>(() => {
         shippingState.value === 'delivered'
           ? formatDateTime(deliveredAt.value) || t('orderDetails.progress.completed')
           : deliveryIssue
-            ? formatDateTime(deliveryIssueReportedAt.value) || t('orderDetails.progress.reported')
+            ? formatDateTime(disputeOpenedAt.value) || t('orderDetails.progress.reported')
           : shippingState.value === 'shipped'
             ? t('orderDetails.progress.inProgress')
             : '',

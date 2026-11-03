@@ -51,9 +51,6 @@ public sealed class OrderListItemDto
     public DateTime? ShippedAtUtc { get; init; }
     public DateTime? DeliveredAtUtc { get; init; }
     public DateTime? CompletedAtUtc { get; init; }
-    public DateTime? DeliveryIssueAvailableFromUtc { get; init; }
-    public DateTime? DeliveryIssueReportedAtUtc { get; init; }
-    public string? DeliveryIssueReason { get; init; }
     public string? CarrierName { get; init; }
     public string? TrackingNumber { get; init; }
     /// <summary>

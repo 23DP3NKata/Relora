@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { computed, ref } from "vue"
+import { computed } from "vue"
 import { useI18n } from "vue-i18n"
 import { compressAndConvertToWebp } from "@/utils/compressImage"
 import { toast } from "vue-sonner"
-import type { LookupOption, UploadedProofDocument } from "@/types/lotCatalog"
 import type { UploadedPhoto } from "@/types/createLot"
 
 const MIN_PHOTOS = 5
@@ -11,10 +10,7 @@ const MAX_PHOTOS = 15
 
 const props = defineProps<{
   photos: UploadedPhoto[]
-  proofDocuments?: UploadedProofDocument[]
-  proofDocumentTypes?: LookupOption[]
   isUploading?: boolean
-  isUploadingProofDocuments?: boolean
 }>()
 
 const emit = defineEmits<{
@@ -24,11 +20,8 @@ const emit = defineEmits<{
   (e: "retry-photo", photoId: string): void
   (e: "move-photo", photoId: string, direction: "left" | "right"): void
   (e: "make-cover", photoId: string): void
-  (e: "proof-documents-selected", documentTypeId: string, files: File[]): void
-  (e: "remove-proof-document", id: string): void
 }>()
 
-const selectedProofTypeId = ref("")
 const { t } = useI18n()
 
 const hasEnoughPhotos = computed(() => props.photos.length >= MIN_PHOTOS)
@@ -54,16 +47,6 @@ const handleFileChange = async (event: Event) => {
 
   emit("files-selected", processedFiles)
 
-  input.value = ""
-}
-
-const handleProofFileChange = (event: Event) => {
-  const input = event.target as HTMLInputElement
-  const files = input.files
-
-  if (!files || files.length === 0) return
-
-  emit("proof-documents-selected", selectedProofTypeId.value, Array.from(files))
   input.value = ""
 }
 
@@ -255,88 +238,6 @@ const handleReplacePhotoChange = async (photoId: string, event: Event) => {
 
     <div v-else class="mt-8 rounded-[24px] border border-dashed p-5 text-sm text-foreground/60">
       {{ $t("sell.noPhotosYet") }}
-    </div>
-
-    <div class="mt-10 border-t pt-8">
-      <div>
-        <p class="text-xs uppercase tracking-[0.16em] text-foreground/50">
-          {{ $t("sell.proofPrivateLabel") }}
-        </p>
-        <h3 class="mt-2 text-lg font-semibold tracking-tight">
-          {{ $t("sell.proofTitle") }}
-        </h3>
-        <p class="mt-2 text-sm leading-6 text-foreground/65">
-          {{ $t("sell.proofDescription") }}
-        </p>
-        <p class="mt-1 text-sm leading-6 text-foreground/55">
-          {{ $t("sell.proofHint") }}
-        </p>
-      </div>
-
-      <div class="mt-5 grid gap-4 md:grid-cols-[1fr_1.3fr]">
-        <div>
-          <label class="block text-sm font-medium">
-            {{ $t("sell.proofType") }}
-          </label>
-          <select
-            v-model="selectedProofTypeId"
-            class="mt-2 w-full rounded-2xl border bg-background px-4 py-3 text-sm outline-none transition focus:ring-2 focus:ring-foreground/20"
-          >
-            <option value="" disabled>
-              {{ $t("sell.selectProofType") }}
-            </option>
-            <option
-              v-for="type in proofDocumentTypes ?? []"
-              :key="type.id"
-              :value="type.id"
-            >
-              {{ $t(type.nameKey) }}
-            </option>
-          </select>
-        </div>
-
-        <label class="flex min-h-[96px] cursor-pointer flex-col items-center justify-center rounded-[24px] border border-dashed px-5 py-6 text-center transition hover:bg-foreground/5">
-          <span class="text-sm font-medium">
-            {{ isUploadingProofDocuments ? $t("sell.uploading") : $t("sell.addProofDocument") }}
-          </span>
-          <span class="mt-2 text-xs text-foreground/50">
-            {{ $t("sell.proofFormats") }}
-          </span>
-          <input
-            type="file"
-            multiple
-            accept="image/png,image/jpeg,image/webp,application/pdf"
-            :disabled="!selectedProofTypeId || isUploadingProofDocuments"
-            class="hidden"
-            @change="handleProofFileChange"
-          />
-        </label>
-      </div>
-
-      <div
-        v-if="proofDocuments?.length"
-        class="mt-5 space-y-2"
-      >
-        <article
-          v-for="document in proofDocuments"
-          :key="document.id"
-          class="flex flex-wrap items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-sm"
-        >
-          <div>
-            <p class="font-medium">{{ document.originalFileName }}</p>
-            <p class="mt-1 text-xs text-foreground/55">
-              {{ document.mimeType }} - {{ Math.round(document.sizeBytes / 1024) }} KB
-            </p>
-          </div>
-          <button
-            type="button"
-            class="rounded-xl border px-3 py-2 text-xs font-medium transition hover:bg-foreground hover:text-background"
-            @click="emit('remove-proof-document', document.id)"
-          >
-            {{ $t("sell.remove") }}
-          </button>
-        </article>
-      </div>
     </div>
   </section>
 </template>

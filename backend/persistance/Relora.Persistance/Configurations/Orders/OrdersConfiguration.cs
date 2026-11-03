@@ -62,9 +62,6 @@ public sealed class OrdersConfiguration : IEntityTypeConfiguration<Order>
         builder.Property(x => x.ShippedAtUtc);
         builder.Property(x => x.DeliveredAtUtc);
         builder.Property(x => x.CompletedAtUtc);
-        builder.Property(x => x.DeliveryIssueAvailableFromUtc);
-        builder.Property(x => x.DeliveryIssueReportedAtUtc);
-        builder.Property(x => x.DeliveryIssueReason).HasMaxLength(1000);
         builder.Property(x => x.CarrierName).HasMaxLength(120);
         builder.Property(x => x.TrackingNumber).HasMaxLength(120);
         builder.Property(x => x.ShippingFullName).HasMaxLength(160);
@@ -79,7 +76,6 @@ public sealed class OrdersConfiguration : IEntityTypeConfiguration<Order>
         builder.HasIndex(x => x.AuctionId).IsUnique();
         builder.HasIndex(x => new { x.Status, x.PaymentDeadlineUtc });
         builder.HasIndex(x => new { x.Status, x.ShipByUtc });
-        builder.HasIndex(x => new { x.Status, x.DeliveryIssueReportedAtUtc });
         builder.HasIndex(x => x.BuyerId);
         builder.HasIndex(x => x.SellerId);
     }

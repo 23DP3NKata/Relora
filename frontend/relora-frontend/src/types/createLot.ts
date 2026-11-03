@@ -2,8 +2,6 @@ import type {
   LotDepartment,
   LotMaterialInput,
   LotMeasurementInput,
-  ProofDocumentUploadInput,
-  UploadedProofDocument,
 } from "@/types/lotCatalog"
 
 export type SellStepKey =
@@ -59,7 +57,6 @@ export type CreateLotPayload = {
   coverPhotoKey?: string | null
   materials: LotMaterialInput[]
   measurements: LotMeasurementInput[]
-  proofDocuments: ProofDocumentUploadInput[]
 }
 
 export type CreateLotResponse = string
@@ -88,7 +85,6 @@ export type CreateLotFormState = {
   vintageNotes: string
   materials: LotMaterialInput[]
   measurements: LotMeasurementInput[]
-  proofDocuments: UploadedProofDocument[]
   age: string
   style: string
   shippingPrice: number | null
@@ -132,7 +128,6 @@ export const DEFAULT_CREATE_LOT_FORM: CreateLotFormState = {
   vintageNotes: "",
   materials: [],
   measurements: [],
-  proofDocuments: [],
   photoKeys: [],
   coverPhotoKey: "",
   country: "",

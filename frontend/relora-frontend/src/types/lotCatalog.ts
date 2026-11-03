@@ -41,7 +41,6 @@ export type LotFormLookups = {
   categories: CategoryNode[]
   materials: LookupOption[]
   colors: LookupOption[]
-  proofDocumentTypes: LookupOption[]
   measurementDefinitions: MeasurementDefinition[]
   sizeOptions: SizeOption[]
 }
@@ -56,19 +55,4 @@ export type LotMeasurementInput = {
   key: string
   value: number
   unit?: string | null
-}
-
-export type ProofDocumentUploadInput = {
-  uploadId: string
-}
-
-export type UploadedProofDocument = {
-  id: string
-  uploadId: string
-  documentTypeId: string
-  originalFileName: string
-  mimeType: string
-  sizeBytes: number
-  createdAtUtc: string
-  isExisting?: boolean
 }
