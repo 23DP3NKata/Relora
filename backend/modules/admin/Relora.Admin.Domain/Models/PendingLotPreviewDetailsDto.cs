@@ -29,4 +29,10 @@ public sealed class PendingLotPreviewDetailsDto
     public LotStatus Status { get; init; }
 
     public string? MainImageUrl { get; init; }
+
+    public string? Color { get; init; }
+    public string Country { get; init; } = string.Empty;
+    public DateTime CreatedAt { get; init; }
+
+    public List<string> PhotoKeys { get; init; } = [];
 }

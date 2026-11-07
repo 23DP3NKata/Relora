@@ -70,7 +70,17 @@ public sealed class GetPendingLotDetailsHandler
                 MainImageUrl = l.Media
                     .Where(m => m.Type == "photo")
                     .Select(m => m.Key)
-                    .FirstOrDefault()
+                    .FirstOrDefault(),
+
+                Color = l.Color,
+                Country = l.Country,
+                CreatedAt = l.CreatedAt,
+
+                PhotoKeys = l.Media
+                    .Where(m => m.Type == "photo")
+                    .OrderBy(m => m.SortOrder)
+                    .Select(m => m.Key)
+                    .ToList()
             })
             .FirstOrDefaultAsync(cancellationToken);
     }

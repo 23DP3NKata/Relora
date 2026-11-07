@@ -50,20 +50,52 @@ public sealed class GetOverdueShipmentOrdersHandler
             .OrderBy(order => order.ShipByUtc)
             .ToListAsync(cancellationToken);
 
+        // lotu atrodam caur auction
+        var auctionIds = overdueOrders
+            .Select(order => order.AuctionId)
+            .Distinct()
+            .ToList();
+
+        var auctions = await _context.Auctions
+            .AsNoTracking()
+            .Where(auction => auctionIds.Contains(auction.Id))
+            .ToDictionaryAsync(auction => auction.Id, cancellationToken);
+
+        var lotIds = auctions.Values
+            .Where(auction => auction.LotId.HasValue)
+            .Select(auction => auction.LotId!.Value)
+            .ToList();
+
+        var lots = await _context.Lots
+            .AsNoTracking()
+            .Where(lot => lotIds.Contains(lot.Id))
+            .ToDictionaryAsync(lot => lot.Id, cancellationToken);
+
         return overdueOrders
-            .Select(order => new OverdueShipmentOrderDto
+            .Select(order =>
             {
-                OrderId = order.Id,
-                AuctionId = order.AuctionId,
-                SellerId = order.SellerId,
-                BuyerId = order.BuyerId,
-                TotalPrice = order.TotalPrice,
-                Currency = order.Currency,
-                PaidAtUtc = order.PaidAtUtc,
-                ShipByUtc = order.ShipByUtc,
-                DaysOverdue = order.ShipByUtc == null
-                    ? 0
-                    : Math.Max(0, (int)Math.Floor((now - order.ShipByUtc.Value).TotalDays))
+                auctions.TryGetValue(order.AuctionId, out var auction);
+                var lot = auction?.LotId != null && lots.TryGetValue(auction.LotId.Value, out var foundLot)
+                    ? foundLot
+                    : null;
+
+                return new OverdueShipmentOrderDto
+                {
+                    OrderId = order.Id,
+                    AuctionId = order.AuctionId,
+                    LotTitle = lot?.Title,
+                    LotBrand = lot?.Brand,
+                    StatusName = order.Status.ToString(),
+                    SellerId = order.SellerId,
+                    BuyerId = order.BuyerId,
+                    TotalPrice = order.TotalPrice,
+                    Currency = order.Currency,
+                    PaidAtUtc = order.PaidAtUtc,
+                    ShipByUtc = order.ShipByUtc,
+                    DaysOverdue = order.ShipByUtc == null
+                        ? 0
+                        : Math.Max(0, (int)Math.Floor((now - order.ShipByUtc.Value).TotalDays))
+                };
             })
             .ToList();
     }

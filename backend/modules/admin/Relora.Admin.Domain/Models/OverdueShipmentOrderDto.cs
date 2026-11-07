@@ -4,6 +4,9 @@ public sealed class OverdueShipmentOrderDto
 {
     public Guid OrderId { get; init; }
     public Guid AuctionId { get; init; }
+    public string? LotTitle { get; init; }
+    public string? LotBrand { get; init; }
+    public string StatusName { get; init; } = default!;
     public Guid SellerId { get; init; }
     public Guid BuyerId { get; init; }
     public decimal TotalPrice { get; init; }
