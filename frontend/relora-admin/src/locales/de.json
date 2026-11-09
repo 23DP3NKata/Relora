@@ -9,9 +9,11 @@
   },
   "navigation": {
     "pendingLots": "Ausstehende Lose",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "disputes": "Streitfaelle"
   },
   "admin": {
+    "badge": "Admin",
     "title": "Relora Admin",
     "pending": {
       "title": "Ausstehende Lose",
@@ -49,6 +51,48 @@
       "activeAuctionsCount": "Aktive Auktionen",
       "usersCount": "Registrierte Nutzer",
       "goToPending": "Lose pruefen"
+    },
+    "disputes": {
+      "title": "Streitfaelle",
+      "description": "Pruefen Sie Streitfaelle von Kaeufern und entscheiden Sie, wer recht hat.",
+      "loadFailed": "Streitfaelle konnten nicht geladen werden.",
+      "resolveFailed": "Streitfall konnte nicht entschieden werden.",
+      "resolved": "Streitfall erfolgreich entschieden.",
+      "empty": "Keine offenen Streitfaelle.",
+      "emptyHint": "Von Kaeufern eroeffnete Streitfaelle erscheinen hier.",
+      "showResolved": "Entschiedene anzeigen",
+      "order": "Bestellung",
+      "buyer": "Kaeufer",
+      "openedAt": "Eroeffnet",
+      "tracking": "Sendungsnummer",
+      "reason": "Grund",
+      "evidence": "Fotobeweise",
+      "noEvidence": "Der Kaeufer hat keine Fotos hinzugefuegt.",
+      "decision": "Entscheidung",
+      "forBuyer": "Zugunsten des Kaeufers",
+      "forSeller": "Zugunsten des Verkaeufers",
+      "forBuyerHint": "Die Bestellung wird zugunsten des Kaeufers storniert.",
+      "forSellerHint": "Die Bestellung wird zugunsten des Verkaeufers abgeschlossen.",
+      "reasonLabel": "Begruendung",
+      "reasonPlaceholder": "Erklaeren Sie, warum diese Entscheidung getroffen wurde...",
+      "reasonRequired": "Bitte geben Sie eine Begruendung ein.",
+      "confirm": "Entscheidung bestaetigen",
+      "status": {
+        "Open": "Offen",
+        "Resolved": "Entschieden"
+      },
+      "decisions": {
+        "CancelOrder": "Zugunsten des Kaeufers (Bestellung storniert)",
+        "CompleteOrder": "Zugunsten des Verkaeufers (Bestellung abgeschlossen)"
+      },
+      "reasons": {
+        "ItemNotShipped": "Artikel nicht versendet",
+        "ItemNotReceived": "Artikel nicht erhalten",
+        "WrongItem": "Falscher Artikel",
+        "SignificantlyNotAsDescribed": "Erheblich abweichend von der Beschreibung",
+        "Damaged": "Beschaedigt",
+        "SuspectedCounterfeit": "Verdacht auf Faelschung"
+      }
     }
   }
 }

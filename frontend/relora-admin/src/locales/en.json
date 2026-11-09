@@ -9,9 +9,11 @@
   },
   "navigation": {
     "pendingLots": "Pending Lots",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "disputes": "Disputes"
   },
   "admin": {
+    "badge": "Admin",
     "title": "Relora Admin",
     "pending": {
       "title": "Pending Lots",
@@ -49,6 +51,48 @@
       "activeAuctionsCount": "Active auctions",
       "usersCount": "Registered users",
       "goToPending": "Review lots"
+    },
+    "disputes": {
+      "title": "Disputes",
+      "description": "Review buyer disputes and decide who is right.",
+      "loadFailed": "Failed to load disputes.",
+      "resolveFailed": "Failed to resolve dispute.",
+      "resolved": "Dispute resolved successfully.",
+      "empty": "No open disputes.",
+      "emptyHint": "Disputes opened by buyers will appear here.",
+      "showResolved": "Show resolved",
+      "order": "Order",
+      "buyer": "Buyer",
+      "openedAt": "Opened",
+      "tracking": "Tracking",
+      "reason": "Reason",
+      "evidence": "Photo evidence",
+      "noEvidence": "Buyer did not add photos.",
+      "decision": "Decision",
+      "forBuyer": "In favour of buyer",
+      "forSeller": "In favour of seller",
+      "forBuyerHint": "The order will be cancelled in favour of the buyer.",
+      "forSellerHint": "The order will be completed in favour of the seller.",
+      "reasonLabel": "Justification",
+      "reasonPlaceholder": "Explain why this decision was made...",
+      "reasonRequired": "Please enter a justification.",
+      "confirm": "Confirm decision",
+      "status": {
+        "Open": "Open",
+        "Resolved": "Resolved"
+      },
+      "decisions": {
+        "CancelOrder": "In favour of buyer (order cancelled)",
+        "CompleteOrder": "In favour of seller (order completed)"
+      },
+      "reasons": {
+        "ItemNotShipped": "Item not shipped",
+        "ItemNotReceived": "Item not received",
+        "WrongItem": "Wrong item",
+        "SignificantlyNotAsDescribed": "Significantly not as described",
+        "Damaged": "Damaged",
+        "SuspectedCounterfeit": "Suspected counterfeit"
+      }
     }
   }
 }

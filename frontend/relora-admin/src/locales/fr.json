@@ -9,9 +9,11 @@
   },
   "navigation": {
     "pendingLots": "Lots en attente",
-    "dashboard": "Tableau de bord"
+    "dashboard": "Tableau de bord",
+    "disputes": "Litiges"
   },
   "admin": {
+    "badge": "Admin",
     "title": "Relora Admin",
     "pending": {
       "title": "Lots en attente",
@@ -49,6 +51,48 @@
       "activeAuctionsCount": "Encheres actives",
       "usersCount": "Utilisateurs inscrits",
       "goToPending": "Examiner les lots"
+    },
+    "disputes": {
+      "title": "Litiges",
+      "description": "Examinez les litiges des acheteurs et decidez qui a raison.",
+      "loadFailed": "Impossible de charger les litiges.",
+      "resolveFailed": "Impossible de resoudre le litige.",
+      "resolved": "Litige resolu avec succes.",
+      "empty": "Aucun litige ouvert.",
+      "emptyHint": "Les litiges ouverts par les acheteurs apparaitront ici.",
+      "showResolved": "Afficher les resolus",
+      "order": "Commande",
+      "buyer": "Acheteur",
+      "openedAt": "Ouvert",
+      "tracking": "Suivi",
+      "reason": "Motif",
+      "evidence": "Preuves photo",
+      "noEvidence": "L'acheteur n'a pas ajoute de photos.",
+      "decision": "Decision",
+      "forBuyer": "En faveur de l'acheteur",
+      "forSeller": "En faveur du vendeur",
+      "forBuyerHint": "La commande sera annulee en faveur de l'acheteur.",
+      "forSellerHint": "La commande sera finalisee en faveur du vendeur.",
+      "reasonLabel": "Justification",
+      "reasonPlaceholder": "Expliquez pourquoi cette decision a ete prise...",
+      "reasonRequired": "Veuillez saisir une justification.",
+      "confirm": "Confirmer la decision",
+      "status": {
+        "Open": "Ouvert",
+        "Resolved": "Resolu"
+      },
+      "decisions": {
+        "CancelOrder": "En faveur de l'acheteur (commande annulee)",
+        "CompleteOrder": "En faveur du vendeur (commande finalisee)"
+      },
+      "reasons": {
+        "ItemNotShipped": "Article non expedie",
+        "ItemNotReceived": "Article non recu",
+        "WrongItem": "Mauvais article",
+        "SignificantlyNotAsDescribed": "Tres different de la description",
+        "Damaged": "Endommage",
+        "SuspectedCounterfeit": "Contrefacon suspectee"
+      }
     }
   }
 }

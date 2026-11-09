@@ -64,61 +64,38 @@ const submitReject = () => {
 </script>
 
 <template>
-  <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-    <div class="flex flex-col gap-4 p-4 sm:flex-row sm:items-center">
-      <div class="h-40 w-full shrink-0 overflow-hidden rounded-xl bg-slate-100 sm:h-28 sm:w-28">
+  <article class="card p-4 sm:p-5">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
+      <div class="aspect-[4/5] w-24 shrink-0 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
         <img v-if="imageUrl" :src="imageUrl" :alt="lot.title || $t('admin.pending.lotImage')" class="h-full w-full object-cover" />
-        <div v-else class="flex h-full w-full items-center justify-center text-xs text-slate-400">
+        <div v-else class="flex h-full w-full items-center justify-center p-2 text-center text-xs text-neutral-400">
           {{ $t('admin.pending.noImage') }}
         </div>
       </div>
 
       <div class="min-w-0 flex-1">
-        <div class="flex flex-wrap items-center gap-2">
-          <h3 class="truncate text-base font-semibold">{{ lot.title || $t('admin.pending.untitledLot') }}</h3>
-          <span class="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-800">
-            {{ $t('admin.pending.statusPending') }}
-          </span>
-        </div>
-
-        <p class="mt-0.5 text-sm text-slate-500">{{ lot.brand || $t('admin.pending.unknownBrand') }}</p>
-        <p class="mt-2 text-lg font-semibold">{{ priceLabel }}</p>
-
-        <dl class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500">
-          <div class="flex gap-1">
-            <dt>{{ $t('admin.pending.seller') }}:</dt>
-            <dd class="font-mono text-slate-700" :title="lot.sellerId">{{ shortSellerId }}</dd>
-          </div>
-          <div class="flex gap-1">
-            <dt>{{ $t('admin.pending.created') }}:</dt>
-            <dd class="text-slate-700">{{ createdDate }}</dd>
-          </div>
-        </dl>
+        <p class="eyebrow truncate">{{ lot.brand || $t('admin.pending.unknownBrand') }}</p>
+        <h3 class="mt-1 truncate text-base font-semibold sm:text-lg">{{ lot.title || $t('admin.pending.untitledLot') }}</h3>
+        <p class="mt-1 text-lg font-semibold tabular-nums">{{ priceLabel }}</p>
+        <p class="mt-2 text-xs text-neutral-400">
+          {{ $t('admin.pending.seller') }} <span class="font-mono" :title="lot.sellerId">{{ shortSellerId }}</span>
+          <span class="mx-1.5">·</span>
+          {{ createdDate }}
+        </p>
       </div>
 
-      <div v-if="!isRejectOpen" class="flex gap-2 sm:flex-col">
-        <button
-          type="button"
-          class="flex-1 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-50"
-          :disabled="isActing"
-          @click="emit('approve', lot.id)"
-        >
-          {{ $t('admin.pending.approve') }}
-        </button>
-
-        <button
-          type="button"
-          class="flex-1 rounded-lg border border-red-200 bg-white px-4 py-2 text-sm font-medium text-red-600 transition hover:bg-red-50 disabled:cursor-not-allowed disabled:opacity-50"
-          :disabled="isActing"
-          @click="openReject"
-        >
+      <div v-if="!isRejectOpen" class="flex flex-wrap gap-2">
+        <button type="button" class="btn" :disabled="isActing" @click="openReject">
           {{ $t('admin.pending.reject') }}
+        </button>
+        <button type="button" class="btn-primary" :disabled="isActing" @click="emit('approve', lot.id)">
+          {{ $t('admin.pending.approve') }}
         </button>
       </div>
     </div>
 
-    <form v-if="isRejectOpen" class="border-t border-slate-100 bg-slate-50 p-4" @submit.prevent="submitReject">
-      <label :for="`reject-reason-${lot.id}`" class="text-sm font-medium text-slate-700">
+    <form v-if="isRejectOpen" class="mt-4 border-t border-neutral-200 pt-4" @submit.prevent="submitReject">
+      <label :for="`reject-reason-${lot.id}`" class="text-sm font-medium">
         {{ $t('admin.pending.rejectReasonLabel') }}
       </label>
       <textarea
@@ -127,29 +104,17 @@ const submitReject = () => {
         rows="3"
         :maxlength="reasonMaxLength"
         :placeholder="$t('admin.pending.rejectReasonPlaceholder')"
-        class="mt-2 w-full rounded-lg border bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2"
-        :class="reasonError ? 'border-red-300 focus:ring-red-200' : 'border-slate-200 focus:ring-slate-200'"
+        class="field mt-2"
       />
-
       <div class="mt-1 flex justify-between text-xs">
         <span class="text-red-600">{{ reasonError }}</span>
-        <span class="text-slate-400">{{ reason.length }}/{{ reasonMaxLength }}</span>
+        <span class="text-neutral-400">{{ reason.length }}/{{ reasonMaxLength }}</span>
       </div>
-
       <div class="mt-3 flex justify-end gap-2">
-        <button
-          type="button"
-          class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 disabled:opacity-50"
-          :disabled="isActing"
-          @click="cancelReject"
-        >
+        <button type="button" class="btn" :disabled="isActing" @click="cancelReject">
           {{ $t('common.cancel') }}
         </button>
-        <button
-          type="submit"
-          class="rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-50"
-          :disabled="isActing"
-        >
+        <button type="submit" class="btn-primary" :disabled="isActing">
           {{ $t('admin.pending.confirmReject') }}
         </button>
       </div>
