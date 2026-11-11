@@ -10,7 +10,8 @@
   "navigation": {
     "pendingLots": "Lots en attente",
     "dashboard": "Tableau de bord",
-    "disputes": "Litiges"
+    "disputes": "Litiges",
+    "overdueShipments": "Envois en retard"
   },
   "admin": {
     "badge": "Admin",
@@ -92,6 +93,30 @@
         "SignificantlyNotAsDescribed": "Tres different de la description",
         "Damaged": "Endommage",
         "SuspectedCounterfeit": "Contrefacon suspectee"
+      }
+    },
+    "overdue": {
+      "title": "Envois en retard",
+      "description": "Commandes payees que le vendeur n'a pas expediees a temps.",
+      "loadFailed": "Impossible de charger les envois en retard.",
+      "empty": "Aucun envoi en retard.",
+      "emptyHint": "Les commandes apparaissent ici lorsque le delai d'expedition est depasse.",
+      "order": "Commande",
+      "lot": "Lot",
+      "total": "Total",
+      "status": "Statut",
+      "problemSince": "Probleme depuis",
+      "daysOverdue": "{days} jours de retard",
+      "statuses": {
+        "PendingPayment": "Paiement en attente",
+        "PaymentExpired": "Paiement expire",
+        "Paid": "Payee",
+        "AwaitingShipment": "En attente d'expedition",
+        "Shipped": "Expediee",
+        "Delivered": "Livree",
+        "Completed": "Terminee",
+        "Cancelled": "Annulee",
+        "Disputed": "En litige"
       }
     }
   }

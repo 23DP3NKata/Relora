@@ -10,7 +10,8 @@
   "navigation": {
     "pendingLots": "Ausstehende Lose",
     "dashboard": "Dashboard",
-    "disputes": "Streitfaelle"
+    "disputes": "Streitfaelle",
+    "overdueShipments": "Versandverzug"
   },
   "admin": {
     "badge": "Admin",
@@ -92,6 +93,30 @@
         "SignificantlyNotAsDescribed": "Erheblich abweichend von der Beschreibung",
         "Damaged": "Beschaedigt",
         "SuspectedCounterfeit": "Verdacht auf Faelschung"
+      }
+    },
+    "overdue": {
+      "title": "Versandverzug",
+      "description": "Bezahlte Bestellungen, die der Verkaeufer nicht rechtzeitig versendet hat.",
+      "loadFailed": "Verspaetete Sendungen konnten nicht geladen werden.",
+      "empty": "Keine verspaeteten Sendungen.",
+      "emptyHint": "Bestellungen erscheinen hier, wenn die Versandfrist abgelaufen ist.",
+      "order": "Bestellung",
+      "lot": "Los",
+      "total": "Summe",
+      "status": "Status",
+      "problemSince": "Problem seit",
+      "daysOverdue": "{days} Tage ueberfaellig",
+      "statuses": {
+        "PendingPayment": "Zahlung ausstehend",
+        "PaymentExpired": "Zahlung abgelaufen",
+        "Paid": "Bezahlt",
+        "AwaitingShipment": "Wartet auf Versand",
+        "Shipped": "Versendet",
+        "Delivered": "Zugestellt",
+        "Completed": "Abgeschlossen",
+        "Cancelled": "Storniert",
+        "Disputed": "Im Streitfall"
       }
     }
   }

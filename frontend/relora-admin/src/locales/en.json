@@ -10,7 +10,8 @@
   "navigation": {
     "pendingLots": "Pending Lots",
     "dashboard": "Dashboard",
-    "disputes": "Disputes"
+    "disputes": "Disputes",
+    "overdueShipments": "Overdue shipments"
   },
   "admin": {
     "badge": "Admin",
@@ -92,6 +93,30 @@
         "SignificantlyNotAsDescribed": "Significantly not as described",
         "Damaged": "Damaged",
         "SuspectedCounterfeit": "Suspected counterfeit"
+      }
+    },
+    "overdue": {
+      "title": "Overdue shipments",
+      "description": "Paid orders that the seller has not shipped on time.",
+      "loadFailed": "Failed to load overdue shipments.",
+      "empty": "No overdue shipments.",
+      "emptyHint": "Orders appear here when the shipping deadline has passed.",
+      "order": "Order",
+      "lot": "Lot",
+      "total": "Total",
+      "status": "Status",
+      "problemSince": "Problem since",
+      "daysOverdue": "{days} days overdue",
+      "statuses": {
+        "PendingPayment": "Pending payment",
+        "PaymentExpired": "Payment expired",
+        "Paid": "Paid",
+        "AwaitingShipment": "Awaiting shipment",
+        "Shipped": "Shipped",
+        "Delivered": "Delivered",
+        "Completed": "Completed",
+        "Cancelled": "Cancelled",
+        "Disputed": "Disputed"
       }
     }
   }

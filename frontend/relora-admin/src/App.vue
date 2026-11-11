@@ -9,6 +9,7 @@ const links = [
   { to: '/admin/dashboard', label: 'navigation.dashboard' },
   { to: '/admin/pending', label: 'navigation.pendingLots' },
   { to: '/admin/disputes', label: 'navigation.disputes' },
+  { to: '/admin/overdue-shipments', label: 'navigation.overdueShipments' },
 ]
 </script>
 
