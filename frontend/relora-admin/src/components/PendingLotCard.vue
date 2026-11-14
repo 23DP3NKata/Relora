@@ -85,6 +85,9 @@ const submitReject = () => {
       </div>
 
       <div v-if="!isRejectOpen" class="flex flex-wrap gap-2">
+        <RouterLink :to="`/admin/pending/${lot.id}`" class="btn">
+          {{ $t('admin.pending.view') }}
+        </RouterLink>
         <button type="button" class="btn" :disabled="isActing" @click="openReject">
           {{ $t('admin.pending.reject') }}
         </button>

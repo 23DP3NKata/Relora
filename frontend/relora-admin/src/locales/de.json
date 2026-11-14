@@ -40,7 +40,8 @@
       "rejectReasonLabel": "Grund der Ablehnung",
       "rejectReasonPlaceholder": "Erklaeren Sie dem Verkaeufer, was korrigiert werden muss...",
       "rejectReasonRequired": "Bitte geben Sie einen Grund fuer die Ablehnung ein.",
-      "confirmReject": "Los ablehnen"
+      "confirmReject": "Los ablehnen",
+      "view": "Ansehen"
     },
     "dashboard": {
       "title": "Dashboard",
@@ -117,6 +118,32 @@
         "Completed": "Abgeschlossen",
         "Cancelled": "Storniert",
         "Disputed": "Im Streitfall"
+      }
+    },
+    "lotDetails": {
+      "back": "Zurueck zu ausstehenden Losen",
+      "loadFailed": "Los konnte nicht geladen werden. Es wurde moeglicherweise bereits moderiert.",
+      "category": "Kategorie",
+      "condition": "Zustand",
+      "color": "Farbe",
+      "country": "Land",
+      "description": "Beschreibung",
+      "noDescription": "Keine Beschreibung.",
+      "categories": {
+        "Tops": "Oberteile",
+        "Bottoms": "Hosen und Roecke",
+        "Outerwear": "Oberbekleidung",
+        "Shoes": "Schuhe",
+        "Accessories": "Accessoires",
+        "Vintage": "Vintage",
+        "Bags": "Taschen",
+        "Jewellery": "Schmuck",
+        "Other": "Sonstiges"
+      },
+      "conditions": {
+        "New": "Neu",
+        "Worn": "Getragen",
+        "Refurbished": "Aufbereitet"
       }
     }
   }

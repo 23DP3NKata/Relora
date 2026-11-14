@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PendingLotsPage from '@/pages/PendingLotsPage.vue'
+import PendingLotDetailsPage from '@/pages/PendingLotDetailsPage.vue'
 import DashboardPage from '@/pages/DashboardPage.vue'
 import DisputesPage from '@/pages/DisputesPage.vue'
 import OverdueShipmentsPage from '@/pages/OverdueShipmentsPage.vue'
@@ -14,6 +15,10 @@ const router = createRouter({
     {
       path: '/admin/pending',
       component: PendingLotsPage,
+    },
+    {
+      path: '/admin/pending/:id',
+      component: PendingLotDetailsPage,
     },
     {
       path: '/admin/dashboard',
