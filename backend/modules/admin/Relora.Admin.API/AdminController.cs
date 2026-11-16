@@ -9,6 +9,7 @@ using Relora.Items.Application.Models;
 using Relora.Orders.Application.Commands;
 using Relora.Orders.Application.Requests;
 using Relora.Orders.Domain.Enums;
+using Relora.Support.Domain;
 
 using MediatR;
 
@@ -128,6 +129,37 @@ public sealed class AdminController : ControllerBase
         await _mediator.Send(
             new ResolveOrderDisputeCommand(disputeId, adminId, decision, request.Reason),
             cancellationToken);
+
+        return Ok();
+    }
+
+    [HttpGet("support-requests")]
+    public async Task<ActionResult<IReadOnlyList<AdminSupportRequestDto>>> GetSupportRequests(
+        CancellationToken cancellationToken)
+    {
+        var adminId = User.Claims.GetUserId();
+        var result = await _mediator.Send(new GetSupportRequests(adminId), cancellationToken);
+
+        return Ok(result);
+    }
+
+    [HttpPost("support-requests/{requestId:guid}/status")]
+    public async Task<ActionResult> ChangeSupportRequestStatus(
+        Guid requestId,
+        [FromBody] ChangeSupportRequestStatusRequest request,
+        CancellationToken cancellationToken)
+    {
+        if (!Enum.TryParse<SupportRequestStatus>(request.Status?.Trim(), ignoreCase: true, out var status))
+        {
+            return BadRequest(new
+            {
+                message = "Invalid support request status.",
+                allowedStatuses = Enum.GetNames<SupportRequestStatus>()
+            });
+        }
+
+        var adminId = User.Claims.GetUserId();
+        await _mediator.Send(new ChangeSupportRequestStatusCommand(requestId, adminId, status), cancellationToken);
 
         return Ok();
     }
