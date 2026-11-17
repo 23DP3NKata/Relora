@@ -10,6 +10,7 @@ const links = [
   { to: '/admin/pending', label: 'navigation.pendingLots' },
   { to: '/admin/disputes', label: 'navigation.disputes' },
   { to: '/admin/overdue-shipments', label: 'navigation.overdueShipments' },
+  { to: '/admin/support', label: 'navigation.support' },
 ]
 </script>
 

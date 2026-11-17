@@ -11,7 +11,8 @@
     "pendingLots": "Lots en attente",
     "dashboard": "Tableau de bord",
     "disputes": "Litiges",
-    "overdueShipments": "Envois en retard"
+    "overdueShipments": "Envois en retard",
+    "support": "Support"
   },
   "admin": {
     "badge": "Admin",
@@ -52,7 +53,9 @@
       "pendingLotsCount": "Lots a examiner",
       "activeAuctionsCount": "Encheres actives",
       "usersCount": "Utilisateurs inscrits",
-      "goToPending": "Examiner les lots"
+      "goToPending": "Examiner les lots",
+      "newSupportRequestsCount": "Nouvelles demandes de support",
+      "goToSupport": "Ouvrir les demandes"
     },
     "disputes": {
       "title": "Litiges",
@@ -144,6 +147,25 @@
         "New": "Neuf",
         "Worn": "Porte",
         "Refurbished": "Remis a neuf"
+      }
+    },
+    "support": {
+      "title": "Demandes de support",
+      "description": "Messages envoyes via le formulaire de support.",
+      "loadFailed": "Impossible de charger les demandes de support.",
+      "changeFailed": "Impossible de changer le statut.",
+      "empty": "Aucune demande de support ouverte.",
+      "emptyHint": "Les nouvelles demandes du formulaire apparaitront ici.",
+      "showClosed": "Afficher les fermees",
+      "guest": "invite",
+      "reply": "Repondre par e-mail",
+      "takeInProgress": "Prendre en charge",
+      "close": "Fermer",
+      "reopen": "Rouvrir",
+      "status": {
+        "New": "Nouvelle",
+        "InProgress": "En cours",
+        "Closed": "Fermee"
       }
     }
   }

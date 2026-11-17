@@ -11,7 +11,8 @@
     "pendingLots": "Ausstehende Lose",
     "dashboard": "Dashboard",
     "disputes": "Streitfaelle",
-    "overdueShipments": "Versandverzug"
+    "overdueShipments": "Versandverzug",
+    "support": "Support"
   },
   "admin": {
     "badge": "Admin",
@@ -52,7 +53,9 @@
       "pendingLotsCount": "Lose zur Pruefung",
       "activeAuctionsCount": "Aktive Auktionen",
       "usersCount": "Registrierte Nutzer",
-      "goToPending": "Lose pruefen"
+      "goToPending": "Lose pruefen",
+      "newSupportRequestsCount": "Neue Supportanfragen",
+      "goToSupport": "Anfragen oeffnen"
     },
     "disputes": {
       "title": "Streitfaelle",
@@ -144,6 +147,25 @@
         "New": "Neu",
         "Worn": "Getragen",
         "Refurbished": "Aufbereitet"
+      }
+    },
+    "support": {
+      "title": "Supportanfragen",
+      "description": "Nachrichten aus dem Supportformular.",
+      "loadFailed": "Supportanfragen konnten nicht geladen werden.",
+      "changeFailed": "Status konnte nicht geaendert werden.",
+      "empty": "Keine offenen Supportanfragen.",
+      "emptyHint": "Neue Anfragen aus dem Supportformular erscheinen hier.",
+      "showClosed": "Geschlossene anzeigen",
+      "guest": "Gast",
+      "reply": "Per E-Mail antworten",
+      "takeInProgress": "In Bearbeitung nehmen",
+      "close": "Schliessen",
+      "reopen": "Wieder oeffnen",
+      "status": {
+        "New": "Neu",
+        "InProgress": "In Bearbeitung",
+        "Closed": "Geschlossen"
       }
     }
   }

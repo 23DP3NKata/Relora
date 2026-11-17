@@ -17,6 +17,7 @@ const stats = computed(() => {
     { key: 'pending', label: t('admin.dashboard.pendingLotsCount'), value: dashboard.value.pendingLotsCount },
     { key: 'auctions', label: t('admin.dashboard.activeAuctionsCount'), value: dashboard.value.activeAuctionsCount },
     { key: 'users', label: t('admin.dashboard.usersCount'), value: dashboard.value.usersCount },
+    { key: 'support', label: t('admin.dashboard.newSupportRequestsCount'), value: dashboard.value.newSupportRequestsCount },
   ]
 })
 
@@ -49,16 +50,23 @@ onMounted(loadDashboard)
       </button>
     </div>
 
-    <div v-if="isLoading" class="grid gap-4 sm:grid-cols-3">
-      <div v-for="n in 3" :key="n" class="card h-32 animate-pulse bg-neutral-50" />
+    <div v-if="isLoading" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div v-for="n in 4" :key="n" class="card h-32 animate-pulse bg-neutral-50" />
     </div>
 
     <p v-else-if="errorMessage" class="card p-5 text-sm text-red-600">{{ errorMessage }}</p>
 
-    <div v-else class="grid gap-4 sm:grid-cols-3">
+    <div v-else class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       <article v-for="stat in stats" :key="stat.key" class="card p-5">
         <p class="eyebrow">{{ stat.label }}</p>
         <p class="mt-3 text-4xl font-semibold tracking-tight tabular-nums">{{ stat.value }}</p>
+        <RouterLink
+          v-if="stat.key === 'support'"
+          to="/admin/support"
+          class="mt-4 inline-flex text-sm text-neutral-500 underline-offset-4 hover:text-neutral-950 hover:underline"
+        >
+          {{ $t('admin.dashboard.goToSupport') }} →
+        </RouterLink>
         <RouterLink
           v-if="stat.key === 'pending'"
           to="/admin/pending"
