@@ -9,9 +9,12 @@
   },
   "navigation": {
     "pendingLots": "Pending Lots",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "disputes": "Disputes",
+    "overdueShipments": "Overdue shipments"
   },
   "admin": {
+    "badge": "Admin",
     "title": "Relora Admin",
     "pending": {
       "title": "Pending Lots",
@@ -37,7 +40,8 @@
       "rejectReasonLabel": "Reason for rejection",
       "rejectReasonPlaceholder": "Explain to the seller what needs to be fixed...",
       "rejectReasonRequired": "Please enter a reason for rejection.",
-      "confirmReject": "Reject lot"
+      "confirmReject": "Reject lot",
+      "view": "View"
     },
     "dashboard": {
       "title": "Dashboard",
@@ -49,6 +53,98 @@
       "activeAuctionsCount": "Active auctions",
       "usersCount": "Registered users",
       "goToPending": "Review lots"
+    },
+    "disputes": {
+      "title": "Disputes",
+      "description": "Review buyer disputes and decide who is right.",
+      "loadFailed": "Failed to load disputes.",
+      "resolveFailed": "Failed to resolve dispute.",
+      "resolved": "Dispute resolved successfully.",
+      "empty": "No open disputes.",
+      "emptyHint": "Disputes opened by buyers will appear here.",
+      "showResolved": "Show resolved",
+      "order": "Order",
+      "buyer": "Buyer",
+      "openedAt": "Opened",
+      "tracking": "Tracking",
+      "reason": "Reason",
+      "evidence": "Photo evidence",
+      "noEvidence": "Buyer did not add photos.",
+      "decision": "Decision",
+      "forBuyer": "In favour of buyer",
+      "forSeller": "In favour of seller",
+      "forBuyerHint": "The order will be cancelled in favour of the buyer.",
+      "forSellerHint": "The order will be completed in favour of the seller.",
+      "reasonLabel": "Justification",
+      "reasonPlaceholder": "Explain why this decision was made...",
+      "reasonRequired": "Please enter a justification.",
+      "confirm": "Confirm decision",
+      "status": {
+        "Open": "Open",
+        "Resolved": "Resolved"
+      },
+      "decisions": {
+        "CancelOrder": "In favour of buyer (order cancelled)",
+        "CompleteOrder": "In favour of seller (order completed)"
+      },
+      "reasons": {
+        "ItemNotShipped": "Item not shipped",
+        "ItemNotReceived": "Item not received",
+        "WrongItem": "Wrong item",
+        "SignificantlyNotAsDescribed": "Significantly not as described",
+        "Damaged": "Damaged",
+        "SuspectedCounterfeit": "Suspected counterfeit"
+      }
+    },
+    "overdue": {
+      "title": "Overdue shipments",
+      "description": "Paid orders that the seller has not shipped on time.",
+      "loadFailed": "Failed to load overdue shipments.",
+      "empty": "No overdue shipments.",
+      "emptyHint": "Orders appear here when the shipping deadline has passed.",
+      "order": "Order",
+      "lot": "Lot",
+      "total": "Total",
+      "status": "Status",
+      "problemSince": "Problem since",
+      "daysOverdue": "{days} days overdue",
+      "statuses": {
+        "PendingPayment": "Pending payment",
+        "PaymentExpired": "Payment expired",
+        "Paid": "Paid",
+        "AwaitingShipment": "Awaiting shipment",
+        "Shipped": "Shipped",
+        "Delivered": "Delivered",
+        "Completed": "Completed",
+        "Cancelled": "Cancelled",
+        "Disputed": "Disputed"
+      }
+    },
+    "lotDetails": {
+      "back": "Back to pending lots",
+      "loadFailed": "Failed to load lot. It may have already been moderated.",
+      "category": "Category",
+      "condition": "Condition",
+      "color": "Color",
+      "country": "Country",
+      "description": "Description",
+      "noDescription": "No description.",
+      "categories": {
+        "Tops": "Tops",
+        "Bottoms": "Bottoms",
+        "Outerwear": "Outerwear",
+        "Shoes": "Shoes",
+        "Accessories": "Accessories",
+        "Vintage": "Vintage",
+        "Bags": "Bags",
+        "Jewellery": "Jewellery",
+        "Other": "Other"
+      },
+      "conditions": {
+        "New": "New",
+        "Worn": "Worn",
+        "Refurbished": "Refurbished"
+      }
     }
   }
 }

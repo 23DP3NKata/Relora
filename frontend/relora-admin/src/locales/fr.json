@@ -9,9 +9,12 @@
   },
   "navigation": {
     "pendingLots": "Lots en attente",
-    "dashboard": "Tableau de bord"
+    "dashboard": "Tableau de bord",
+    "disputes": "Litiges",
+    "overdueShipments": "Envois en retard"
   },
   "admin": {
+    "badge": "Admin",
     "title": "Relora Admin",
     "pending": {
       "title": "Lots en attente",
@@ -37,7 +40,8 @@
       "rejectReasonLabel": "Motif du refus",
       "rejectReasonPlaceholder": "Expliquez au vendeur ce qui doit etre corrige...",
       "rejectReasonRequired": "Veuillez indiquer un motif de refus.",
-      "confirmReject": "Refuser le lot"
+      "confirmReject": "Refuser le lot",
+      "view": "Voir"
     },
     "dashboard": {
       "title": "Tableau de bord",
@@ -49,6 +53,98 @@
       "activeAuctionsCount": "Encheres actives",
       "usersCount": "Utilisateurs inscrits",
       "goToPending": "Examiner les lots"
+    },
+    "disputes": {
+      "title": "Litiges",
+      "description": "Examinez les litiges des acheteurs et decidez qui a raison.",
+      "loadFailed": "Impossible de charger les litiges.",
+      "resolveFailed": "Impossible de resoudre le litige.",
+      "resolved": "Litige resolu avec succes.",
+      "empty": "Aucun litige ouvert.",
+      "emptyHint": "Les litiges ouverts par les acheteurs apparaitront ici.",
+      "showResolved": "Afficher les resolus",
+      "order": "Commande",
+      "buyer": "Acheteur",
+      "openedAt": "Ouvert",
+      "tracking": "Suivi",
+      "reason": "Motif",
+      "evidence": "Preuves photo",
+      "noEvidence": "L'acheteur n'a pas ajoute de photos.",
+      "decision": "Decision",
+      "forBuyer": "En faveur de l'acheteur",
+      "forSeller": "En faveur du vendeur",
+      "forBuyerHint": "La commande sera annulee en faveur de l'acheteur.",
+      "forSellerHint": "La commande sera finalisee en faveur du vendeur.",
+      "reasonLabel": "Justification",
+      "reasonPlaceholder": "Expliquez pourquoi cette decision a ete prise...",
+      "reasonRequired": "Veuillez saisir une justification.",
+      "confirm": "Confirmer la decision",
+      "status": {
+        "Open": "Ouvert",
+        "Resolved": "Resolu"
+      },
+      "decisions": {
+        "CancelOrder": "En faveur de l'acheteur (commande annulee)",
+        "CompleteOrder": "En faveur du vendeur (commande finalisee)"
+      },
+      "reasons": {
+        "ItemNotShipped": "Article non expedie",
+        "ItemNotReceived": "Article non recu",
+        "WrongItem": "Mauvais article",
+        "SignificantlyNotAsDescribed": "Tres different de la description",
+        "Damaged": "Endommage",
+        "SuspectedCounterfeit": "Contrefacon suspectee"
+      }
+    },
+    "overdue": {
+      "title": "Envois en retard",
+      "description": "Commandes payees que le vendeur n'a pas expediees a temps.",
+      "loadFailed": "Impossible de charger les envois en retard.",
+      "empty": "Aucun envoi en retard.",
+      "emptyHint": "Les commandes apparaissent ici lorsque le delai d'expedition est depasse.",
+      "order": "Commande",
+      "lot": "Lot",
+      "total": "Total",
+      "status": "Statut",
+      "problemSince": "Probleme depuis",
+      "daysOverdue": "{days} jours de retard",
+      "statuses": {
+        "PendingPayment": "Paiement en attente",
+        "PaymentExpired": "Paiement expire",
+        "Paid": "Payee",
+        "AwaitingShipment": "En attente d'expedition",
+        "Shipped": "Expediee",
+        "Delivered": "Livree",
+        "Completed": "Terminee",
+        "Cancelled": "Annulee",
+        "Disputed": "En litige"
+      }
+    },
+    "lotDetails": {
+      "back": "Retour aux lots en attente",
+      "loadFailed": "Impossible de charger le lot. Il a peut-etre deja ete modere.",
+      "category": "Categorie",
+      "condition": "Etat",
+      "color": "Couleur",
+      "country": "Pays",
+      "description": "Description",
+      "noDescription": "Aucune description.",
+      "categories": {
+        "Tops": "Hauts",
+        "Bottoms": "Bas",
+        "Outerwear": "Vetements d'exterieur",
+        "Shoes": "Chaussures",
+        "Accessories": "Accessoires",
+        "Vintage": "Vintage",
+        "Bags": "Sacs",
+        "Jewellery": "Bijoux",
+        "Other": "Autre"
+      },
+      "conditions": {
+        "New": "Neuf",
+        "Worn": "Porte",
+        "Refurbished": "Remis a neuf"
+      }
     }
   }
 }

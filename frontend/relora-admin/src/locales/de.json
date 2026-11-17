@@ -9,9 +9,12 @@
   },
   "navigation": {
     "pendingLots": "Ausstehende Lose",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "disputes": "Streitfaelle",
+    "overdueShipments": "Versandverzug"
   },
   "admin": {
+    "badge": "Admin",
     "title": "Relora Admin",
     "pending": {
       "title": "Ausstehende Lose",
@@ -37,7 +40,8 @@
       "rejectReasonLabel": "Grund der Ablehnung",
       "rejectReasonPlaceholder": "Erklaeren Sie dem Verkaeufer, was korrigiert werden muss...",
       "rejectReasonRequired": "Bitte geben Sie einen Grund fuer die Ablehnung ein.",
-      "confirmReject": "Los ablehnen"
+      "confirmReject": "Los ablehnen",
+      "view": "Ansehen"
     },
     "dashboard": {
       "title": "Dashboard",
@@ -49,6 +53,98 @@
       "activeAuctionsCount": "Aktive Auktionen",
       "usersCount": "Registrierte Nutzer",
       "goToPending": "Lose pruefen"
+    },
+    "disputes": {
+      "title": "Streitfaelle",
+      "description": "Pruefen Sie Streitfaelle von Kaeufern und entscheiden Sie, wer recht hat.",
+      "loadFailed": "Streitfaelle konnten nicht geladen werden.",
+      "resolveFailed": "Streitfall konnte nicht entschieden werden.",
+      "resolved": "Streitfall erfolgreich entschieden.",
+      "empty": "Keine offenen Streitfaelle.",
+      "emptyHint": "Von Kaeufern eroeffnete Streitfaelle erscheinen hier.",
+      "showResolved": "Entschiedene anzeigen",
+      "order": "Bestellung",
+      "buyer": "Kaeufer",
+      "openedAt": "Eroeffnet",
+      "tracking": "Sendungsnummer",
+      "reason": "Grund",
+      "evidence": "Fotobeweise",
+      "noEvidence": "Der Kaeufer hat keine Fotos hinzugefuegt.",
+      "decision": "Entscheidung",
+      "forBuyer": "Zugunsten des Kaeufers",
+      "forSeller": "Zugunsten des Verkaeufers",
+      "forBuyerHint": "Die Bestellung wird zugunsten des Kaeufers storniert.",
+      "forSellerHint": "Die Bestellung wird zugunsten des Verkaeufers abgeschlossen.",
+      "reasonLabel": "Begruendung",
+      "reasonPlaceholder": "Erklaeren Sie, warum diese Entscheidung getroffen wurde...",
+      "reasonRequired": "Bitte geben Sie eine Begruendung ein.",
+      "confirm": "Entscheidung bestaetigen",
+      "status": {
+        "Open": "Offen",
+        "Resolved": "Entschieden"
+      },
+      "decisions": {
+        "CancelOrder": "Zugunsten des Kaeufers (Bestellung storniert)",
+        "CompleteOrder": "Zugunsten des Verkaeufers (Bestellung abgeschlossen)"
+      },
+      "reasons": {
+        "ItemNotShipped": "Artikel nicht versendet",
+        "ItemNotReceived": "Artikel nicht erhalten",
+        "WrongItem": "Falscher Artikel",
+        "SignificantlyNotAsDescribed": "Erheblich abweichend von der Beschreibung",
+        "Damaged": "Beschaedigt",
+        "SuspectedCounterfeit": "Verdacht auf Faelschung"
+      }
+    },
+    "overdue": {
+      "title": "Versandverzug",
+      "description": "Bezahlte Bestellungen, die der Verkaeufer nicht rechtzeitig versendet hat.",
+      "loadFailed": "Verspaetete Sendungen konnten nicht geladen werden.",
+      "empty": "Keine verspaeteten Sendungen.",
+      "emptyHint": "Bestellungen erscheinen hier, wenn die Versandfrist abgelaufen ist.",
+      "order": "Bestellung",
+      "lot": "Los",
+      "total": "Summe",
+      "status": "Status",
+      "problemSince": "Problem seit",
+      "daysOverdue": "{days} Tage ueberfaellig",
+      "statuses": {
+        "PendingPayment": "Zahlung ausstehend",
+        "PaymentExpired": "Zahlung abgelaufen",
+        "Paid": "Bezahlt",
+        "AwaitingShipment": "Wartet auf Versand",
+        "Shipped": "Versendet",
+        "Delivered": "Zugestellt",
+        "Completed": "Abgeschlossen",
+        "Cancelled": "Storniert",
+        "Disputed": "Im Streitfall"
+      }
+    },
+    "lotDetails": {
+      "back": "Zurueck zu ausstehenden Losen",
+      "loadFailed": "Los konnte nicht geladen werden. Es wurde moeglicherweise bereits moderiert.",
+      "category": "Kategorie",
+      "condition": "Zustand",
+      "color": "Farbe",
+      "country": "Land",
+      "description": "Beschreibung",
+      "noDescription": "Keine Beschreibung.",
+      "categories": {
+        "Tops": "Oberteile",
+        "Bottoms": "Hosen und Roecke",
+        "Outerwear": "Oberbekleidung",
+        "Shoes": "Schuhe",
+        "Accessories": "Accessoires",
+        "Vintage": "Vintage",
+        "Bags": "Taschen",
+        "Jewellery": "Schmuck",
+        "Other": "Sonstiges"
+      },
+      "conditions": {
+        "New": "Neu",
+        "Worn": "Getragen",
+        "Refurbished": "Aufbereitet"
+      }
     }
   }
 }
