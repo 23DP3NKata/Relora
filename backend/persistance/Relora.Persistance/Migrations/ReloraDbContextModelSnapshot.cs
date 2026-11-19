@@ -880,12 +880,10 @@ namespace Relora.Persistance.Migrations
                             b1.Property<Guid>("Id")
                                 .HasColumnType("uuid");
 
-                            b1.Property<string>("Key")
-                                .IsRequired()
-                                .HasMaxLength(80)
-                                .HasColumnType("character varying(80)");
-
                             b1.Property<Guid>("LotId")
+                                .HasColumnType("uuid");
+
+                            b1.Property<Guid>("MeasurementDefinitionId")
                                 .HasColumnType("uuid");
 
                             b1.Property<string>("Unit")
@@ -898,13 +896,21 @@ namespace Relora.Persistance.Migrations
 
                             b1.HasKey("Id");
 
-                            b1.HasIndex("LotId", "Key")
+                            b1.HasIndex("MeasurementDefinitionId");
+
+                            b1.HasIndex("LotId", "MeasurementDefinitionId")
                                 .IsUnique();
 
                             b1.ToTable("lot_measurements", (string)null);
 
                             b1.WithOwner()
                                 .HasForeignKey("LotId");
+
+                            b1.HasOne("Relora.Items.Domain.MeasurementDefinition", null)
+                                .WithMany()
+                                .HasForeignKey("MeasurementDefinitionId")
+                                .OnDelete(DeleteBehavior.Restrict)
+                                .IsRequired();
                         });
 
                     b.OwnsMany("Relora.Items.Domain.Lot+LotMedia", "Media", b1 =>

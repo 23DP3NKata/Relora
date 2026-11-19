@@ -74,9 +74,18 @@ public sealed class EditLotCommandHandler : IRequestHandler<EditLotCommand>
             .Select(material => new LotMaterialInput(material.MaterialId, material.Percentage, material.OtherName))
             .ToList();
 
-        var measurementInputs = request.measurements ?? lot.Measurements
-            .Select(measurement => new LotMeasurementInput(measurement.Key, measurement.Value, measurement.Unit))
-            .ToList();
+        var measurementInputs = request.measurements;
+        if (measurementInputs is null)
+        {
+            // lotā glabājas tikai definīcijas id, tāpēc vajag atpakaļ dabūt key
+            var definitions = await _catalogRepository.GetMeasurementDefinitionsAsync(cancellationToken);
+            var keysById = definitions.ToDictionary(definition => definition.Id, definition => definition.Key);
+
+            measurementInputs = lot.Measurements
+                .Where(measurement => keysById.ContainsKey(measurement.MeasurementDefinitionId))
+                .Select(measurement => new LotMeasurementInput(keysById[measurement.MeasurementDefinitionId], measurement.Value, measurement.Unit))
+                .ToList();
+        }
 
         var catalogInput = await LotCatalogInputResolver.ResolveAsync(
             _catalogRepository,

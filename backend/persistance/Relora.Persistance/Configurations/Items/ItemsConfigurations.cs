@@ -204,10 +204,14 @@ public sealed class LotConfiguration : IEntityTypeConfiguration<Lot>
             measurement.WithOwner().HasForeignKey("LotId");
             measurement.HasKey(m => m.Id);
             measurement.Property(m => m.Id).ValueGeneratedNever();
-            measurement.Property(m => m.Key).HasMaxLength(80).IsRequired();
+            measurement.Property(m => m.MeasurementDefinitionId).IsRequired();
             measurement.Property(m => m.Value).HasColumnType("numeric(8,2)").IsRequired();
             measurement.Property(m => m.Unit).HasMaxLength(12).IsRequired();
-            measurement.HasIndex("LotId", "Key").IsUnique();
+            measurement.HasOne<MeasurementDefinition>()
+                .WithMany()
+                .HasForeignKey(m => m.MeasurementDefinitionId)
+                .OnDelete(DeleteBehavior.Restrict);
+            measurement.HasIndex("LotId", nameof(Lot.LotMeasurement.MeasurementDefinitionId)).IsUnique();
         });
 
         builder.HasIndex(l => l.CategoryId);

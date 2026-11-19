@@ -196,11 +196,11 @@ public static class LotCatalogInputResolver
             measurementProfile,
             cancellationToken);
 
-        var allowedKeys = definitions
-            .Select(definition => definition.Key)
-            .ToHashSet(StringComparer.OrdinalIgnoreCase);
+        // pēc key atrodam mēru definīciju
+        var definitionsByKey = definitions
+            .ToDictionary(definition => definition.Key, StringComparer.OrdinalIgnoreCase);
 
-        if (allowedKeys.Count == 0)
+        if (definitionsByKey.Count == 0)
         {
             throw new InvalidOperationException("Selected category does not accept measurements.");
         }
@@ -210,13 +210,13 @@ public static class LotCatalogInputResolver
             {
                 var key = measurement.Key.Trim().ToLowerInvariant();
 
-                if (!allowedKeys.Contains(key))
+                if (!definitionsByKey.TryGetValue(key, out var definition))
                 {
                     throw new InvalidOperationException($"Measurement '{measurement.Key}' is not allowed for the selected category.");
                 }
 
                 return new LotMeasurement(
-                    key,
+                    definition.Id,
                     measurement.Value,
                     string.IsNullOrWhiteSpace(measurement.Unit) ? "cm" : measurement.Unit);
             })

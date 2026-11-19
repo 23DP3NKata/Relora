@@ -663,8 +663,8 @@ public sealed class Lot : Entity<Guid>
     private void SetMeasurements(IEnumerable<LotMeasurement> measurements)
     {
         var normalizedMeasurements = measurements
-            .Where(measurement => !string.IsNullOrWhiteSpace(measurement.Key))
-            .GroupBy(measurement => measurement.Key.Trim(), StringComparer.OrdinalIgnoreCase)
+            .Where(measurement => measurement.MeasurementDefinitionId != Guid.Empty)
+            .GroupBy(measurement => measurement.MeasurementDefinitionId)
             .Select(group => group.First())
             .ToList();
 
@@ -893,11 +893,11 @@ public sealed class Lot : Entity<Guid>
         {
         }
 
-        public LotMeasurement(string key, decimal value, string? unit)
+        public LotMeasurement(Guid measurementDefinitionId, decimal value, string? unit)
         {
-            if (string.IsNullOrWhiteSpace(key))
+            if (measurementDefinitionId == Guid.Empty)
             {
-                throw new ArgumentException("Measurement key is required.");
+                throw new ArgumentException("Measurement definition is required.");
             }
 
             if (value <= 0)
@@ -905,13 +905,13 @@ public sealed class Lot : Entity<Guid>
                 throw new ArgumentException("Measurement value must be positive.");
             }
 
-            Key = key.Trim();
+            MeasurementDefinitionId = measurementDefinitionId;
             Value = value;
             Unit = string.IsNullOrWhiteSpace(unit) ? "cm" : unit.Trim().ToLowerInvariant();
         }
 
         public Guid Id { get; private set; } = Guid.NewGuid();
-        public string Key { get; private set; } = default!;
+        public Guid MeasurementDefinitionId { get; private set; }
         public decimal Value { get; private set; }
         public string Unit { get; private set; } = "cm";
     }
