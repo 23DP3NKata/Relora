@@ -23,7 +23,7 @@ public sealed class CurrentUserCommandHandler : IRequestHandler<CurrentUserComma
             throw new UnauthorizedAccessException("No user is currently authenticated.");
         }
 
-        var userDto = new UserDto(user.Result.Id, user.Result.UserName, user.Result.Email);
+        var userDto = new UserDto(user.Result.Id, user.Result.UserName, user.Result.Email, user.Result.IsAdmin);
 
         return Task.FromResult(userDto);
     }
