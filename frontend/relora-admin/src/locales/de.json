@@ -168,5 +168,18 @@
         "Closed": "Geschlossen"
       }
     }
+  },
+  "login": {
+    "eyebrow": "Admin-Bereich",
+    "title": "Anmelden",
+    "description": "Hier koennen sich nur Administratorkonten anmelden.",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "signIn": "Anmelden",
+    "signingIn": "Anmeldung...",
+    "signOut": "Abmelden",
+    "fillFields": "Bitte E-Mail und Passwort eingeben.",
+    "failed": "Falsche E-Mail oder falsches Passwort.",
+    "notAdmin": "Dieses Konto hat keinen Administratorzugang."
   }
 }

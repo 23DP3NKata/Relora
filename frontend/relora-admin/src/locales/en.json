@@ -168,5 +168,18 @@
         "Closed": "Closed"
       }
     }
+  },
+  "login": {
+    "eyebrow": "Admin panel",
+    "title": "Sign in",
+    "description": "Only administrator accounts can sign in here.",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in...",
+    "signOut": "Sign out",
+    "fillFields": "Please enter email and password.",
+    "failed": "Wrong email or password.",
+    "notAdmin": "This account does not have administrator access."
   }
 }

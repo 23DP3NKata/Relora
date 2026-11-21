@@ -5,6 +5,8 @@ import DashboardPage from '@/pages/DashboardPage.vue'
 import DisputesPage from '@/pages/DisputesPage.vue'
 import OverdueShipmentsPage from '@/pages/OverdueShipmentsPage.vue'
 import SupportRequestsPage from '@/pages/SupportRequestsPage.vue'
+import LoginPage from '@/pages/LoginPage.vue'
+import { currentUser, authService } from '@/services/authService'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -12,6 +14,11 @@ const router = createRouter({
     {
       path: '/',
       redirect: '/admin/pending',
+    },
+    {
+      path: '/login',
+      component: LoginPage,
+      meta: { public: true },
     },
     {
       path: '/admin/pending',
@@ -38,6 +45,21 @@ const router = createRouter({
       component: SupportRequestsPage,
     },
   ],
+})
+
+// bez admina citas lapas nerāda, sūta uz login
+router.beforeEach(async (to) => {
+  if (to.meta.public) {
+    return true
+  }
+
+  const user = currentUser.value ?? (await authService.loadCurrentUser())
+
+  if (!user || !user.isAdmin) {
+    return { path: '/login', query: { redirect: to.fullPath } }
+  }
+
+  return true
 })
 
 export default router

@@ -168,5 +168,18 @@
         "Closed": "Fermee"
       }
     }
+  },
+  "login": {
+    "eyebrow": "Panneau d'administration",
+    "title": "Connexion",
+    "description": "Seuls les comptes administrateur peuvent se connecter ici.",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "signingIn": "Connexion...",
+    "signOut": "Se deconnecter",
+    "fillFields": "Veuillez saisir l'e-mail et le mot de passe.",
+    "failed": "E-mail ou mot de passe incorrect.",
+    "notAdmin": "Ce compte n'a pas d'acces administrateur."
   }
 }
