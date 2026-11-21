@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { nextTick, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
@@ -14,6 +15,18 @@ const links = [
   { to: '/admin/overdue-shipments', label: 'navigation.overdueShipments' },
   { to: '/admin/support', label: 'navigation.support' },
 ]
+
+const navRef = ref<HTMLElement | null>(null)
+
+// telefonā pieritina izvēlni līdz aktīvajai lapai
+watch(
+  () => route.path,
+  async () => {
+    await nextTick()
+    const active = navRef.value?.querySelector('.border-neutral-950')
+    active?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
+  },
+)
 
 const logout = async () => {
   await authService.logout()
@@ -36,12 +49,12 @@ const logout = async () => {
           <button type="button" class="btn py-1.5" @click="logout">{{ $t('login.signOut') }}</button>
         </div>
 
-        <nav class="flex w-full flex-wrap gap-x-5 gap-y-2 text-sm">
+        <nav ref="navRef" class="no-scrollbar -mx-4 flex w-[calc(100%+2rem)] gap-x-5 overflow-x-auto whitespace-nowrap px-4 text-sm sm:mx-0 sm:w-full sm:px-0">
           <RouterLink
             v-for="link in links"
             :key="link.to"
             :to="link.to"
-            class="border-b pb-1 transition hover:text-neutral-950"
+            class="shrink-0 border-b pb-1 transition hover:text-neutral-950"
             :class="route.path.startsWith(link.to) ? 'border-neutral-950 text-neutral-950' : 'border-transparent text-neutral-500'"
           >
             {{ $t(link.label) }}

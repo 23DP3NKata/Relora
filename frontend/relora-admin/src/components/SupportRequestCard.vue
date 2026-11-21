@@ -49,14 +49,14 @@ const mailtoLink = computed(() => `mailto:${props.request.email}?subject=${encod
     <p class="mt-3 whitespace-pre-line text-sm leading-6 text-neutral-600">{{ request.message }}</p>
 
     <div class="mt-4 flex flex-wrap justify-end gap-2 border-t border-neutral-200 pt-4">
-      <a :href="mailtoLink" class="btn">
+      <a :href="mailtoLink" class="btn basis-full sm:basis-auto">
         {{ $t('admin.support.reply') }}
       </a>
 
       <button
         v-if="request.statusName === 'New'"
         type="button"
-        class="btn"
+        class="btn flex-1 sm:flex-none"
         :disabled="isActing"
         @click="emit('changeStatus', request.id, 'InProgress')"
       >
@@ -66,7 +66,7 @@ const mailtoLink = computed(() => `mailto:${props.request.email}?subject=${encod
       <button
         v-if="request.statusName !== 'Closed'"
         type="button"
-        class="btn-primary"
+        class="btn-primary flex-1 sm:flex-none"
         :disabled="isActing"
         @click="emit('changeStatus', request.id, 'Closed')"
       >
