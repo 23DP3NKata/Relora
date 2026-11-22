@@ -14,6 +14,7 @@ import {
   type BidPlacedEvent,
 } from '@/app/services/auctionRealtimeService'
 import { bidService, type Bid } from '@/app/services/bidService'
+import ConfirmBidModal from '@/components/modals/ConfirmBidModal.vue'
 import { useAuthStore } from '@/stores/authStore'
 import type { AuctionDetails } from '@/types/auction'
 import type { Lot } from '@/types/lot'
@@ -46,6 +47,7 @@ const errorMessage = ref('')
 const bidError = ref('')
 const bidSuccess = ref('')
 const bidAmount = ref<number | null>(null)
+const isBidConfirmOpen = ref(false)
 
 const selectedImageIndex = ref(0)
 const isGalleryOpen = ref(false)
@@ -1066,6 +1068,28 @@ const loadLot = async () => {
   }
 }
 
+// pirms likmes parāda logu ar brīdinājumu
+const openBidConfirm = () => {
+  bidError.value = ''
+  bidSuccess.value = ''
+
+  if (!canBid.value || !auction.value?.auctionId || !lot.value) {
+    bidError.value = t('lot.biddingUnavailable')
+    return
+  }
+
+  if (
+    bidAmount.value === null ||
+    Number.isNaN(bidAmount.value) ||
+    bidAmount.value <= 0
+  ) {
+    bidError.value = t('lot.validBidRequired')
+    return
+  }
+
+  isBidConfirmOpen.value = true
+}
+
 const submitBid = async () => {
   bidError.value = ''
   bidSuccess.value = ''
@@ -1102,6 +1126,7 @@ const submitBid = async () => {
     bidError.value = getApiErrorMessage(error, t('lot.bidFailed'))
   } finally {
     isBidSubmitting.value = false
+    isBidConfirmOpen.value = false
   }
 }
 
@@ -1388,11 +1413,20 @@ onBeforeUnmount(() => {
                   !bidAmount ||
                   bidAmount <= 0
                 "
-                @click="submitBid"
+                @click="openBidConfirm"
               >
                 {{ isBidSubmitting ? $t('lot.placingBid') : $t('lot.placeBid') }}
               </button>
             </div>
+
+            <ConfirmBidModal
+              v-if="isBidConfirmOpen && lot"
+              :lot-title="lot.title"
+              :amount-label="formatMoney(bidAmount, lot.currency)"
+              :is-loading="isBidSubmitting"
+              @cancel="isBidConfirmOpen = false"
+              @confirm="submitBid"
+            />
 
             <p
               v-if="!isAuthenticated"

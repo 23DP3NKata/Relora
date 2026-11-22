@@ -17,7 +17,7 @@ public sealed class CreateSupportRequestCommandHandler(
 {
     public async Task<Guid> Handle(CreateSupportRequestCommand request, CancellationToken cancellationToken)
     {
-        var supportRequest = new SupportRequest(Guid.NewGuid(), request.Email, request.Category, request.Subject, request.Message, DateTime.UtcNow);
+        var supportRequest = new SupportRequest(Guid.NewGuid(), request.UserId, request.Email, request.Category, request.Subject, request.Message, DateTime.UtcNow);
         await repository.AddAsync(supportRequest, cancellationToken);
 
         try

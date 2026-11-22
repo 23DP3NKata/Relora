@@ -65,8 +65,8 @@ const submitReject = () => {
 
 <template>
   <article class="card p-4 sm:p-5">
-    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
-      <div class="aspect-[4/5] w-24 shrink-0 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+    <div class="flex flex-wrap items-center gap-4 sm:flex-nowrap sm:gap-5">
+      <div class="aspect-[4/5] w-20 shrink-0 sm:w-24 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
         <img v-if="imageUrl" :src="imageUrl" :alt="lot.title || $t('admin.pending.lotImage')" class="h-full w-full object-cover" />
         <div v-else class="flex h-full w-full items-center justify-center p-2 text-center text-xs text-neutral-400">
           {{ $t('admin.pending.noImage') }}
@@ -84,14 +84,14 @@ const submitReject = () => {
         </p>
       </div>
 
-      <div v-if="!isRejectOpen" class="flex flex-wrap gap-2">
-        <RouterLink :to="`/admin/pending/${lot.id}`" class="btn">
+      <div v-if="!isRejectOpen" class="flex w-full gap-2 sm:w-auto">
+        <RouterLink :to="`/admin/pending/${lot.id}`" class="btn flex-1 sm:flex-none">
           {{ $t('admin.pending.view') }}
         </RouterLink>
-        <button type="button" class="btn" :disabled="isActing" @click="openReject">
+        <button type="button" class="btn flex-1 sm:flex-none" :disabled="isActing" @click="openReject">
           {{ $t('admin.pending.reject') }}
         </button>
-        <button type="button" class="btn-primary" :disabled="isActing" @click="emit('approve', lot.id)">
+        <button type="button" class="btn-primary flex-1 sm:flex-none" :disabled="isActing" @click="emit('approve', lot.id)">
           {{ $t('admin.pending.approve') }}
         </button>
       </div>

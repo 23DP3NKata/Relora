@@ -65,8 +65,8 @@ const submit = () => {
 
 <template>
   <article class="card p-4 sm:p-5">
-    <div class="flex flex-col gap-4 sm:flex-row sm:gap-5">
-      <div class="aspect-[4/5] w-24 shrink-0 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+    <div class="flex items-start gap-4 sm:gap-5">
+      <div class="aspect-[4/5] w-20 shrink-0 sm:w-24 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
         <img
           v-if="dispute.lotPhotoKey"
           :src="photoUrl(dispute.lotPhotoKey)"
@@ -137,10 +137,10 @@ const submit = () => {
 
     <!-- admins izvēlas, kam taisnība -->
     <div v-else-if="!decision" class="mt-4 flex flex-wrap justify-end gap-2 border-t border-neutral-200 pt-4">
-      <button type="button" class="btn" :disabled="isActing" @click="chooseDecision('CancelOrder')">
+      <button type="button" class="btn flex-1 sm:flex-none" :disabled="isActing" @click="chooseDecision('CancelOrder')">
         {{ $t('admin.disputes.forBuyer') }}
       </button>
-      <button type="button" class="btn" :disabled="isActing" @click="chooseDecision('CompleteOrder')">
+      <button type="button" class="btn flex-1 sm:flex-none" :disabled="isActing" @click="chooseDecision('CompleteOrder')">
         {{ $t('admin.disputes.forSeller') }}
       </button>
     </div>

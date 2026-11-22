@@ -11,7 +11,8 @@
     "pendingLots": "Pending Lots",
     "dashboard": "Dashboard",
     "disputes": "Disputes",
-    "overdueShipments": "Overdue shipments"
+    "overdueShipments": "Overdue shipments",
+    "support": "Support"
   },
   "admin": {
     "badge": "Admin",
@@ -52,7 +53,9 @@
       "pendingLotsCount": "Lots awaiting review",
       "activeAuctionsCount": "Active auctions",
       "usersCount": "Registered users",
-      "goToPending": "Review lots"
+      "goToPending": "Review lots",
+      "newSupportRequestsCount": "New support requests",
+      "goToSupport": "Open requests"
     },
     "disputes": {
       "title": "Disputes",
@@ -145,6 +148,38 @@
         "Worn": "Worn",
         "Refurbished": "Refurbished"
       }
+    },
+    "support": {
+      "title": "Support requests",
+      "description": "Messages sent through the support form.",
+      "loadFailed": "Failed to load support requests.",
+      "changeFailed": "Failed to change status.",
+      "empty": "No open support requests.",
+      "emptyHint": "New requests from the support form will appear here.",
+      "showClosed": "Show closed",
+      "guest": "guest",
+      "reply": "Reply by email",
+      "takeInProgress": "Take in progress",
+      "close": "Close",
+      "reopen": "Reopen",
+      "status": {
+        "New": "New",
+        "InProgress": "In progress",
+        "Closed": "Closed"
+      }
     }
+  },
+  "login": {
+    "eyebrow": "Admin panel",
+    "title": "Sign in",
+    "description": "Only administrator accounts can sign in here.",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in...",
+    "signOut": "Sign out",
+    "fillFields": "Please enter email and password.",
+    "failed": "Wrong email or password.",
+    "notAdmin": "This account does not have administrator access."
   }
 }

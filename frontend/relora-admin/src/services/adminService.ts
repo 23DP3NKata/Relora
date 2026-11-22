@@ -5,6 +5,7 @@ export type AdminDashboardData = {
   usersCount: number
   activeAuctionsCount: number
   pendingLotsCount: number
+  newSupportRequestsCount: number
 }
 
 export const adminService = {

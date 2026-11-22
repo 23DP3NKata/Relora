@@ -19,6 +19,15 @@ body {
     @apply inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-950 transition hover:bg-neutral-100 disabled:cursor-not-allowed disabled:opacity-40;
   }
 
+  /* izvēlne telefonā ritinās uz sāniem bez redzamas joslas */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   .card {
     @apply rounded-2xl border border-neutral-200 bg-white;
   }

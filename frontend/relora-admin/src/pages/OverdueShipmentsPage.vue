@@ -61,7 +61,39 @@ onMounted(loadOrders)
       <p class="mt-2 text-sm text-neutral-500">{{ $t('admin.overdue.emptyHint') }}</p>
     </div>
 
-    <div v-else-if="orders.length > 0" class="card overflow-x-auto">
+    <!-- telefonā tabula neietilpst, tāpēc rāda kartītes -->
+    <div v-if="!isLoading && orders.length > 0" class="space-y-3 md:hidden">
+      <article v-for="order in orders" :key="order.orderId" class="card p-4">
+        <div class="flex items-start justify-between gap-3">
+          <p class="eyebrow truncate">{{ order.lotBrand || $t('admin.pending.unknownBrand') }}</p>
+          <span class="tag shrink-0">{{ $t(`admin.overdue.statuses.${order.statusName}`) }}</span>
+        </div>
+        <h3 class="mt-1 text-base font-semibold">{{ order.lotTitle || $t('admin.pending.untitledLot') }}</h3>
+        <p class="mt-1 text-lg font-semibold tabular-nums">{{ formatPrice(order) }}</p>
+
+        <dl class="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 border-t border-neutral-200 pt-3 text-sm">
+          <div>
+            <dt class="eyebrow">{{ $t('admin.overdue.order') }}</dt>
+            <dd class="font-mono text-neutral-500">{{ shortId(order.orderId) }}</dd>
+          </div>
+          <div>
+            <dt class="eyebrow">{{ $t('admin.overdue.problemSince') }}</dt>
+            <dd>{{ formatDate(order.shipByUtc) }}</dd>
+            <dd class="text-xs text-neutral-400">{{ $t('admin.overdue.daysOverdue', { days: order.daysOverdue }) }}</dd>
+          </div>
+          <div>
+            <dt class="eyebrow">{{ $t('admin.disputes.buyer') }}</dt>
+            <dd class="font-mono text-neutral-500">{{ shortId(order.buyerId) }}</dd>
+          </div>
+          <div>
+            <dt class="eyebrow">{{ $t('admin.pending.seller') }}</dt>
+            <dd class="font-mono text-neutral-500">{{ shortId(order.sellerId) }}</dd>
+          </div>
+        </dl>
+      </article>
+    </div>
+
+    <div v-if="!isLoading && orders.length > 0" class="card hidden overflow-x-auto md:block">
       <table class="min-w-full text-left text-sm">
         <thead class="border-b border-neutral-200">
           <tr>

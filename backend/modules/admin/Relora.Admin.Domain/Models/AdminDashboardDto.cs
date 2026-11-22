@@ -5,4 +5,5 @@ public sealed class AdminDashboardDto
     public int UsersCount { get; set; }
     public int ActiveAuctionsCount { get; set; }
     public int PendingLotsCount { get; set; }
+    public int NewSupportRequestsCount { get; set; }
 }

@@ -719,14 +719,26 @@ namespace Relora.Persistance.Migrations
                         .HasMaxLength(5000)
                         .HasColumnType("character varying(5000)");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
                     b.Property<string>("Subject")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("character varying(200)");
 
+                    b.Property<Guid?>("UserId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CreatedAt");
+
+                    b.HasIndex("Status");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("support_requests", (string)null);
                 });
@@ -868,12 +880,10 @@ namespace Relora.Persistance.Migrations
                             b1.Property<Guid>("Id")
                                 .HasColumnType("uuid");
 
-                            b1.Property<string>("Key")
-                                .IsRequired()
-                                .HasMaxLength(80)
-                                .HasColumnType("character varying(80)");
-
                             b1.Property<Guid>("LotId")
+                                .HasColumnType("uuid");
+
+                            b1.Property<Guid>("MeasurementDefinitionId")
                                 .HasColumnType("uuid");
 
                             b1.Property<string>("Unit")
@@ -886,13 +896,21 @@ namespace Relora.Persistance.Migrations
 
                             b1.HasKey("Id");
 
-                            b1.HasIndex("LotId", "Key")
+                            b1.HasIndex("MeasurementDefinitionId");
+
+                            b1.HasIndex("LotId", "MeasurementDefinitionId")
                                 .IsUnique();
 
                             b1.ToTable("lot_measurements", (string)null);
 
                             b1.WithOwner()
                                 .HasForeignKey("LotId");
+
+                            b1.HasOne("Relora.Items.Domain.MeasurementDefinition", null)
+                                .WithMany()
+                                .HasForeignKey("MeasurementDefinitionId")
+                                .OnDelete(DeleteBehavior.Restrict)
+                                .IsRequired();
                         });
 
                     b.OwnsMany("Relora.Items.Domain.Lot+LotMedia", "Media", b1 =>
@@ -1000,6 +1018,14 @@ namespace Relora.Persistance.Migrations
                         .HasForeignKey("DisputeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Relora.Support.Domain.SupportRequest", b =>
+                {
+                    b.HasOne("Relora.Identity.Domain.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.SetNull);
                 });
 
             modelBuilder.Entity("Relora.Auctions.Domain.Auction", b =>

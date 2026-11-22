@@ -3,6 +3,7 @@ using Relora.Admin.Domain.Models;
 using Relora.Identity.Application.Interfaces;
 using Relora.Persistance;
 using Relora.Shared.Domain.Enums;
+using Relora.Support.Domain;
 
 using MediatR;
 
@@ -38,12 +39,14 @@ public sealed class GetAdminDashboardDataHandler : IRequestHandler<GetAdminDashb
         var activeUsersCount = _context.Users.Count();
         var activeAuctionsCount = _context.Auctions.AsNoTracking().Where(a => a.Status == Shared.Domain.Enums.AuctionStatus.Active).Count();
         var pendingLotsCount = _context.Lots.AsNoTracking().Where(a => a.Status == LotStatus.Pending).Count();
+        var newSupportRequestsCount = _context.SupportRequests.AsNoTracking().Where(x => x.Status == SupportRequestStatus.New).Count();
 
         return new AdminDashboardDto
         {
             UsersCount = activeUsersCount,
             ActiveAuctionsCount = activeAuctionsCount,
-            PendingLotsCount = pendingLotsCount
+            PendingLotsCount = pendingLotsCount,
+            NewSupportRequestsCount = newSupportRequestsCount
         };
     }
 }

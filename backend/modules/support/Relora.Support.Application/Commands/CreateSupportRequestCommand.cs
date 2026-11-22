@@ -2,4 +2,4 @@ using MediatR;
 
 namespace Relora.Support.Application.Commands;
 
-public sealed record CreateSupportRequestCommand(string Email, string Category, string Subject, string Message) : IRequest<Guid>;
+public sealed record CreateSupportRequestCommand(string Email, string Category, string Subject, string Message, Guid? UserId = null) : IRequest<Guid>;

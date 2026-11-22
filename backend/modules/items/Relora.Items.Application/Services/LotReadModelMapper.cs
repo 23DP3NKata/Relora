@@ -9,7 +9,7 @@ public sealed record LotCatalogReadContext(
     IReadOnlyDictionary<Guid, Category> Categories,
     IReadOnlyDictionary<Guid, ItemColor> Colors,
     IReadOnlyDictionary<Guid, Material> Materials,
-    IReadOnlyDictionary<string, MeasurementDefinition> MeasurementDefinitions);
+    IReadOnlyDictionary<Guid, MeasurementDefinition> MeasurementDefinitions);
 
 public static class LotReadModelMapper
 {
@@ -108,7 +108,7 @@ public static class LotReadModelMapper
             VintageNotes = includePrivateDetails ? lot.VintageNotes : null,
             Materials = lot.Materials.Select(material => ToMaterialDto(material, catalog)).ToList(),
             Measurements = lot.Measurements
-                .Select(measurement => ToMeasurementDto(measurement, category, catalog))
+                .Select(measurement => ToMeasurementDto(measurement, catalog))
                 .ToList(),
             Status = lot.Status,
             StatusName = lot.Status.ToString(),
@@ -172,7 +172,7 @@ public static class LotReadModelMapper
                 .Select(color => color!)
                 .ToList(),
             Measurements = lot.Measurements
-                .Select(measurement => ToMeasurementDto(measurement, category, catalog))
+                .Select(measurement => ToMeasurementDto(measurement, catalog))
                 .ToList(),
             Status = lot.Status,
             StatusName = lot.Status.ToString(),
@@ -207,9 +207,7 @@ public static class LotReadModelMapper
             categories.ToDictionary(category => category.Id),
             colors.ToDictionary(color => color.Id),
             materials.ToDictionary(material => material.Id),
-            measurementDefinitions.ToDictionary(
-                definition => $"{definition.Profile}:{definition.Key}",
-                StringComparer.OrdinalIgnoreCase));
+            measurementDefinitions.ToDictionary(definition => definition.Id));
     }
 
     private static Category? ResolveCategory(Lot lot, LotCatalogReadContext catalog)
@@ -277,17 +275,13 @@ public static class LotReadModelMapper
 
     private static LotMeasurementDto ToMeasurementDto(
         Lot.LotMeasurement measurement,
-        Category? category,
         LotCatalogReadContext catalog)
     {
-        var definitionKey = category is null
-            ? string.Empty
-            : $"{category.MeasurementProfile}:{measurement.Key}";
+        if (!catalog.MeasurementDefinitions.TryGetValue(measurement.MeasurementDefinitionId, out var definition))
+        {
+            return new LotMeasurementDto("unknown", measurement.Value, measurement.Unit, null);
+        }
 
-        var labelKey = catalog.MeasurementDefinitions.TryGetValue(definitionKey, out var definition)
-            ? definition.LabelKey
-            : null;
-
-        return new LotMeasurementDto(measurement.Key, measurement.Value, measurement.Unit, labelKey);
+        return new LotMeasurementDto(definition.Key, measurement.Value, measurement.Unit, definition.LabelKey);
     }
 }

@@ -92,7 +92,10 @@ public sealed class MediaUploader(IOptions<MediaOptions> options, IAmazonS3 s3) 
                 ContinuationToken = continuationToken
             }, cancellationToken);
 
-            keys.AddRange(response.S3Objects
+            // ja bucket ir tukšs, S3Objects ir null
+            var objects = response.S3Objects ?? [];
+
+            keys.AddRange(objects
                 .Where(item => item.LastModified is { } lastModified && lastModified.ToUniversalTime() <= cutoffUtc)
                 .Select(item => item.Key));
 
