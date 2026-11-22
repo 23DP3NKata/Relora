@@ -316,6 +316,16 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // back / forward button: go back to the old position
+    if (savedPosition) return savedPosition
+
+    // only query changed (filters, pages) - page handles scroll itself
+    if (to.path === from.path) return false
+
+    // new page always opens from the top, smooth if we were scrolled down
+    return { top: 0, behavior: 'smooth' }
+  },
 })
 
 router.beforeEach(async (to) => {

@@ -77,12 +77,9 @@ onBeforeUnmount(() => {
   >
     <header class="grid gap-6 border-t border-foreground/10 pt-6 lg:grid-cols-12 lg:items-end lg:gap-10">
       <div class="lg:col-span-8">
-        <p class="font-mono text-[10px] uppercase tracking-[0.24em] text-foreground/55 sm:text-[11px]">
-          02 — {{ $t('home.liveAuctions.eyebrow') }}
-        </p>
         <h2
           id="live-auctions-title"
-          class="live-title mt-4 overflow-hidden pb-[0.04em] text-[clamp(2.9rem,9vw,7.5rem)] font-semibold uppercase leading-[0.86] tracking-[-0.065em] text-foreground"
+          class="live-title overflow-hidden pb-[0.04em] text-[clamp(2.9rem,9vw,7.5rem)] font-semibold uppercase leading-[0.86] tracking-[-0.065em] text-foreground"
         >
           <span class="live-title-inner block">{{ $t('home.liveAuctions.title') }}</span>
         </h2>

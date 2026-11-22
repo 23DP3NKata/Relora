@@ -4,16 +4,19 @@ import { RouterLink, type RouteLocationRaw } from 'vue-router'
 import { animate, press } from 'motion'
 
 // magnetic link button (Motion spring), hover fill is css
-withDefaults(
+const props = withDefaults(
   defineProps<{
     to: RouteLocationRaw
     variant?: 'dark' | 'light'
     // full width on mobile
     wide?: boolean
+    // no movement, only color change on hover
+    still?: boolean
   }>(),
   {
     variant: 'dark',
     wide: false,
+    still: false,
   },
 )
 
@@ -42,7 +45,7 @@ function onLeave() {
 }
 
 onMounted(() => {
-  if (!button.value) return
+  if (!button.value || props.still) return
 
   const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -79,6 +82,7 @@ onBeforeUnmount(() => {
           ? 'bg-[#111111] text-white dark:bg-white dark:text-[#111111]'
           : 'border border-[#111111]/15 bg-white text-[#111111] dark:border-white/20 dark:bg-transparent dark:text-white',
         wide ? 'w-full sm:w-auto' : '',
+        still ? 'magnetic-button-still' : '',
       ]"
       @click="navigate"
     >
@@ -118,6 +122,10 @@ onBeforeUnmount(() => {
 
 .magnetic-button:hover .magnetic-arrow {
   transform: translateX(4px);
+}
+
+.magnetic-button-still:hover .magnetic-arrow {
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

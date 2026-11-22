@@ -19,14 +19,12 @@ const brands = [
 <template>
   <section aria-labelledby="brands-title">
     <HomeSectionHeader
-      number="05"
-      :eyebrow="$t('home.brands')"
       :title="$t('home.shopByBrand')"
       title-id="brands-title"
     >
       <RouterLink
         :to="localePath('/designers')"
-        class="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
+        class="text-[11px] uppercase tracking-[0.14em] text-foreground/60 underline-offset-[6px] transition hover:text-foreground hover:underline"
       >
         {{ $t('home.browseBrands') }} →
       </RouterLink>

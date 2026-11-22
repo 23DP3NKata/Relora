@@ -56,7 +56,7 @@ const price = computed(() => formatPrice(props.lot.price, props.lot.currency ?? 
       </div>
 
       <div class="pt-4">
-        <div class="flex items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-foreground/55">
+        <div class="flex items-center justify-between gap-3 text-[10px] uppercase tracking-[0.14em] text-foreground/55">
           <span class="truncate">{{ lot.brand }}</span>
           <span class="shrink-0 transition-transform duration-500 group-hover:rotate-45" aria-hidden="true">↗</span>
         </div>
@@ -69,7 +69,7 @@ const price = computed(() => formatPrice(props.lot.price, props.lot.currency ?? 
           <p class="font-semibold tabular-nums tracking-[-0.02em] text-foreground">
             {{ price }}
           </p>
-          <p v-if="lot.sizeName" class="truncate font-mono text-[11px] uppercase text-foreground/50">
+          <p v-if="lot.sizeName" class="truncate text-[11px] uppercase text-foreground/50">
             {{ lot.sizeName }}
           </p>
         </div>

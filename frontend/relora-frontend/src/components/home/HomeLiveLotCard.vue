@@ -48,7 +48,7 @@ const isClosingSoon = computed(() => !isEnded.value && seconds.value < 3600)
 
         <span
           v-if="isClosingSoon"
-          class="absolute left-3 top-3 inline-flex items-center gap-2 bg-white px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-[#111111]"
+          class="absolute left-3 top-3 inline-flex items-center gap-2 bg-white px-2.5 py-1.5 text-[10px] uppercase tracking-[0.14em] text-[#111111]"
         >
           <span class="h-1.5 w-1.5 rounded-full bg-[var(--auction-accent)]" />
           {{ $t('home.liveAuctions.closingSoon') }}
@@ -56,7 +56,7 @@ const isClosingSoon = computed(() => !isEnded.value && seconds.value < 3600)
       </div>
 
       <div :class="variant === 'row' ? 'pb-1' : 'pt-4'">
-        <div class="flex items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-foreground/55">
+        <div class="flex items-center justify-between gap-3 text-[10px] uppercase tracking-[0.14em] text-foreground/55">
           <span class="truncate">{{ $t('home.liveHero.lot') }} {{ formatLotNumber(index) }} — {{ lot.brand }}</span>
           <span class="shrink-0 transition-transform duration-500 group-hover:rotate-45" aria-hidden="true">↗</span>
         </div>
@@ -70,7 +70,7 @@ const isClosingSoon = computed(() => !isEnded.value && seconds.value < 3600)
 
         <div class="mt-4 flex items-end justify-between gap-4 border-t border-foreground/10 pt-3">
           <div>
-            <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-foreground/45">
+            <p class="text-[10px] uppercase tracking-[0.14em] text-foreground/45">
               {{ $t('home.liveHero.currentBid') }}
             </p>
             <p
@@ -82,11 +82,11 @@ const isClosingSoon = computed(() => !isEnded.value && seconds.value < 3600)
           </div>
 
           <div class="text-right">
-            <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-foreground/45">
+            <p class="text-[10px] uppercase tracking-[0.14em] text-foreground/45">
               {{ $t('home.liveHero.timeLeft') }}
             </p>
             <p
-              class="mt-1 font-mono text-sm tabular-nums"
+              class="mt-1 text-sm tabular-nums"
               :class="isClosingSoon ? 'text-[var(--auction-accent)]' : 'text-foreground'"
             >
               {{ isEnded ? $t('home.liveHero.ended') : timeLeft }}
